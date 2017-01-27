@@ -1,16 +1,19 @@
 # FabAcademy_Template
-An html/ajax template for the students of Fab Academy
+## WEEK 1
+### WEBSITE
+* [W3schools](http://www.w3schools.com)
+* [Bootstrap](http://getbootstrap.com)
+* [Brackets](http://brackets.io)
+* [Sublime Text](https://www.sublimetext.com)
+* [MarkDown](https://daringfireball.net/projects/markdown)
 
-## License
-MIT
+### PROJECT MANAGEMENT
+* [Google Calendar](https://calendar.google.com/)
+* [embbed Google Calendar](https://support.google.com/calendar/answer/41207?hl=en)
+* [GanttChart](http://www.ganttproject.biz/) > Create tasks and milestones. Aside from the start date and duration, every task may have priority, cost, color and fill pattern, text notes and user-defined custom fields. 
+* [GanttView](https://github.com/thegrubbsian/jquery.ganttView) > The jQuery.ganttView plugin is a very lightweight plugin for creating a Gantt chart in plain HTML...no vector graphics or images required. The plugin supports dragging and resizing the Gantt blocks and callbacks to trap the updated data.
 
-## Includes
-* <a href="http://getbootstrap.com/">Twitter Bootstrap</a>
-* <a href="http://jquery.com/">JQuery</a>
-* <a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>
-* <a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>
-* <a href="https://code.google.com/p/jsc3d/">JSC3D</a>
-* <a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>
-
-## Notes
-Ajax functionalities won't work locally on Chrome because of "safety settings" (but will work online).
+### FINAL PROJECT CONCEPTS
+* [Project development week](http://academy.cba.mit.edu/classes/project_development/index.html)
+* [Last Year Students](http://archive.fabacademy.org/archives/2016/master/students.html)
+* [MIT HTMAA student pages](http://fab.cba.mit.edu) > click under classes to see the full list of courses and years.
