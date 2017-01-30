@@ -1,5 +1,10 @@
 # FABACADEMY WEEKLY REVIEW
+
+* [FabAcademy Handbook](http://docs.academany.org/FabAcademy-Handbook/_book/)
+* [FabAcademy Assignment and Assessments](http://docs.academany.org/FabAcademy-Assessment/_book/)
+
 ## WEEK 1
+
 ### WEBSITE
 * [W3schools](http://www.w3schools.com)
 * [Bootstrap](http://getbootstrap.com)
