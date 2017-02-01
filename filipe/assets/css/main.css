@@ -2177,7 +2177,7 @@
 
 		body.homepage #header:after {
 			content: '';
-			background: linear-gradient(to bottom, #808080 15%, #ffffff 88%);
+			background: linear-gradient(to bottom, #000000 30%, #808080 80%);
 			display: block;
 			position: absolute;
 			left: 0;
