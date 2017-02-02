@@ -106,7 +106,7 @@ li.L9 {
 }
 /* edited by Lucio changed font and background color */
 .prettyprint.linenums {
-    color: green; background: black;
+    color: black; background: grey;
 	-webkit-box-shadow: inset 0px 0 0 #fbfbfc, inset 0px 0 0 #ececf0;
 	        box-shadow: inset 0px 0 0 #fbfbfc, inset 0px 0 0 #ececf0;
 }
