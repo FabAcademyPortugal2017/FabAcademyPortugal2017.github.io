@@ -1091,7 +1091,7 @@ html {
 /* edited by Lucio changed font type */
 body {
     text-align: justify; 
-  font-family: AndaleMono;
+  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
   font-size: 14px;
   line-height: 1.42857143;
   color: green; <!--original color: #333333;-->
@@ -1122,8 +1122,7 @@ figure {
   margin: 0;
 }
 img {
-  vertical-align: left;
-    
+  vertical-align: left;    
 }
 .img-responsive,
 .thumbnail > img,
