@@ -25,7 +25,7 @@
   display: block;
   padding: 4px;
   line-height: 1;
-  max-width: 90%;
+  max-width: 95%;
   border: 1px solid #ddd;
   -webkit-border-radius: 14px;
   -moz-border-radius: 14px;
@@ -38,10 +38,10 @@
   margin-top: 15px;
   margin-bottom:15px;
 }
-/*legend css editedby Lucio*/
+/*legend css edited by Lucio*/
 legend { 
 	margin:10px; 
-	text-align:left;
+	text-align:center;
 	width:100%; 
 	font-size: 14px; 
 	border: 0px;   
@@ -50,7 +50,7 @@ legend {
 
 .pic {
     margin:10px;
-    text-align:left;
+    text-align:center;
     width:100%;
     display: block;
     padding: 4px;

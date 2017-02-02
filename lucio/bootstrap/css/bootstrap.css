@@ -1121,8 +1121,9 @@ a:focus {
 figure {
   margin: 0;
 }
+/*edited by Lucio*/
 img {
-  vertical-align: left;
+  vertical-align: center;
 }
 .img-responsive,
 .thumbnail > img,
@@ -1130,7 +1131,7 @@ img {
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   display: block;
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
 }
 .img-rounded {
