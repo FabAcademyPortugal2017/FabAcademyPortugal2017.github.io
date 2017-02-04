@@ -2070,7 +2070,7 @@
 /* Type */
 
 	body, input, select, textarea {
-		color: #7f888f;
+		color: #000000;
 		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;;
 		font-size: 13pt;
 		font-weight: 400;
@@ -2107,13 +2107,13 @@
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #1A211B;
+		color: #285149;
 		text-decoration: none;
 	}
 
 		a:hover {
-			border-bottom-color: #1A211B;
-			color: #1A211B !important;
+			border-bottom-color: #285149;
+			color: #285149 !important;
 		}
 
 			a:hover strong {
@@ -2121,7 +2121,7 @@
 			}
 
 	strong, b {
-		color: #3d4449;
+		color: #285149;
 		font-weight: 600;
 	}
 
@@ -2134,7 +2134,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #3d4449;
+		color: #285149;
 		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-weight: 700;
 		line-height: 1.5;
@@ -2282,7 +2282,7 @@
 	}
 
 	header.major > :last-child {
-		border-bottom: solid 3px #1A211B;
+		border-bottom: solid 3px #285149;
 		display: inline-block;
 		margin: 0 0 2em 0;
 		padding: 0 0.75em 0.5em 0;
@@ -2299,7 +2299,7 @@
 	}
 
 	label {
-		color: #3d4449;
+		color: #285149;
 		display: block;
 		font-size: 0.9em;
 		font-weight: 600;
@@ -2349,8 +2349,8 @@
 		input[type="url"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #1A211B;
-			box-shadow: 0 0 0 1px #1A211B;
+			border-color: #285149;
+			box-shadow: 0 0 0 1px #285149;
 		}
 
 	.select-wrapper {
@@ -2417,7 +2417,7 @@
 		input[type="checkbox"] + label,
 		input[type="radio"] + label {
 			text-decoration: none;
-			color: #7f888f;
+			color: #000000;
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1em;
@@ -2455,16 +2455,16 @@
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: #3d4449;
-			border-color: #3d4449;
+			background: #285149;
+			border-color: #285149;
 			color: #ffffff;
 			content: '\f00c';
 		}
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #1A211B;
-			box-shadow: 0 0 0 1px #1A211B;
+			border-color: #285149;
+			box-shadow: 0 0 0 1px #285149;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2697,7 +2697,7 @@
 				}
 
 				ul.contact li:before {
-					color: #1A211B;
+					color: #285149;
 					display: inline-block;
 					font-size: 1.5em;
 					height: 1.125em;
@@ -2821,7 +2821,7 @@
 				}
 
 					ul.pagination li > .page.active {
-						background-color: #1A211B;
+						background-color: #285149;
 						color: #ffffff !important;
 					}
 
@@ -2894,7 +2894,7 @@
 		}
 
 		table th {
-			color: #3d4449;
+			color: #285149;
 			font-size: 0.9em;
 			font-weight: 600;
 			padding: 0 0.75em 0.75em 0.75em;
@@ -2953,8 +2953,8 @@
 		background-color: transparent;
 		border-radius: 0.375em;
 		border: 0;
-		box-shadow: inset 0 0 0 2px #1A211B;
-		color: #1A211B !important;
+		box-shadow: inset 0 0 0 2px #285149;
+		color: #285149 !important;
 		cursor: pointer;
 		display: inline-block;
 		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -3027,7 +3027,7 @@
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #1A211B;
+			background-color: #285149;
 			box-shadow: none;
 			color: #ffffff !important;
 		}
@@ -3147,7 +3147,7 @@
 			}
 
 				.features article .icon:before {
-					color: #1A211B;
+					color: #285149;
 					font-size: 2.75rem;
 					position: relative;
 					top: 0.05em;
@@ -3792,7 +3792,7 @@
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		border-bottom: solid 5px #1A211B;
+		border-bottom: solid 5px #285149;
 		padding: 6em 0 1em 0;
 		position: relative;
 	}
@@ -3809,7 +3809,14 @@
 			border-bottom: 0;
 			color: inherit;
 			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-			font-size: 1.125em;
+			font-size: 2em;
+		}
+
+		#header .logo .logot {
+			height: 30px;
+			fill: 186859;
+			color:inherit;
+
 		}
 
 		#header .icons {
@@ -3833,6 +3840,13 @@
 				#header .logo {
 					font-size: 1.25em;
 					margin: 0;
+				}
+
+				#header .logo .logot {
+					height: 18px;
+					fill: 186859;
+					color:inherit;
+
 				}
 
 				#header .icons {
@@ -3967,7 +3981,7 @@
 		-webkit-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		color: #3d4449;
+		color: #285149;
 		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		letter-spacing: 0.075em;
 		list-style: none;
@@ -3986,7 +4000,7 @@
 		}
 
 			#menu ul a:hover, #menu ul span:hover {
-				color: #1A211B;
+				color: #285149;
 			}
 
 			#menu ul a.opener, #menu ul span.opener {
@@ -4020,7 +4034,7 @@
 				}
 
 				#menu ul a.opener:hover:before, #menu ul span.opener:hover:before {
-					color: #1A211B;
+					color: #285149;
 				}
 
 				#menu ul a.opener.active + ul, #menu ul span.opener.active + ul {
