@@ -29,12 +29,12 @@
 ## WEEK 2
 
 ### 2D Design
-* [bitmap vs vector](
+* [bitmap vs vector](https://www.youtube.com/watch?v=fy9Pby0Gzsc)
 * [Gimp](https://www.gimp.org/)
 * [Inkscape](https://inkscape.org/en/)
 
 ### 3D Modeling
-* [mesh vs nurbs](https://www.youtube.com/watch?v=Lm1G5jJ6JC8)Rhinoceros 3D](https://www.rhino3d.com/)
+* [mesh vs nurbs](https://www.youtube.com/watch?v=Lm1G5jJ6JC8)
 * [Blender](https://www.blender.org/)
 * [Rhinoceros 3D](https://www.rhino3d.com/)
 * [FreeCad](https://www.freecadweb.org/)
