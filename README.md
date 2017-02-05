@@ -25,3 +25,18 @@
 * [Project development week](http://academy.cba.mit.edu/classes/project_development/index.html)
 * [Last Year Students](http://archive.fabacademy.org/archives/2016/master/students.html)
 * [MIT HTMAA student pages](http://fab.cba.mit.edu) > click under classes to see the full list of courses and years.
+
+## WEEK 2
+
+### 2D Design
+* [bitmap vs vector](https://www.youtube.com/watch?v=fy9Pby0Gzsc)
+* [Gimp](https://www.gimp.org/)
+* [Inkscape](https://inkscape.org/en/)
+
+### 3D Modeling
+* [mesh vs nurbs](https://www.youtube.com/watch?v=Lm1G5jJ6JC8)
+* [Blender](https://www.blender.org/)
+* [Rhinoceros 3D](https://www.rhino3d.com/)
+* [FreeCad](https://www.freecadweb.org/)
+* [SolidWorks](http://www.solidworks.com/) - for getting the free maker license please get in touch with me (Luís Carvão)
+
