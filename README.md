@@ -50,4 +50,5 @@
 * [html5 embed video](http://www.w3schools.com/html/html5_video.asp) > UPLOAD ALL VIDEOS TO THE LOCAL REPO!!! DON'T USE THIRD PARTY SERVICES LIKE YOUTUBE
 * maximum recommended video size: 600x400px
 * prefered video format/codec: H.264/MPEG-4 AVC
+* [VLC](http://www.videolan.org/vlc/index.html) > For video compression go to: Multimedia>Convert/Save
 
