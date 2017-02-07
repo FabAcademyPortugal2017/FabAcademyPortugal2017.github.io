@@ -68,12 +68,12 @@ mark {
   background: #ff0;
 }
 small {
-  font-size: 80%;
+  font-size: 60%;
 }
 sub,
 sup {
   position: relative;
-  font-size: 50%;
+  font-size: 30%;
   line-height: 0;
   vertical-align: baseline;
 }
@@ -1077,13 +1077,13 @@ th {
           box-sizing: border-box;
 }
 html {
-  font-size: 10px;
+  font-size: 8px;
 
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
   color: #333;
   background-color: #fff;
@@ -1237,7 +1237,7 @@ h2 .small,
 .h2 .small,
 h3 .small,
 .h3 .small {
-  font-size: 65%;
+  font-size: 40%;
 }
 h4,
 .h4,
@@ -1287,7 +1287,7 @@ h6,
   font-size: 12px;
 }
 p {
-  margin: 0 0 10px;
+  margin: 0 0 6px;
 }
 .lead {
   margin-bottom: 20px;
@@ -4493,7 +4493,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #f8f8f8;
+  background-color: lightgrey;
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
@@ -4524,18 +4524,18 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
 .navbar-default .navbar-nav > .disabled > a:focus {
-  color: #ccc;
+  color: lightgrey;
   background-color: transparent;
 }
 .navbar-default .navbar-toggle {
-  border-color: #ddd;
+  border-color: lightgrey;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
   background-color: #ddd;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #888;
+  background-color: lightgrey;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
