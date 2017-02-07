@@ -20,12 +20,12 @@
   margin: 30px auto 30px auto !important;
   display: block;
 }
-
+/*max with edited by lucio*/
 .container p img {
   display: block;
   padding: 4px;
   line-height: 1;
-  max-width: 920px;
+  max-width: 95%;
   border: 1px solid #ddd;
   -webkit-border-radius: 14px;
   -moz-border-radius: 14px;
@@ -38,9 +38,9 @@
   margin-top: 15px;
   margin-bottom:15px;
 }
-
+/*legend css edited by Lucio*/
 legend { 
-	margin:3px; 
+	margin:10px; 
 	text-align:center;
 	width:100%; 
 	font-size: 14px; 
@@ -49,11 +49,12 @@ legend {
 	}
 
 .pic {
-  margin:3px; text-align:center;width:100%
-  display: block;
-  padding: 4px;
-  width: 940px;
-  line-height: 1;
+    margin:10px;
+    text-align:center;
+    width:100%;
+    display: block;
+    padding: 4px;
+    line-height: 1;
  /*  border: 1px solid #ddd;
   -webkit-border-radius: 14px;
   -moz-border-radius: 14px;
