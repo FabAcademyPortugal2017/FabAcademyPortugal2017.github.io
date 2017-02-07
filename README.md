@@ -5,14 +5,14 @@
 
 ## WEEK 1
 
-### WEBSITE
+### Website
 * [W3schools](http://www.w3schools.com)
 * [Bootstrap](http://getbootstrap.com)
 * [Brackets](http://brackets.io)
 * [Sublime Text](https://www.sublimetext.com)
 * [MarkDown](https://daringfireball.net/projects/markdown)
 
-### PROJECT MANAGEMENT
+### Project Management
 * [Google Calendar](https://calendar.google.com/)
 * [embbed Google Calendar](https://support.google.com/calendar/answer/41207?hl=en)
 * [GanttChart](http://www.ganttproject.biz/) > Create tasks and milestones. Aside from the start date and duration, every task may have priority, cost, color and fill pattern, text notes and user-defined custom fields. 
@@ -21,10 +21,15 @@
 ### GIT
 * [git github](http://humansthatmake.com/github/)
 
-### FINAL PROJECT CONCEPTS
+### Final Project Ideas
 * [Project development week](http://academy.cba.mit.edu/classes/project_development/index.html)
 * [Last Year Students](http://archive.fabacademy.org/archives/2016/master/students.html)
 * [MIT HTMAA student pages](http://fab.cba.mit.edu) > click under classes to see the full list of courses and years.
+
+### Image sizes
+* [adding images html](http://www.w3schools.com/html/html_images.asp) > UPLOAD ALL IMAGES TO THE LOCAL REPO!!! DON'T USE THIRD PARTY SERVICES LIKE FLICKR
+* maximum recommended image size: 800x600px
+* prefered image format: .png
 
 ## WEEK 2
 
@@ -38,5 +43,12 @@
 * [Blender](https://www.blender.org/)
 * [Rhinoceros 3D](https://www.rhino3d.com/)
 * [FreeCad](https://www.freecadweb.org/)
-* [SolidWorks](http://www.solidworks.com/) - for getting the free maker license please get in touch with me (Luís Carvão)
+* [SolidWorks](http://www.solidworks.com/) > for getting the free maker license please get in touch with your instructor (Luís Carvão)
+* [Fusion360](http://www.autodesk.com/products/fusion-360/overview) > for getting the free maker license please get in touch with your instructor (Luís Carvão)
+
+### Animation Upload
+* [html5 embed video](http://www.w3schools.com/html/html5_video.asp) > UPLOAD ALL VIDEOS TO THE LOCAL REPO!!! DON'T USE THIRD PARTY SERVICES LIKE YOUTUBE
+* maximum recommended video size: 600x400px
+* prefered video format/codec: H.264/MPEG-4 AVC
+* [VLC](http://www.videolan.org/vlc/index.html) > For video compression go to: Multimedia>Convert/Save
 
