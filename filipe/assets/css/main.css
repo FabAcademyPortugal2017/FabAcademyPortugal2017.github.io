@@ -218,7 +218,7 @@
 /* Grid */
 
 	.row {
-		border-bottom: solid 1px transparent;
+		border-bottom: solid 50px transparent;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
@@ -1581,7 +1581,7 @@
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
 		color: #666;
-		line-height: 1.5em;
+		line-height: 1.3em;
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
