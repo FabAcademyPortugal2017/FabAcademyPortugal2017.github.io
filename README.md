@@ -3,7 +3,7 @@
 * [FabAcademy Handbook](http://docs.academany.org/FabAcademy-Handbook/_book/)
 * [FabAcademy Assignment and Assessments](http://docs.academany.org/FabAcademy-Assessment/_book/)
 
-## WEEK 1
+## WEEK 1 - PRINCIPLES AND PRACTICES
 
 ### Website
 * [W3schools](http://www.w3schools.com)
@@ -31,7 +31,7 @@
 * maximum recommended image size: 800x600px
 * prefered image format: .png
 
-## WEEK 2
+## WEEK 2 - COMPUTER AIDED DESIGN
 
 ### 2D Design
 * [bitmap vs vector](https://www.youtube.com/watch?v=fy9Pby0Gzsc)
@@ -52,3 +52,8 @@
 * prefered video format/codec: H.264/MPEG-4 AVC
 * [VLC](http://www.videolan.org/vlc/index.html) > For video compression go to: Multimedia>Convert/Save
 
+## WEEK 3 - COMPUTER CONTROLLED CUTTING
+* [Kenny Cheung aka The Nasa Guy](https://dspace.mit.edu/handle/1721.1/78199#files-area)
+* [press-fit construction kit](https://www.google.pt/search?safe=off&client=ubuntu&hs=9lt&channel=fs&biw=1215&bih=897&tbm=isch&sa=1&q=modular+structures+lasercut&oq=modular+structures+lasercut&gs_l=img.3...5912.11623.0.11794.0.0.0.0.0.0.0.0..0.0....0...1c.1.64.img..0.0.0.hgyfOWT_l2A#safe=off&channel=fs&tbm=isch&q=press+fit+construction+kit)
++ parametric softwares:
+- test
