@@ -55,5 +55,8 @@
 ## WEEK 3 - COMPUTER CONTROLLED CUTTING
 * [Kenny Cheung aka The Nasa Guy](https://dspace.mit.edu/handle/1721.1/78199#files-area)
 * [press-fit construction kit](https://www.google.pt/search?safe=off&client=ubuntu&hs=9lt&channel=fs&biw=1215&bih=897&tbm=isch&sa=1&q=modular+structures+lasercut&oq=modular+structures+lasercut&gs_l=img.3...5912.11623.0.11794.0.0.0.0.0.0.0.0..0.0....0...1c.1.64.img..0.0.0.hgyfOWT_l2A#safe=off&channel=fs&tbm=isch&q=press+fit+construction+kit)
-+ parametric softwares:
-- test
+* parametric 2D softwares: Inkscape, Antimony, [Matter Machine](http://mattermachine.com/), Grasshopper, Freecad, SolidWorks, Onshape...
+* [what not to do for this week](http://fabacademy.org/archives/2014/students/cosme.vasco/img/week3/restos.jpg) > please make a small test cut first so you can check tolerances
+* Glue is a sign of failure.
+
+* 
