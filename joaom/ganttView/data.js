@@ -8,7 +8,7 @@ var ganttData = [
 	{
 		id: 2, name: "Research, requirement analysis and Documentation", series: [
 			{ name: "Planned", start: new Date(2017,01,01), end: new Date(2017,01,28) },
-/*			{ name: "Actual", start: new Date(2017,01,01), end: new Date(2017,01,28), color: "#f0f0f0" },
+/*			{ name: "Actual", start: new Date(2017,01,01), end: new Date(2017,01,28), color: "#f0f0f0" }
 */		]
 	}, 
 	{
@@ -44,6 +44,36 @@ var ganttData = [
 		id: 8, name: "Final presentation preparation", series: [
 			{ name: "Planned", start: new Date(2017,06,5), end: new Date(2017,06,14) },
 <!--			{ name: "Actual", start: new Date(2017,01,01), end: new Date(2017,01,05), color: "#f0f0f0" }-->
+		]
+	}, 
+	{
+		id: 7, name: "Prototyping, machining, tests, documentation", series: [
+			{ name: "Planned", start: new Date(2017,05,1), end: new Date(2017,06,5) }
+		]
+	},
+	{
+		id: 7, name: "Prototyping, machining, tests, documentation", series: [
+			{ name: "Planned", start: new Date(2017,05,1), end: new Date(2017,06,5) }
+		]
+	},
+	{
+		id: 7, name: "Prototyping, machining, tests, documentation", series: [
+			{ name: "Planned", start: new Date(2017,05,1), end: new Date(2017,06,5) }
+		]
+	}, 
+	{
+		id: 7, name: "Prototyping, machining, tests, documentation", series: [
+			{ name: "Planned", start: new Date(2017,05,1), end: new Date(2017,06,5) }
+		]
+	}, 
+	{
+		id: 7, name: "Prototyping, machining, tests, documentation", series: [
+			{ name: "Planned", start: new Date(2017,05,1), end: new Date(2017,06,5) }
+		]
+	}, 
+	{
+		id: 7, name: "Prototyping, machining, tests, documentation", series: [
+			{ name: "Planned", start: new Date(2017,05,1), end: new Date(2017,06,5) }
 		]
 	}
 ];
