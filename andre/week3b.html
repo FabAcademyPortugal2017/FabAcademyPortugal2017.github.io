@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<!--
+Editorial by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+Modified by André Rocha at Fab Academy 2017
+-->
+<html>
+<head>
+	<title>steam228@Fab Academy - Week2</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+<body>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header-->
+				<header id="header">
+					<a href="index.html" class="logo"><img class="logot" src="images/fab1.svg" alt="fab logo on my green"></img><strong>  FAB ACADEMY 2017</strong></a>
+					<!--<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
+				</ul>-->
+			</header>
+
+			<!-- Content -->
+			<section>
+				<header class="main">
+					<h1>Week 3 - Design, Design and Digital Design - Part 2 Laser</h1>
+				</header>
+
+				<span class="image main"><img src="images/week3cover.png" alt="experimenting with laser" /></span>
+
+				<h2>Experiences</h2>
+
+				<p>I started a bit late on this, trying to catch up with the rest of the colleagues,<br />
+					At first I focused on the cardboard trying to figure a scale for a assemblage on this specific 7mm thick one.<br />
+					I used my colleague Filipa definitions and previous experience and developed a quick experience on illustrator.</p>
+					<span class="image fit"><img src="images/expsCartLaser.png" alt="experimenting with laser - cardboard connections" /></span>
+
+					<p>I had <strong>two goals</strong>, one of which I didn&rsquo;t got to accomplish yet.</p>
+
+					<p>The first was to make a scale model of my near probe (GROUU new design), the one that would be stuck on the ground, near the plants, collecting all kinds of data;</p>
+
+					<span class="image fit"><img src="images/proberhino1.png" alt="Probe Design for 3 mm MDF" /></span>
+
+					<p>The second was to come up with lost molds for blown glass, to use on workshop this weekend. (I will talk about this other time)</p>
+
+					<hr class="major" />
+					<h2>Kerf Bending</h2>
+
+					<span class="image fit"><img src="images/kerKerfKerf.png" alt="kerf experiments2" /></span>
+					<p>
+						For both, kerf bending techniques and a deeper knowledge about it, besides grabbing samples and feeling amazed , would do a great job toward both goals.</p>
+
+						<p>The linear bend technique is easy and FIlipe already has very nice experience on the matter.<br />
+							I was very interested on trying to bend MDF on more than one direction simultaneously. <br />
+							I would use that for my lost moulds.</p>
+
+							<p>By experimenting with <a href="http://www.instructables.com/id/Curved-laser-bent-wood/" target="blank"> this set of samples</a>, and cutting a few., I began having a lot of ideas and at the same time the clear conscience that to achieve a mould by wednesday was again an impossibility.</p>
+							<span class="image fit"><img src="images/kerKerfKerf2.png" alt="kerf experiments2" /></span>
+
+							<hr class="major" />
+
+							<h2>My Model</h2>
+
+							<p>I than focused on the model.<br />
+								I only had access to rhino and the complexity of the shape was also impossible to model parametrically in just a few days. So I modeled it it classis NURBS 3d modeling techniques.</p>
+							<p>After having the complete model, I separated the components on layers and began isolating the outer surface and unrolling it (with the Unrollsrf command).</p>
+              <span class="image fit"><img src="images/rhinomodel.png" alt="Probe Design for 3 mm MDF kerf studies" /></span>
+							<p>On top of this, I applied a linear kerf pattern to the perimeter of the areas to bend.</p>
+
+							<p>I than used the Make2d command to these elements and exported it to the dwg format to cut.</p>
+
+							<span class="image fit"><img src="images/kerfOnModel.png" alt="rhino + kerf + array" /></span>
+
+									<p>At this time I noticed that the size won&rsquo;t fit the area. Since scaling was an impossibility because it makes me lose tolerances and material thickness index on connections, I just cut the smaller parts, leaving the rest to cut on a bigger dimension laser cutter.</p>
+
+									<p>Here is the result:<br />
+									</p>
+									<span class="image fit"><img src="images/resultFinal.png" alt="part od the model" /></span>
+
+
+
+					<hr class="major" />
+
+
+
+					<!--<h2>1. Research - some related work</h2>
+					<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+
+					<span class="image main"><img src="images/relatedwork.png" alt="Related Work Research - Proprietary Projects" /></span>
+
+					<hr class="major" />-->
+
+
+						</section>
+
+					</div>
+				</div>
+
+				<!-- Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+
+						<!-- Search -->
+						<section id="search" class="alt">
+							<form method="post" action="https://duckduckgo.com/search.html?prefill=Search">
+								<input type="text" name="query" id="query" placeholder="Search DuckDuckGo" />
+							</form>
+						</section>
+
+						<!-- Menu -->
+						<nav id="menu">
+							<header class="major">
+								<h2>Menu</h2>
+							</header>
+							<ul>
+								<li><a href="index.html">Homepage</a></li>
+								<li>
+									<span class="opener">Fab Process</span>
+									<ul>
+										<li><a href="week1a.html">Week1 - Sketch&Plan the Final Project</a></li>
+										<li><a href="#"><strike>Week1 - Website and Git</strike></a></li>
+										<li><a href="week2.html">Week2 </a></li>
+										<li><a href="week3.html">Week3 - Part 1</a></li>
+										<li><a href="week3B.html">Week3 - Part 2</a></li>
+
+									</ul>
+								</li>
+								<!--<li><a href="elements.html">The Master Plan</a></li>-->
+
+							</nav>
+
+							<!-- Section to use for latest -->
+							<!--	<section>
+							<header class="major">
+							<h2>Latest Stuff Added</h2>
+						</header>
+						<div class="mini-posts">
+						<article>
+						<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+						<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+					</article>
+					<article>
+					<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+					<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+				</article>
+				<article>
+				<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+				<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+			</article>
+		</div>
+		<ul class="actions">
+		<li><a href="#" class="button">More</a></li>
+	</ul>
+</section> -->
+
+<!-- Section -->
+<section>
+	<header class="major">
+		<h2>Get in touch</h2>
+	</header>
+	<p>Lets Do it Together!</p>
+	<ul class="contact">
+		<li class="fa-envelope-o"><a mailto="steam228@gmail.com">steam two hundred and twenty eight at gmail dot com</a></li>
+		<li class="fa-home">Fab Lab Caldas da Rainha<br />
+			Rua General Amilcar Mota, 16<br />
+			2500-202 Caldas da Rainha PORTUGAL</li>
+			<li class="fa-github"><a href="https://github.com/steam228/" target="_blank">steam228</a></li>
+		</ul>
+	</section>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<p class="copyright">If unspecified, all content is under  <a href="https://creativecommons.org" class="icon fa-creative-commons">-by 4.0</a><br/>Theme Design by: <a href="https://html5up.net">HTML5 UP</a>.</p>
+	</footer>
+
+</div>
+</div>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
