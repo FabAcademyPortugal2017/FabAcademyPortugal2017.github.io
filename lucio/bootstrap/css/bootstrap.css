@@ -1086,12 +1086,15 @@ th {
 html {
   font-size: 10px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background: black
 }
+/* edited by Lucio changed font type */
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: justify; 
+  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #091a72; <!--original color: #333333;-->
+  color: green; <!--original color: #333333;-->
   background-color: #ffffff;
 }
 input,
@@ -1118,9 +1121,9 @@ a:focus {
 figure {
   margin: 0;
 }
+/*edited by Lucio*/
 img {
-  vertical-align: left;
-    
+  vertical-align: center;
 }
 .img-responsive,
 .thumbnail > img,
