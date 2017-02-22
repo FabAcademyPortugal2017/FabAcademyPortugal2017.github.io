@@ -47,9 +47,6 @@
                                     <a href="index.html">Home</a>
                                 </li>
                                 <li>
-                                    <a href="project.html">Final Project</a>
-                                </li>
-                                <li>
                                 </li>
                                 <li>
                                 </li>
@@ -64,11 +61,130 @@
         <main class="main" id="main">
             <div class="hero cyan darken-3 overflow-hidden">
                 <canvas id="canvas"></canvas>
-                <h1 class="bold">Celebrate digital</h1>
+                <h1 class="bold">Electronics Production</h1>
             </div>
 
             
-        </main>
+
+        <section class="section scrollspy" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12 l6">
+                            <h2>Week 4</h2>
+                            <img src="./assets/images/week4/week4.jpg">
+                            <h3>Electronics Production</h3>
+                            
+                            
+                        </div>
+                        <div class="col s12 l6">
+                        <h2>Tasks</h2>
+                          <p class="teal"><strong>Individual assignment</strong>:
+        make an in-circuit programmer by milling the PCB, then optionally trying other processes <br>
+</p>     </div></div>
+<br>
+                           
+<h4>Preparing the Roland Modela mdx-40a</h4>                    
+                          
+                  <p class="flow-text">We started this week looking at the forth axis installed on our modela and removing it. We had to level the plate for better milling results. We cutted 305mm square of a 8mm acrylic in the lasercut and milled 0.5mm depth with a 6mm end mill at 0.6mm of stepdown, 7500RPM, 2.6mm of stepover with a 40mm/sec feedrate.  Next time we'll reduce the stepover for smoother results. Next time i'll also change the clearance for the screws. I made a 5mm clearance in the material and only left 3mm to support tha screws, and it stayed too fragile. I think a 3mm area are enough for hiding the screws from the milling surface.</p>
+          <span class="deep-orange">Modela MDX 40A Fourth Axis</span><br>
+<img src="./assets/images/week4/week4_28.jpg"><br>                  
+          <span class="deep-orange">Working with Artcam in the modela</span><br>
+<img src="./assets/images/week4/artcam.jpg"><br>
+<br>       
+          <span class="deep-orange">Final Result</span><br>
+<img src="./assets/images/week4/week4_05.jpg"><br>
+<span class="green">FILES</span><br>
+ <a href="assets/files/mdx40.art" class="green">Artcam file</a><br>
+<a href="assets/files/mdx40base.svg" class="green">Plate Vector File</a>
+                      
+<p class="teal"> References - <a href="http://support.rolanddga.com/docs/documents/departments/technical%20services/manuals%20and%20guides/ru_mdx-40a_set_up.pdf" target="_blank">Roland Modela MDX-40A manual</a>,
+<br>
+<br></p>
+
+<h4>PCB Fabrication</h4>                    
+                          
+                  <blockquote>
+                    <p class="flow-text">I choose <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html" target="_blank" class="amber">Brian "FabTinyISP Minimal"</a>, a Bas  Zaerc's ISP with few modifications tutorial. I choose this because i liked its shape, and in our group we decided to make 2 diferent FabISP's. After reading a while i come to some conclusions:<br>
+                      <span class="amber">Less components needed<br>
+                        
+                      The LEDS facilitate usage<br>
+                      Easy way of removing the bridge/jumpers<br>
+                      Practical use in USB slot</span><br>
+
+                      I started by downloading the <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/fts_mini_traces.png" target="_blank"><span class="amber-text">traces </span></a>and the <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/fts_mini_cut.png" target="_blank"><span class="amber-text">outline cutout</span></a>. I used <a href="http://fabmodules.org/" target="_blank" class="amber-text">Fabmodules HTML5</a> to get the clearance an cutting paths. Here are the steps i followed:<br>
+  <span class="amber">input format --> image (.png) --> select the png file<br>
+    output format --> Rolland mill (.rml)<br>
+    Process --> PCB Traces (1/64)<br>
+  </span> Then i changed a few parameters, as seen on the picture below, for better results. I changed the zhome (mm): to 6mm for the jog in the end of the milling go up for a safe Z of 6mm, otherwise the PCB could get damaged.
+                      
+                      
+                    </p>
+                  </blockquote>
+<br>
+
+<span class="deep-orange">Parameters for Fabmodules</span><br>
+<img src="./assets/images/week4/fabmodules.jpg"><br>
+<span class="deep-orange">0.25mm V Cut PCB Carbide End Mill (very nice results)</span><br>
+<img src="./assets/images/week4/endmill.jpg"><br>
+<p class="flow-text">I grabed a PCB board and attach it to the plate using double sided 
+Adhesive tape. Then i had to set the origins in the modela Vpanel. The X and Y are easier to define, but the Z axis is a bit more complicated. I used a paper and changed the speed of the motor to 1 step at a time until i reached the paper and i couldn't move it more. When it stucks, the Z oringin is set!</p>
+<span class="deep-orange">Sticking to the board</span><br>
+<img src="./assets/images/week4/week4_04.jpg"><br>
+<span class="deep-orange">Attaching to the plate</span><br>
+<img src="./assets/images/week4/week4_05.jpg"><br>
+<span class="deep-orange">Seting Z origin with paper</span><br>
+<img src="./assets/images/week4/week4_06.jpg"><br>
+<span class="deep-orange">Using Roland Vpanel</span><br>
+<img src="./assets/images/week4/vpanel.jpg"><br>
+<p class="flow-text">Next step was to cut the board. I used the cuting png and in fabmodules:<br>
+<span class="amber">input format --> image (.png) --> select the cutting png file<br>
+output format --> Rolland mill (.rml)<br>
+Process --> PCB Outline (1/32)<br></span>
+I changed a few parameters again, because my board was thicker (2mm) and reduced the stepdown to 0.25mm. i used a 0.8mm endmill. It did a nice cut. I could see that it was cut because of the remains of the adhesive tape sticked to the mill.</p>
+<span class="deep-orange">Cuting Parameters</span><br>
+<img src="./assets/images/week4/cuting.jpg"><br>
+<p class="flow-text">Here is the final result of my PCB after using a knife to recude the copper remains in the board.</p>
+<span class="deep-orange">Final Result</span><br>
+<img src="./assets/images/week4/week4_10.jpg"><br>
+<p class="flow-text">Next i had to gather all the components to start and do the weldings. It was a bit more complicated because the components were arriving to the Lab and we had to pack properly all of them.</p>
+<span class="deep-orange">A bit of a mess</span><br>
+<img src="./assets/images/week4/week4_08.jpg"><br>
+<span class="deep-orange">Final Packing Result</span><br>
+<img src="./assets/images/week4/week4_07.jpg"><br>
+<span class="deep-orange">My components ready</span><br>
+<img src="./assets/images/week4/week4_09.jpg"><br>
+<p class="flow-text">I started the welding process with calm and with precision the first components started to appear in the board. I took a break after 15 minutes of welding to relax hands and muscles, i suggest you do it too.</p>
+<span class="deep-orange">First components welded</span><br>
+<img src="./assets/images/week4/week4_20.jpg"><br>
+<p class="flow-text">I used a bit of welding paste, because some of the copper tracks were really thin. I was also helped by using the schematic and board images that i printed</p>
+<span class="deep-orange">Schematic pictures helping the welding process</span><br>
+<img src="./assets/images/week4/week4_17.jpg"><br>
+<span class="deep-orange">Welding with the help of a friends hand (tweezers)</span><br>
+<img src="./assets/images/week4/week4_23.jpg"><br>
+<span class="deep-orange">Final Result</span><br>
+<img src="./assets/images/week4/week4_27.jpg"><br>
+<span class="deep-orange">Analysing the board through a magnifying glass</span><br>
+<img src="./assets/images/week4/week4_26.jpg"><br>
+<p class="flow-text">Next step is to program the board. I've already did some tests and the LED turned on! </p>
+<span class="deep-orange">Debugging the board</span><br>
+<img src="./assets/images/week4/week4_30.jpg"><br>
+<span class="deep-orange">Red LED On!</span><br>
+<img src="./assets/images/week4/week4_31.jpg"><br>
+<p class="flow-text">I'm going to machine this board in vectors using my CAM software to test the final result and the diference between the 2 processes.</p>
+                 
+<span class="green">FILES</span><br>
+ <a href="assets/files/fts_traces_cut.svg" class="green">Board Vector File</a><br>
+<a href="assets/files/fts_mini_traces.rml" class="green">Roland Modela Clearance File</a><br>
+<a href="assets/files/fts_mini_cut.rml" class="green">Roland Modela Cuting File</a><br>
+<br>
+        
+                                                               
+                                    
+                           
+    </div>
+                    
+                
+
         <!-- Footer-->
 
         <footer>
