@@ -122,7 +122,7 @@
                      <img class="img-responsive img-border-left" src="img/week4_pen2.jpg" alt="">
                 </div>
                 <div class="col-md-6">
-                    <p>For the experiences in PCB manufacturing I used the "pens" made from the FabTinyISP examples.</p>
+                    <p>For the experiences in PCB manufacturing I used the FabTinyStar - another version of an AVR ISP programmer/board.</p>
                      <br>
                     <p>Several group experiments were made in the fab lab from the examples: Ali (microUSB) and Brian (USB).
                     <br>
@@ -130,7 +130,7 @@
                     <li> <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian link</a></li>
                     <br>
                     <br>
-                    <p>We used a Hartpapier-Platte plate, cu, FR2 with 1.7mm thickness.</p>
+                    <p>We used a Hartpapier-Platte, cu, FR2 with 1.7mm thickness.</p>
                     <p>FR1 and FR copper sheets are made of paper and FR4 sheets are made of fiberglass. Type FR1 or FR2 are lowcost, more flexible and easily machined. Besides, they do not need a chemical bath.</p>
                     <br>
                     <p>The copper sheet was attached to the Carvey milling machine with double fix tape on the bottom, so as not to come loose from the base when the cut was started.</p>
@@ -179,6 +179,11 @@
                 
             <div class="col-md-6">
                <p>The electronic components were then soldered to the PCB using a soldering iron.</p>
+                <br>
+                <p>After soldering the components in the PSB it is necessary to verify that all are properly welded and if the copper line has not risen.</p>
+                   <br>
+                <p>A multi-meter was used to check for short between Vcc and GND.</p>
+                     <br>
                 
                 <div class="clearfix"></div>
             </div>
@@ -193,8 +198,42 @@
                 
                 <h2 class="intro-text text-center">Programming . <strong>PCB</strong>
                 </h2>
-                 
             </div>
+            
+            
+             <div class="col-md-6">
+                  
+                    <img class="img-responsive img-border-left" src="img/image.jpg" alt="">
+                    <br>
+                     <img class="img-responsive img-border-left" src="img/image.jpg" alt="">
+                     
+                </div>
+                <div class="col-md-6">
+                    
+                    <p>To program the AVR-type card it is necessary to use a programmer.</p>
+                    <p>There are 3 types:</p>
+                    <li>Small blue programmer</li> 
+                    <li>Big blue programmer</li>
+                    <li>White programmer with a blue line</li>
+                     <br>
+                      <br>
+                    <p>Steps</p>
+                    <ol type="1">
+                    <li>install the softwareCrossPack (in case it is a Mac OS computer)</li>
+                        <br>
+                    <li>Get the firmware "fts_firware_bdm.v1" available on the site and install "fts_firware.hex"</li>
+                        <br>
+                    <li>To call you use the codes: <br>
+                        - Small Blue Programmer - Avrisp2<br>
+                        - Big blue programmer - jtag2sip<br>
+                        - White programmer with a blue line - atmelice</li>
+                        <br>
+                    <li>connect the PCB with the computer (do not connect directly to the input of your computer, use a USB extension)</li>
+                        <br>
+                    <li>Open the "Makefile" file with an html editor, I used the "brackers" and change the line that says "programmer = Ubstiny" to your programmer's code and save it as a ".hex"</li>
+                        <br>
+                    <li>Run on the "make flash." Command line that will delete the memory of your chip and program with the contents of the ".hex" file.</li>
+                    </ol>
         </div>
          
             </div>
