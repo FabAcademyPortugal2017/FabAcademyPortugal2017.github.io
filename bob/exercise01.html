@@ -105,11 +105,11 @@
   <h3>Linux and MacOs</h3>
 	<p>
      Setting up git client in Linux  and MacOs is very easy.Fire up your terminal and tye the following
-	<pre class="prettyprint linenums">
-	&ltp&gt;
+	<p>
+	
 	 sudo apt-get install git 
 
-	&lt/p&gt;</pre>
+	</p>
 	</p>
 	  <h2>Result </h2>
         <p class="pic">
@@ -117,78 +117,23 @@
 		<legend>git installed and configured in Linux.</legend>
 		</p>
 	
-	<h3>Images</h3>
+	<h3>Using Git</h3>
 	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp class="pic&gt;>&ltimg src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg"&gt;
-	&ltlegend&gt;Here's the legend of the picture.&lt/legend&gt;
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p class="pic"><img src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg">
-	<legend>Here's the legend of the picture.</legend>
+	Git is a client /software that is used to access various services in github.
+
+
+	Using Github can be a challenge but once mastered it can be very useful for both engineers,designers,programmers or developers etc.
+
+	To use git and github one needs to create a user account online .This is as easy as going to www.github.com
+	After creating an account one needs to sign in and create a repository.A repository or repo as devs call it is like a container/ folder where all your files will be stored .
 	</p>
      
-	<h3>Code</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltpre class="prettyprint linenums"&gt;
-	Your code here
-	&lt/pre&gt;</pre>
 	
-	Result:
-	<pre class="prettyprint linenums">
-	for i in members:
-		print ""
-		print "USER:",members[i]
-		print "Loading connections..."
-		followers = load_connections([i], "followers")
-		friends = load_connections([i], "friends")
-
-		# Add edges...
-		print "Building the graph..."
-
-		for f in followers:
-			for k in followers[f]:
-				graph.add_edge(k,f)
-	
-		for f in friends:
-			for k in friends[f]:
-				graph.add_edge(f,k)</pre>
-	</p>
-	
-	<h3>3D Model</h3>
+	<h2>Final Project</h2>
 	<p>	
-	The model can be rotated and zoomed with the mouse/trackpad. You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltcanvas id="cv" width=640 height=480&gt;
-	It seems you are using an outdated browser that does not support canvas :-(
-	&lt/canvas&gt;
-	&ltscript type="text/javascript"&gt;
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	&lt/script&gt;</pre>
+	My Final Project is a cool African made Mat that interacts with the user and monitors what Goes 
 	
-	You can set up the path to the 3D model (.stl/.obj) within this line:
-	<pre class="prettyprint linenums">
-	viewer.setParameter('SceneUrl','media/monkey.stl');</pre>
-	
-	Result:
-	<canvas id="cv" width=640 height=480>
-	It seems you are using an outdated browser that does not support canvas :-(
-	</canvas>
+	</p>
 	<script type="text/javascript">
 		var canvas = document.getElementById('cv');
 		var viewer = new JSC3D.Viewer(canvas);
@@ -212,7 +157,36 @@
 	<!-- footer -->
     
     <footer id="footer">
-       
+     <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Location</strong>
+                    </h4>
+                    <p>Gearbox Kenya
+                        <br>Bishop Magua , Opposite Uchumi Hyper Ngong Rd Nairobi</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-phone fa-fw"></i> +254-710854823</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">bobraphtoneafwata@gmail.com</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Made with Fab Love </p>
+                </div>
+            </div>
+        </div>
+                <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>  
     </footer>
     
 
