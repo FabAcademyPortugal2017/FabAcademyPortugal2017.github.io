@@ -317,7 +317,7 @@ pre {
 
 #fh5co-work .fh5co-work-wrap {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 #fh5co-work .fh5co-work-item {
   position: relative;
@@ -339,7 +339,7 @@ pre {
 #fh5co-work .fh5co-work-item .fh5co-overlay-bg {
 	position: absolute;
 	opacity: 0;
-	left: 388px;
+	left: -4px;
 }
 #fh5co-work .fh5co-work-item .fh5co-overlay-bg {
   background: rgba(255, 255, 255, 0.9);
@@ -351,7 +351,7 @@ pre {
 }
 #fh5co-work .fh5co-work-item .fh5co-overlay-text {
   text-align: center;
-  top: -18px;
+  top: -17px;
   margin-top: -36px;
   z-index: 56;
   width: 100%;

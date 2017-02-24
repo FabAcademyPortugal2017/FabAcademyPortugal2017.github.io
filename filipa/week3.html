@@ -25,9 +25,11 @@
 
 <body>
 
-      <!-- MENUS -->
+    <!-- MENUS -->
     
-<nav class="navbar navbar-default">
+     
+    
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">FabAcademy</a>
@@ -35,14 +37,20 @@
         
 
     <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">Home</a></li><li class="active"><a href="about.html">About</a></li>
+                <li class="active">
+        <a href="index.html">Home</a></li>
+        
+        <li>
+            <a class="page-scroll" href="about.html">About</a>
+        </li>
             
+                    
                 
-        <li class="dropdown">
+        <li class="dropdown" class="page-scroll">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Exercises
             <span class="caret"></span></a>
                
-               <ul class="dropdown-menu">    
+                <ul class="dropdown-menu">    
                     
         <li><a href="week1.html">1. Project Management</a></li>
         <li><a href="week2.html">2. Computer-aided design</a></li>
@@ -65,24 +73,15 @@
         <li><a href="week19.html">19.Project development</a></li>
                 </ul>
          </li>
-    
-        
-        <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Final Project
-            <span class="caret"></span></a>
-        
-                <ul class="dropdown-menu">
-                    <li><a href="concept.html">Concept</a></li>
-                    <li><a href="#">Development</a></li>
-                    <li><a href="#">Presentation</a></li>
-                    
-                </ul>
-        </li>
+
+        <li>
+        <a href="project.html">Final Project</a></li>
     </ul>         
     </div>
 </nav>
 
-    <div class="container">
+
+     <div class="container">
 
         <div class="row">
             <div class="box">
@@ -90,7 +89,6 @@
                   <div class="col-lg-12 text-center">
 
                     <h1 class="brand-name">Computer-controlled cutting</h1>
-                  <hr>
                       <h2 class="brand-before">
                       <small>Week 3</small> </h2>
                 </div>
@@ -99,8 +97,6 @@
                 </div>
             </div>
         </div>
-
-    
       
      <div class="container">
         <div class="row">
@@ -126,13 +122,20 @@
                     <p>After having my planning with the measurements, I started with the CorelDraw program to be able to print on the lasercutting machine.</p>
                     <br>
                     <p>On CorelDraw it was necessary to:</p>
-                       <li>1 - Define the page size equal to the maximum measures of the machine, which are 600mm x 300mm.</li>
-                       <li>2 - Define the minimum line thickness for the laser cut to be as precise as possible.</li>
-                       <li>3 - Define and paint the areas that will be to burn and not to cut with black solid color, RGB: 0,0,0</li>
-                       <li>4 - Finally, set the cut and burn parameters in the print preset.</li> 
+                    <ol type="1">
+                       <li>Define the page size equal to the maximum measures of the machine, which are 600mm x 300mm.</li>
+                        <br>
+                       <li>Define the minimum line thickness for the laser cut to be as precise as possible.</li>
+                        <br>
+                       <li>Define and paint the areas that will be to burn and not to cut with black solid color, RGB: 0,0,0</li>
+                        <br>
+                       <li>Finally, set the cut and burn parameters in the print preset.</li> 
+                    </ol>    
                     <br>
                     <br>
                        <p> Before starting to cut, I decided to do a few small tests on the material first (figure on the right) to understand the parameters of speed and power needed to cut each type of material.</p>
+                    
+                    
                 
                     
                    
@@ -172,7 +175,7 @@
                       <li>acrylic</li>
                        <li> wood</li>
             <br>    
-             <p> To cut the wood I used for as:
+             <p> To cut the Cardboard I used for as:
                 <ul>Vetor Setting:
                     <li>Speed: 10%</li>
                     <li>Power: 40%</li>
@@ -204,8 +207,10 @@
                 </ul>
                 <br>
                 <br>
-                <p>In the images, we can see the results of my tests.</p>
-                <p>The cuts and the fittings were fine, and the pieces fit perfectly to assembly the box. I used white glue to help fix the pieces:) </p>
+             
+                <p>The cuts and the fittings were fine, and the pieces fit perfectly to assembly the box. I used white glue to help fix the pieces </p>
+                <br>
+                <p>To ensure that the parts are secured without glue, it is necessary to reduce 1mm on each side to the fittings. For example, if the thickness of the material is 3mm, the fittings should be 2.98mm to get stuck.</p>
                 
                  </div>
                 <div class="clearfix"></div>
@@ -219,10 +224,41 @@
         <div class="box">
             <div class="col-lg-12 text-center">
                 
-                <h2 class="intro-text text-center"><strong>vinylcutter</strong>
+                <h2 class="intro-text text-center"><strong>Vinylcutter</strong>
                 </h2>
                  
             </div>
+            
+            <div class="col-md-6">
+               
+                 <img class="img-responsive img-border-left" src="img/week3_vinil4%20copy.jpg" alt="">
+                  <br><img class="img-responsive img-border-left" src="img/week3_vinil0.jpg" alt="">
+                  <br>
+                <img class="img-responsive img-border-left" src="img/week3_vinil00.jpg" alt="">
+                  <br>
+                <img class="img-responsive img-border-left" src="img/week3_vinil1.jpg" alt="">
+                  <br>
+                <img class="img-responsive img-border-left" src="img/week3_vinil2.jpg" alt="">
+                 
+            </div>
+                
+            <div class="col-md-6">
+                <p>I decided to give a name and create a logo for my project. Which will be called "Plant.Air".</p>
+                <p>I used the logo and cut it on vinyl to customize the boxes I did before in laser cut.</p>
+                <br>
+                <p>To do this, I used my vectorized logo in the Illustrator program and imported it into the PLOT software that works with acutting plotter ROHS.
+                <br>
+                <br>
+                <p>In PLOT software it is necessary to define as features:</p>
+                    <li>Overcut: 1mm</li>
+                    <li>Curve flatness: 0.6 auto-align</li>
+                    <br>
+                <p> In the vinyl cutting machine it is necessary to define the origin and the parameters:</p>
+                    <li>Speed: 350 m m / s</li>
+                    <li>Force: 60g</li>
+                <br>
+                <p>After the cut was done, the logo was removed and pasted into cardboard and MDF wood cartons.</p>
+                   
         </div>
          </div>
     </div>
