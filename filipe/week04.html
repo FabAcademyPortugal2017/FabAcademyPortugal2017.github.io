@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="icon" type="image logo" href="images/logo.gif" />
+		<title>Filipe Silvestre @ Fab Academy 2017</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1 id="title">Filipe Silvestre</h1>
+							<p>FCT FabLab Portugal</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Home</span></a></li>
+								<li><a href="index.html#Weekly" class="skel-layers-ignoreHref"><span class="icon fa-th">Weekly Assigment</span></a></li>
+                                <li><a href="index.html#Final" class="skel-layers-ignoreHref"><span class="icon fa-th">Final Project</span></a>
+                                </li>
+								<li><a href="index.html#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Me</span></a>
+                                </li>
+								<li><a href="index.html#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a>
+                                </li>								
+                            </ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://www.facebook.com/f.2a.silvestre" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="mailto:f.silvestre@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+			
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							
+							<header>
+								
+                                <a href="http://academy.cba.mit.edu/classes/electronics_production/index.html"><h3 style="color:black;">#04. Electronics Production</h3></a>
+							
+                            </header>                            
+                            <header>
+								
+                                <h3>Technology</h3>
+								
+							</header>
+							<p>
+				                For this week we were asked to produce a FabIPS and for that we could use a certain number of diferent techologies. In our case at the FCT FabLab we can only use machining and for that we have a <a href="http://www.shapeoko.com/wiki/index.php/ShapeOko_2">Shapeoko 2</a> and a <a href="https://www.inventables.com/technologies/carvey">Carvey</a> both by <a href="https://www.inventables.com/">Inventables</a>. The first one was a kit bought a couple of years a go and is a very simple equipment with 3 axis controlled by an arduino with a gshield. On the other hand we a month old Carvey, wish is the machine we ended up using to produce our pcbs.
+                            </p>
+                                <img src="images/weeks/week04/" />
+                            <br>
+                                                        
+                            <header>
+								
+                                <h3>From digital to physical</h3>
+								
+							</header>
+							<p>
+				                Starting with some experimenting, never used the carvey to carve pcb so i little testing first. After some advice from our local instructor Luís Carvão we decided to simply go for it and carve!
+                                First and very important, the Carvey uses a specific app, the <a href="https://www.inventables.com/technologies/easel">Easel</a>, its a very simple, very user friendly app. You can either draw directly on the browser app or you can import an SVG, Gcode or trace. We started by trying importing the Gcode and for that we used Fab Modules to generate the desired code as follow:
+                            </p>
+                                <img src="images/weeks/week04/fabmod_pngtraces.JPG" />
+                            <p>
+                                Imported the Gcode on Easel but unfortunatelly we got into some code problems as the exported gcode couldn't be recognized by the app and kept on giving errors, so decided to use the trace from the app directly on the png. The outcome from this wasn't detailed enough for what we needed since the tracks ended up beeing mixed and not as like the png. So, last but now least, we tryed the svg import and that did the trick.
+                            <br>
+                                
+                            </p>
+                            
+						</div>
+                        
+					</section>
+        </div>
+        
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

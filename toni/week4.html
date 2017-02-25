@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="barreiros, toni, fablab, academy" />
+<meta name="keywords" content="toni, barreiros, arquitecto, robótica, fablab, Portugal, Beira Baixa, living lab, inovation, COWORK, programção" />
+<meta name="author" content="Toni Barreiros / Design by Toni Barreiros - tonibarreiros@gmail.com/" />
+<meta name="google-site-verification" content="jL3wmXZG6dA3Kdf4W-pa8kFuV3vMbm9pDWimgrwS05k" />
+<link rel="stylesheet" type="text/css" href="style.css" title="1024px style" media="screen,projection" />
+<link REL="SHORTCUT ICON" HREF="http://www.fabacademy.org/supernode/barcelona/2013/barreiros.toni/favicon.ico"> 
+<title>Toni Barreiros</title>
+<style type="text/css">
+<!--
+.style13 {font-size: small}
+.style34 {color: #FF0000}
+.style35 {font-size: medium; color: #990000; }
+.style36 {color: #990000}
+.style38 {color: #000000; font-weight: bold; }
+.style39 {color: #990000; font-weight: bold; }
+.style41 {color: #000000; font-weight: bold; font-size: small; }
+.style43 {color: #000000; font-size: small; }
+.style44 {color: #000000}
+-->
+</style>
+<script src="AC_RunActiveContent.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="wrap">
+
+<p align="left" id="toplinks">Skip to: <a href="aboutme.html" class="style36">About me </a> |<a href="contactme.html"> <span class="style36">Contact me</span></a></p>
+
+<h1 align="justify"><span class="fade"><span class="style36"><a href="index.html" class="style39">Toni </a><span class="gray
+">F. Barreiros</span></span></span><br />
+  <br />
+<br />
+
+<img src="images/toni.jpg" alt="toni" /></h1>
+<p align="justify" class="style35" id="slogan"><span class="style34"><a href="http://fabacademy.org/" class="style36">FAB Academy</a></span> Project </p>
+<div id="content">
+  <h2 align="center">&nbsp;</h2>
+<p align="center"><span class="style36"><strong><a href="week3.html" class="style36"> WEEK 4 (15 February 2017)</a></strong></span><strong><br />
+</strong><span class="style38">[</span><span class="style39"><a href="http://academy.cba.mit.edu/classes/electronics_production/index.html" class="style38">Electronics Production</a></span><span class="style38">]</span></p>
+<p align="left" class="style38">This week The&nbsp;Electronics Production&nbsp;assignment is to mill a board,( hello.ISP.44.) stuff it with components and programming it, this board ISP that we can use later on to program future boards. </p>
+<div></div>
+<div>
+  <h2 class="style38">Objectives</h2>
+  <ul class="style41">
+    <li><strong>Mill a Board </strong></li>
+    <li>Welding the components</li>
+    <li><strong>Programming the Board</strong></li>
+  </ul>
+  <h2 class="style38"><strong><strong>Mill a Board </strong></strong><span class="style43">(hello.ISP.44.) </span></h2>
+<p>We have in our Fablab a Roland MDX 40A milling machine.  </p>
+  <p>We were to choose a FabISP circuit design from former FabAcademy students. &nbsp;My choice was <span id="u6498-29">hello.ISP.44</span>&nbsp;board.</p>
+  <p>First step I downloaded the png files and saved them in a folder on the desktop.</p>
+  <p>With these files we went to the milling machine Roland MDX 40A at the Fab Lab. It has a PC next to it from where we send all the files and instructions. It is a little bit like that with almost every machine here at the lab.</p>
+  <p align="center" class="style38"><img src="images/pcb1.jpg" alt="pcb1"  /></p>
+  <p align="left" class="style44"><img src="images/pcb2.jpg" alt="pcb2" /></p>
+  <p align="left" class="style44">Second step<span class="style44">  I mported the png. image of the FabISP traces to the Fab Modules, selected the output: Roland mill (.rml); and the process: PCB traces (1/64).</span></p>
+  <p align="left" class="style44">Before creating the .rml file, the machine has to be ready. For that, it is important to put the board on the base. The acrilic base in the machine doesn't come with the Roland machine, but is there just in case the bits drill too deep so it damages the board and not the machine's original base. This is not a problem because the Z axis can be set every time. The board can also be positioned anywhere inside the area covered by the wooden board, because the X and Y origin can also be reconfigured every time.</p>
+  <p align="center" class="style44"><img src="images/pcb3.jpg" alt="pcb3"/></p>
+  <p align="left" class="style44">Third step set the correct values for machine:</p>
+  <ul>
+    <li class="style13">Output: Machine: MDX40 </li>
+    <li class="style13">cut depth (mm):&nbsp;to 0,5mm; </li>
+    <li class="style13"> tool diameter (mm):&nbsp;0,25 mm </li>
+    <li class="style13">number of offsets (-1 to fill):&nbsp;4</li>
+    <li class="style13">offset overlap (%):&nbsp;50%</li>
+  </ul>
+  <p align="center" class="style44"><img src="images/pcb4.jpg" alt="pcb4" /></p>
+  <p align="left" class="style44">Fourth step pushed the button calculate to see the perview of the traces and downloaded de .rlm file in the G code.</p>
+  <p align="center" class="style44"><img src="images/pcb5.jpg" alt="pcb5"  /></p>
+  <p align="left" class="style44">Once the X and Y origin is set, the Z origin has to be set. This is done by pressing on the up and down arrows on the machine panel. Normally the bit will be above the desired level so we can press on the DOWN button, the bit will start rotating and approaching downwards very slowly... One has to be very precise but it can be seen when the bit touches the board because a little bit of dust is generated.</p>
+  <br />
+  <p align="center" class="style44"><img src="images/milling1.jpg" alt="milling1" /></p>
+  <p align="left" class="style44">Then we import the generated rml fille into fabmodules and to the Roland V panel and &quot;begin milling&quot;</p>
+  <p align="center" class="style44"><img src="images/milling2.jpg" alt="milling2" width="719" height="364" /></p>
+  <p align="left" class="style44">Fifth step  &quot;begin milling&quot;  it takes about ten minutes to do all the traces! And after all the traces are done it's very dusty and Siron advised us never to blow all the dust but to vaccuum it because it can damage the motor! And also, once all the tracing is done, all the steps before have to be repeated but changing the configuration to 1/32 which is a bigger bit and pre-set to cut instead of tracing. The only one thing that one has to remember is the X,Y points from the settings before, especially if many boards were cut!</p>
+  <p align="center" class="style44"><img src="images/pcb7.jpg" alt="pcb7"  /></p>
+  <p align="left" class="style44">Sixth step, all  boards of the students in Fund&atilde;o, We did four boards and, as I explain before, every step is almost the same in order to cut the board. Some configuration changes are needed and always remember the origin points! Once everything is cut you can TURN OFF THE MACHINE and then remove the board and the double sided tape from the bottom and we have a circuit!</p>
+  <p align="center" class="style44"><img src="images/pcb6.jpg" alt="pcb6"  /></p>
+  <p align="left" class="style44">My Board &quot;T&quot; (Toni Board)</p>
+  <p align="center" class="style44"><img src="images/pcb8.jpg" alt="pcb8"  /></p>
+  <p align="left" class="style44">The board was ready, the next step is to start looking for the components and to start soldering them. There's many things to bring together before starting to solder. A good light is very important, a comfortable space too. And then, some tools: tweezers, a fine point soldering iron, the heater, a sponge, some masking tape, solder, a loup, my board and the components. This is the set up I ended having and the components list:</p>
+  <ul>
+    <li>
+      <div align="left" class="style43">1 ATTiny 44 microcontroller</div>
+    </li>
+    <li>
+      <div align="left" class="style43">1 Capacitor 1uF</div>
+    </li>
+    <li>
+      <div align="left" class="style43">2 Capacitor 10 pF</div>
+    </li>
+    <li>
+      <div align="left" class="style43">2 Resistor 100 ohm</div>
+    </li>
+    <li>
+      <div align="left" class="style43">1 Resistor 499 ohm</div>
+    </li>
+    <li>
+      <div align="left" class="style43">1 Resistor 1K ohm</div>
+    </li>
+    <li>
+      <div align="left" class="style43">1 Resistor 10K</div>
+    </li>
+    <li>
+      <div align="left" class="style43">One 6 pin header</div>
+    </li>
+    <li>
+      <div align="left" class="style43">USB connector</div>
+    </li>
+    <li>
+      <div align="left" class="style43">2 jumpers - 0 ohm resistors</div>
+    </li>
+    <li>
+      <div align="left" class="style43">1 Crystal 20MHz</div>
+    </li>
+    <li>
+      <div align="left" class="style43">two Zener Diode 3.3 V</div>
+    </li>
+    <li>
+      <div align="left" class="style43">one usb mini cable</div>
+    </li>
+    <li>
+      <div align="left" class="style43">one ribbon cable</div>
+    </li>
+    <li>
+      <div align="left" class="style43">two 6 pin connectors</div>
+    </li>
+  </ul>
+  <p align="center" class="style44"><img src="images/pcb9.jpg" alt="pcb9"  /></p>
+</div>
+<p align="left" class="style44">After working on it patiently, the board was done! The most difficult parts were the micro-controller and the usb header.</p>
+<p align="center" class="style44"><img src="images/pcb10.jpg" alt="pcb10" /></p>
+<p><strong>&quot;Smoke Test&quot;</strong></p>
+<p>I plug the FabISP into my computer via the mini USB cable and I get a green light in the debugger.</p>
+<p align="center" class="style44"><img src="images/pcb11.jpg" alt="pcb11"  /></p>
+<p align="left" class="style44">Board is complete! </p>
+<p align="left" class="style44" id="p-process">Next step , we have to&nbsp;program our FABISP.</p>
+<p align="left" class="style44" id="p-process">And this are the steps:</p>
+<div>
+  <div>
+    <div>
+      <li>
+        <p align="left" id="p-process-list">To program the FabISP,&nbsp;you first need to install the necessary software for your operating system and download the firmware.</p>
+      </li>
+      <li>
+        <p align="left" id="p-process-list">Edit&nbsp;the Makefile.</p>
+      </li>
+      <li>
+        <p align="left" id="p-process-list">Set the fuses /&nbsp;program the board.</p>
+      </li>
+      <li>
+        <p align="left" id="p-process-list">Verify&nbsp;that the board is working properly.</p>
+      </li>
+      <li>
+        <p align="left" class="style44" id="p-process-list">Desolder jumpers&nbsp;to turn it into a programer.</p>
+      </li>
+    </div>
+  </div>
+</div>
+<p align="left" class="style38">To Be Continued... </p>
+<p align="left" class="style38">&nbsp;</p>
+<div><div></div>
+  </div>
+</div>
+
+<div id="sidebar">
+<h2 align="center" class="style38"> My Fab Lab  </h2>
+<p align="center" class="style13"><a href="https://www.facebook.com/FabLabAldeiasDoXisto/"><img src="images/fablablogo.png" alt="fablablogo"  /></a></p>
+<h2>&nbsp;</h2>
+<p align="center"><a href="http://www.facebook.com/toni.barreiros" target="_blank"><img src="images/facebook.png"  /></a></p>
+<h2>&nbsp;</h2>
+<ul>
+  <li>
+    <div align="center"><a class="hide" href="#header">Back</a><a href="https://www.cm-fundao.pt/" target="_blank" class="style36">Fund&atilde;o 2017 </a></div>
+  </li>
+</ul>
+</div>
+
+<div id="footer">
+  <p><a href="aboutme.html">About me</a> | <a href="contactme.html">Contact </a>| <a href="#header">Back to top</a><br />
+&copy; 2017 Toni F. Barreiros  Design</p>
+</div>
+
+</div>
+</body>
+</html>

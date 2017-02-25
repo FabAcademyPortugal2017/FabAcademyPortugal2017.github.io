@@ -1,0 +1,192 @@
+<!-- 
+//////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////
+ -->
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Fab Academy 2017;</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Fab Academy Page by Inês" />
+  	<meta name="keywords" content="fab lab, fab academy, assignments" />
+  	<meta name="author" content="Inês Carmo" />
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon2.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon2.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="css/style.css">
+
+	
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body onLoad="Load()">
+		
+		<!-- Header -->
+		<header id="fh5co-header" role="banner">
+			<div class="container">
+				<!-- Logo -->
+				<div id="fh5co-logo">
+					<a href="index.html">
+						<img src="images/logo 2.png" alt="" width="150" height="151">					</a>				</div>
+				<!-- Logo -->
+				
+				<!-- Mobile Toggle Menu Button -->
+				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+				
+					<!-- Main Nav -->
+				<div id="fh5co-main-nav">
+				  <nav id="fh5co-nav" role="navigation">
+						<ul>
+							<li class="fh5co-active">
+								<a href="index.html">Assignments</a><a href="index.html"></a>							</li>
+							<li>
+								<a href="finalproject.html">Final Project </a>							</li>
+							<li>
+								<a href="aboutme.html">About me </a>							</li>
+						</ul>
+						
+				  </nav>
+				</div>
+				<!-- Main Nav -->
+			</div>
+		</header>
+		<!-- Header -->
+
+		<main role="main">
+			<!-- Start Intro -->
+			<div id="fh5co-intro">
+				<div class="container">
+					<h1>Week no. 4 </h1>
+						<div class="row">
+						  <div class="col-md-6 col-md-push-6 fh5co-intro-sub">
+						    <p>Electronics Production :						    </p>
+						    <ul>
+						      <li>
+						        <p>Make an in-circuit programmer by milling the PCB</p>
+					          </li>
+						      <li>
+						        <p>Optionally, trying other processes.</p>
+					          </li>
+					        </ul>
+					      </div>
+						</div>
+				</div>
+			</div>
+			<!-- End Intro -->
+			<div id="fh5co-tab-feature-center" class="fh5co-tab text-center">
+										<div>
+										  <div class="row">
+											  <div class="col-md-12">
+													<h2 class="h3">Milling the PCP  </h2>
+    </div>
+											  
+												<div class="col-md-12">
+													<p>To iniciate my week's work I started by reading this <a href="http://fabacademy.org/archives/content/tutorials/05_Electronics_Production/Assemble_and_Program_FabISP.html" target="_blank">tutorial</a> and downloaded the board files. </p>
+											  </div>	
+							  		      <p align="center" class="style38"><img src="images/Week 4/hello.ISP.44.traces.png" width="366" height="719"p><img src="images/Week 4/hello.ISP.44.interior.png" width="366" height="719"p>                                          
+							  		      <p align="center" class="style38">Then i imported the png. image of the FabISP traces to the Fab Modules, selected the output: Roland mill (.rml); and the process: PCB traces (1/64).                                                                                    
+							  		      <p align="center" class="style38"><img src="images/Week 4/fabmodule1.png" width="719" height="404">                                          
+							  		      <p align="center" class="style38">After that i changed some values like: 
+							  		      <ul>
+							  		        <li>Output: Machine: MDX40A </li>
+							  		        <li>cut depth (mm): to 0,05mm;						  		            </li>
+							  		        <li> tool diameter (mm): 0,25 mm </li>
+							  		        <li>number of offsets (-1 to fill): 4</li>
+							  		        <li>offset overlap (%): 50%</li>
+							  		        </ul>
+							  		      <p><img src="images/Week 4/fabmodule2.png" width="719" height="404"></p>
+							  		      <p>Then i pushed the button calculate to see the perview of the traces and downloaded de .rlm file with the G code.</p>
+							  		      <p><img src="images/Week 4/fabmodule3.png" width="719" height="404"> </p>
+							  		      <p>After i downloaded the .rml file, i opened the V-Panel of the machine (Roland MDX40) anda set the origin of the x,y a z axis.</p>
+							  		      <p><img src="images/Week 4/roland1.png" width="719" height="404"> </p>
+							  		      <p>Next what i did was import the .rml file generated by the fab modules and proced to the cut.</p>
+							  		      <p><img src="images/Week 4/roland2.png" width="719" height="404"> </p>
+							  		      <p>The board cut out was in the same three steps, but this time using the process PCB outline (1/32). And changed: </p>
+							  		      <ul>
+							  		        <li>cut depth (mm): to 0,25mm; </li>
+							  		        <li> tool diameter (mm): 0,8 mm<br>
+							  		          <br>
+							  		        </li>
+							  		        </ul>
+							  		      </div>
+			  </div>
+											  <div class="col-md-6"></div>
+    </div>
+	</div>
+										<div>
+											<div class="row">
+												<div class="col-md-12">
+													<h2 align="center" class="h3">Stufing</h2>
+											  </div>
+    <div class="col-md-12">
+		  <p align="center">After the milling of the Fab ISP was done its time to solder the components to the board.</p>
+		  <p align="center">First i did a list with the components,quantities and their position on the board  with a panel of pre-spacing tape to help me pick </p>
+		  <p align="center">the components and downloaded the Hello ISP 44 schematic and some  photos to set as an example. </p>
+		  <p align="center"><img src="images/Week 4/soldering.png" width="719" height="431"> </p>
+		  <p align="center">Then i starded solder the components to the board using a soldering iron and solder.</p>
+		  <p align="center"><img src="images/Week 4/soldering1.png" width="400" height="255"><img src="images/Week 4/soldering2.png" width="423" height="256"></p>
+		  <p align="center">It was my first time doing this, so it's not perfect, i need to practice more. </p>
+		  <p align="center"><img src="images/Week 4/soldering3.png" width="400" height="240"><img src="images/Week 4/soldering4.png" width="400" height="240"></p>
+		  <p align="center">I have some components missing, i will receive them on friday so i can finhish this assignment. </p>
+    </div>
+											 
+										<div>
+											<div class="row">
+											  <div class="col-md-12">
+													<h2 align="center" class="h3">Debugging and Programming</h2>
+    </div>
+											  
+												<div class="col-md-12">
+													<p align="center">......</p>
+													
+	</div>											
+	                                            <div align="left">
+	                                              <p align="center"><FONT SIZE=1><BR>
+	                                                </FONT><img src="images/work_4.jpg" width="470" height="330"></p>
+	                                             
+    </div>
+												 
+	</BODY>
+
+					
+							

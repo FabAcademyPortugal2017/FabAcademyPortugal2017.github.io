@@ -3809,13 +3809,15 @@
 			border-bottom: 0;
 			color: inherit;
 			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-			font-size: 2em;
+			font-size: 2.2em;
 		}
 
 		#header .logo .logot {
-			height: 30px;
-			fill: 186859;
-			color:inherit;
+			position: relative;
+			top: 4.7px;
+			height: 37px;
+			fill: #285149;
+
 
 		}
 
@@ -3843,9 +3845,10 @@
 				}
 
 				#header .logo .logot {
+					position: relative;
+					top: 3px;
 					height: 18px;
-					fill: 186859;
-					color:inherit;
+					fill: #285149;
 
 				}
 
