@@ -8,7 +8,7 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2015 - Name Surname</title>
+    <title>Fab Academy 2017 - Bob Raphtone </title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -55,7 +55,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Name Surname</a>
+          <a class="navbar-brand" href="index.html">Bob Raphtone</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -81,126 +81,86 @@
 	<!-- Insert your content here below! -->
 
 
-     <h2>Exercise...</h1>
+     <h2>Week 5</h1>
     
-    <h3>Menu</h3>
+    <h3>3D Scanning and Printing </h3>
 	<p>
-	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
+    In this week i will demostrate how I scanned 3D objects using a 3d camera ,and finally 3D print the object  . I chose a Kinect 360 camera made by Microsoft .
 	</p>
+    <p>Other Cameras That I tried out or which are available in My lab includes intels Real Seanse Camera  made by Intel corporation</p>
     
-    
-    <h3>Text</h3>
+    <h3>Kinect 360 Camera</h3>
 	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp&gt;
-	Your text here
-	&lt/p&gt;</pre>
+	Kinect Camera is an easy to use Camera ,Although its expensive ,It can do a wide variety of things including bieng used to take images ,3d images for your Projects as well as bieng used as an input for your various Desktop Games.
+	
 	</p>
-	Result:
+	<h3>Software and Hardware Required  </h3>
+	<p>For this week I used the following  free Softwares  that works with the various Cameras and 3d printers .Note that each Camera and printer has its freely downloadable Software from the manufactures Websites <br></br>
+	1) Microsoft Kinect 360 Camera<br></br>
+	2) Real Sense Camera<br></br>
+	3) Maker bot 3D printer<br></br> 
+	</p>
+	<p class="pic">
+        <img src="media/kinect.jpg">
+        <legend>Kinect Camera.</legend>
+        </p>
+        <p class="pic">
+        <img src="media/makerbot.jpg">
+        <legend>Maker Bot 3D printer.</legend>
+        </p>
+    
+    
+   <p>  I preferred using Microsofts Kinect camera since its easy to use ,the software is very easy to use and it also exports .stl file formats thats compartible with with the Makerbot 3D prirnter and other printers found in most Fablabs and maker spaces. <br></br>
+   The kinect also produced better quality 3d scanns compared to Intel Realsense Camera.</p>
+	
+	
+	<h2>Intel Real sense Camera  </h2>
 	<p>
-	Your text here
+	Intel real sense Camera is a development Kit /camera made by Intel ,It was released in 2013 but was available for developers to use in in making desktop games ,am=nimations ,in robotics,drones etc .In conjuction withoter INtel technologies such as itel galileoe and edison ,Real sense camera has been used alot to make great drones with 3d image analysis etc
 	</p>
 	
-	<h3>Images</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp class="pic&gt;>&ltimg src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg"&gt;
-	&ltlegend&gt;Here's the legend of the picture.&lt/legend&gt;
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p class="pic"><img src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg">
-	<legend>Here's the legend of the picture.</legend>
-	</p>
+	<p> Some interesting features of the Camera include depth analysis .It has sesnsors that are used to measure depth or how far an object or image is from the camera . I will demosstrate how to use this camera to measure depth as well as scanning of various 3d objects and previewing it using a web browser.</p>
+	<p class="pic">
+        <img src="media/realsense.jpg">
+        <legend>Real Sense Camera.</legend>
+        </p>
+    
      
-	<h3>Code</h3>
+	<h3>Scanning With Kinect </h3>
 	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltpre class="prettyprint linenums"&gt;
-	Your code here
-	&lt/pre&gt;</pre>
-	
-	Result:
-	<pre class="prettyprint linenums">
-	for i in members:
-		print ""
-		print "USER:",members[i]
-		print "Loading connections..."
-		followers = load_connections([i], "followers")
-		friends = load_connections([i], "friends")
-
-		# Add edges...
-		print "Building the graph..."
-
-		for f in followers:
-			for k in followers[f]:
-				graph.add_edge(k,f)
-	
-		for f in friends:
-			for k in friends[f]:
-				graph.add_edge(f,k)</pre>
+	After downloading and instslling the Kinects Software one needs to follow the following steps to ensure excellent quality Scans of the Images .<br></br>
+	1) Step 1 -Plug In the Camera to the power using Its adapter .Also plug in the usb cable to your Laptop.
+	<br></br>
+	2) Start the software and browse to the Scan tab in the top 
+	</p>
+	 <p class="pic">
+        <img src="media/scan1.jpg">
+        <legend>Me during Scanning.</legend>
+        </p>
+    <p class="pic">
+        <img src="media/scan2.jpg">
+        <legend>Kinect Scanning my Image.</legend>
+        </p>
+    
+	<h3> Image Processing </h3>
+	<p>	
+	Here I will demonstrate how to use the  Kinect camera  to process the Image Scans and produce a .stl file thats can easily be 3 D printed with a makerbot 3D printer in our lab.
 	</p>
 	
-	<h3>3D Model</h3>
-	<p>	
-	The model can be rotated and zoomed with the mouse/trackpad. You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltcanvas id="cv" width=640 height=480&gt;
-	It seems you are using an outdated browser that does not support canvas :-(
-	&lt/canvas&gt;
-	&ltscript type="text/javascript"&gt;
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	&lt/script&gt;</pre>
 	
-	You can set up the path to the 3D model (.stl/.obj) within this line:
-	<pre class="prettyprint linenums">
-	viewer.setParameter('SceneUrl','media/monkey.stl');</pre>
-	
-	Result:
-	<canvas id="cv" width=640 height=480>
-	It seems you are using an outdated browser that does not support canvas :-(
-	</canvas>
-	<script type="text/javascript">
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	</script> 
-    </p> 
+	<h2> 3D printing </h2> 
+    <p class="pic">
+        <img src="media/scan3.jpg">
+        <legend>The Stl file opened with the makerbot software ready to 3D print.</legend>
+        </p>
     
     <h3>Download</h3>
 	<p>
-	You can set up a button for files to be downloaded with:
-	<pre class="prettyprint linenums">
-	&lta href="#"&gt;
-	&ltbutton type="button" class="btn btn-primary btn-lg">Download the file&lt/button&gt;
-	&lt/a&gt;</pre>
+	
 	</p>
 	
 	<p>
-	Result:
+	
 	</p>
 	<p>
 	<a href="#">
@@ -208,9 +168,9 @@
 	</a>
 	</p>
       
-    <h3>Would you like to insert more style/elements?</h3>
+    <h3>Videos</h3>
       <p>
-      Check the documentation of Bootstrap <a href="">here</a>.
+     Youtube  Videos of my Scans and 3d printing <a href="">here</a>.
       </p>
     <!-- End of your content -->
 
@@ -219,13 +179,40 @@
 	<!-- footer -->
     
     <footer id="footer">
-        <p id="cclicense">
-                </p>
-        <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
-        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
-        </p>
+        <footer id="footer">
+         <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Location</strong>
+                    </h4>
+                    <p>Gearbox Kenya
+                        <br>Bishop Magua , Opposite Uchumi Hyper Ngong Rd Nairobi</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-phone fa-fw"></i> +254-710854823</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">bobraphtoneafwata@gmail.com</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Made with Fab Love </p>
+                </div>
+            </div>
+        </div>
+                <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
     </footer>
+    
+   
     
 
 	<!-- Do not touch this! -->
