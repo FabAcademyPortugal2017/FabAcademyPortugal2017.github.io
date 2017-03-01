@@ -79,8 +79,510 @@
     <div class="container">
 
 	<!-- Insert your content here below! -->
+<h3>Week 4 - Make an in-circuit programmer by milling the PCB</h3>
+        <h3>Description</h3>
+    
+<p>This week I will be making a ISP <a href="https://en.wikipedia.org/wiki/In-system_programming" >(In-system programming)</a> or in-circuit programmer.</p>
 
+<p>I chose to do <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP</a>. I chose it for its simplicity and cost as it is striped down to a bare minimum of components.</p>
         
+<p class="pic"><img src="media/week4img/image001.png"><legend>image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend></p>
+        
+<p class="pic"><img src="media/week4img/image003.png"><legend>image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend></p>
+
+
+<p>The process will be split in phases, Milling, Stuffing/Populating, De-buging, Programing:</p>
+
+<h4>Milling</h4>
+<p>On this phase I will be using the following:</p>
+
+<p>_	Fab Modules <a href="http://fabmodules.org"></a></p>
+<p>_	Mach3</p>
+<p>_	The CNC</p>
+
+<h4>Fab Modules</h4>
+
+<p>-	I started by downloading the Traces (1000 dpi) and Outline Cutout (1000 dpi) of the circuit provided at Brian's tutorial.</p>
+
+<p class="pic"><img src="media/week4img/image005.png"><legend>image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend></p>
+
+<p class="pic"><img src="media/week4img/image007.png"><legend>image from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian's ISP's</a> page</legend></p>
+
+<h4>-	At Fab modules</h4>
+
+<p>I selected the option "image (.png)"</p>
+        
+<p class="pic"><img src="media/week4img/image009.png"><legend>image capture from my computer</legend></p>
+        
+<p>I choose the image file</p>
+<p class="pic"><img src="media/week4img/image011.png"><legend>image capture from my computer</legend></p>
+
+<p>Once image is loaded I selected "output format" and then "G-codes (.nc)"</p>
+        
+<p class="pic"><img src="media/week4img/image013.png"><legend>image capture from my computer</legend></p>
+
+<p>On Process I selected "PCB traces (1/64)"</p>
+        
+<p class="pic"><img src="media/week4img/image015.png"><legend>image capture from my computer</legend></p>
+
+<p>Before calculating I changed the cut depth to 0.05, half of the default value as I was beeing a bit cautious on it.</p>
+<p class="pic"><img src="media/week4img/image017.png"><legend>image capture from my computer</legend></p>
+
+<p>Then pressed calculate</p>
+
+<p class="pic"><img src="media/week4img/image019.png"><legend>image capture from my computer</legend></p>
+
+<p>After calculation I proceed with a inspection of the toolpath to make sure that all traces were covered. By holding left mouse key I was able to move the image and with the wheel button I could zoom the image to better check the tool path.</p>
+        
+<p class="pic"><img src="media/week4img/image021.png"><legend>image capture from my computer</legend></p>
+
+<p>By holding right mouse key I was able to even see it with a different perspective.</p>
+        
+<p class="pic"><img src="media/week4img/image023.png"><legend>image capture from my computer</legend></p>
+
+<p>Last I saved the file for the milling process.</p>
+
+<p class="pic"><img src="media/week4img/image025.png"><legend>image capture from my computer</legend></p>
+
+<p class="pic"><img src="media/week4img/image027.png"><legend>image capture from my computer</legend></p>
+
+<p>To outline I followed the same steps as before exept I chose to "PCB outline (1/32)" instead of traces.</p>
+
+<p class="pic"><img src="media/week4img/image029.png"><legend>image capture from my computer</legend></p>
+        
+<h4>2. Mach3</h4>
+
+<p>I started the preparation of the cnc by milling a pocket the size of the blank PCB (76x50x1.5mm)</p>
+
+<p class="pic"><img src="media/week4img/image031.png"><legend>image capture from my computer</legend></p>
+
+<p>Milling the pocket</p>
+
+<p class="pic"><img src="media/week4img/image033.png"><legend>image capture from my computer</legend></p>
+
+<p>Finished pocket</p>
+
+<p class="pic"><img src="media/week4img/image035.png"><legend>image capture from my computer</legend></p>
+
+<p>Gluing double face tape on the FR1 board
+        </p>
+
+<p class="pic"><img src="media/week4img/image037.png"><legend>image capture from my computer</legend></p>
+
+<p>The end result is this.</p>
+
+<p class="pic"><img src="media/week4img/image039.png"><legend>image capture from my computer</legend></p>
+        
+<p>Milling the cutout of one of the ISP's </p>
+
+<p class="pic"><img src="media/week4img/image041.png"><legend>image capture from my computer</legend></p>
+
+<p>Removing the PCB from the pocket.</p>
+
+<p class="pic"><img src="media/week4img/image043.png"><legend>image capture from my computer</legend></p>
+              
+<p>I used a Xsato blade and sandpaper to remove shavings left from the milling process.</p>
+
+<p class="pic"><img src="media/week4img/image045.png"><legend>image capture from my computer</legend></p>
+
+<p>Removed the double face tape from behind the pcb.</p>
+        
+<p class="pic"><img src="media/week4img/image047.png"><legend>image capture from my computer</legend></p>
+
+<h4>3. Stuffing</h4>
+
+<p>Basing on Brian's ISP's page tutorial I started by creating a spreadsheet with the components and its positions.</p>
+
+<p class="pic"><img src="media/week4img/image049.png"><legend>image capture from my computer</legend></p>
+    
+<p class="pic"><img src="media/week4img/image051.png"><legend>image from Brian's ISP's page</legend></p>
+
+<p class="pic"><img src="media/week4img/image053.png"><legend>image from Brian's ISP's page</legend></p>
+
+BOM
+        
+<table border=1 cellspacing=0 cellpadding=0 width=800>
+ <tr>
+  <td width=178 valign=top style='width:200pt;border:solid white 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='line-height:normal'>Components</p>
+  </td>
+  <td width=60 valign=top style='width:60pt;border:solid white 1.0pt;
+  border-left:none;solid white 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='line-height:normal'>Location</p>
+  </td>
+  <td width=200 valign=top style='width:300pt;border:solid white 1.0pt;
+  border-left:none;solid white 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='line-height:normal'><span class=SpellE>Digikey</span>
+  or Mouser</p>
+  <p style='line-height:normal'>Part number </p>
+  </td>
+  <td width=146 valign=top style='width:145.5pt;border:solid white 1.0pt;
+  border-left:none;solid white 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='line-height:normal'>Manufacture Part #</p>
+  </td>
+ </tr>
+ <tr >
+  <td width=178 valign=top style='width:177.75pt;border:solid white 1.0pt;
+  border-top:none;solid white 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='margin-left:.5in;auto;
+  text-indent:-.25in;line-height:normal;l0 level1 lfo8'><![if !supportLists]><span
+  style='font-size:10.0pt'><span style='Ignore'>_<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>1x
+  <a href="http://www.atmel.com/devices/attiny45.aspx"><span style='color:#1155CC'>ATtiny45</span></a>
+  or ATtiny85</p>
+  </td>
+  <td width=56 valign=top style='width:56.25pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='line-height:normal'>U1</p>
+  </td>
+  <td width=130 valign=bottom style='width:129.75pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:2.0pt 2.0pt 2.0pt 2.0pt'>
+  <p style='line-height:normal'><a
+  href="http://www.digikey.com/product-detail/en/atmel/ATTINY45V-10SUR/ATTINY45V-10SURCT-ND/3789329"><span
+  style='color:#1155CC'>ATTINY45V-10SU-ND</span></a></p>
+  </td>
+  <td width=146 valign=bottom style='width:145.5pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:2.0pt 2.0pt 2.0pt 2.0pt'>
+  <p style='line-height:normal'>ATTINY45V-10SUR</p>
+  </td>
+ </tr>
+ <tr >
+  <td width=178 valign=top style='width:177.75pt;border:solid white 1.0pt;
+  border-top:none;solid white 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='margin-left:.5in;auto;
+  text-indent:-.25in;line-height:normal;l0 level1 lfo8'><![if !supportLists]><span
+  style='font-size:10.0pt'><span style='Ignore'>_<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>2x
+  1kΩ resistors</p>
+  </td>
+  <td width=56 valign=top style='width:56.25pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='line-height:normal'>R1, R6</p>
+  </td>
+  <td width=130 valign=bottom style='width:129.75pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:2.0pt 2.0pt 2.0pt 2.0pt'>
+  <p style='line-height:normal'><a
+  href="http://www.digikey.com/product-detail/en/yageo/RC1206FR-071KL/311-1.00KFRCT-ND/731334"><span
+  style='color:#1155CC'>311-1.00KFRCT-ND</span></a></p>
+  </td>
+  <td width=146 valign=bottom style='width:145.5pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:2.0pt 2.0pt 2.0pt 2.0pt'>
+  <p style='line-height:normal'>RC1206FR-071KL </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:177.75pt;border:solid white 1.0pt;
+  border-top:none;solid white 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='margin-left:.5in;auto;
+  text-indent:-.25in;line-height:normal;l0 level1 lfo8'><![if !supportLists]><span
+  style='font-size:10.0pt'><span style='Ignore'>_<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>2x
+  499Ω resistors</p>
+  </td>
+  <td width=56 valign=top style='width:56.25pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='line-height:normal'>R2, R5</p>
+  </td>
+  <td width=130 valign=bottom style='width:129.75pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:2.0pt 2.0pt 2.0pt 2.0pt'>
+  <p style='line-height:normal'><a
+  href="http://www.digikey.com/product-detail/en/yageo/RC1206FR-07499RL/311-499FRCT-ND/731891"><span
+  style='color:#1155CC'>311-499FRCT-ND</span></a></p>
+  </td>
+  <td width=146 valign=bottom style='width:145.5pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:2.0pt 2.0pt 2.0pt 2.0pt'>
+  <p style='line-height:normal'>RC1206FR-07499RL </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:177.75pt;border:solid white 1.0pt;
+  border-top:none;solid white 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='margin-left:.5in;auto;
+  text-indent:-.25in;line-height:normal;l0 level1 lfo8'><![if !supportLists]><span
+  style='font-size:10.0pt'><span style='Ignore'>_<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>2x
+  49Ω resistors</p>
+  </td>
+  <td width=56 valign=top style='width:56.25pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='line-height:normal'>R3, R4</p>
+  </td>
+  <td width=130 valign=bottom style='width:129.75pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:2.0pt 2.0pt 2.0pt 2.0pt'>
+  <p style='line-height:normal'><a
+  href="http://www.digikey.com/product-detail/en/yageo/RC1206FR-0749R9L/311-49.9FRCT-ND/731889"><span
+  style='color:#1155CC'>311-49.9FRCT-ND</span></a></p>
+  </td>
+  <td width=146 valign=bottom style='width:145.5pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:2.0pt 2.0pt 2.0pt 2.0pt'>
+  <p style='line-height:normal'>RC1206FR-0749R9L</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:177.75pt;border:solid white 1.0pt;
+  border-top:none;solid white 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='margin-left:.5in;auto;
+  text-indent:-.25in;line-height:normal;l0 level1 lfo8'><![if !supportLists]><span
+  style='font-size:10.0pt'><span style='Ignore'>_<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>2x
+  3.3v <span class=SpellE>zener</span> diodes</p>
+  </td>
+  <td width=56 valign=top style='width:56.25pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='line-height:normal'>D1, D2</p>
+  </td>
+  <td width=130 valign=bottom style='width:129.75pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:2.0pt 2.0pt 2.0pt 2.0pt'>
+  <p style='line-height:normal'><a
+  href="http://www.digikey.com/product-detail/en/diodes-incorporated/BZT52C3V3-7-F/BZT52C3V3-FDICT-ND/717854"><span
+  style='color:#1155CC'>BZT52C3V3-FDICT-ND</span></a></p>
+  </td>
+  <td width=146 valign=bottom style='width:145.5pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:2.0pt 2.0pt 2.0pt 2.0pt'>
+  <p style='line-height:normal'>BZT52C3V3-7-F</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:177.75pt;border:solid white 1.0pt;
+  border-top:none;solid white 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='margin-left:.5in;auto;
+  text-indent:-.25in;line-height:normal;l0 level1 lfo8'><![if !supportLists]><span
+  style='font-size:10.0pt'><span style='Ignore'>_<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>1x
+  red LED</p>
+  </td>
+  <td width=56 valign=top style='width:56.25pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='line-height:normal'>D4</p>
+  </td>
+  <td width=130 valign=bottom style='width:129.75pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:2.0pt 2.0pt 2.0pt 2.0pt'>
+  <p style='line-height:normal'><a
+  href="http://www.digikey.com/product-detail/en/lite-on-inc/LTST-C150CKT/160-1167-1-ND/269239"><span
+  style='color:#1155CC'>160-1167-1-ND</span></a></p>
+  </td>
+  <td width=146 valign=bottom style='width:145.5pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:2.0pt 2.0pt 2.0pt 2.0pt'>
+  <p style='line-height:normal'>LTST-C150CKT</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:177.75pt;border:solid white 1.0pt;
+  border-top:none;solid white 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='margin-left:.5in;auto;
+  text-indent:-.25in;line-height:normal;l0 level1 lfo8'><![if !supportLists]><span
+  style='font-size:10.0pt'><span style='Ignore'>_<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>1x
+  green LED</p>
+  </td>
+  <td width=56 valign=top style='width:56.25pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='line-height:normal'>D3</p>
+  </td>
+  <td width=130 valign=bottom style='width:129.75pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:2.0pt 2.0pt 2.0pt 2.0pt'>
+  <p style='line-height:normal'><a
+  href="http://www.digikey.com/product-detail/en/lite-on-inc/LTST-C230TBKT/160-1889-1-ND/3306146"><span
+  style='color:#1155CC'>160-1889-1-ND</span></a></p>
+  </td>
+  <td width=146 valign=bottom style='width:145.5pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:2.0pt 2.0pt 2.0pt 2.0pt'>
+  <p style='line-height:normal'>LTST-C230TBKT</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:177.75pt;border:solid white 1.0pt;
+  border-top:none;solid white 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='margin-left:.5in;auto;
+  text-indent:-.25in;line-height:normal;l0 level1 lfo8'><![if !supportLists]><span
+  style='font-size:10.0pt'><span style='Ignore'>_<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>1x
+  100nF/0.1uF capacitor</p>
+  </td>
+  <td width=56 valign=top style='width:56.25pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='line-height:normal'>C1</p>
+  </td>
+  <td width=130 valign=bottom style='width:129.75pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:2.0pt 2.0pt 2.0pt 2.0pt'>
+  <p style='line-height:normal'><a
+  href="http://www.digikey.com/product-detail/en/kemet/C1206C104KARACTU/399-4674-1-ND/992199"><span
+  style='color:#1155CC'>399-4674-1-ND</span></a></p>
+  </td>
+  <td width=146 valign=bottom style='width:145.5pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:2.0pt 2.0pt 2.0pt 2.0pt'>
+  <p style='line-height:normal'>C1206C104KARACTU</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:177.75pt;border:solid white 1.0pt;
+  border-top:none;solid white 1.0pt;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='margin-left:.5in;auto;
+  text-indent:-.25in;line-height:normal;l0 level1 lfo8'><![if !supportLists]><span
+  style='font-size:10.0pt'><span style='Ignore'>_<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]>1x
+  2x3 pin header</p>
+  </td>
+  <td width=56 valign=top style='width:56.25pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p style='line-height:normal'>ISP</p>
+  </td>
+  <td width=130 valign=bottom style='width:129.75pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:0in 2.0pt 0in 2.0pt'>
+  <p style='line-height:normal'><a
+  href="http://www.mouser.com/ProductDetail/Amphenol-FCI/95278-101A06LF/?qs=AwD%252bQufC0y6awc4Pvf%2Fc%252bg%3D%3D"><span
+  style='color:#1155CC'>649-95278-101A06LF</span></a></p>
+  </td>
+  <td width=146 valign=bottom style='width:145.5pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.0pt;border-right:solid white 1.0pt;
+  solid white 1.0pt;solid white 1.0pt;
+  padding:2.0pt 2.0pt 2.0pt 2.0pt'>
+  <p style='line-height:normal'>71600-006LF</p>
+  </td>
+ </tr>
+</table>
+
+<p>After that I proceed soldering all components in place.</p>
+
+
+<video controls><source src="media/week4img/Untitled.m4v">
+            Your browser does not support HTML5 video.</video>
+
+<h4>-3 Pre-Debugging</h4>
+        
+        <p>I started with a visual inspection.</p>
+
+
+That's when I realised I forgot to solder the jumper wire. That made me remove the shrink tube I had installed prior.
+
+
+
+With the multimeter I looked for shorts and nothing was detected especially between Vcc and GND.
+
+Overall the board seemed fine so I proceed with the programing. And now programing...
+Programming
+Under Ubuntu for Windows 10.
+
+Started by installing the programing environment
+
+
+With the prior command the programs got downloaded.
+
+
+I then downloaded the firmware source  to a directory. Following that I run the command "make"
+
+
+Using Sublime-text I edited the makefile file and replaced the entry "PROGRAMMER ?= usbtiny" with "PROGRAMMER ?= usbasp".
+
+
+I then run "make flash"
+
+
+But not success. So I run sudo lsusb and I get a message “unable to initialize libusb: -99
+
+After a quick search on stackoverflow I find out there is no support for usb under windows 10 ubuntu shell yet! Argh!
+
+
+
+http://stackoverflow.com/questions/38954691/is-usb-supported-on-bash-on-ubuntu-on-windows-10
+
+
+Then I gave up on Ubuntu bash for windows 10 and run a copy of Ubuntu under VMware player.
+At ubuntu I run:
+
+sudo apt install avrdude gcc-avr avr-libc make
+
+
+
+This time after running lsusb I can see that device is present.
+
+I run "make" in order to compile the firmware.
+
+
+I then run "make flash". But again I got an error message.
+
+I end up finding out that my ISP has to have a jumper installed in order to program the Attiny45. So I do it! 
+
+And it works!
+
+Next I run "make fuses"
+
+
+After having the firmware uploaded and fuses burnt my new ASP would not be recognised.
+So back to debugging…
+I end up measuring each resistor value, and replacing the attiny with a new one. With a multimeter I found out that the R1 1K resistor was not working, replaced and voila. Board detected!!! Oh also I decided to install a usb connector I cutted from an old cable and after some washing that's how it looks.
+
+
+Final command make rstdisbl and this tiny can't be programed again.
+
+
+It worked now I remove jumper!
+
+
+It works!
+
+Final Test
+Loading the driver on windows I use the tool "Zadig_2.2.exe"
+
+
+After the driver installation I tested under windows the burning of my 3D printer board's firmware.
+
+
+All working!
+</p>
         
         
         
