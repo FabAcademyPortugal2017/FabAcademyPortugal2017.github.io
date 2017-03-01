@@ -505,51 +505,63 @@ BOM
         
         <p>I started with a visual inspection.</p>
 
+<p class="pic"><img src="media/week4img/image053.png"><legend>photo of my semi-finished ISP</legend></p>
+        
+<p>OK I need to clean a bit more</p>
+        
+<p>That's when I realised I forgot to solder the jumper wire. That made me remove the shrink tube I had installed prior.</p>
+        
+<p class="pic"><img src="media/week4img/image055.png"><legend>photo of my semi-finished ISP</legend></p>
+        
+<p>With the multimeter I looked for shorts and nothing was detected especially between Vcc and GND.</p>
 
-That's when I realised I forgot to solder the jumper wire. That made me remove the shrink tube I had installed prior.
+<p>Overall the board seemed fine so I proceed with the programing. And now programing...</p>
+        
+<h4>Programming</h4>
+        
+<p>Under Ubuntu for Windows 10.
+Started by installing the programing environment</p>
 
+<p class="pic"><img src="media/week4img/image057.png"><legend>capture of my computer screen</legend></p>
 
+<p>With the prior command the programs got downloaded.</p>
 
-With the multimeter I looked for shorts and nothing was detected especially between Vcc and GND.
+<p class="pic"><img src="media/week4img/image059.png"><legend>capture of my computer screen</legend></p>
 
-Overall the board seemed fine so I proceed with the programing. And now programing...
-Programming
-Under Ubuntu for Windows 10.
-
-Started by installing the programing environment
-
-
-With the prior command the programs got downloaded.
-
-
-I then downloaded the firmware source  to a directory. Following that I run the command "make"
-
-
-Using Sublime-text I edited the makefile file and replaced the entry "PROGRAMMER ?= usbtiny" with "PROGRAMMER ?= usbasp".
-
+<p>I then downloaded the firmware source  to a directory. Following that I run the command "make"
+</p>
+        
+<p class="pic"><img src="media/week4img/image061.png"><legend>capture of my computer screen</legend></p>
+        
+<p>Using Sublime-text I edited the makefile file and replaced the entry "PROGRAMMER ?= usbtiny" with "PROGRAMMER ?= usbasp".</p>
+        
+<p class="pic"><img src="media/week4img/image063.png"><legend>capture of my computer screen</legend></p>
 
 I then run "make flash"
 
-
+<p class="pic"><img src="media/week4img/image065.png"><legend>capture of my computer screen</legend></p>
+        
 But not success. So I run sudo lsusb and I get a message “unable to initialize libusb: -99
 
+<p class="pic"><img src="media/week4img/image067.png"><legend>capture of my computer screen</legend></p>
+
 After a quick search on stackoverflow I find out there is no support for usb under windows 10 ubuntu shell yet! Argh!
-
-
-
-http://stackoverflow.com/questions/38954691/is-usb-supported-on-bash-on-ubuntu-on-windows-10
-
+        
+<p class="pic"><img src="media/week4img/image069.png"><legend>capture of my computer screen on <a href="http://stackoverflow.com/questions/38954691/is-usb-supported-on-bash-on-ubuntu-on-windows-10">stackoverflow</a> </legend></p>
 
 Then I gave up on Ubuntu bash for windows 10 and run a copy of Ubuntu under VMware player.
 At ubuntu I run:
-
+        
 sudo apt install avrdude gcc-avr avr-libc make
 
+<p class="pic"><img src="media/week4img/image071.png"><legend>capture of my computer screen</legend></p>
 
 
 This time after running lsusb I can see that device is present.
 
 I run "make" in order to compile the firmware.
+        
+<p class="pic"><img src="media/week4img/image073.png"><legend>capture of my computer screen</legend></p>
 
 
 I then run "make flash". But again I got an error message.
@@ -558,18 +570,26 @@ I end up finding out that my ISP has to have a jumper installed in order to prog
 
 And it works!
 
-Next I run "make fuses"
+<p class="pic"><img src="media/week4img/image075.png"><legend>capture of my computer screen</legend></p>
 
+Next I run "make fuses"
+        
+<p class="pic"><img src="media/week4img/image077.png"><legend>capture of my computer screen</legend></p>
 
 After having the firmware uploaded and fuses burnt my new ASP would not be recognised.
 So back to debugging…
 I end up measuring each resistor value, and replacing the attiny with a new one. With a multimeter I found out that the R1 1K resistor was not working, replaced and voila. Board detected!!! Oh also I decided to install a usb connector I cutted from an old cable and after some washing that's how it looks.
 
+<p class="pic"><img src="media/week4img/image079.png"><legend>capture of my computer screen</legend></p>
+
 
 Final command make rstdisbl and this tiny can't be programed again.
 
+<p class="pic"><img src="media/week4img/image081.png"><legend>capture of my computer screen</legend></p>
 
 It worked now I remove jumper!
+
+<p class="pic"><img src="media/week4img/image083.png"><legend>capture of my computer screen</legend></p>
 
 
 It works!
@@ -577,14 +597,17 @@ It works!
 Final Test
 Loading the driver on windows I use the tool "Zadig_2.2.exe"
 
+<p class="pic"><img src="media/week4img/image085.png"><legend>capture of my computer screen</legend></p>
+
 
 After the driver installation I tested under windows the burning of my 3D printer board's firmware.
+    
+<p class="pic"><img src="media/week4img/image087.png"><legend>capture of my computer screen</legend></p>
 
 
 All working!
 </p>
-        
-        
+
         
     <!-- End of your content -->
 
