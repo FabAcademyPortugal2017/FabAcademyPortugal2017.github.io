@@ -2511,7 +2511,7 @@ legend {
   margin-bottom: 20px;
   font-size: 21px;
   line-height: inherit;
-  color: #333333;
+  color: rgb(161, 201, 167);
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }
