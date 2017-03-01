@@ -59,4 +59,19 @@
 * [what not to do for this week](http://fabacademy.org/archives/2014/students/cosme.vasco/img/week3/restos.jpg) > please make a small test cut first so you can check tolerances
 * Glue is a sign of failure.
 
-* 
+## WEEK 4 - ELECTRONICS PRODUCTION
+* [fabmodules](fabmodules.org)
+* [prepare Modela for machining circuits](http://www.youtube.com/watch?v=XdamEhs2RIk&list=PL-xEsC0ZUCUM42QNHaOOdoOwYg0j251dU&index=1)
+* [why FR1/FR2 copper board?](http://www.youtube.com/watch?v=XdamEhs2RIk&list=PL-xEsC0ZUCUM42QNHaOOdoOwYg0j251dU&index=1)
+* [ISP that doesn't require Crystal/Resonator](http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html)
+* [Attiny 44](http://www.atmel.com/images/doc8006.pdf)
+* [ISP interface explained](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi)
+* [other programming methods](http://fabacademy.org/archives/2015/eu/students/gunnarsson.thorarinn_b.b/docs/d7/ProgrammingMethods.pdf)
+
+## WEEK 5 - 3D SCANNING AND PRINTING
+* [Meshlab scan alignment for a multiple part scan](https://www.youtube.com/watch?v=4g9Hap4rX0k)
+* [Meshlab merge scans with poisson reconstruction](https://www.youtube.com/watch?v=dTkiPsNZg_o)
+* [MeshMixer hollow models for Formlabs](https://formlabs.com/blog/how-to-hollow-out-3d-models/)
+* [Rhino mesh repair tools](https://design.umn.edu/current_students/leo/hall/documents/Rhino_STL_repair.pdf)
+* [common FDM 3d printing issues](http://support.3dverkstan.se/article/23-a-visual-ultimaker-troubleshooting-guide)
+
