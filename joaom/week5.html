@@ -47,9 +47,6 @@
                                     <a href="index.html">Home</a>
                                 </li>
                                 <li>
-                                    <a href="project.html">Final Project</a>
-                                </li>
-                                <li>
                                 </li>
                                 <li>
                                 </li>
@@ -64,11 +61,128 @@
         <main class="main" id="main">
             <div class="hero cyan darken-3 overflow-hidden">
                 <canvas id="canvas"></canvas>
-                <h1 class="bold">Celebrate digital</h1>
+                <h1 class="bold">3D scanning and printing</h1>
             </div>
 
             
-        </main>
+
+        <section class="section scrollspy" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12 l6">
+                            <h2>Week 5</h2>
+                            <img src="./assets/images/week5/week5.jpg">
+                            <h3>3D scanning and printing</h3>
+                            
+                            
+                        </div>
+                        <div class="col s12 l6">
+                        <h2>Tasks</h2>
+                          <p class="teal"><strong>Group assignment</strong>:
+        group project: test the design rules for your printer(s)<br>
+design and 3D print an object (small, few cm) that could not be made subtractively<br>
+3D scan an object (and optionally print it) (extra credit: make your own scanner)<br>
+ <br>
+</p>     </div></div>
+<br>
+                           
+<h4>Group assignment. printing test</h4>                    
+                          
+                  <p class="flow-text">For our group assignment we decided to model a print test for each of our 3d printers at the lab, a <a href="https://store.bq.com/pt/kit-prusai3" target="_blank">prusa i3</a>, a <a href="https://www.bq.com/pt/support/witbox/support-sheet" target="_blank">BQ witbox</a>, a zmorph and a <a href="https://www.bq.com/pt/support/witbox/support-sheet" target="_blank">Stratasys Fortus 250mc</a>. I started to model the test in Illustrator and then exported to Japanese AI, that’s the format 3d Studio Max recognizes, and in Studio MAX imported the file, following these steps:<br></p>
+          <span class="deep-orange">Illustrator editing</span><br>
+<img src="./assets/images/week5/illustrator_3d.jpg"><br> 
+          <span class="deep-orange">Menu-->Import-->Select AI file, select desired option</span><br>
+<img src="./assets/images/week5/illustrator_3d2.jpg"><br>                  
+          <span class="deep-orange">Menu-->Import-->Select AI file, select desired option</span><br>
+<img src="./assets/images/week5/illustrator_3d3.jpg"><br>
+<br>       
+          <span class="deep-orange">Imported vector file in spline mode</span><br>
+<img src="./assets/images/week5/illustrator_3d3.jpg"><br>
+                  <p class="flow-text"> I converted the splines to editable poly and started making extrusions and aligning the polygons. This is the final result and the scheme for printing<br></p>
+ <span class="deep-orange">3d Modeling </span><br>
+<img src="./assets/images/week5/3dmodel.jpg"><br> 
+          <span class="deep-orange">Scheme of the model, a render edited in photoshop by adding some text</span><br>
+<img src="./assets/images/week5/printest_render_scheme.jpg"><br> 
+
+<p class="flow-text"> Tomorrow i'll print the model in my selected 3printer and share with you.<br></p><span class="green">FILES</span><br>
+ <a href="assets/files/printest.pdf" class="green">Vector file</a><br>
+<a href="assets/files/printest.max" class="green">3d MAX file</a><br>
+<a href="assets/files/printest.stl" class="green">STL file</a>
+                      
+<p class="teal"> References - <a href="http://www.thingiverse.com/glitchpudding/collections/calibration" target="_blank">Calibration Models in thingiverse</a>,
+<br>
+<br></p>
+
+<h4>3D printing</h4>                    
+                          
+                  <blockquote>
+                    <p class="flow-text">After searching something to do, i've came to a conclusion that there are a few models that i would like to test. I decided to model 3 pieces with diferent technics:<br>
+<span class="amber">A Chamfer box jail<br></span>
+For this purpose i want to print something that is opened, so i can see inside, and put an object inside it.<br>
+In 3d Studio Max, i selected extended primitives-->oiltank with this parameters:<br>
+<span class="deep-orange">Parameters of the oiltank</span><br>
+<img src="./assets/images/week5/coin1.jpg"><br> 
+<span class="deep-orange">Converting to editable poly</span><br>
+<img src="./assets/images/week5/coin2.jpg"><br> 
+<span class="deep-orange">Editing and deleting the polygons</span><br>
+<img src="./assets/images/week5/coin3.jpg"><br> 
+<span class="deep-orange">Applying a 1mm shell modifier</span><br>
+<img src="./assets/images/week5/coin4.jpg"><br> 
+The idea is to 3d print, pause the printing and insert a coin inside the model and finish the model. I'll share the result later.<br><br>
+
+
+<span class="amber">A Chamfer box with 3d print inside<br></span>
+For this model i wanted to print 2 objects, a box with a hedra inside with support structurethat i could cut at the end.<br>
+
+<span class="deep-orange">Parameters of the chamferbox (extended primitives-->chamferbox)</span><br>
+<img src="./assets/images/week5/dodec3.jpg"><br> 
+<span class="deep-orange">Adding support structure, a simple box scaling the top to be thinner than the base. I selected the vertex, the scale tool and reduced the top</span><br>
+<img src="./assets/images/week5/dodec.jpg"><br> 
+<span class="deep-orange">Creating a Hedra-dodec to put in the top of the support structure</span><br>
+<img src="./assets/images/week5/dodec1.jpg"><br> 
+<span class="deep-orange">Aligning all the objects and attaching them all, to form one single object and export to STL.</span><br>
+<img src="./assets/images/week5/dodec2.jpg"><br> 
+I'll share the result later.<br><br>
+
+
+<span class="amber">Chamferbox with an interior slide<br></span>
+This object is impossible to make subtratively. i started to draw a gengon (extended primitives-->gengon).
+<span class="deep-orange">Gengon parameters</span><br>
+<img src="./assets/images/week5/gengon1.jpg"><br> 
+<span class="deep-orange">spline modelling. Ensure to transform it in editable poly in the end.</span><br>
+<img src="./assets/images/week5/gengon2.jpg"><br> 
+<span class="deep-orange">Pro boolean operation. Just select the other object and let 3d max do the rest.</span><br>
+<img src="./assets/images/week5/gengon3.jpg"><br>
+<span class="deep-orange">Final result</span><br>
+<img src="./assets/images/week5/gengon4.jpg"><br>
+<span class="deep-orange">Slicing the 3d Model with CURA.</span><br>
+<img src="./assets/images/week5/3dprint.jpg"><br>
+<span class="deep-orange">The final result didn't work so well at the top, so next time i'll change the parameters of the infill, or the top thickness or the infill %.</span><br>
+<img src="./assets/images/week5/3dprint3.jpg"><br>
+
+<span class="deep-orange">Result of the 3D Print.</span><br>
+<img src="./assets/images/week5/gengon5.jpg"><br>
+                    </p>
+<span class="green">FILES</span><br>
+ <a href="assets/files/print_test.max" class="green">3D Studio MAX files</a><br>
+<a href="assets/files/st.rar" class="green">STL Files</a><br>
+<a href="assets/files/cura_profile.ini" class="green">Cura Printing Profile</a><br>
+<br>                    
+                  </blockquote>
+<br>
+
+<h4>3D Scanning</h4>                    
+                          
+                  <p class="flow-text">For this assignment i used the Ciclop Scanner. It works with two laser and one webcam. For first thing I calibrated the scanner and prepared the set, with three lights, for to make soft shadows and to make correct lighting. Also I was careful to don’t focus light directly on the object, but I did reflect light on the table or I made a soft light with a white paper placed in front of the light.<br>
+I set the scanning process to max resolution, that lasted about 15 minutes.<br>
+One issue of this 3d Scanner is that it doesn't create mesh files, instead it creates points cloud. So i had to create it for 3d printing with Mesh Labs software. I followed this <a href="http://fabacademy.org/archives/2014/tutorials/pointcloudToSTL.html" target="_blank">great tutorial </a>to help me do it. I'll post photos later</p>        
+                                                               
+                                    
+                           
+    </div>
+                    
+                
+
         <!-- Footer-->
 
         <footer>
