@@ -64,9 +64,10 @@
 * [prepare Modela for machining circuits](http://www.youtube.com/watch?v=XdamEhs2RIk&list=PL-xEsC0ZUCUM42QNHaOOdoOwYg0j251dU&index=1)
 * [why FR1/FR2 copper board?](http://www.youtube.com/watch?v=XdamEhs2RIk&list=PL-xEsC0ZUCUM42QNHaOOdoOwYg0j251dU&index=1)
 * [ISP that doesn't require Crystal/Resonator](http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html)
-* [Attiny 44](http://www.atmel.com/images/doc8006.pdf)
+* [How to solder smd components](http://makezine.com/2016/02/19/learn-simple-surface-mount-soldering-in-collins-lab/)
 * [ISP interface explained](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi)
 * [other programming methods](http://fabacademy.org/archives/2015/eu/students/gunnarsson.thorarinn_b.b/docs/d7/ProgrammingMethods.pdf)
+
 
 ## WEEK 5 - 3D SCANNING AND PRINTING
 * [Meshlab scan alignment for a multiple part scan](https://www.youtube.com/watch?v=4g9Hap4rX0k)
@@ -74,4 +75,14 @@
 * [MeshMixer hollow models for Formlabs](https://formlabs.com/blog/how-to-hollow-out-3d-models/)
 * [Rhino mesh repair tools](https://design.umn.edu/current_students/leo/hall/documents/Rhino_STL_repair.pdf)
 * [common FDM 3d printing issues](http://support.3dverkstan.se/article/23-a-visual-ultimaker-troubleshooting-guide)
+
+## WEEK 6 - 3D SCANNING AND PRINTING
+* [Arduino led and button project](https://www.arduino.cc/en/tutorial/button)
+* [read the Attiny 44 datasheet](http://www.atmel.com/images/doc8006.pdf)
+* [What is a pull-up resistor and why do we need to use it with a button switch?](https://learn.sparkfun.com/tutorials/pull-up-resistors)
+* [resistor value calculator for LED current control](http://led.linear1.org/1led.wiz)
+* [Why do we need a Crystal for our microcontroller?](http://fabacademy.org/archives/2015/doc/aboutClockSpeed.html)
+* [Eagle is now Autodesk Eagle!](http://www.autodesk.com/products/eagle/overview)
+* [electronics design with Eagle CAD. Some differences may apply!](http://fabacademy.org/archives/2013/students/carvao.luis/week6.html)
+* exporting png
 
