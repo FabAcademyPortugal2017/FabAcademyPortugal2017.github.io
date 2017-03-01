@@ -537,77 +537,72 @@ Started by installing the programing environment</p>
         
 <p class="pic"><img src="media/week4img/image063.png"><legend>capture of my computer screen</legend></p>
 
-I then run "make flash"
+<p>I then run "make flash"</p>
 
 <p class="pic"><img src="media/week4img/image065.png"><legend>capture of my computer screen</legend></p>
         
-But not success. So I run sudo lsusb and I get a message “unable to initialize libusb: -99
+<p>But not success. So I run sudo lsusb and I get a message “unable to initialize libusb: -99</p>
 
 <p class="pic"><img src="media/week4img/image067.png"><legend>capture of my computer screen</legend></p>
 
-After a quick search on stackoverflow I find out there is no support for usb under windows 10 ubuntu shell yet! Argh!
+<p>After a quick search on stackoverflow I find out there is no support for usb under windows 10 ubuntu shell yet! Argh!</p>
         
 <p class="pic"><img src="media/week4img/image069.png"><legend>capture of my computer screen on <a href="http://stackoverflow.com/questions/38954691/is-usb-supported-on-bash-on-ubuntu-on-windows-10">stackoverflow</a> </legend></p>
 
-Then I gave up on Ubuntu bash for windows 10 and run a copy of Ubuntu under VMware player.
-At ubuntu I run:
+<p>Then I gave up on Ubuntu bash for windows 10 and run a copy of Ubuntu under VMware player.
+At ubuntu I run:</p>
         
-sudo apt install avrdude gcc-avr avr-libc make
+<pre class="prettyprint linenums">sudo apt install avrdude gcc-avr avr-libc make</pre>
 
 <p class="pic"><img src="media/week4img/image071.png"><legend>capture of my computer screen</legend></p>
 
 
-This time after running lsusb I can see that device is present.
+<p>This time after running lsusb I can see that device is present.</p>
 
-I run "make" in order to compile the firmware.
+<p>I run <pre class="prettyprint linenums">make</pre> in order to compile the firmware.</p>
         
 <p class="pic"><img src="media/week4img/image073.png"><legend>capture of my computer screen</legend></p>
 
 
-I then run "make flash". But again I got an error message.
+<p>I then run <pre class="prettyprint linenums">make flash</pre>. But again I got an error message.</p>
 
-I end up finding out that my ISP has to have a jumper installed in order to program the Attiny45. So I do it! 
+<p>I end up finding out that my ISP has to have a jumper installed in order to program the Attiny45. So I do it! </p>
 
-And it works!
+<p>And it works!</p>
 
 <p class="pic"><img src="media/week4img/image075.png"><legend>capture of my computer screen</legend></p>
 
-Next I run "make fuses"
+<p>Next I run <pre class="prettyprint linenums">make fuses</pre></p>
         
 <p class="pic"><img src="media/week4img/image077.png"><legend>capture of my computer screen</legend></p>
 
-After having the firmware uploaded and fuses burnt my new ASP would not be recognised.
-So back to debugging…
-I end up measuring each resistor value, and replacing the attiny with a new one. With a multimeter I found out that the R1 1K resistor was not working, replaced and voila. Board detected!!! Oh also I decided to install a usb connector I cutted from an old cable and after some washing that's how it looks.
+<p>After having the firmware uploaded and fuses burnt my new ASP would not be recognised.</p>
+<p>So back to debugging…</p>
+<p>I end up measuring each resistor value, and replacing the attiny with a new one. With a multimeter I found out that the R1 1K resistor was not working, replaced and voila. Board detected!!! Oh also I decided to install a usb connector I cutted from an old cable and after some washing that's how it looks.</p>
 
 <p class="pic"><img src="media/week4img/image079.png"><legend>capture of my computer screen</legend></p>
 
-
-Final command make rstdisbl and this tiny can't be programed again.
+<p>Final command make rstdisbl and this tiny can't be programed again.</p>
 
 <p class="pic"><img src="media/week4img/image081.png"><legend>capture of my computer screen</legend></p>
 
-It worked now I remove jumper!
+<p>It worked now I remove jumper!</p>
 
 <p class="pic"><img src="media/week4img/image083.png"><legend>capture of my computer screen</legend></p>
 
+<p>It works!</p>
 
-It works!
+<h4>-4 Final Test</h4>
 
-Final Test
-Loading the driver on windows I use the tool "Zadig_2.2.exe"
+<p>Loading the driver on windows I use the tool "Zadig_2.2.exe"</p>
 
 <p class="pic"><img src="media/week4img/image085.png"><legend>capture of my computer screen</legend></p>
 
-
-After the driver installation I tested under windows the burning of my 3D printer board's firmware.
+<p>After the driver installation I tested under windows the burning of my 3D printer board's firmware.</p>
     
 <p class="pic"><img src="media/week4img/image087.png"><legend>capture of my computer screen</legend></p>
 
-
-All working!
-</p>
-
+<p>All working!</p>
         
     <!-- End of your content -->
 
