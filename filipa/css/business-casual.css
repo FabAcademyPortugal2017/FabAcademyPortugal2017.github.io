@@ -63,7 +63,7 @@ hr {
 .navbar-nav {
     background-color: lightgrey;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 100;
     letter-spacing: 3px;
 }
 
@@ -211,7 +211,7 @@ footer p {
         float: none;
         margin: 0 auto;
         table-layout: fixed;
-        font-size: 1.25em;
+        font-size: 1em;
         }
     
     li.navbar-nav-content {
