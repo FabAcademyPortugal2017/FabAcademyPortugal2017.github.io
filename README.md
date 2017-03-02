@@ -76,7 +76,7 @@
 * [Rhino mesh repair tools](https://design.umn.edu/current_students/leo/hall/documents/Rhino_STL_repair.pdf)
 * [common FDM 3d printing issues](http://support.3dverkstan.se/article/23-a-visual-ultimaker-troubleshooting-guide)
 
-## WEEK 6 - 3D SCANNING AND PRINTING
+## WEEK 6 - ELECTRONICS DESIGN
 * [Arduino led and button project](https://www.arduino.cc/en/tutorial/button)
 * [read the Attiny 44 datasheet](http://www.atmel.com/images/doc8006.pdf)
 * [What is a pull-up resistor and why do we need to use it with a button switch?](https://learn.sparkfun.com/tutorials/pull-up-resistors)
