@@ -104,7 +104,11 @@ design and 3D print an object (small, few cm) that could not be made subtractive
           <span class="deep-orange">Scheme of the model, a render edited in photoshop by adding some text</span><br>
 <img src="./assets/images/week5/printest_render_scheme.jpg"><br> 
 
-<p class="flow-text"> Tomorrow i'll print the model in my selected 3printer and share with you.<br></p><span class="green">FILES</span><br>
+<p class="flow-text"> I started to print in HD definition and it didn't get so well. i Had to change the retraction settings to get better results, wich i did<br>
+<span class="deep-orange">Retraction settings changed</span><br>
+<img src="./assets/images/week5/retraction.jpg"><br> 
+
+<br></p><span class="green">FILES</span><br>
  <a href="assets/files/printest.pdf" class="green">Vector file</a><br>
 <a href="assets/files/printest.max" class="green">3d MAX file</a><br>
 <a href="assets/files/printest.stl" class="green">STL file</a>
@@ -117,7 +121,7 @@ design and 3D print an object (small, few cm) that could not be made subtractive
                           
                   <blockquote>
                     <p class="flow-text">After searching something to do, i've came to a conclusion that there are a few models that i would like to test. I decided to model 3 pieces with diferent technics:<br>
-<span class="amber">A Chamfer box jail<br></span>
+<span class="amber">An oiltank coin jail<br></span>
 For this purpose i want to print something that is opened, so i can see inside, and put an object inside it.<br>
 In 3d Studio Max, i selected extended primitives-->oiltank with this parameters:<br>
 <span class="deep-orange">Parameters of the oiltank</span><br>
@@ -128,7 +132,9 @@ In 3d Studio Max, i selected extended primitives-->oiltank with this parameters:
 <img src="./assets/images/week5/coin3.jpg"><br> 
 <span class="deep-orange">Applying a 1mm shell modifier</span><br>
 <img src="./assets/images/week5/coin4.jpg"><br> 
-The idea is to 3d print, pause the printing and insert a coin inside the model and finish the model. I'll share the result later.<br><br>
+The idea is to 3d print, pause the printing and insert a coin inside the model and finish the model. <br><br>
+<span class="deep-orange">3d printing process</span><br>
+<img src="./assets/images/week5/3dprint1.gif"><br> 
 
 
 <span class="amber">A Chamfer box with 3d print inside<br></span>
@@ -142,9 +148,16 @@ For this model i wanted to print 2 objects, a box with a hedra inside with suppo
 <img src="./assets/images/week5/dodec1.jpg"><br> 
 <span class="deep-orange">Aligning all the objects and attaching them all, to form one single object and export to STL.</span><br>
 <img src="./assets/images/week5/dodec2.jpg"><br> 
-I'll share the result later.<br><br>
-
-
+The 3d printing didn't went so well, first the support for the dodec wasn't at ground zero.the model was too small and the dodec support started to crash, i had to change the model and make a stronger base for the support and made a brim for the platform adhesion type unde CURA.<br><br>
+<span class="deep-orange">bad 3d printed models, diferent z for the pieces, and filament jam.</span><br>
+<img src="./assets/images/week5/errors.jpg"><br>
+After optimizing i got a better result.
+<span class="deep-orange">final result of the 3dprint.</span><br>
+<img src="./assets/images/week5/testprint10.jpg"><br>
+<span class="deep-orange">i had to cut the support with a plier</span><br>
+<img src="./assets/images/week5/testprint11.jpg"><br>
+<span class="deep-orange">Aftercut</span><br>
+<img src="./assets/images/week5/testprint13.jpg"><br>
 <span class="amber">Chamferbox with an interior slide<br></span>
 This object is impossible to make subtratively. i started to draw a gengon (extended primitives-->gengon).
 <span class="deep-orange">Gengon parameters</span><br>
@@ -173,12 +186,50 @@ This object is impossible to make subtratively. i started to draw a gengon (exte
 
 <h4>3D Scanning</h4>                    
                           
-                  <p class="flow-text">For this assignment i used the Ciclop Scanner. It works with two laser and one webcam. For first thing I calibrated the scanner and prepared the set, with three lights, for to make soft shadows and to make correct lighting. Also I was careful to don’t focus light directly on the object, but I did reflect light on the table or I made a soft light with a white paper placed in front of the light.<br>
-I set the scanning process to max resolution, that lasted about 15 minutes.<br>
-One issue of this 3d Scanner is that it doesn't create mesh files, instead it creates points cloud. So i had to create it for 3d printing with Mesh Labs software. I followed this <a href="http://fabacademy.org/archives/2014/tutorials/pointcloudToSTL.html" target="_blank">great tutorial </a>to help me do it. I'll post photos later</p>        
+                  <p class="flow-text">For this assignment i used the Ciclop Scanner. It works with two laser beams and one webcam. The first thing to do was to find an object to scan. I found a wood snail done by my friend <a href="https://www.facebook.com/nunoalves.officina" target="_blank">Nuno Alves</a>, also a <a href="http://archive.fabacademy.org/archives/2017/fablabaldeias/students/476" target="_blank">student from Fabacademy</a>.<br>
+<span class="deep-orange">My object to 3d Scan.</span><br>
+<img src="./assets/images/week5/snail.jpg"><br>
+After that i started to install ciclop software in my laptop, under windows OS. <br>
+<br>
+<span class="deep-orange">BQ ciclop 3D scanner</span><br>
+<img src="./assets/images/week5/ciclop.jpg"><br>
+I Installed Logitech camera drivers drivers from <a href="http://support.logitech.com/en_us/product/hd-webcam-c270" target="_blank">here</a> and 
+Horus installer from <a href="https://github.com/bqlabs/horus/releases/download/0.2rc1/Horus_0.2rc1.exe" target="_blank">here</a> <br>
+After installing these software and drivers i started Horus, and skipped the easy interface. It was time to calibrate all the components and adjusting the image quality.
+<br>
+<span class="deep-orange">I adjusted the camera settings acording to the light of my room in the control workbench</span><br>
+<img src="./assets/images/week5/scan3d01.jpg"><br>
+<span class="deep-orange">Then i tested the motor in the same workbench and all went fine</span><br>
+<img src="./assets/images/week5/scan3d02.jpg"><br>
+Then i passed to calibration workbench.<br>
+<span class="deep-orange">Made a scanner autocheck</span><br>
+<img src="./assets/images/week5/scan3d03.jpg"><br>
+<span class="deep-orange">Made a laser triangulation</span><br>
+<img src="./assets/images/week5/scan3d04.jpg"><br>
+<span class="deep-orange">Tested the platform extrinsics</span><br>
+<img src="./assets/images/week5/scan3d05.jpg"><br>
+Pass to scanning process, by clicking Scanning workbench<br>
+
+<span class="deep-orange">I changed the values of Point cloud ROI (region of interest) to reduce my scaning area and speed the scaning process</span><br>
+<img src="./assets/images/week5/scan3d06.jpg"><br>
+<span class="deep-orange">And clicked the play button to start the process. It took about 15min to scan the snail. I got good results.</span><br>
+<img src="./assets/images/week5/scan3d07.jpg"><br>
+Scaning process was finished. I save the file and passed to <a href="http://www.meshlab.net/" target="_blank">meshlab</a>. I had to download an older version to follow the tutorial i found <a href="http://fabacademy.org/archives/2014/tutorials/pointcloudToSTL.html" target="_blank">here</a>
+I imported the point file created in Horus and start the filtering process. Meshlab has lots of complex operations and i'm keen to test them someday.<br>
+<span class="deep-orange">Filters -> Normals, Curvatures and Orientation -> Compute Normals for Point Sets</span><br>
+<img src="./assets/images/week5/scan3d08.jpg"><br>
+<span class="deep-orange">Filters -> Remeshing, Simplification and Reconstruction -> Surface Reconstruction: Poisson</span><br>
+<img src="./assets/images/week5/scan3d09.jpg"><br>
+Exported the file to STL and voila!
                                                                
                                     
-                           
+<p class="teal"> References - <a href="http://horus.readthedocs.io/en/release-0.2/" target="_blank">Horus Documentation online</a>,
+<br>
+<br></p>    
+<span class="green">FILES</span><br>
+ <a href="assets/files/caracol.ply" class="green">Snail point cloud file</a><br>
+<a href="assets/files/caracol.stl" class="green">Snail STL File</a><br>
+<a href="assets/files/caracol.mlp" class="green">Meshlabs project</a>                       
     </div>
                     
                 
