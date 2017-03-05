@@ -79,10 +79,171 @@
     <div class="container">
 
 	<!-- Insert your content here below! -->
+<h2>Assignment</h2>
+
+<section class="todo">
+                    <ul class="todo-list" style="list-style-type:none">
+                        <li> <label class="tasks-list-item">
+                                <input type="checkbox" name="task_2" value="1" class="tasks-list-cb" checked="">
+                                <span class="tasks-list-mark"></span>
+                                <span class="tasks-list-desc"> add a button and LED to the echo hello-world board </span>
+                            </label>  </li>
+                        <li> <label class="tasks-list-item">
+                                <input type="checkbox" name="task_2" value="1" class="tasks-list-cb" checked="">
+                                <span class="tasks-list-mark"></span>
+                                <span class="tasks-list-desc"> check the design rules</span>
+                            </label>  </li>
+                        <li> <label class="tasks-list-item">
+                                <input type="checkbox" name="task_2" value="1" class="tasks-list-cb" checked="">
+                                <span class="tasks-list-mark"></span>
+                                <span class="tasks-list-desc"> and make it </span>
+                            </label>  </li>
+                        <li> <label class="tasks-list-item">
+                                <input type="checkbox" name="task_2" value="1" class="tasks-list-cb" checked="">
+                                <span class="tasks-list-mark"></span>
+                                <span class="tasks-list-desc"> Review <a href="http://academy.cba.mit.edu/classes/electronics_design/index.html">Neil's class page</a> </span>
+                            </label>  </li>
+                          
+                    </ul>
+      
+            </section>
+
+<h3>Week workflow</h3>
+
+<p>Wekely assignment → introduction to eagle → Edit Schematic/Boad → Mill the board→ solder componets → debug → burn firmware and fuses → test board → edit and publish website</p>
+
+<h3>Tools used</h3>
+
+<ul style=>
+  <li>Solder Station</li>
+  <li>TaoBao CNC</li>
+</ul>
+        
+<h3>Software Used</h3>
+<ul style="list-style-type:disc">
+  <li>Eagle</li>
+  <li>Fab Modules</li>
+</ul>
+
+<h2>Eagle introduction:</h2>
+<p class="pic"><iframe width="560" height="315" src="https://www.youtube.com/embed/1AXwjZoyNno" frameborder="0" allowfullscreen=""></iframe>   
+                        <legend>Tutorial 1 for Eagle: Schematic Design</legend>
+	               </p>
+<p class="pic"><iframe width="560" height="315" src="https://www.youtube.com/embed/CCTs0mNXY24" frameborder="0" allowfullscreen=""></iframe>   
+                        <legend> Printed Circuit Board Layout</legend>
+	               </p>
+
+<p>After watching the video tutorials above I had a look through the eagle tutorial for the week6. Following it I downloaded and instaled the Fab library for eagle. </p>
+
+<h3>Reverse engineering Neil's Board</h3>
+
+<p>I started by having a look at the Electronics Design - Eagle tutorial
+With the bellow schematics in hand I started redrawing it at eagle
+Schematic from eagle tutorial</p>
+        
+<p class="pic"></p> 
+        
+<h3>Schematics Step by Step:</h3>
+        
+<ol type="a">
+    <li>under projects → right click on eagle → click on new project → name project</li>
+    <li>right click on project name → new→ Schematic</li>
+    <li>type add → search for each part</li>
+    <li>place part with let click → repeat procedure until all the same part is added → press ESC to add next part → search for next part or press ESC to go back to schematics</li>
+    <li>Type rotate and left click on part origin to turn part around to desired position</li>
+    <li>Type net to connect part to each other;</li>
+    <li>type name and left click on top of part to name part;</li>
+    <li>type label and left click on wire to connect one to the other without having to net;</li>
+    <li>type value and left click on part origin to designate part value;</li>
+    <li>save the file</li>
+    
+</ol>
+
+<h3>Make BOM (Bill of Materials)</h3>
+
+<ol type="a">
+    <li>Left click on design link → left click on Schematic</li>
+    <li>wait for program to display part → type new search string in case desired part does not apear → left click manual search → choose desired part → left click select</li>
+    <li>repeat previous process until all parts are found</li>
+    <li>left click export and save BOM File</li>
+        </ol>
+        
+<p>After some edditing here it is:</p> 
+
+        <div class="table-responsive">    
+<table class="table" border with="800">
+  <tr>
+    <th>Quantity</th>
+    <th>Value</th>
+    <th>Package</th>
+    <th>Manuf. Code</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td></td>
+    <td>6MM_SWITCH</td>
+    <td>FSM6JSMATR</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1UF</td>
+    <td>C1206FAB</td>
+    <td>C1206X105K3RAC3316</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>ATTINY44-SSU</td>
+    <td>SOIC14</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>FTDI</td>
+    <td>1X06-SMD</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>10K</td>
+    <td>R1206FAB</td>
+    <td>CRCW120610K0FKTA</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>499 Ohms</td>
+    <td>R1206FAB</td>
+    <td>CRCW1206499RFKEA</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>RESONATOR</td>
+    <td>EFOBM</td>
+    <td>AWSCR-20.00MTD-T</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>AVRISPSMD</td>
+    <td>2X03SMD</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Green LED</td>
+    <td></td>
+    <td></td>
+  </tr>
+</table></div>
+        
+        
+<h3>Drawing the Board</h3>
+
+<ol type="a">
+        <li>Left click on file → left click on swicth to board / or type board → accept waring and left click yes to create from schematic</li>
+        
+</ol>
 
         
-        
-        
+<p>I started by reading the Attiny44 datasheet. Slept a few times and moved on… Seriouly?</p>
         
     <!-- End of your content -->
 
