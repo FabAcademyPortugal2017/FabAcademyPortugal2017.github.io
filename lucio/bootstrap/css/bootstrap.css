@@ -43,6 +43,9 @@ progress,
 video {
   display: inline-block;
   vertical-align: baseline;
+  width: 100%    !important;
+  height: auto   !important;
+  vertical-align: middle !important;
 }
 audio:not([controls]) {
   display: none;
@@ -1280,7 +1283,7 @@ h1,
 h2,
 .h2 {
   font-size: 30px;
-  
+  font-weight: bolder;
 }
 h3,
 .h3 {
