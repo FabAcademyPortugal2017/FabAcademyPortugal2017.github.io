@@ -84,5 +84,5 @@
 * [Why do we need a Crystal for our microcontroller?](http://fabacademy.org/archives/2015/doc/aboutClockSpeed.html)
 * [Eagle is now Autodesk Eagle!](http://www.autodesk.com/products/eagle/overview)
 * [electronics design with Eagle CAD. Some differences may apply!](http://fabacademy.org/archives/2013/students/carvao.luis/week6.html
-* [Fab Libraries for Eagle](https://drive.google.com/drive/folders/0B75VtQiY0YitNUw3THdoTy1mRWM?usp=sharing)
+* [Fab Libraries for Eagle](https://github.com/FabAcademyPortugal2017/FabAcademyPortugal2017.github.io/tree/master/contents)
 
