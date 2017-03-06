@@ -137,24 +137,29 @@
                         <legend> Printed Circuit Board Layout</legend>
 	               </p>
 
-<p>After watching the video tutorials above I had a look through the eagle tutorial for the week6. Following it I downloaded and instaled the Fab library for eagle. </p>
-<hr>
-<h3>Reverse engineering Neil's Board</h3>
+<p>After watching the video tutorials above I had a look through the <a href="http://archive.fabacademy.org/archives/2017/doc/electronics_design_eagle.html">eagle tutorial</a> for the week6. Following it I downloaded and instaled the Fab library for eagle. </p>
 
-<p>I started by having a look at the Electronics Design - Eagle tutorial
+<hr>
+    
+<h3>Reverse engineering Neil's Board</h3>
+ 
+<p class="pic"><img src="media/week6/hello.ftdi.44.png"><legend>Neil's Hello Board</legend></p>
+
+<p>I started by having a look at the <a href="http://archive.fabacademy.org/archives/2017/doc/electronics_design_eagle.html#step5">Electronics Design - Eagle tutorial</a>
 With the bellow schematics in hand I started redrawing it at eagle
-Schematic from eagle tutorial</p>
-        
-<p class="pic"></p> 
-      <hr>
+Schematic from <a href="http://archive.fabacademy.org/archives/2017/doc/electronics_design_eagle.html#step5">agle tutorial</a>e</p>
   
 <h3>Schematics Step by Step:</h3>
         
 <ol type="a">
     <li>under projects → right click on eagle → click on new project → name project</li>
+    <p class="pic"><img src="media/week6/image02.png"></p>
     <li>right click on project name → new→ Schematic</li>
+    <p class="pic"><img src="media/week6/image06.png"></p>
     <li>type add → search for each part</li>
+    <p class="pic"><img src="media/week6/image07.png"></p>
     <li>place part with let click → repeat procedure until all the same part is added → press ESC to add next part → search for next part or press ESC to go back to schematics</li>
+    <p class="pic"><img src="media/week6/image04.png"></p>
     <li>Type rotate and left click on part origin to turn part around to desired position</li>
     <li>Type net to connect part to each other;</li>
     <li>type name and left click on top of part to name part;</li>
@@ -169,9 +174,12 @@ Schematic from eagle tutorial</p>
 
 <ol type="a">
     <li>Left click on design link → left click on Schematic</li>
+    <p class="pic"><img src="media/week6/image08.png"></p>
     <li>wait for program to display part → type new search string in case desired part does not apear → left click manual search → choose desired part → left click select</li>
+    <p class="pic"><img src="media/week6/image09.png"></p>
     <li>repeat previous process until all parts are found</li>
     <li>left click export and save BOM File</li>
+    <p class="pic"><img src="media/week6/image10.png"></p>
         </ol>
         
 <p>After some edditing here it is:</p> 
@@ -204,8 +212,8 @@ Schematic from eagle tutorial</p>
   </tr>
   <tr>
     <td>1</td>
+    <td>6-pin</td>
     <td>FTDI</td>
-    <td>1X06-SMD</td>
     <td></td>
   </tr>
   <tr>
@@ -223,7 +231,7 @@ Schematic from eagle tutorial</p>
   <tr>
     <td>1</td>
     <td>RESONATOR</td>
-    <td>EFOBM</td>
+    <td>20MHz</td>
     <td>AWSCR-20.00MTD-T</td>
   </tr>
   <tr>
@@ -245,13 +253,59 @@ Schematic from eagle tutorial</p>
 <h3>Drawing the Board</h3>
 
 <ol type="a">
-        <li>Left click on file → left click on swicth to board / or type board → accept waring and left click yes to create from schematic</li>
-        
-</ol>
-        <div class="table-responsive">
-            <p style="pic"> <video controls> <source src="/media/week6/Neilshelloboard.m4v"></video></p></div>
+    
+<li>Left click on file → left click on swicth to board / or type board → accept waring and left click yes to create from schematic</li>
+
+<p class="pic"><img src="media/week6/image01.png"></p>
+    
+<li>all components will be displayed to the left of the board → Drag them one by one with move left click to inside the board and position them accordingly</li>
+    
+<li>turn the components the same way on the schematics </li>
+<li>after all is positioned → resize board size draging the sides of the original board</li>
+<li>type polygon and select top layer and traw a square around the board limits</li>
+<li>type ratsnest → start autorouter type auto</li>
+<p class="pic"><img src="media/week6/image13.png"></p>
+<li>select start</li>
+<p class="pic"><img src="media/week6/image11.png"></p>
+<li>adjust traces if needed</li>
 
         
+</ol>
+        
+<div class="table-responsive">
+            <p style="pic"> <video controls> <source src="/media/week6/neilshelloboard.m4v"></video></p></div>
+
+
+Adding the LED and Button
+1 In order to add the LED and the Button I went back to the Schematics.
+1 In the schematics type add anded two resistors one LED and the button
+3 like before I used the commands move rotate and label name copy to position all components on its place
+
+
+
+Video here
+
+Exporting the image for fabmodules
+
+1 on layers toolbar select only the top layer
+        
+<p class="pic"><img src="media/week6/image00.png"></p>
+
+<p class="pic"><img src="media/week6/image05.png"></p>
+
+2 the result is a black and white image
+
+Image here
+
+Next export the outline
+1 select only Dimention layer
+2 do the same as before
+
+<p class="pic"><img src="media/week6/image03.png"></p>
+
+
+<p class="pic"><img src="media/week6/neilshelloboard2.png"></p><p class="pic"><img src="media/week6/neilshelloboardoutline2.png"></p>
+
 <p>I started by reading the Attiny44 datasheet. Slept a few times and moved on… Seriouly?</p>
         
     <!-- End of your content -->
