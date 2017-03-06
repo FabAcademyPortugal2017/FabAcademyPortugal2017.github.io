@@ -126,6 +126,7 @@
 <ul style="list-style-type:disc">
   <li>Eagle</li>
   <li>Fab Modules</li>
+    <li>Gimp</li>
 </ul>
 <hr>
 
@@ -146,8 +147,7 @@
 <p class="pic"><img src="media/week6/hello.ftdi.44.png"><legend>Neil's Hello Board</legend></p>
 
 <p>I started by having a look at the <a href="http://archive.fabacademy.org/archives/2017/doc/electronics_design_eagle.html#step5">Electronics Design - Eagle tutorial</a>
-With the bellow schematics in hand I started redrawing it at eagle
-Schematic from <a href="http://archive.fabacademy.org/archives/2017/doc/electronics_design_eagle.html#step5">agle tutorial</a>e</p>
+With the above schematics in hand I started redrawing it at Eagle</p>
   
 <h3>Schematics Step by Step:</h3>
         
@@ -156,15 +156,16 @@ Schematic from <a href="http://archive.fabacademy.org/archives/2017/doc/electron
     <p class="pic"><img src="media/week6/image02.png"></p>
     <li>right click on project name → new→ Schematic</li>
     <p class="pic"><img src="media/week6/image06.png"></p>
-    <li>type add → search for each part</li>
+    <li>type "add" → search for each part</li>
     <p class="pic"><img src="media/week6/image07.png"></p>
     <li>place part with let click → repeat procedure until all the same part is added → press ESC to add next part → search for next part or press ESC to go back to schematics</li>
     <p class="pic"><img src="media/week6/image04.png"></p>
-    <li>Type rotate and left click on part origin to turn part around to desired position</li>
-    <li>Type net to connect part to each other;</li>
-    <li>type name and left click on top of part to name part;</li>
-    <li>type label and left click on wire to connect one to the other without having to net;</li>
-    <li>type value and left click on part origin to designate part value;</li>
+    <li>Type "rotate" and left click on part origin to turn part around to desired position</li>
+    <li>Type "net" to connect part to each other;</li>
+    <li>type "name" and left click on top of part to name part;</li>
+    <li>type "label" and left click on wire to connect one to the other without having to net;</li>
+    <li>type value and left click on part origin to designate part "value";</li>
+    <li>type "move" to position the part as needed</li>
     <li>save the file</li>
     
 </ol>
@@ -250,63 +251,92 @@ Schematic from <a href="http://archive.fabacademy.org/archives/2017/doc/electron
         
    <hr>
      
-<h3>Drawing the Board</h3>
+<h3>Drawing the Board</h3><br>
+<h4>To position the components on the PCB use commands as done on the schematics:</h4>
 
 <ol type="a">
     
-<li>Left click on file → left click on swicth to board / or type board → accept waring and left click yes to create from schematic</li>
+<li>Left click on file → type "board" → accept warning and left click yes to create start designing the PCB from previously created schematics</li>
 
 <p class="pic"><img src="media/week6/image01.png"></p>
     
-<li>all components will be displayed to the left of the board → Drag them one by one with move left click to inside the board and position them accordingly</li>
+<li>all components will be displayed to the left of the board → Drag them one by one with command "move"+left click drag to position inside the board</li>
     
-<li>turn the components the same way on the schematics </li>
-<li>after all is positioned → resize board size draging the sides of the original board</li>
-<li>type polygon and select top layer and traw a square around the board limits</li>
-<li>type ratsnest → start autorouter type auto</li>
+<li>type "rotate" to turn the components the same way as in the schematics</li>
+<li>after all is positioned → resize board size draging the sides of the original board with the command "move"</li>
+<li>type "polygon" and select top layer and traw a square around the board limits in order to creat he top layer of the PCB</li>
+<li>type "ratsnest" → start autorouter type "auto", this command is verry convinient as it gives initial idea on how yowe can route the board, but it doesn't replace manual routing</li>
 <p class="pic"><img src="media/week6/image13.png"></p>
 <li>select start</li>
 <p class="pic"><img src="media/week6/image11.png"></p>
-<li>adjust traces if needed</li>
-
-        
+<li>adjust traces if needed with command "ripup" to remove posicioned paths</li>
+<li>place new paths with command "route" and "move" to better position</li>
+<li> type command "info"+left click in order to fine tune position of paths as well as thicknes</li>
+  
 </ol>
+
+<p> You can wacth how I did it here, pump up the volume for some Cash!
+        </p>
         
 <div class="table-responsive">
-            <p style="pic"> <video controls> <source src="/media/week6/neils_hello_board.m4v"></video></p></div>
+<p style="pic"> <video controls> <source src="/media/week6/neils_hello_board.m4v"></video></p><legend>video of my computer screen while I make the schematics and board</legend>
+</div>
+        <hr>
 
 
-Adding the LED and Button
-1 In order to add the LED and the Button I went back to the Schematics.
-1 In the schematics type add anded two resistors one LED and the button
-3 like before I used the commands move rotate and label name copy to position all components on its place
+<h3>Adding the LED and Button</h3>
 
+<ol type="a">
 
-
-Video here
-
-Exporting the image for fabmodules
-
-1 on layers toolbar select only the top layer
+<li>In order to add the LED and the Button I went back to the Schematics.
+</li>
         
-<p class="pic"><img src="media/week6/image00.png"></p>
+<li>
+In the schematics type "add" to add two resistors, one LED and the button</li>
+        
+<li>
+like before I used the commands move rotate and label name copy to position all components on its place</li></ol>
 
+
+<div class="table-responsive">
+<p style="pic"> <video controls> <source src="/media/week6/neils_hello_board_add_button_led.m4v"></video></p><legend>video of my computer screen while I add button and LED to the schematics and board</legend>
+</div>
+        
+<hr>
+
+<h3>Exporting the image for fabmodules</h3>
+        
+<ol type="i">
+<li>On layers toolbar select only the top layer</li>
 <p class="pic"><img src="media/week6/image05.png"></p>
+<li>next type "export"→ select image nd monocromatic→and in resolution type 500</li>
+<li>save to desired location</li>
+<p class="pic"><img src="media/week6/image00.png"></p>
+        
+<li>the result is a black and white image</li>
 
-2 the result is a black and white image
+            
+</ol>
 
-Image here
+<h3> edit in gimp</h3>
 
-Next export the outline
-1 select only Dimention layer
-2 do the same as before
+<p>in the end you should have two images, one for the PCB and one for the outline</p>
 
-<p class="pic"><img src="media/week6/image03.png"></p>
+<p class="pic"><img src="media/week6/neilshelloboard2.png"><legend>PCB image ready for fabmodules</legend></p>
 
+<p class="pic"><img src="media/week6/neilshelloboardoutline2.png"><legend>pcb outline ready for fabmodules</legend></p>
 
-<p class="pic"><img src="media/week6/neilshelloboard2.png"></p><p class="pic"><img src="media/week6/neilshelloboardoutline2.png"></p>
+<hr>
+<h3> Fab modules and Milling</h3>
 
-<p>I started by reading the Attiny44 datasheet. Slept a few times and moved on… Seriouly?</p>
+<p>The process in Fabmodules and Milling is already outlined by the <a href="exercise04.html">week 4 </a>assignment so I will only keep here some images and video of the results </p>
+<hr>
+        
+<h3>Soldering/Populating the PCB and Debuging</h3>
+        
+<hr>
+
+<h3> The result</h3>
         
     <!-- End of your content -->
 
