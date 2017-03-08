@@ -1,0 +1,131 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Joao Ribeiro</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional fonts for this theme -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this theme -->
+    <link href="css/joao.css" rel="stylesheet">
+
+    <!-- Temporary navbar container fix until Bootstrap 4 is patched -->
+    <style>
+    .navbar-toggler {
+        z-index: 1;
+    }
+    
+    @media (max-width: 576px) {
+        nav > .container {
+            width: 100%;
+        }
+    }
+    </style>
+
+</head>
+
+<body id="page-top">
+<div class="portfolio-modal "  tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal" >
+                    <a href="index.html">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </a>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Electronics Production</h2>
+                                <p class="item-intro text-muted">CNC Machining</p>
+                                <p>
+                                I chose to make the pcb of
+                                    <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">Brian</a>. To make this pcb i download the PNG files(Traces and outline Cutout). Before i import the files to the software i convert the PNG file to SVG.
+                                    </p>
+                                        <img src="img/portfolio/06-pcb1.jpg">
+                                    <p>
+                                         I use for machining the pcb the CARVEY CNC. The software i use to control the CARVEY is EASEL. First step i chose the material i use in the CARVEY, in this case i use PCB FR2.
+                                    </p>
+                                        <img src="img/portfolio/06-pcb2.jpg">
+                                    <p>
+                                        Before i put in the settings the tool i use to machinig the pcb for the traces i use tool with 0.4MM and to cut PCB i use 0.8MM.
+                                    </p>
+                                        <img src="img/portfolio/06-pcb3.jpg">
+                                        <img src="img/portfolio/06-pcb6.jpg">
+                                    <p>
+                                        To the Cut Settings i use the Recommended settings for this material.
+                                        Feed Rate: 254 mm/min
+                                        Plunge rate: 228.6 mm/min
+                                        Depth per pass: 0.1mm
+                                    </p>
+                                        <img src="img/portfolio/06-pcb4.jpg">
+                                    <p>
+                                        I import the SVG file to the EASEL and chose the Outline cut and the depth i cut is 0.1MM. 
+                                    </p>
+                                        <img src="img/portfolio/06-pcb5.jpg">
+                                    <p>
+                                        Before the settings is already ok i start the machining the PBC.
+                                        First i make the the paths with depth 0.1MM and before cut the PCB with 1.7MM.
+                                    </p>
+                                    <img src="img/portfolio/06-pcb7.jpg">
+                                    <p class="item-intro text-muted">Soldering</p>
+                                    For soldering the compenents in the PCB i use this tecnique, first i put the weld in one of the peds in the PCB before i put the component.
+                                        <img src="img/portfolio/06-pcb8.jpg">
+                                    <p>
+                                        In this step i soldering one of the peds in the pcb for the component is in the right place in the pcb footprint.
+                                    </p>
+                                        <img src="img/portfolio/06-pcb9.jpg">
+                                    <p>
+                                        Before the component is in right place i soldering the all peds in the pcb.
+                                    </p>
+                                        <img src="img/portfolio/06-pcb10.jpg">
+                                        <img src="img/portfolio/06-pcb11.jpg">
+                                    <p>
+                                        For the final step i test all soldering with voltmeter.
+                                    </p>
+                                        <img src="img/portfolio/06-pcb12.jpg">
+                                
+                                        
+                                    <a href="index.html"><button type="button" class="btn btn-primary" data-dismiss="modal" ><i class="fa fa-times"></i> Close Project</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+       <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/tether/tether.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Cusotm JavaScript for this theme -->
+    <script src="js/agency.min.js"></script>
+
+</body>
+
+</html>

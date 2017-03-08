@@ -1,0 +1,160 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Joao Ribeiro</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional fonts for this theme -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this theme -->
+    <link href="css/joao.css" rel="stylesheet">
+
+    <!-- Temporary navbar container fix until Bootstrap 4 is patched -->
+    <style>
+    .navbar-toggler {
+        z-index: 1;
+    }
+    
+    @media (max-width: 576px) {
+        nav > .container {
+            width: 100%;
+        }
+    }
+    </style>
+
+</head>
+
+<body id="page-top">
+<div class="portfolio-modal "  tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal" >
+                    <a href="index.html">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </a>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Electronics Design</h2>
+                                <p class="item-intro text-muted">3D Printing</p>
+                               <p>
+                                   I choose to make draw my PCB thconfusoe EAGLE software.
+                                   I redraw the PCB <a href="http://academy.cba.mit.edu/classes/embedded_programming/hello.ftdi.44.png">echo hello-world board</a> and add a button and LED. 
+                                   First i create a new schematic and start to put the components.
+                                   To add the components click in add our type add.
+                                   I use the Librarie fab.lib from FAB ACADEMY.
+                               </p>
+                                       <img src="img/portfolio/08-pcbdesign1.jpg">
+                                <p>
+                                    To add the VCC and GND i make with same method.
+                                </p>
+                                       <img src="img/portfolio/08-pcbdesign2.jpg">
+                                <p>
+                                    After add my components i connect my components using NET.
+                                    This method is simple but if they have many components is confused because we have saw much many nets.
+                                </p>
+                                       <img src="img/portfolio/08-pcbdesign3.jpg">
+                                <p>
+                                    And to connect the components exist other method with less confusion.
+                                    In this  method you need to give the name to your pad component in my case i give the name MISO because e need connect the ISP pin to the pad 7 (MOSI) of attiny44.
+
+                                </p>
+                                       <img src="img/portfolio/08-pcbdesign4.jpg">
+                                <p>
+                                    After you give the name to first pad you need give the same name to the other pad and pop ups this window to connect the two pads.
+                                </p>
+                                       <img src="img/portfolio/08-pcbdesign5.jpg">
+                                <p>
+                                    I put the label to know where the pads are connected.
+                                </p>
+                                       <img src="img/portfolio/08-pcbdesign6.jpg">
+                                <p>
+                                    And after the connect all components this is my final result schematic.
+                                </p>
+                                       <img src="img/portfolio/08-pcbdesign7.jpg">
+                                <p>
+                                    The schematic it's over is the to start make the board.
+                                    To go this windows need to click in schematic GENERATE/switch to board.
+                                </p>
+                                       <img src="img/portfolio/08-pcbdesign8.jpg">
+                                <p>
+                                    The first step i make is to go the Net classes and the settings .
+                                </p>
+                                       <img src="img/portfolio/08-pcbdesign9.jpg">
+                                <p>
+                                    In this step i move the components to the board in strategic site to be easier to connect the components. 
+                                    To connect the components we have two options, make the route manually our make the autorouter.
+                                    I choose make manually route.
+                                </p>
+                                       <img src="img/portfolio/08-pcbdesign10.jpg">
+                                <p>
+                                    In this images i simulate a autorouter but the result is not very good.
+                                </p>
+                                       <img src="img/portfolio/08-pcbdesign11.jpg">
+                                <p>
+                                    You can see the autorouter don't connect all components. 
+                                </p>
+                                       <img src="img/portfolio/08-pcbdesign12.jpg">
+                                <p>
+                                    This is my result of manually route.
+                                </p>
+                                       <img src="img/portfolio/08-pcbdesign.jpg">
+                                <p>
+                                    After i draw my board i passed to the cnc i export one image of the board in eagle and convert svg.
+                                    I put the svg in CARVEY CNC and this is result.
+                                </p>
+                                       <img src="img/portfolio/08-pcbdesign14.jpg">
+                                       <img src="img/portfolio/08-pcbdesign13.jpg">
+                                <p>
+                                    I decided to make one outline because more outline implies more time.
+                                    And in this case i make one outline so i had to test all contacts with the voltmeter.
+                                </p>
+                                       <img src="img/portfolio/08-pcbdesign15.jpg">
+
+                                    
+                                    <a href="files/schematic.zip" download><button type="button" class="btn btn-primary" data-dismiss="modal" style=" background-color:#31708f;"  > Download Files</button></a>
+                                    <a href="index.html"><button type="button" class="btn btn-primary" data-dismiss="modal" ><i class="fa fa-times"></i> Close Project</button></a>
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+       <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/tether/tether.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Cusotm JavaScript for this theme -->
+    <script src="js/agency.min.js"></script>
+
+</body>
+
+</html>
