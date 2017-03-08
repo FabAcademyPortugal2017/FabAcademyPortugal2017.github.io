@@ -1,0 +1,232 @@
+<!-- 
+//////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////
+ -->
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Fab Academy 2017;</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Fab Academy Page by Inês" />
+  	<meta name="keywords" content="fab lab, fab academy, assignments" />
+  	<meta name="author" content="Inês Carmo" />
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon2.ico and apple-touch-icon.jpg in the root directory -->
+	<link rel="shortcut icon" href="favicon2.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="css/style.css">
+
+	
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body onLoad="Load()">
+		
+		<!-- Header -->
+		<header id="fh5co-header" role="banner">
+			<div class="container">
+				<!-- Logo -->
+				<div id="fh5co-logo">
+					<a href="index.html">
+						<img src="images/logo2.png" alt="" width="150" height="151">					</a>				</div>
+				<!-- Logo -->
+				
+				<!-- Mobile Toggle Menu Button -->
+				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+				
+					<!-- Main Nav -->
+				<div id="fh5co-main-nav">
+				  <nav id="fh5co-nav" role="navigation">
+						<ul>
+							<li class="fh5co-active">
+								<a href="index.html">Assignments</a><a href="index.html"></a>							</li>
+							<li>
+								<a href="finalproject.html">Final Project </a>							</li>
+							<li>
+								<a href="aboutme.html">About me </a>							</li>
+						</ul>
+						
+				  </nav>
+				</div>
+				<!-- Main Nav -->
+			</div>
+		</header>
+		<!-- Header -->
+
+		<main role="main">
+			<!-- Start Intro -->
+			<div id="fh5co-intro">
+				<div class="container">
+					<h1>Week no. 6 </h1>
+						<div class="row">
+						  <div class="col-md-6 col-md-push-6 fh5co-intro-sub">
+						    <p>Electronics Design :						    </p>
+						    <ul>
+						      <li>
+						        <p>Redraw the echo hello-world board;</p>
+					          </li>
+						      <li>
+						        <p>Add at least a button and LED (with current-limiting resistor)</p>
+					          </li>
+							   <li>
+						        <p>Check the design rules, make it, an test it.</p>
+					          </li>
+					        </ul>
+					      </div>
+						</div>
+				</div>
+			</div>
+			<!-- End Intro -->
+			<div id="fh5co-tab-feature-center" class="fh5co-tab text-center">
+										<div>
+										  <div class="row">
+											  <div class="col-md-12">
+													<h2 class="h3">Redraw the Echo Hello-World Board </h2>
+    </div>
+											  
+												<div class="col-md-12">
+													<p>To iniciate this week's work we started by reading this tutorial:</p>
+													<p><a href="http://archive.fabacademy.org/archives/2017/doc/electronics_design_eagle.html#step4">http://archive.fabacademy.org/archives/2017/doc/electronics_design_eagle.html#step4</a></p>
+											</div>	
+							  		            <p align="center" class="style38">
+					  		                
+							  		            <ul>
+							  		              <li>First step: Download and Install Eagle; </li>
+							  		              <li>Second step: Download the Hello Echo schematic and board files; </li>
+							  		              <li>Third step: Download and Install the Libraries.</li>
+	  		                                </ul>
+						  		                <p>&nbsp;</p>
+					  		                <p align="center" class="style38">After reading the tutorial and done this tree steps i'm ready to start this assignment!<br>
+				  		                    Create new project-Right click on the created project and create new schematic. <br>Adding the components from the fab library is straight forward process.                                                
+                                                <p align="center" class="style38"><img src="images/week6/week6.jpg" width="719" height="404"> 
+                                                     <h5>Parts that are already on the Hello Echo Board:</h5>
+                                                     <p align="center"><strong>6-pin programming header:</strong> for programming the board<br>
+                                                     <strong>microcontroller: </strong>attiny44A. Once the microcontroller is programmed, <br>
+                                                       the program stored in non-volatile memory. This means that it will remember the program.<br>
+                                                     <strong>FTDI header:</strong> powers the board and allows board to talk to computer<br>
+                                                     <strong>20MHz resonator:</strong> external clock. The attiny has a 8Mhz clock but the resonator is faster<br> 
+                                                     (increase the clock speed of the processor) and more accurate.</p>
+                                                     <h5>The  components to the schematic:</h5>
+                                                     <p align="center"><strong>Resistor</strong> (value 10k)<br>
+                                                       <strong>Button </strong>(OMERON switch)<br>
+                                                       <strong>Ground<br>
+                                                       </strong><strong>VCC<br>
+                                                       </strong><strong>connect pin 10</strong> (PA3) on the microcontroller to the button<br>
+                                                       <strong>LED </strong>(Light Emitting Diode) <br>
+                                                     <strong>Resistor </strong>(current limiting resistor)</p>
+                                                     <p align="center"><br>
+                                                       <img src="images/week6/2.png" width="719" height="404"><br>
+                                                       To the LED i choose i need to use a 150 ohm resistor or above to avoid blowing out the LED. <br>
+                                                     I chose to use a 499 ohm resistor, because is the one that i have most in the lab.<br>
+                                                     <br>
+                                                     <img src="images/week6/3.png" width="719" height="404"></p>
+                                                     <p>When the components are placed on the schematic, its time to start connecting them by using the Net tool.<br>
+                                                       If the wiring becomes too crowded, you can use name tool to label the wires and connect them that way. <br>
+				  		                       Similarly named wires are connected in the board layout.<br>
+				  		                       <img src="images/week6/1.png" width="719" height="404"><br>
+                                               Once the layout is ready, switch to the board view (File-switch to board).<br>
+                                            Next, we need to place the components inside the defined board area and then design the wiring on the board.</p>
+                                                     <p><img src="images/week6/4.png" width="562" height="505"><img src="images/week6/5.jpg" width="706" height="505"></p>
+                                                     <p>The final step is to make the board export ready.In layers menu in the top toolbar, <br>
+                                                       wee need to
+                                                     select the only the top layer (traces only).</p>
+                                                     <p><img src="images/week6/6.jpg" width="719" height="404"> <img src="images/week6/7.jpg" width="719" height="404"> </p>
+                                                     <p>Then we need to export as a png (file-export-image)<br>
+                                                       with the settings should:<br>
+                                                       MONOCHROME<br>
+                                                       500 DPI</p>
+                                                     <p><img src="images/week6/traces.png" width="634" height="541"></p>
+                                                     <p>You can have my files <a href="Files/week6/week6.rar">here</a>. <br>
+                                                              </p>
+										  </div>
+			  </div>
+											  <div class="col-md-6"></div>
+    </div>
+	</div>
+										<div>
+											<div class="row">
+												<div class="col-md-12">
+													<h2 align="center" class="h3">Milling and Stuffing </h2>
+    </div>
+    <div class="col-md-12">
+		  <p align="center">To this part of the assignment i used tha fab modules to generate the traces <a href="Files/week6/w06.rar">.rml code</a> and the VPanel to control the MDX40 machine. </p>
+		  
+		 
+		  
+	
+          <p align="center"><img src="images/week6/8.jpg" width="719" height="404"><img src="images/week6/10.png" width="719" height="404">          
+          <p align="center"><img src="images/week6/12.jpg" width="719" height="431"><img src="images/week6/13.jpg" width="719" height="431">          
+          <p align="center">Then ichanged the tool and repeated the same process to do the cut, first i imported the <a href="images/week6/cut.png">.png file</a> to the fab modules, 
+          <p align="center"><img src="images/week6/cut.png" width="693" height="580">           
+          <p align="center">generated the cut <a href="Files/week6/cut.rar">.rml code</a> and imported to the Vpanel of the MDX40 to proced to the cut.
+          
+          <p align="center"><img src="images/week6/14.png" width="719" height="404">
+            <img src="images/week6/15.png" width="719" height="404">
+          <p align="center"><img src="images/week6/16.jpg" width="719" height="431">
+          <p align="center"><img src="images/week6/18.jpg" width="719" height="431">
+            <img src="images/week6/19.jpg" width="719" height="431">
+          
+          <p align="center">
+          
+          <p align="center">
+    </div>
+											 
+										<div>
+											<div class="row">
+											  <div class="col-md-12">
+													<h2 align="center" class="h3">Testing</h2>
+    </div>
+											  
+												<div class="col-md-12">
+													<p align="center">......</p>
+													
+	</div>											
+	                                            <div align="left">
+	                                              <p align="center"><FONT SIZE=1><BR>
+	                                                </FONT><img src="images/work4.jpg" width="470" height="330"></p>
+	                                             
+    </div>
+												 
+	</BODY>
+
+					
+							
