@@ -110,7 +110,7 @@
 
 <h3>Week workflow</h3>
 
-<p>Wekely assignment → introduction to eagle → Edit Schematic/Boad → Mill the board→ solder componets → debug → burn firmware and fuses → test board → edit and publish website</p><hr>
+<p>Wekely assignment → introduction to eagle → Edit Schematic/Boad → Mill the board→ solder componets → debug → edit and publish website</p><hr>
 
 
 <h3>Tools used</h3>
@@ -170,8 +170,68 @@ With the above schematics in hand I started redrawing it at Eagle</p>
     
 </ol>
 <hr>
+     
+<h3>Drawing the Board</h3><br>
+<h4>To position the components on the PCB use commands as done on the schematics:</h4>
+
+<ol type="a">
+    
+<li>Left click on file → type "board" → accept warning and left click yes to create start designing the PCB from previously created schematics</li>
+
+<p class="pic"><img src="media/week6/image01.png"></p>
+    
+<li>all components will be displayed to the left of the board → Drag them one by one with command "move"+left click drag to position inside the board</li>
+    
+<li>type "rotate" to turn the components the same way as in the schematics</li>
+<li>after all is positioned → resize board size draging the sides of the original board with the command "move"</li>
+<li>type "polygon" and select top layer and traw a square around the board limits in order to creat he top layer of the PCB</li>
+<li>type "ratsnest" → start autorouter type "auto", this command is verry convinient as it gives initial idea on how yowe can route the board, but it doesn't replace manual routing</li>
+<p class="pic"><img src="media/week6/image13.png"></p>
+<li>select start</li>
+<p class="pic"><img src="media/week6/image11.png"></p>
+<li>adjust traces if needed with command "ripup" to remove posicioned paths</li>
+<li>place new paths with command "route" and "move" to better position</li>
+<li> type command "info"+left click in order to fine tune position of paths as well as thicknes</li>
+  
+</ol>
+
+<p> You can wacth how I did it here, pump up the volume for some Cash!
+        </p>
+        
+<div class="table-responsive">
+<p style="pic"><video controls><source src="/media/week6/hello.m4v"></video></p><legend>video of my computer screen while I make the schematics and board</legend>
+
+</div>
+  
+<hr>
+
+
+<h3>Adding the LED and Button</h3>
+
+<ol type="a">
+
+<li>In order to add the LED and the Button I went back to the Schematics.
+</li>
+        
+<li>
+In the schematics type "add" to add two resistors, one LED and the button</li>
+
+<li> The fist resistor works to limit the current that goes to the LED. It should be placed in the positive side of it. In orther to dimention the LED I checked first the LED data sheet. There I looked for, Dc forward current, in this case 30 and forward voltage, in mthis case 2.1.</li>
+<li> with those two values plus my input voltage "5" in hand I input the values to the website <a href="http://led.linear1.org/1led.wiz">LED center</a> in orther to calculate the correct resistor, in this case 100Ohms</li>
+<p class="pic"><img src="media/week6/image14.png"></p>   
+<li> as for the swicth I used a 10K resistor as a pullup resistor</li>
+<li>
+like before I used the commands move rotate and label name copy to position all components on its place</li></ol>
+
+
+<!--<div class="table-responsive">
+<p style="pic"><video controls><source src="/media/week6/hello.m4v"></video></p><legend>video of my computer screen while I add button and LED to the schematics and board</legend>
+</div>-->
+        
+<hr>
 
 <h3>Make BOM (Bill of Materials)</h3>
+            
 
 <ol type="a">
     <li>Left click on design link → left click on Schematic</li>
@@ -185,7 +245,7 @@ With the above schematics in hand I started redrawing it at Eagle</p>
         
 <p>After some edditing here it is:</p> 
 
-<div class="tg-wrap"><table class="table">
+<div class="table"><table class="table">
   <tr>
     <th>qty</th>
     <th>Location</th>
@@ -256,67 +316,9 @@ With the above schematics in hand I started redrawing it at Eagle</p>
     <td>71600-006LF</td>
     <td>Headers &amp; Wire Housings 2X3P UNSHRD HDR 30 microinch gold</td>
   </tr>
-</table></div>        
-   <hr>
-     
-<h3>Drawing the Board</h3><br>
-<h4>To position the components on the PCB use commands as done on the schematics:</h4>
-
-<ol type="a">
-    
-<li>Left click on file → type "board" → accept warning and left click yes to create start designing the PCB from previously created schematics</li>
-
-<p class="pic"><img src="media/week6/image01.png"></p>
-    
-<li>all components will be displayed to the left of the board → Drag them one by one with command "move"+left click drag to position inside the board</li>
-    
-<li>type "rotate" to turn the components the same way as in the schematics</li>
-<li>after all is positioned → resize board size draging the sides of the original board with the command "move"</li>
-<li>type "polygon" and select top layer and traw a square around the board limits in order to creat he top layer of the PCB</li>
-<li>type "ratsnest" → start autorouter type "auto", this command is verry convinient as it gives initial idea on how yowe can route the board, but it doesn't replace manual routing</li>
-<p class="pic"><img src="media/week6/image13.png"></p>
-<li>select start</li>
-<p class="pic"><img src="media/week6/image11.png"></p>
-<li>adjust traces if needed with command "ripup" to remove posicioned paths</li>
-<li>place new paths with command "route" and "move" to better position</li>
-<li> type command "info"+left click in order to fine tune position of paths as well as thicknes</li>
+</table></div>   
+            <hr>
   
-</ol>
-
-<p> You can wacth how I did it here, pump up the volume for some Cash!
-        </p>
-        
-<div class="table-responsive">
-<p style="pic"><video controls><source src="/media/week6/hello.m4v"></video></p><legend>video of my computer screen while I make the schematics and board</legend>
-
-</div>
-  
-<hr>
-
-
-<h3>Adding the LED and Button</h3>
-
-<ol type="a">
-
-<li>In order to add the LED and the Button I went back to the Schematics.
-</li>
-        
-<li>
-In the schematics type "add" to add two resistors, one LED and the button</li>
-
-<li> The fist resistor works to limit the current that goes to the LED. It should be placed in the positive side of it. In orther to dimention the LED I checked first the LED data sheet. There I looked for, Dc forward current, in this case 30 and forward voltage, in mthis case 2.1.</li>
-<li> with those two values plus my input voltage "5" in hand I input the values to the website <a href="http://led.linear1.org/1led.wiz">LED center</a> in orther to calculate the correct resistor, in this case 100Ohms</li>
-<p class="pic"><img src="media/week6/image14.png"></p>   
-<li> as for the swicth I used a 10K resistor as a pullup resistor</li>
-<li>
-like before I used the commands move rotate and label name copy to position all components on its place</li></ol>
-
-
-<!--<div class="table-responsive">
-<p style="pic"><video controls><source src="/media/week6/hello.m4v"></video></p><legend>video of my computer screen while I add button and LED to the schematics and board</legend>
-</div>-->
-        
-<hr>
 
 <h3>Exporting the image for fabmodules</h3>
         
