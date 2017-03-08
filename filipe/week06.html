@@ -62,19 +62,54 @@
                             </header>                            
                             <header>
 								
-                                <h3>Title</h3>
+                                <h3>Redesigning Echo Hello-World</h3>
 								
 							</header>
 							<p>
-							
-                                text 
-				            </section>
-						</div>
+                                This week we had to add a LED and a button to a well knowned board named Echo Hello-World. But, because is always good to have more work them the one we were asked to do, i decided i should use not one but three LEDs. This way, my board wouldn't just blink, it would glow.
+                                <br>
+                                <img src="images/weeks/week06/notes.jpg" />
+                                <br>
+                                Started with understanding the board, and how it would work, what did what, what goes where, etc etc (picture above). Getting sure that the routes where correct was the first thing, and since there were a coupple of free pins on the Attiny45 i wanted to use them to add some extra LEDs. The components to add were 3x100ohm resistors for 3xGreen LEDs and a 10kohm resistor for the button. Below you can check the full list of components i used:
+                                <ul>
+                                    <li>R1 100ohm</li>
+                                    <li>R2 100ohm</li>
+                                    <li>R3 100ohm</li>
+                                    <li>R4 10kohm</li>
+                                    <li>R5 0ohm</li>
+                                    <li>R6 10kohm</li>
+                                    <li>C1 1uF</li>
+                                    <li>LEDs Green</li>
+                                    <li>Button</li>
+                                    <li>Resonator 20Mhz</li>
+                                    <li>Attiny44</li>
+                                    <li>ISP</li>
+                                    <li>FTDI</li>
+                                </ul>
+                                After looking into the diferent circuit drawing softwares and ended up using <a href="http://www.autodesk.com/products/eagle/overview">Eagle from Autodesk</a>, never used this sort of software but since one of my goals is to make my own 3D printer eletronics i believe this would be one of the most useful tools. Started with searching for some tutorials and found a couple of them who were very useful, here's the <a href="https://www.youtube.com/playlist?list=PL868B73617C6F6FAD">link to them</a>. With just the first two i was able to learn all i needed to redraw the board as i wanted.
+                                <br>
+                                <br>
+                                <img src="images/weeks/week06/eaglesche.jpg" />
+                                <br>
+                                As seen in the image above i used the method of linking the components by the use of small links with tags, this way there isn't a mess of wires going all around. The main difference you may see is the 3 LEDs and a 0ohm resistor that will be used as a bridge without wish i wasn't able to make all the routes. After i switch to the board mode, it took some time (almost a day considering that i had to redo everything once due to a simple mistake) to get everything to work out correctly and all routes got to the right place, at the end i only had to space out some resistor pads since there wasn't enought clearance between. Here's the end result:
+                                <br>
+                                <br>
+                                <img src="images/weeks/week06/ehw_finally.png" />
+                                <img src="images/weeks/week06/ehw_finally_mono.png" />
+                                <br>
+                                Finally used the Carvey with the Easel app and carved the board away, this time did only the outlines of the path to tryout and workout really good, clean look, a fraction of machining time as well as less stress on the tool. Soldering came afterwards and all went well with just some dificulty of the resonator. Below there's an image of the completed board and the schematic i made to help me put all together.
+                                <br>
+                                <br>
+                                <img src="images/weeks/week06/pcbsoldered.jpg" />
+                                <img src="images/weeks/week06/soldering.png" />
+                                <br>
+                            </p>
                         
-					</section>
-        </div>
-        
-		<!-- Footer -->
+                        </div>
+				    </section>
+            </div>
+                        
+        <!-- Footer -->
 			<div id="footer">
 
 				<!-- Copyright -->
