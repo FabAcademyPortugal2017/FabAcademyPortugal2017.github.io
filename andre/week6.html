@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<!--
+Editorial by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+Modified by André Rocha at Fab Academy 2017
+-->
+<html>
+<head>
+	<title>steam228@Fab Academy - Week2</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+<body>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header-->
+				<header id="header">
+					<a href="index.html" class="logo"><img class="logot" src="images/fab1.svg" alt="fab logo on my green"></img><strong>  FAB ACADEMY 2017</strong></a>
+					<!--<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
+				</ul>-->
+			</header>
+
+			<!-- Content -->
+			<section>
+				<header class="main">
+					<h1>Week 6 - Electronics Design</h1>
+				</header>
+
+				<span class="image main"><img src="images/week3cover.png" alt="experimenting with laser" /></span>
+
+				<h2>XXXXXXXXX</h2>
+				<p>Electronics Design - “or at least I tried”</p>
+				<p>The main conclusion about this week is that I feel ready to start exploring and trying to design my own boards. Mostly, i’m very motivated to do so.</p>
+				<p>By embracing this task I understood how important it is to develop our own circuitry and how it turns our development process much more robust.</p>
+				<p>I also used the week to explore other fabrication approaches, aiming at the use of a more low level CNC machine. (this specific process enriched my electronics production content, and will leave for a later tutorial.</p>
+
+				<ol><li>Understanding the circuit:
+
+
+								My first step was to understand the circuit and the changes that we were supposed to make.
+
+My previous experiences with Arduino (which I deeply recommend a front door to these worlds), helped me a to understand the potential of the Attiny, not only for this project as well for my final project.
+<img src="images/Image_0.png" />
+Taken from ATTINY44 datasheet: <u><a href="http://www.atmel.com/Images/8183S.pdf" rel="nofollow">http://www.atmel.com/Images/8183S.pdf</a></u>
+
+By a very simple analogy, we can just consider that all the PA pins, which are ADC pins can be connected as simples circuits we connect to an arduino pin.
+
+Previous year students, helped me get a clear view on what it was expected and <b>what was the crystal meant to do</b>. Again, by analogy with the AVR chips from Arduino, I soon understood that the internal time counting, impulses weren’t native from these smaller MCU’s.
+
+(<u><a href="http://fabacademy.org/archives/2015/doc/aboutClockSpeed.html" rel="nofollow">http://fabacademy.org/archives/2015/doc/aboutClockSpeed.html</a></u>) - about the crystal
+
+Also, the <b>reset pullup resistor</b>, declares the LOW state of the reset pin, which releases it from the float undefined mode. That does’n have to happen on an arduino AVR based system, because this MCU’s reset pins have internal pullup resistors.
+</li>
+<li>Eagle eyes over Eagle CAD
+
+I started by a very quick and well structured “Ben Heck Show” (<u>https://www.youtube.com/watch?v=R4DYztYB6d4</u>)  tutorial on youtube,
+My first guess was: having explored it previously, adding the well structured content of the class and tutorship of Luís I could easily understand handle it.
+
+The first challenge was to replicate the helloBoard exactly as defined.
+
+This process enabled me to get acquainted with the dimensions and types of components, and drawing strategies.
+
+For that, a couple of past student tutorials were essential:
+Xavier Dominguez
+<u><a href="http://archive.fabacademy.org/archives/2016/fablabbcn2016/students/262/" rel="nofollow">http://archive.fabacademy.org/archives/2016/fablabbcn2016/students/262/</a></u>
+Edgar R. Aguilar Arenales
+<u><a href="http://archive.fabacademy.org/archives/2016/fablabbcn2016/students/246/pages/06_week.html" rel="nofollow">http://archive.fabacademy.org/archives/2016/fablabbcn2016/students/246/pages/06_week.html</a></u>
+
+</li>
+<ol><li>Draw the schematic
+
+Every board begins with the circuit definition.
+
+First place the components you are expecting to use inside the layout area.
+Define the best positions for a clear understanding.
+And start connecting everyhing.
+
+</li>
+<li>When done, run ERC and switch to <b>board mode</b>.
+
+By this time it is essential to understand part sizes <u>https://www.youtube.com/watch?v=b9FC9fAlfQE</u>). And define a main trace sizes. <u><a href="http://www.4pcb.com/trace-width-calculator.html" rel="nofollow">http://www.4pcb.com/trace-width-calculator.html</a></u>
+
+Also your set of rules. Here you will be mainly worried about the clearance between conductive copper elements. If, like mentioned in most Eagle Tutorials, you are about to send the production files to a board house, then you should load their standards.
+
+In our case, we opted for 16 mil which is .4 mm, our smallest and most appropriate drill.
+
+<img src="images/Image_1.png" />
+</li>
+<li>Run DRC and see what happens:
+
+<img src="images/Image_2.png" />
+
+Notice some hatch areas? It is, as a result of the test, one area where our drill would damage the circuit by cutting the trace.
+
+
+</li>
+<li>My/your Hello World version!
+
+
+
+
+
+
+
+</li></ol>
+						</section>
+
+					</div>
+				</div>
+
+				<!-- Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+
+						<!-- Search -->
+						<section id="search" class="alt">
+							<form method="post" action="https://duckduckgo.com/search.html?prefill=Search">
+								<input type="text" name="query" id="query" placeholder="Search DuckDuckGo" />
+							</form>
+						</section>
+
+						<!-- Menu -->
+						<nav id="menu">
+							<header class="major">
+								<h2>Menu</h2>
+							</header>
+							<ul>
+								<li><a href="index.html">Homepage</a></li>
+								<li>
+									<span class="opener">Fab Process</span>
+									<ul>
+										<li><a href="week1a.html">Week1 - Sketch&Plan the Final Project</a></li>
+										<li><a href="#"><strike>Week1 - Website and Git</strike></a></li>
+										<li><a href="week2.html">Week2 </a></li>
+										<li><a href="week3.html">Week3 - Part 1</a></li>
+										<li><a href="week3b.html">Week3 - Part 2</a></li>
+										<li><a href="week3c.html">Week3 - Part 3</a></li>
+										<li><a href="week4.html">Week4 - Electronics + CNC </a></li>
+										<li><a href="week5.html">Week5 - 3D Printing </a></li>
+										<li><a href="week6.html"><strike>Week6 - Electronics Design</strike></a></li>
+
+									</ul>
+								</li>
+								<!--<li><a href="elements.html">The Master Plan</a></li>-->
+
+							</nav>
+
+							<!-- Section to use for latest -->
+							<!--	<section>
+							<header class="major">
+							<h2>Latest Stuff Added</h2>
+						</header>
+						<div class="mini-posts">
+						<article>
+						<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+						<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+					</article>
+					<article>
+					<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+					<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+				</article>
+				<article>
+				<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+				<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+			</article>
+		</div>
+		<ul class="actions">
+		<li><a href="#" class="button">More</a></li>
+	</ul>
+</section> -->
+
+<!-- Section -->
+<section>
+	<header class="major">
+		<h2>Get in touch</h2>
+	</header>
+	<p>Lets Do it Together!</p>
+	<ul class="contact">
+		<li class="fa-envelope-o"><a mailto="steam228@gmail.com">steam two hundred and twenty eight at gmail dot com</a></li>
+		<li class="fa-home">Fab Lab Caldas da Rainha<br />
+			Rua General Amilcar Mota, 16<br />
+			2500-202 Caldas da Rainha PORTUGAL</li>
+			<li class="fa-github"><a href="https://github.com/steam228/" target="_blank">steam228</a></li>
+		</ul>
+	</section>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<p class="copyright">If unspecified, all content is under  <a href="https://creativecommons.org" class="icon fa-creative-commons">-by 4.0</a><br/>Theme Design by: <a href="https://html5up.net">HTML5 UP</a>.</p>
+	</footer>
+
+</div>
+</div>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
