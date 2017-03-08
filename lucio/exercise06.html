@@ -185,70 +185,78 @@ With the above schematics in hand I started redrawing it at Eagle</p>
         
 <p>After some edditing here it is:</p> 
 
-        <div class="table-responsive">    
-<table class="table" border with="800">
+<div class="tg-wrap"><table class="table">
   <tr>
-    <th>Quantity</th>
-    <th>Value</th>
-    <th>Package</th>
-    <th>Manuf. Code</th>
+    <th>qty</th>
+    <th>Location</th>
+    <th>Digikey or MouserPart number</th>
+    <th>Manufacture Part #</th>
+    <th>Description</th>
   </tr>
   <tr>
     <td>1</td>
-    <td></td>
-    <td>6MM_SWITCH</td>
-    <td>FSM6JSMATR</td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>1UF</td>
-    <td>C1206FAB</td>
-    <td>C1206X105K3RAC3316</td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>ATTINY44-SSU</td>
-    <td>SOIC14</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>6-pin</td>
-    <td>FTDI</td>
-    <td></td>
+    <td>U1</td>
+    <td>ATTINY45V-10SU-ND</td>
+    <td>ATTINY45V-10SUR</td>
+    <td>IC MCU 8BIT 4KB FLASH 8SOIC</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>10K</td>
-    <td>R1206FAB</td>
-    <td>CRCW120610K0FKTA</td>
+    <td>R1</td>
+    <td>311-10.0KFRCT-ND</td>
+    <td>RC1206FR-0710KL</td>
+    <td>RES SMD 10K OHM 1% 1/4W 1206</td>
   </tr>
   <tr>
     <td>1</td>
-    <td>499 Ohms</td>
-    <td>R1206FAB</td>
-    <td>CRCW1206499RFKEA</td>
+    <td>R2</td>
+    <td>311-100FRCT-ND</td>
+    <td>RC1206FR-07100RL</td>
+    <td>RES SMD 100 OHM 1% 1/4W 1206</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>D3</td>
+    <td>160-1169-1-ND</td>
+    <td>LTST-C150GKT</td>
+    <td>LED GREEN CLEAR 1206 SMD</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>C1</td>
+    <td>445-1423-1-ND</td>
+    <td>C3216X7R1H105K160AB</td>
+    <td>CAP CER 1UF 50V X7R 1206</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>FTDI</td>
+    <td></td>
+    <td></td>
+    <td>6 pin header</td>
   </tr>
   <tr>
     <td>1</td>
     <td>RESONATOR</td>
-    <td>20MHz</td>
-    <td>AWSCR-20.00MTD-T</td>
+    <td>XC1109CT-ND</td>
+    <td>ECS-CR2-20.00-B-TR</td>
+    <td>CER RES 20.0000MHZ 15PF SMD</td>
   </tr>
   <tr>
     <td>1</td>
-    <td>AVRISPSMD</td>
-    <td>2X03SMD</td>
     <td></td>
+    <td>450-2058-1-ND</td>
+    <td>FSM6JSMATR</td>
+    <td>SWITCH TACTILE SPST-NO 0.05A 24V</td>
   </tr>
   <tr>
     <td>1</td>
-    <td>Green LED</td>
-    <td></td>
-    <td></td>
+    <td>ISP</td>
+    <td>649-95278-101A06LF</td>
+    <td>71600-006LF</td>
+    <td>Headers &amp; Wire Housings 2X3P UNSHRD HDR 30 microinch gold</td>
   </tr>
-</table></div>
-        
+</table></div>        
    <hr>
      
 <h3>Drawing the Board</h3><br>
@@ -279,7 +287,9 @@ With the above schematics in hand I started redrawing it at Eagle</p>
         </p>
         
 <div class="table-responsive">
-<p style="pic"><video controls><source src="/media/week6/hello.m4v"></video></p><legend>video of my computer screen while I make the schematics and board</legend></div>
+<p style="pic"><video controls><source src="/media/week6/hello.m4v"></video></p><legend>video of my computer screen while I make the schematics and board</legend>
+
+</div>
   
 <hr>
 
@@ -293,13 +303,17 @@ With the above schematics in hand I started redrawing it at Eagle</p>
         
 <li>
 In the schematics type "add" to add two resistors, one LED and the button</li>
-        
+
+<li> The fist resistor works to limit the current that goes to the LED. It should be placed in the positive side of it. In orther to dimention the LED I checked first the LED data sheet. There I looked for, Dc forward current, in this case 30 and forward voltage, in mthis case 2.1.</li>
+<li> with those two values plus my input voltage "5" in hand I input the values to the website <a href="http://led.linear1.org/1led.wiz">LED center</a> in orther to calculate the correct resistor, in this case 100Ohms</li>
+<p class="pic"><img src="media/week6/image14.png"></p>   
+<li> as for the swicth I used a 10K resistor as a pullup resistor</li>
 <li>
 like before I used the commands move rotate and label name copy to position all components on its place</li></ol>
 
 
 <div class="table-responsive">
-<p style="pic"> <video controls> <source src="/media/week6/hello.m4v"></video></p><legend>video of my computer screen while I add button and LED to the schematics and board</legend>
+<p style="pic"><video controls><source src="/media/week6/hello.m4v"></video></p><legend>video of my computer screen while I add button and LED to the schematics and board</legend>
 </div>
         
 <hr>
@@ -322,18 +336,20 @@ like before I used the commands move rotate and label name copy to position all 
 
 <p>in the end you should have two images, one for the PCB and one for the outline</p>
 
-<p class="pic"><img src="media/week6/neilshelloboard2.png"><legend>PCB image ready for fabmodules</legend></p>
+<p class="pic"><img src="media/week6/neilhelloboard.png"><legend>PCB image ready for fabmodules</legend></p>
 
-<p class="pic"><img src="media/week6/neilshelloboardoutline2.png"><legend>pcb outline ready for fabmodules</legend></p>
+<p class="pic"><img src="media/week6/neilhelloboardoutline.png"><legend>pcb outline ready for fabmodules</legend></p>
 
 <hr>
 <h3> Fab modules and Milling</h3>
 
 <p>The process in Fabmodules and Milling is already outlined by the <a href="exercise04.html">week 4 </a>assignment so I will only keep here some images and video of the results </p>
+  <p class="pic"><img src="media/week6/image15.jpg"><legend>pcb outline ready for fabmodules</legend></p>      
+        
 <hr>
         
 <h3>Soldering/Populating the PCB and Debuging</h3>
-        
+  <p class="pic"><img src="media/week6/image16.jpeg"><legend>pcb outline ready for fabmodules</legend></p>      
 <hr>
 
 <h3> The result</h3>

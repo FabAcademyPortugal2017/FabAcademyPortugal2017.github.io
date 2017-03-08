@@ -2266,6 +2266,7 @@ pre code {
 }
 table {
   background-color: transparent;
+    border;
 }
 caption {
   padding-top: 8px;
