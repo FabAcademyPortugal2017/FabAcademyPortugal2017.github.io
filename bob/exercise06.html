@@ -8,7 +8,7 @@
     <meta name="author" content="Name Surname">
     <link rel="icon" href="media/favicon.ico">
 
-    <title>Fab Academy 2015 - Name Surname</title>
+    <title>Fab Academy 2017 - Bob Raphtone</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +18,7 @@
     
     <!-- 3D files viewer -->
     <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
-	<script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.min.js"></script>
     <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
     <script type="text/javascript" src="media/jsc3d.touch.js"></script>
 
@@ -34,12 +34,12 @@
     
     <!-- Load the menu file -->
     <script>
-	function menu() {
-					  $('#exercises').load("exercises-menu.html");
-					  $('#project').load("project-menu.html");
-					  $('#cclicense').load("license.html");
-					  }
-	</script>
+    function menu() {
+                      $('#exercises').load("exercises-menu.html");
+                      $('#project').load("project-menu.html");
+                      $('#cclicense').load("license.html");
+                      }
+    </script>
 
   </head>
 
@@ -55,7 +55,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Name Surname</a>
+          <a class="navbar-brand" href="index.html">Bob Raphtone</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -78,157 +78,182 @@
 
     <div class="container">
 
-	<!-- Insert your content here below! -->
+    <!-- Insert your content here below! -->
 
 
-     <h2>Exercise...</h1>
+     <h2>Week 6</h1>
     
-    <h3>Menu</h3>
-	<p>
-	You can edit it by changing the <em>exercises-menu.html</em> and <em>project-menu.html</em>. Do <strong>not</strong> add any &ltol&gt; or &ltul&gt;, leave the structure as it is.
-	</p>
+    <h3>ELECTRONICS PRODUCTION</h3>
+    <p>
+    This is the most fun Week for me .Its where I begin to design and  make Electronics components.The week aims to form a basis for my future weeks on Electronics Design,Inputs,Outputs,Communications and also my Final project.
+
+
+    During this week I will be Producing the Fab Isp using various methords of Electronics Production
+
+    The key methord I will use now and in the future is Milling although other metheord of Electronics Production will be explained /illustrated.
+
+    </p>
     
     
-    <h3>Text</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp&gt;
-	Your text here
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p>
-	Your text here
-	</p>
-	
-	<h3>Images</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltp class="pic&gt;>&ltimg src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg"&gt;
-	&ltlegend&gt;Here's the legend of the picture.&lt/legend&gt;
-	&lt/p&gt;</pre>
-	</p>
-	Result:
-	<p class="pic"><img src="http://academy.cba.mit.edu/2012/students/menichinelli.massimo/exercise07/exercise07_02.jpg">
-	<legend>Here's the legend of the picture.</legend>
-	</p>
-     
-	<h3>Code</h3>
-	<p>
-	You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltpre class="prettyprint linenums"&gt;
-	Your code here
-	&lt/pre&gt;</pre>
-	
-	Result:
-	<pre class="prettyprint linenums">
-	for i in members:
-		print ""
-		print "USER:",members[i]
-		print "Loading connections..."
-		followers = load_connections([i], "followers")
-		friends = load_connections([i], "friends")
+    <h3>FabIsp and Eagle</h3>
+    <p>
+    FabIsp is a programmer that is used in FabLabs to Programme /load software into AVR microcontrollers.The FabIsp I will be making is based off Niels Design and modified by other previous Students
+    
+    </p>
+    
+    <h2> Eagle</h2>
+    <p>
+    Eagle is an Electronic Design software that is widely used in Fablabs and for hobby Electronics and beginners,In future lessons or weeks I will be showing a detailed tutorial on how to use Eagle to Design Electronic PCBs .
+    But for this week I will only be using it to open the design Files and produce the milling data used by the CNC machine to mill and drill the Fab ISP
+    </p>
+    
+    <p class="  pic"> 
+    <img src="  media/eagle.png">
+    <legend>  Eagle Software Design</legend>
+     </p>
+    <p class="  pic"> 
+    <img src="  media/eagle1.png">
+    <legend>Routing of the Board</legend>
+     </p>
+    <h3>Assignment</h3>
+    <p>
+    In this week ,I aim to Mill the Fab Isp and prohgramme It using the latest orr available firmaware so we can use It to programme our foture Boards we will be making and using
+    <p>
+    </p>
+    <h2>Procedure for Milling .</h2>
+    </h3>
+    Requirements  for Milling.
+    </h3>
 
-		# Add edges...
-		print "Building the graph..."
+    </p>
+    You require the following for a succesfull PCB milling
 
-		for f in followers:
-			for k in followers[f]:
-				graph.add_edge(k,f)
-	
-		for f in friends:
-			for k in friends[f]:
-				graph.add_edge(f,k)</pre>
-	</p>
-	
-	<h3>3D Model</h3>
-	<p>	
-	The model can be rotated and zoomed with the mouse/trackpad. You can set it up with:
-	<pre class="prettyprint linenums">
-	&ltcanvas id="cv" width=640 height=480&gt;
-	It seems you are using an outdated browser that does not support canvas :-(
-	&lt/canvas&gt;
-	&ltscript type="text/javascript"&gt;
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	&lt/script&gt;</pre>
-	
-	You can set up the path to the 3D model (.stl/.obj) within this line:
-	<pre class="prettyprint linenums">
-	viewer.setParameter('SceneUrl','media/monkey.stl');</pre>
-	
-	Result:
-	<canvas id="cv" width=640 height=480>
-	It seems you are using an outdated browser that does not support canvas :-(
-	</canvas>
-	<script type="text/javascript">
-		var canvas = document.getElementById('cv');
-		var viewer = new JSC3D.Viewer(canvas);
-		viewer.setParameter('SceneUrl','media/monkey.stl');
-		viewer.setParameter('ModelColor','#CAA618');
-		viewer.setParameter('BackgroundColor1','#E5D7BA');
-		viewer.setParameter('BackgroundColor2','#383840');
-		viewer.setParameter('RenderMode','flat');
-		viewer.setParameter('MipMapping','on');
-		viewer.setParameter('Definition','high');
-		viewer.setParameter('Renderer','webgl');
-		viewer.init();
-		viewer.update();
-	</script> 
+    FR4 board double sided or single sided depending on your Design
+    Drill and Milling Bits shown below
+    A CNC milling machine /Modella .I will be using a Desktop CNC Machine
+    Design Files/ Milling Data got /exported from Eagle.That is shown above
+    </p>
+
+       <p class="pic">
+        <img src="media/mill.jpg">
+        <legend>CNC mill.</legend>
+        </p>
+
+        <p class="pic">
+        <img src="media/endmills.jpg">
+        <legend>    End Mills.</legend>
+        </p>
+
+   <h3>Exporting Milling Files</h3>
+   <p>After Successfull design using Eagle software I exported the various drilling amd milling data to RouteCam ,the software used for millinga nd drilling PCBs with our CCD</p>
+    <p class="  pic"> 
+    <img src="  media/eagle2.jpg">
+    <legend>Route Cam</legend>
+     </p>
+     <p>Then had the correct settings in the Route CAM ,these settings are ideal or required to avaid breaking the tools /end mills and also for ensuring success of the Milling and drilling </p>
+        <p class="  pic"> 
+    <img src="  media/milling.jpg">
+    <legend> Milling</legend>
+    </p>
+    <p class="  pic"> 
+    <img src="  media/milledboard.jpg">
+    <legend>  Board already milled</legend>
+    </p>
+    <h3>Soldering The Board</h3>
+    <p>Soldering requires use of a sharp tip soldering gun set at the correct temperature .I also find using Solder paste and Flux very useful in soldering of Surface Mount Componets.</p>
+    <p class="  pic"> 
+    <img src="  media/milledboard.jpg">
+    <legend>  Board already Soldered successfully</legend>
+    </p>
+    <h3>Testing Connection and Continuity </h3>
+    <p>3D After Succesfull Soldering all the componets You need to test the continuity of all the </p>
+
+    <h2>Programming / Installing Firmware</h2>
+    <p>
+    After Succesully Milling Your FabIsp You will need to Solder the Componets and test all electrical connections are Okay
+
+
+    Testing the connections ensures one does not blow up his board componets due to wrong electrical faults.
+    </p>
+    
+    
+    <p>
+    For successful firmware installation and programming we will need an ISP programmer,Incircuit serial programmer for AVRs ..the most common and cheapy available is the USB tiny.After installing its drivers on windows and installing a special software called AVR dedes I should be able to detect the Microcontroller in the FabIsp as Attiny 44 ,This I didnt get in the first place or first attempt.This could be because of the soldering and the contacts between the componets .
+    </p>
+    <p class="  pic"> 
+    <img src="  media/avrdude.png">
+    <legend> Programming Firmware using AVRdudess under windows</legend>
+     </p>
+    <p>
+    
+     In Linux or MacOs I will need to install avrdude using the sudo apt-get install avrdude command.
     </p> 
     
-    <h3>Download</h3>
-	<p>
-	You can set up a button for files to be downloaded with:
-	<pre class="prettyprint linenums">
-	&lta href="#"&gt;
-	&ltbutton type="button" class="btn btn-primary btn-lg">Download the file&lt/button&gt;
-	&lt/a&gt;</pre>
-	</p>
-	
-	<p>
-	Result:
-	</p>
-	<p>
-	<a href="#">
-	<button type="button" class="btn btn-primary btn-lg">Download the file</button>
-	</a>
-	</p>
-      
-    <h3>Would you like to insert more style/elements?</h3>
+
+    <h2>Images and Gallery</h2>
       <p>
-      Check the documentation of Bootstrap <a href="">here</a>.
+     After troubleshooting and correcting all errors in the soldering and firmware  ISP programmer is now ready to be used in the future projects that require programming or loading firmware into other boards we will be making 
+     It has its drivers installed on windows and linux which will make life easy for me.
       </p>
+
+      <p class="  pic"> 
+    <img src="  media/milledboard.jpg">
+    <legend> ISP ready to programme other chips / MCUs</legend>
+     </p>
+    <p>
+    
+    <h3>Download Files </h3>
+    <p>
+    You Can download the Design Files Here
+    </p>
+    <p>
+    <a href="#">
+    <button type="button" class="btn btn-primary btn-lg">Download the file</button>
+    </a>
+    </p>
+      
+    
     <!-- End of your content -->
 
     </div> <!-- /container -->
 
-	<!-- footer -->
+    <!-- footer -->
     
     <footer id="footer">
-        <p id="cclicense">
-                </p>
-        <p class="license">
-        Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br>
-        Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
-        </p>
+         <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Location</strong>
+                    </h4>
+                    <p>Gearbox Kenya
+                        <br>Bishop Magua , Opposite Uchumi Hyper Ngong Rd Nairobi</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-phone fa-fw"></i> +254-710854823</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">bobraphtoneafwata@gmail.com</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Made with Fab Love </p>
+                </div>
+            </div>
+        </div>
+                <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
     </footer>
     
 
-	<!-- Do not touch this! -->
+    <!-- Do not touch this! -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -239,14 +264,14 @@
     </script>
     <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
     <link href="media/github.css" type="text/css" rel="stylesheet">
-	<script type="text/javascript">
-	  !function ($) {
-		$(function(){
-		  window.prettyPrint && prettyPrint()   
-		})
-	  }(window.jQuery)
-	</script>
-	
+    <script type="text/javascript">
+      !function ($) {
+        $(function(){
+          window.prettyPrint && prettyPrint()   
+        })
+      }(window.jQuery)
+    </script>
+    
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
