@@ -17,7 +17,6 @@ Modified by André Rocha at Fab Academy 2017
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 </head>
 <body>
-
 	<!-- Wrapper -->
 	<div id="wrapper">
 
@@ -35,176 +34,163 @@ Modified by André Rocha at Fab Academy 2017
 					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 					<li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
 				</ul>-->
-			</header>
-
-			<!-- Content -->
-			<section>
-				<header class="main">
-					<h1>Week 6 - Electronics Design</h1>
 				</header>
 
-				<span class="image main"><img src="images/week3cover.png" alt="experimenting with laser" /></span>
+				<!-- Content -->
+				<section>
+					<header class="main">
+						<h1>Week 6 - Electronics Design</h1>
+					</header>
+					<span class="image main"><img src="images/coverElectronicProd.png" alt="my final HelloBoard design" /></span>
 
-				<h2>XXXXXXXXX</h2>
-				<p>Electronics Design - “or at least I tried”</p>
-				<p>The main conclusion about this week is that I feel ready to start exploring and trying to design my own boards. Mostly, i’m very motivated to do so.</p>
-				<p>By embracing this task I understood how important it is to develop our own circuitry and how it turns our development process much more robust.</p>
-				<p>I also used the week to explore other fabrication approaches, aiming at the use of a more low level CNC machine. (this specific process enriched my electronics production content, and will leave for a later tutorial.</p>
-
-				<ol><li>Understanding the circuit:
-
-
-								My first step was to understand the circuit and the changes that we were supposed to make.
-
-My previous experiences with Arduino (which I deeply recommend a front door to these worlds), helped me a to understand the potential of the Attiny, not only for this project as well for my final project.
-<img src="images/Image_0.png" />
-Taken from ATTINY44 datasheet: <u><a href="http://www.atmel.com/Images/8183S.pdf" rel="nofollow">http://www.atmel.com/Images/8183S.pdf</a></u>
-
-By a very simple analogy, we can just consider that all the PA pins, which are ADC pins can be connected as simples circuits we connect to an arduino pin.
-
-Previous year students, helped me get a clear view on what it was expected and <b>what was the crystal meant to do</b>. Again, by analogy with the AVR chips from Arduino, I soon understood that the internal time counting, impulses weren’t native from these smaller MCU’s.
-
-(<u><a href="http://fabacademy.org/archives/2015/doc/aboutClockSpeed.html" rel="nofollow">http://fabacademy.org/archives/2015/doc/aboutClockSpeed.html</a></u>) - about the crystal
-
-Also, the <b>reset pullup resistor</b>, declares the LOW state of the reset pin, which releases it from the float undefined mode. That does’n have to happen on an arduino AVR based system, because this MCU’s reset pins have internal pullup resistors.
-</li>
-<li>Eagle eyes over Eagle CAD
-
-I started by a very quick and well structured “Ben Heck Show” (<u>https://www.youtube.com/watch?v=R4DYztYB6d4</u>)  tutorial on youtube,
-My first guess was: having explored it previously, adding the well structured content of the class and tutorship of Luís I could easily understand handle it.
-
-The first challenge was to replicate the helloBoard exactly as defined.
-
-This process enabled me to get acquainted with the dimensions and types of components, and drawing strategies.
-
-For that, a couple of past student tutorials were essential:
-Xavier Dominguez
-<u><a href="http://archive.fabacademy.org/archives/2016/fablabbcn2016/students/262/" rel="nofollow">http://archive.fabacademy.org/archives/2016/fablabbcn2016/students/262/</a></u>
-Edgar R. Aguilar Arenales
-<u><a href="http://archive.fabacademy.org/archives/2016/fablabbcn2016/students/246/pages/06_week.html" rel="nofollow">http://archive.fabacademy.org/archives/2016/fablabbcn2016/students/246/pages/06_week.html</a></u>
-
-</li>
-<ol><li>Draw the schematic
-
-Every board begins with the circuit definition.
-
-First place the components you are expecting to use inside the layout area.
-Define the best positions for a clear understanding.
-And start connecting everyhing.
-
-</li>
-<li>When done, run ERC and switch to <b>board mode</b>.
-
-By this time it is essential to understand part sizes <u>https://www.youtube.com/watch?v=b9FC9fAlfQE</u>). And define a main trace sizes. <u><a href="http://www.4pcb.com/trace-width-calculator.html" rel="nofollow">http://www.4pcb.com/trace-width-calculator.html</a></u>
-
-Also your set of rules. Here you will be mainly worried about the clearance between conductive copper elements. If, like mentioned in most Eagle Tutorials, you are about to send the production files to a board house, then you should load their standards.
-
-In our case, we opted for 16 mil which is .4 mm, our smallest and most appropriate drill.
-
-<img src="images/Image_1.png" />
-</li>
-<li>Run DRC and see what happens:
-
-<img src="images/Image_2.png" />
-
-Notice some hatch areas? It is, as a result of the test, one area where our drill would damage the circuit by cutting the trace.
-
-
-</li>
-<li>My/your Hello World version!
-
-
-
-
-
-
-
-</li></ol>
-						</section>
-
+					<h2 id="content">Electronics Design - “or at least I tried”</h2>
+					<p>The main conclusion about this week is that I feel ready to start exploring and trying to design my own boards. Mostly, i’m very motivated to do so.
+				By embracing this task I understood how important it is to develop our own circuitry and how it turns our development process much more robust.
+				I also used the week to explore other fabrication approaches, aiming at the use of a more low level CNC machine. (this specific process enriched my electronics production content, and will leave for a later tutorial.</p>
+        	<!-- Break -->
+					<div class="row">
+						<div class="6u 12u$(small)">
+							<h3>Understanding the circuit</h3>
+							<p>My first step was to understand the circuit and the changes that we were supposed to make.
+									My previous experiences with Arduino (which I deeply recommend as front door to these worlds), helped me a to understand the potential of the Attiny, not only for this project as well for my final project.
+									By a very simple analogy, we can just consider that all the PA pins, which are ADC pins can be connected as the simple circuits we connect to an arduino pin.</br>
+									Also, Previous year students, helped me get a clear view on what it was expected and what was the <a href="http://fabacademy.org/archives/2015/doc/aboutClockSpeed.html" target="blank">crystal</a> meant to do. </br>
+									Again, by analogy with the AVR chips from Arduino, I soon understood that the internal time counting, impulses weren’t native from these smaller MCU’s.</br>
+									Also, the reset pullup resistor, declares the LOW state of the reset pin, which releases it from the float undefined mode. That does’n have to happen on an arduino AVR based system, because this MCU’s reset pins have internal pullup resistors.<p>
+							<p>Image from ATTINY44: <a href="http://www.atmel.com/Images/8183S.pdf">datasheet</a></p>
+						</div>
+						<div class="6u$ 12u$(small)">
+							<span class="image main"><img src="images/ATTINY44.svg" alt="My second Sketches" /></span>
+						</div>
+				  <!-- Break -->
+						<div class="6u 12u$(small)">
+							<h3>Eagle eyes over Eagle CAD</h3>
+							<p>I started by a very quick and well structured <a href="https://www.youtube.com/watch?v=R4DYztYB6d4" target="blank">“Ben Heck Show” tutorial on youtube,</a>
+								My first guess was: having explored it previously, adding the well structured content of the class and tutorship of Luís I could easily understand handle it.	</br>
+								The first challenge was to replicate the helloBoard exactly as defined.	</br>
+								This process enabled me to get acquainted with the dimensions and types of components, and drawing strategies.	</br>
+								For that, a couple of past student tutorials were essential:</br>
+							<a href="http://archive.fabacademy.org/archives/2016/fablabbcn2016/students/262/" target="blank">Xavier Dominguez</a></br>
+							<a href="http://archive.fabacademy.org/archives/2016/fablabbcn2016/students/246/pages/06_week.html" target="blank">Edgar R. Aguilar Arenales</a></p>
+						</div>
+						<div class="6u$ 12u$(small)">
+							<span class="image main"><img src="images/eagleEyes.png" alt="My second Sketches" /></span>
+						</div>
+					<!-- Break -->
+						<div class="6u$ 12u$(small)">
+							<h3>Draw the schematic</h3>
+							<p>Every board begins with the circuit definition.</p>
+							<ol>
+								<li>First place the components you are expecting to use inside the layout area.</li>
+								<li>Define the best positions for a clear understanding.</li>
+								<li>And start connecting everyhing.</li>
+					  		<li>When done, run ERC and switch to board mode.</li>
+							</ol>
+						</div>
+						<div class="6u$ 12u$(small)">
+							<h3>Design de Board</h3>
+							<ol>
+								<li>By this time it is essential to understand <a href="https://www.youtube.com/watch?v=b9FC9fAlfQE" target="blank">part sizes</a></li>
+								<li>And define a main <a href="http://www.4pcb.com/trace-width-calculator.html" target="blank">trace sizes</a></li>
+								<li>And start connecting everyhing.</li>
+						  	<li>Also your set of rules: </br>
+									Here you will be mainly worried about the clearance between conductive copper elements.</br>
+									If, like mentioned in most Eagle Tutorials, you are about to send the production files to a board house, then you should load their standards.</br>
+									In our case, we opted for 16 mil which is .4 mm, our smallest and most appropriate mill.</li>
+								<li>Notice some hatch areas? It is, as a result of the test, one area where our mill would damage the circuit by cutting the trace.
+							</ol>
+						</div>
+					<!-- Break -->
+						<div class="6u$ 12u$(small)">
+							<span class="image main"><img src="images/Image_1.png" alt="My second Sketches" /></span>
+						</div>
+						<div class="6u$ 12u$(small)">
+							<span class="image main"><img src="images/Image_2.png" alt="My second Sketches2" /></span>
+						</div>
 					</div>
-				</div>
+				</section>
+			</div>
 
-				<!-- Sidebar -->
-				<div id="sidebar">
-					<div class="inner">
+<!-- Sidebar -->
+<div id="sidebar">
+<div class="inner">
 
-						<!-- Search -->
-						<section id="search" class="alt">
-							<form method="post" action="https://duckduckgo.com/search.html?prefill=Search">
-								<input type="text" name="query" id="query" placeholder="Search DuckDuckGo" />
-							</form>
-						</section>
+<!-- Search -->
+<section id="search" class="alt">
+	<form method="post" action="https://duckduckgo.com/search.html?prefill=Search">
+		<input type="text" name="query" id="query" placeholder="Search DuckDuckGo" />
+	</form>
+</section>
 
-						<!-- Menu -->
-						<nav id="menu">
-							<header class="major">
-								<h2>Menu</h2>
-							</header>
-							<ul>
-								<li><a href="index.html">Homepage</a></li>
-								<li>
-									<span class="opener">Fab Process</span>
-									<ul>
-										<li><a href="week1a.html">Week1 - Sketch&Plan the Final Project</a></li>
-										<li><a href="#"><strike>Week1 - Website and Git</strike></a></li>
-										<li><a href="week2.html">Week2 </a></li>
-										<li><a href="week3.html">Week3 - Part 1</a></li>
-										<li><a href="week3b.html">Week3 - Part 2</a></li>
-										<li><a href="week3c.html">Week3 - Part 3</a></li>
-										<li><a href="week4.html">Week4 - Electronics + CNC </a></li>
-										<li><a href="week5.html">Week5 - 3D Printing </a></li>
-										<li><a href="week6.html"><strike>Week6 - Electronics Design</strike></a></li>
+<!-- Menu -->
+<nav id="menu">
+	<header class="major">
+		<h2>Menu</h2>
+	</header>
+	<ul>
+		<li><a href="index.html">Homepage</a></li>
+		<li>
+			<span class="opener">Fab Process</span>
+			<ul>
+				<li><a href="week1a.html">Week1 - Sketch&Plan the Final Project</a></li>
+				<li><a href="#"><strike>Week1 - Website and Git</strike></a></li>
+				<li><a href="week2.html">Week2 </a></li>
+				<li><a href="week3.html">Week3 - Part 1</a></li>
+				<li><a href="week3b.html">Week3 - Part 2</a></li>
+				<li><a href="week3c.html">Week3 - Part 3</a></li>
+				<li><a href="week4.html">Week4 - Electronics + CNC </a></li>
+				<li><a href="week5.html">Week5 - 3D Printing </a></li>
+				<li><a href="week6.html"><strike>Week6 - Electronics Design</strike></a></li>
 
-									</ul>
-								</li>
-								<!--<li><a href="elements.html">The Master Plan</a></li>-->
+			</ul>
+		</li>
+		<!--<li><a href="elements.html">The Master Plan</a></li>-->
 
-							</nav>
+	</nav>
 
-							<!-- Section to use for latest -->
-							<!--	<section>
-							<header class="major">
-							<h2>Latest Stuff Added</h2>
-						</header>
-						<div class="mini-posts">
-						<article>
-						<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-						<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-					</article>
-					<article>
-					<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-					<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-				</article>
-				<article>
-				<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-				<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-			</article>
-		</div>
-		<ul class="actions">
-		<li><a href="#" class="button">More</a></li>
-	</ul>
+	<!-- Section to use for latest -->
+	<!--	<section>
+	<header class="major">
+	<h2>Latest Stuff Added</h2>
+</header>
+<div class="mini-posts">
+<article>
+<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+</article>
+<article>
+<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+</article>
+<article>
+<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+</article>
+</div>
+<ul class="actions">
+<li><a href="#" class="button">More</a></li>
+</ul>
 </section> -->
 
 <!-- Section -->
 <section>
-	<header class="major">
-		<h2>Get in touch</h2>
-	</header>
-	<p>Lets Do it Together!</p>
-	<ul class="contact">
-		<li class="fa-envelope-o"><a mailto="steam228@gmail.com">steam two hundred and twenty eight at gmail dot com</a></li>
-		<li class="fa-home">Fab Lab Caldas da Rainha<br />
-			Rua General Amilcar Mota, 16<br />
-			2500-202 Caldas da Rainha PORTUGAL</li>
-			<li class="fa-github"><a href="https://github.com/steam228/" target="_blank">steam228</a></li>
-		</ul>
-	</section>
+<header class="major">
+<h2>Get in touch</h2>
+</header>
+<p>Lets Do it Together!</p>
+<ul class="contact">
+<li class="fa-envelope-o"><a mailto="steam228@gmail.com">steam two hundred and twenty eight at gmail dot com</a></li>
+<li class="fa-home">Fab Lab Caldas da Rainha<br />
+Rua General Amilcar Mota, 16<br />
+2500-202 Caldas da Rainha PORTUGAL</li>
+<li class="fa-github"><a href="https://github.com/steam228/" target="_blank">steam228</a></li>
+</ul>
+</section>
 
-	<!-- Footer -->
-	<footer id="footer">
-		<p class="copyright">If unspecified, all content is under  <a href="https://creativecommons.org" class="icon fa-creative-commons">-by 4.0</a><br/>Theme Design by: <a href="https://html5up.net">HTML5 UP</a>.</p>
-	</footer>
+<!-- Footer -->
+<footer id="footer">
+<p class="copyright">If unspecified, all content is under  <a href="https://creativecommons.org" class="icon fa-creative-commons">-by 4.0</a><br/>Theme Design by: <a href="https://html5up.net">HTML5 UP</a>.</p>
+</footer>
 
 </div>
 </div>
