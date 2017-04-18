@@ -1,0 +1,212 @@
+<!-- 
+//////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////
+ -->
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Fab Academy 2017;</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Fab Academy Page by Inês" />
+  	<meta name="keywords" content="fab lab, fab academy, assignments" />
+  	<meta name="author" content="Inês Carmo" />
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon2.ico and apple-touch-icon.jpg in the root directory -->
+	<link rel="shortcut icon" href="favicon2.ico">
+
+	<!-- Google Webfont -->
+	<link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Icomoon Icons -->
+	<link rel="stylesheet" href="css/icomoon-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="css/easy-responsive-tabs.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="css/style.css">
+
+	
+	<!-- FOR IE9 below -->
+	<!--[if lte IE 9]>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body onLoad="Load()">
+		
+		<!-- Header -->
+		<header id="fh5co-header" role="banner">
+			<div class="container">
+				<!-- Logo -->
+				<div id="fh5co-logo">
+					<a href="index.html">
+						<img src="images/logo2.png" alt="" width="150" height="151">					</a>				</div>
+				<!-- Logo -->
+				
+				<!-- Mobile Toggle Menu Button -->
+				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+				
+					<!-- Main Nav -->
+				<div id="fh5co-main-nav">
+				  <nav id="fh5co-nav" role="navigation">
+						<ul>
+							<li class="fh5co-active">
+								<a href="index.html">Assignments</a><a href="index.html"></a>							</li>
+							<li>
+								<a href="finalproject.html">Final Project </a>							</li>
+							<li>
+								<a href="aboutme.html">About me </a>							</li>
+						</ul>
+						
+				  </nav>
+				</div>
+				<!-- Main Nav -->
+			</div>
+		</header>
+		<!-- Header -->
+
+		<main role="main">
+			<!-- Start Intro -->
+			<div id="fh5co-intro">
+				<div class="container">
+					<h1>Week no. 11 </h1>
+						<div class="row">
+						  <div class="col-md-6 col-md-push-6 fh5co-intro-sub">
+						    <p>Machine Design :						    </p>
+						    <ul>
+						      <li>automate your machine</li>
+					        </ul>
+					      </div>
+						</div>
+				</div>
+			</div>
+			<!-- End Intro -->
+			<div id="fh5co-tab-feature-center" class="fh5co-tab text-center">
+										<div>
+										  <div class="row">
+											  <div class="col-md-12">
+													<h2 class="h3">Machine Design  </h2>
+    </div>
+											  
+												<div class="col-md-12">
+												  <p>This week’s assignment was to automate the passive parts of our machine.</p>
+											</div>	
+							  		            <p align="center" class="style38">My goal is to have a start and finish line for the circuit, and try to measure the<br>time the marble spends in                                   
+					  		                the circuit in a oled display or ring a bell on the finish line, or maybe both. 
+							  		            <p align="center" class="style38">I start building my code in arduino: 
+                                            <p align="center" class="style38"><img src="images/week11/1.png" width="700" height="394">
+						  		            <h5>My Code :</h5>
+                                                <p>int LDR_START = A4;<br>
+                                              int LED_START = 4;<br>
+                                              int LDR_FINISH = A3;<br>
+                                            int LED_FINISH = 3;</p>
+                                                     <p>int READING_LDR_START = 0;<br>
+                                                       int READING_LDR_FINISH = 0;<br>
+                                                       int THRESHOLD = 400;<br>
+                                                       int TRIGGERED = 0;<br>
+                                                       float START = 0;<br>
+                                                       float FINISH = 0;<br>
+                                                       float DURATION = 0;<br>
+                                                       <br>
+                                                       void setup() {<br>
+                                                       pinMode(LDR_START, INPUT);<br>
+                                                       pinMode(LED_START, OUTPUT);<br>
+                                                       pinMode(LDR_FINISH, INPUT);<br>
+                                                       pinMode(LED_FINISH, OUTPUT);<br>
+                                                       Serial.begin(9600);<br>
+                                                       digitalWrite(LED_START, HIGH);<br>
+                                                       digitalWrite(LED_FINISH, HIGH);<br>
+                                                       }<br>
+  <br>
+                                                       void loop() {<br>
+                                                       READING_LDR_START = analogRead(LDR_START);<br>
+                                                       if (READING_LDR_START &lt; THRESHOLD) {<br>
+                                                       START = millis();<br>
+                                                       TRIGGERED = 1;<br>
+                                                       Serial.print(&quot; STARTED &quot;);<br>
+                                                       delay(500);<br>
+                                                       }<br>
+                                                       READING_LDR_FINISH = analogRead(LDR_FINISH);<br>
+                                                       if ((READING_LDR_FINISH &lt; THRESHOLD) &amp;&amp; (TRIGGERED == 1)) {<br>
+                                                       FINISH = millis();<br>
+                                                       DURATION = FINISH - START;<br>
+                                                       Serial.print(&quot; FINISHED: &quot;);<br>
+                                                       Serial.print(DURATION/1000);<br>
+                                                       Serial.println(&quot; S &quot;);<br>
+                                                       TRIGGERED = 0;<br>
+                                                       delay(500);<br>
+                                                       }<br>
+                                                       }</p>
+                                                     <p><br>
+                                            </p>
+                                          </div>
+			  </div>
+											  <div class="col-md-6"></div>
+    </div>
+	</div>
+										<div>
+											<div class="row">
+												<div class="col-md-12">
+													<h2 align="center" class="h3">Testing the Code </h2>
+    </div>
+    <div class="col-md-12">
+		  <p align="center">To do this part i used some components from a BQ electronics kit. </p>
+		  <p align="center"><img src="images/week11/2.jpg" width="700" height="420"><img src="images/week11/1.jpg" width="700" height="420"></p>
+		  <p align="center">in order to see if my program was working i set the reading only to the LDR from the start<br>
+		    and
+	      i blocked the LED light with my finger to se the results and it was working! </p>
+		  <p align="center"><img src="images/week11/2.png" width="700" height="394"></p>
+		  <p align="center">Then i chaged the code back again and tried with the marble. It didn't work because our marbles<br>
+		    are translucent, so to fix that i coverd him with paper tape and tried again:</p>
+		  <p align="center"><img src="images/week11/3.png" width="700" height="394"> </p>
+		  <p align="center">&nbsp; </p>
+		  <p align="center"><br>
+    </div>
+											 
+										<div>
+											<div class="row">
+											  <div class="col-md-12">
+													<h2 align="center" class="h3">Adding a Buzzer/OLED display </h2>
+    </div>
+											  
+												<div class="col-md-12">
+													<p align="center">......</p>
+													
+	</div>											
+	                                            <div align="left">
+	                                              <p align="center"><FONT SIZE=1><BR>
+	                                                </FONT><img src="images/work4.jpg" width="470" height="330"></p>
+	                                             
+    </div>
+												 
+	</BODY>
+
+					
+							
