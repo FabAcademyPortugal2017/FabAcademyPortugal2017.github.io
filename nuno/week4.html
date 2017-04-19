@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Fab Academy 2017 - Nuno Alves</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Nuno Alves _ Fab Academy 2017</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                          <li>
+                        <a href="finalproject.html">Final Project</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">4_electronics production
+                    <small></small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                <a href="images/week4m.jpg">
+                    <img class="img-responsive" src="images/week4m.jpg" alt="">
+                </a>
+                <h3>
+                    <a href="#">4_electronics production </a>
+                </h3>
+                <p>Assignment is to mill the board, stuff it with components and program it.<br><br>
+
+<br>Fab ISP<br><br>
+The FabISP is an in-system programmer for AVR microcontrollers, designed for production within a FabLab.
+<br><br>
+That is, it allows us to program the microcontrollers on other boards we make, using nothing but a USB cable and 6-pin IDC to 6-pin IDC cable. It's based on the USBtiny and V-USB firmwares, which allow the ATtiny44 to perform USB communication in software. Programming can be done through avrdude.
+<br><br>
+The schematic (PDF) is super simple: USB connector, ATtiny44, and 6-pin ISP header, with assorted passive components. I started with the Eagle files for the USBtinyISP, although there's almost nothing left of it. Most of the parts for the FabISP are in the FabLab inventory. Exceptions include the Mini-B USB connector (SparkFun, Digi-Key), 12 MHz crystal (Digi-Key), and 18 pF capacitors for the crystal (Digi-Key).<br><br> 
+                   
+  <br><br>
+                    PCB Fabrication
+                <br><br>
+I choose Brian "FabTinyISP Minimal", a Bas Zaerc's ISP with few modifications tutorial. I choose this because i liked its shape, and in our group we decided to make 2 diferent FabISP's. After reading a while i come to some conclusions:<br>
+Less components needed<br>
+The LEDS facilitate usage<br>
+Easy way of removing the bridge/jumpers<br>
+Practical use in USB slot<br><br>
+I started by downloading the traces and the outline cutout.<br>
+                    I used Fabmodules HTML5 to get the clearance an cutting paths. Here are the steps i followed:<br>
+input format --> image (.png) --> select the png file<br>
+output format --> Rolland mill (.rml)<br>
+Process --> PCB Traces (1/64)<br><br>
+Then i changed a few parameters, as seen on the picture below, for better results. I changed the z home (mm): to 6mm for the jog in the end of the milling go up for a safe Z of 6mm, otherwise the PCB could get damaged. <br><br>
+                    
+                    
+                    Process:<br><br>
+                    <br> 
+                    
+                      <a href="images/week4aa.jpg">
+                    <img class="img-responsive" src="images/week4aa.jpg" alt="">
+                </a>
+                       <br> 
+                    <br> 
+                    
+                      <a href="images/week4ab.jpg">
+                    <img class="img-responsive" src="images/week4ab.jpg" alt="">
+                </a>
+                       <br> <br>
+                       <br> 
+                    
+                      <a href="images/week4ac.jpg">
+                    <img class="img-responsive" src="images/week4ac.jpg" alt="">
+                </a>
+                       <br><br><br>
+                    Production process:
+                    <br><br>
+                   Change tool
+                    <br><br>
+                    
+                    <a href="images/week4b.jpg">
+                    <img class="img-responsive" src="images/week4b.jpg" alt="">
+                </a>
+
+</p>
+          
+              <br><br>
+                milling of the Fab ISP
+                   
+                    <br><br>
+                <a href="images/week4j.jpg">
+                    <img class="img-responsive" src="images/week4j.jpg" alt="">
+                </a>
+                <br><br><br>
+                 First i did a list with the components,quantities and their position on the board with a panel of pre-spacing tape to help me pick
+                        
+                                    <br><br>
+                 <a href="images/week4c.jpg">
+                    <img class="img-responsive" src="images/week4c.jpg" alt="">
+                </a>
+                <br><br><br>
+            Then i starded solder the components to the board using a soldering iron and solder.
+                <br>
+                It was my first time doing this,i need to practice more.
+                 <br><br>
+                  
+                   
+             <a href="images/week4m.jpg">
+                    <img class="img-responsive" src="images/week4m.jpg" alt="">
+                </a>
+
+             <br><br> 
+
+               <a href="images/week4d.jpg">
+                    <img class="img-responsive" src="images/week4d.jpg" alt="">
+                </a>
+
+                       <br>                     
+
+                <br><br>
+                 <a href="images/week4e.jpg">
+                    <img class="img-responsive" src="images/week4e.jpg" alt="">
+                </a>
+                <br><br> 
+                  <br>
+                         And this is the final result! 
+                 <br><br>
+                 <a href="images/week4f.jpg">
+                    <img class="img-responsive" src="images/week4f.jpg" alt="">
+                </a>
+               
+                <br><br>
+                <br><br>
+                <br><br>
+                <br><br>
+               mmmmmmmmmmmmmmmmmmmmmmmm
+                <br><br>
+zzzzzzzzzzzzzzzzzzzzzzzzzzzz
+                       <br><br> 
+
+                <a href="images/week0a.jpg">
+                    <img class="img-responsive" src="images/week0a.jpg" alt="">
+                </a>
+                <br>
+                 xxxxxxxxxxxxxxxxxxxxxxxxxx
+                       <br><br> 
+                    
+                      <a href="images/week0a.jpg">
+                    <img class="img-responsive" src="images/week0a.jpg" alt="">
+                </a>
+                       <br> 
+             kkkkkkkkkkkkkkkkkkkkk
+                 <br><br>
+                <br><br> 
+                       <br><br>
+pppppppppppppppppppppppppp
+                <br><br> 
+                     
+            
+                <a href="images/week0a.jpg">
+                    <img class="img-responsive" src="images/week0a.jpg" alt="">
+                </a>
+                    aaaaaaaaaaaaaaaaaaaaa
+                       <br><br> 
+                       <br><br>
+                    aaaaaaaaaaaaaaaaaaaaa
+                       <br><br>
+            </div>
+            
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Nuno Alves 2017</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -57,7 +57,6 @@
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
 	</head>
 	<body onLoad="Load()">
 		
@@ -104,18 +103,25 @@
 			</div>
 			<!-- End Intro -->
 			<div id="fh5co-tab-feature-center" class="fh5co-tab text-center">
-										<div>
-										  <div class="row">
+			  <div>
+			    <div class="row">
 <div class="col-md-12">
 													<h2 class="h3">3D Modeling</h2>
     </div>
-													<p>To  model my object i used a software called rhinoceros3D. I started by designing the components that i will use in the brake to try to understand how can i fit them together. </p>
-										  </div>	
-											  		  <p align="center" class="style38">
-			  </div>
-													  <p><img src="images/week2/week21.png" alt="first drawing" longdesc="images/week2_1.png"> </p>
-													  <p>Then i put the bloks in order and design a possible box for the components, trying find the right shape and size.</p>
-													  <p><img src="images/week2/week21.png" alt="first drawing" longdesc="images/week2_2.png"> </p>
+						  <p align="center">To  model my object i used a software called rhinoceros3D. 
+												    I started by designing the components <br>
+												    that i will use in the brake to try to understand how can i fit them together. </p>
+													<p align="center">To design the conponents i used simple comands, as an example, to do the 18650 Battery i draw the batery
+												    profile and did a <strong>revolve</strong>. <br>
+												    For the other components (arduino mini, MP1405 battery charger, NeoPixel LED Stick and accelerometer) i just draw the shape of each one<br> 
+												    did an <strong>extrude curve</strong>, for the holes in the boards i draw the circles, <br>
+extruded them and did a <strong>bollean difference</strong> to take them of.<br>
+													I did each component in a different layer and with a different color to identify them more easily. </p>
+													<p align="center">Then i put the bloks in order and design a possible box for the components, trying find the right shape and size.</p>
+			    </div>	
+	  		  </div>
+													  <p><img src="images/week2/week21.png" alt="first drawing" longdesc="images/week2_1.png"> <img src="images/week2/week22.png" width="600" height="411"></p>
+													  
 													  <p><span class="col-md-12">If you want to see my original files click <a href="Files/brake light components - week2.3dm">here</a>. </span></p>
 						
 													  <div class="col-md-6"></div>
@@ -127,9 +133,19 @@
 													<h2 align="center" class="h3">Redering</h2>
 											  </div>
 											  <div class="col-md-12">
-													<p align="center">I did my redering with rhino as well, at the start i just appliend some basic materials, some decals and lights.</p>
-													<p align="center"><img src="images/week2/week23.png" alt="Render1" longdesc="images/week2_3.png">. </p>
-													<p align="center">Then i tried some environments to do the render... </p>
+													<p align="center">I did my redering with rhino as well. The process needed to render scenes consists of four basic steps:<br>
+													  ●	Add lighting
+													    <br>
+												      ●	Assign materials
+													  <br>
+													  ●	Set up the environment and ground plane<br>
+													  ●	Render<br>
+													  At the start i just appliend some basic materials. With the  materials we can specify the color, finish, <br>
+													  transparency, texture, and bump for use by the renderer. <br>
+												    Then i applied decals, the decal allow you to applied an image  to the surface of an object with <br>
+												    a given projection. You can learn more about this command here: <a href="https://docs.mcneel.com/rhino/5/help/en-us/properties/decal.htm">https://docs.mcneel.com/rhino/5/help/en-us/properties/decal.htm</a><br>
+													And did some tests with lights and envinonments. </p>
+													<p align="center"><img src="images/week2/week23.png" alt="Render1" longdesc="images/week2_3.png">.  </p>
 	</div>
 											 
 										<div>
@@ -139,7 +155,8 @@
     </div>
 											  
 												<div class="col-md-12">
-													<p align="center">For the animation part,  i did the animation on Rhino. I didn't know how to do it but it's actually pretty easy. I used the 360 animation, you juste need to choose the type of image and number of frames! And the result is this! </p>
+													<p align="center">For the animation part,  i did the animation on Rhino. I didn't know how to do it but it's actually pretty easy. <br>
+												    I used the 360 animation, you juste need to choose the type of image and number of frames! And the result is this! </p>
 													
 													
 													
@@ -168,7 +185,7 @@
   <BR>
   <BR>
 
-  &nbsp;&nbsp;&nbsp;
+ 
   <INPUT ID="checkLoop"" TYPE="checkbox" style="width:13;height:13;">
   Loop continuously
   <BR>
@@ -182,10 +199,14 @@
     
     
 	<div class="col-md-12">
-   <p align="center">Then i tried to do another animation in Keyshot:</p>
-   <div align="right"><img src="images/week2/keyshot.png">
-     <img src="images/week2/printkeyshot.png">
-   </div>
+													<p align="center">Then i tried to do another animation in Keyshot.<br>
+     With Keyshot it's a little more complex process but still pretty easy. Basically you can choose if you want to animate a model/part<br> 
+     or if you want to animate with your camera. Then we choose or the camera or the part movement<br> 
+    and the time settings. </p>
+													<p align="center"><img src="images/week2/week25.png" width="633" height="600"><br>
+                                                     </p>
+													<div align="center"><img src="images/week2/keyshot.png" width="634" height="304">
+     <img src="images/week2/printkeyshot.png">   </div>
    <p align="center">And this was the result:</p>
    <P align="center">
    <video class="img-responsive img-border-left"
