@@ -61,7 +61,7 @@
         <main class="main" id="main">
             <div class="hero cyan darken-3 overflow-hidden">
                 <canvas id="canvas"></canvas>
-                <h1 class="bold">Embedded Programming</h1>
+                <h1 class="bold">Outpu devices</h1>
             </div>
 
             
@@ -70,23 +70,93 @@
                 <div class="container">
                     <div class="row">
                         <div class="col s12 l6">
-                            <h2>Week 8</h2>
-                            <img src="./assets/images/week8/week8.jpg">
-                            <h3>Embedded Programming</h3>
+                            <h2>Week 10</h2>
+                            <img src="./assets/images/week10/week10.jpg">
+                            <h3>Output Devices</h3>
                             
                             
                         </div>
                         <div class="col s12 l6">
                         <h2>Tasks</h2>
-                          <p class="teal">read a microcontroller data sheet<br>
-   Program your board to do something, with as many different programming languages
-      and programming environments as possible<br>
-   Extra credit: experiment with other architectures
+                          <p class="teal"> add an output device to a microcontroller board you've designed and program it to do something<br>
+<br>
 </p>     </div></div>
 <br>
                            
-<h4>COMING SOON</h4>                    
+<h4>RGB LED Board</h4>                    
                           
+                  <p class="flow-text">After watching Neil's lesson and take a look at the options i had, i decided to make the RGB Light output Device, wich i'm going to use in my final project to illuminate my greenhouse interior, according to daylight's level.
+                    <br>
+I started by downloading the files needed to the project and then milled the board in our modella. collected the components and soldered all the components to the board. 
+<br>
+<span class="deep-orange">Colecting the components</span><br>
+<img src="./assets/images/week10/output1.jpg"><br>
+<span class="deep-orange">Soldering the components</span><br>
+<img src="./assets/images/week10/output2.jpg"><br>
+I had to verify all the solderings at the end because the board wasn't flashing properly, and found 2 weldings that weren't supposed to be connected. I connected a 9V battery to the board for auxiliar power. <br>
+<span class="deep-orange">Connecting a 9V Battery</span><br>
+<img src="./assets/images/week10/output3.jpg"><br>
+<span class="deep-orange">Testing the board</span><br>
+<img src="./assets/images/week10/output4.jpg"><br>
+When all components were connected to my FabIsp i compiled the C code:
+<br>
+<span class="cyan-text">sudo make -f hello.RGB.45.make </span><br>
+and then<br>
+<span class="cyan-text">sudo make -f hello.RGB.45.make program-usbtiny<br />
+sudo make -f hello.RGB.45.make program-usbtiny <br />
+  avr-objcopy -O ihex hello.RGB.45.out hello.RGB.45.c.hex;\<br />
+  avr-size --mcu=attiny45 --format=avr hello.RGB.45.out<br />
+  AVR Memory Usage<br />
+  ----------------<br />
+  Device: attiny45<br />
+  Program:     330 bytes (4.0% Full)<br />
+  (.text + .data + .bootloader)<br />
+  Data:          0 bytes (0.0% Full)<br />
+  (.data + .bss + .noinit)<br />
+  avrdude -p t45 -P usb -c usbtiny -U flash:w:hello.RGB.45.c.hex<br />  
+  avrdude: AVR device initialized and ready to accept instructions<br />
+  Reading | ################################################## | 100% 0.00s<br />
+  avrdude: Device signature = 0x1e930b<br />
+  avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed<br />
+  To disable this feature, specify the -D option.<br />
+  avrdude: erasing chip<br />
+  avrdude: reading input file "hello.RGB.45.c.hex"<br />
+  avrdude: input file hello.RGB.45.c.hex auto detected as Intel Hex<br />
+  avrdude: writing flash (330 bytes):<br />
+  Writing | ################################################## | 100% 0.37s<br />
+  avrdude: 330 bytes of flash written<br />
+  avrdude: verifying flash memory against hello.RGB.45.c.hex:<br />
+  avrdude: load data flash data from input file hello.RGB.45.c.hex:<br />
+  avrdude: input file hello.RGB.45.c.hex auto detected as Intel Hex<br />
+  avrdude: input file hello.RGB.45.c.hex contains 330 bytes<br />
+  avrdude: reading on-chip flash data:<br />  
+  Reading | ################################################## | 100% 0.33s<br />  
+  avrdude: verifying ...<br />
+  avrdude: 330 bytes of flash verified<br />
+  avrdude: safemode: Fuses OK<br />
+  avrdude done.  Thank you.<br />    
+</span><br>
+<span class="deep-orange">This is my Final Board</span><br>
+<img src="./assets/images/week10/output.jpg"><br>
+Everything went well. Work done! Here's my final video:<br>
+
+<span class="deep-orange">Video of the board flashing</span><br>
+<video width="640" height="480" controls>
+
+  <source src="./assets/videos/output.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<br><br>  
+
+</p>
+
+<span class="green">FILES</span><br>
+ <a href="assets/files/output.rar" class="green">All files</a><br>
+<br>
+
+<br>
+<br>  
+    </div>
                     
                 
 
