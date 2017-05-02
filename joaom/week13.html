@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- Making sure the web-site will scale fine on mobiles-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Trying to force IE to perform at its best-->
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <!-- Meta description, aim for about 150 characters-->
+        <meta name="description" content="Fabacademy 2017 course, portfolio page from João Milheiro, manager at Fab Lab Aldeias do Xisto in Portugal">
+        <!-- Stylesheets-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,700">
+        <link rel="stylesheet" href="./libs/materialize/css/materialize.min.css">
+        <link rel="stylesheet" href="./libs/textillate/assets/animate.css">
+        <link rel="stylesheet" href="./assets/css/linea.min.css">
+        <link rel="stylesheet" href="./assets/css/nas.min.css?v=2">
+        <!-- Favicons-->
+        <link rel="icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/favicons/manifest.json">
+        <link rel="shortcut icon" href="favicon.ico">
+        <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <!-- Site title-->
+        <title>Fabacademy - João Milheiro</title>
+    </head>
+    <body>
+        <div class="loading-overlay" id="loading-overlay"></div>
+        <!-- Pace loader-->
+        <div class="pace" id="pace">
+            <div class="pace-activity"></div>
+        </div>
+        <!-- Navigation-->
+        <div class="navbar-fixed zero-height">
+            <nav>
+                <div class="nav-wrapper">
+                    <div class="row">
+                        <div class="col s12 l6">
+                            <div class="brand-logo"><img class="black-logo" src="./assets/images/fablogo_black.png">
+                            <img class="white-logo" src="./assets/images/fablogo_white.png"></div>
+                        </div>
+                        <div class="col s12 l6">
+                            <ul class="hide-on-med-and-down table-of-contents">
+                                
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                </li>
+                                <li>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Main content-->
+        <main class="main" id="main">
+            <div class="hero cyan darken-3 overflow-hidden">
+                <canvas id="canvas"></canvas>
+                <h1 class="bold">Input devices</h1>
+            </div>
+
+            
+
+        <section class="section scrollspy" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12 l6">
+                            <h2>Week 13</h2>
+                            <img src="./assets/images/week10/week12.jpg">
+                            <h3>input devices</h3>
+                            
+                            
+                        </div>
+                        <div class="col s12 l6">
+                        <h2>Tasks</h2>
+                          <p class="teal">  measure something: add a sensor to a microcontroller board that you have designed and read it<br>
+<br>
+</p>     </div></div>
+<br>
+                           
+<h4>Sound Board (Electret Condenser Microphone)</h4>                    
+                          
+                  <p class="flow-text">After watching Neil's lesson and distribute each board within our group i got the sound challenge, the microboard. I started cutting ther PCB's at the modela with the 1/8 endmill. In one hour i milled and cutted all the group boards.<br>
+<span class="deep-orange">Colecting the components</span><br>
+<img src="./assets/images/week13/input.jpg"><br>                  
+I then started to weld the components in the board.<br />
+<span class="deep-orange">welding process and final board</span><br>
+<img src="./assets/images/week13/input2.jpg"><br>
+<img src="./assets/images/week13/input3.jpg"><br>
+I've finally get to connect, after installing all the dependencies, downloading the <a href="http://academy.cba.mit.edu/classes/input_devices/mic/hello.mic.45.c" target="_blank" class="green">C file</a> the <a href="http://academy.cba.mit.edu/classes/input_devices/step/hello.load.45.make" target="_blank" class="green">Makefile</a>, and the <a href="http://academy.cba.mit.edu/classes/input_devices/mic/hello.mic.45.py" target="_blank" class="green">PY code</a> just typed:<br />
+<br />
+<span class="green-text">sudo make -f hello.mic.45.make program-usbtiny</span><br />
+<br>
+and it flashed correctly as you can see below:<br>
+
+<span class="cyan-text">avr-objcopy -j .text -O ihex hello.mic.45.out hello.mic.45.c.hex;\<br />
+avr-size --mcu=attiny45 --format=avr hello.mic.45.out<br />
+AVR Memory Usage<br />
+----------------<br />
+Device: attiny45<br />
+
+Program:     500 bytes (12.2% Full)<br />
+(.text + .data + .bootloader)<br />
+      
+Data:        200 bytes (78.1% Full)<br />
+(.data + .bss + .noinit)<br />
+      
+      
+avrdude -p t45 -P usb -c usbtiny -U flash:w:hello.mic.45.c.hex<br />
+      
+avrdude: AVR device initialized and ready to accept instructions<br />
+
+Reading | ################################################## | 100% 0.00s<br />
+      
+avrdude: Device signature = 0x1e9206<br />
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed<br />
+To disable this feature, specify the -D option.<br />
+avrdude: erasing chip<br />
+avrdude: reading input file "hello.mic.45.c.hex"<br />
+avrdude: input file hello.mic.45.c.hex auto detected as Intel Hex<br />
+avrdude: writing flash (500 bytes):<br />
+      
+Writing | ################################################## | 100% 0.87s<br />
+      
+   
+avrdude: 500 bytes of flash written<br />
+avrdude: verifying flash memory against hello.mic.45.c.hex:<br />
+avrdude: load data flash data from input file hello.mic.45.c.hex:<br />
+avrdude: input file hello.mic.45.c.hex auto detected as Intel Hex<br />
+avrdude: input file hello.mic.45.c.hex contains 500 bytes<br />
+avrdude: reading on-chip flash data:<br />
+      
+Reading | ################################################## | 100% 1.00s<br />
+      
+      
+      
+avrdude: verifying ...<br />
+avrdude: 500 bytes of flash verified<br />
+      
+avrdude: safemode: Fuses OK<br />
+      
+avrdude done.  Thank you.<br />
+</span>
+
+Everything went well. Work done! Here's my final video:<br>
+
+<span class="deep-orange">Video of the microphone working</span><br>
+<video width="640" height="480" controls>
+
+  <source src="./assets/videos/input.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<br><br>  
+
+</p>
+
+<br>
+
+<br>
+<br>  
+    </div>
+                    
+                
+
+        <!-- Footer-->
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 l4 margin-on-medium-and-down">&copy; 2017 João Milheiro</div>
+                    <div class="col s12 l4 margin-on-medium-and-down">
+                        <ul>
+                            <li>
+                                <a class="underline" href="http://facebook.com/joaomilhas">Facebook</a>
+                            </li>
+                            <li>
+                                <a class="underline" href="#!">Twitter</a>
+                            </li>
+                            <li>
+                                <a class="underline" href="#!">VK</a>
+                            </li>
+                            <li>
+                                <a class="underline" href="https://github.com/joaomilhas">Github</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col s12 l4 margin-on-medium-and-down">
+                        <address>Fab Lab Aldeias do Xisto, Fundão
+                            <br>Portugal
+                            <br>
+                        </address>
+                        <a class="underline" href="https://www.google.pt/maps/place/Fab+Lab+Aldeias+do+Xisto/@40.1380275,-7.5032745,17.75z/data=!4m5!3m4!1s0x0:0x8b9be16a466179fe!8m2!3d40.1372398!4d-7.5017088?hl=pt-PT" target="_blank">Get directions</a>&nbsp;(opens in new tab).
+                        <p>
+                            <a class="underline" href="mailto:joaomilheiro@cm-fundao.pt">joaomilheiro@cm-fundao.pt</a>
+                            <br>+351-961-977-022</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Libraries-->
+        <script src="./libs/jquery/jquery.min.js"></script>
+        <script src="./libs/materialize/js/materialize.min.js"></script>
+        <script src="./libs/textillate/jquery.textillate.js"></script>
+        <script src="./libs/textillate/assets/jquery.lettering.js"></script>
+        <script src="./libs/textillate/assets/jquery.fittext.js"></script>
+        <!-- Nas scripts-->
+        <script src="./assets/js/config.js"></script>
+        <script src="./assets/js/nas.js"></script>
+        <script src="./libs/flat-surface-shader/deploy/fss.js"></script>
+        <script src="./assets/js/triangles-ii.js"></script>
+                <script src="./assets/js/hexes-iii.js"></script>
+    </body>
+</html>
