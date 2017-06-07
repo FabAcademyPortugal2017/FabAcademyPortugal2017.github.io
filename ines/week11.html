@@ -58,7 +58,11 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
-	</head>
+	<style type="text/css">
+<!--
+.style1 {font-size: 16px}
+-->
+</style></head>
 	<body onLoad="Load()">
 		
 		<!-- Header -->
@@ -122,7 +126,7 @@
 					  		                the circuit in a oled display or ring a bell on the finish line, or maybe both. 
 							  		            <p align="center" class="style38">I start building my code in arduino: 
                                             <p align="center" class="style38"><img src="images/week11/1.png" width="700" height="394">
-						  		            <h5>My Code :</h5>
+						  		            <h5>The Code :</h5>
                                                 <p>int LDR_START = A4;<br>
                                               int LED_START = 4;<br>
                                               int LDR_FINISH = A3;<br>
@@ -187,25 +191,83 @@
 		    are translucent, so to fix that i coverd him with paper tape and tried again:</p>
 		  <p align="center"><img src="images/week11/3.jpg" width="662" height="394"></p>
 		  <p align="center">It's working :) </p>
-		  <p align="center"><img src="images/week11/3.png" width="700" height="394"> </p>
-		  <p align="center">&nbsp; </p>
+		  <p align="center"><img src="images/week11/3.png" width="700" height="394"></p>
 		  <p align="center"><br>
     </div>
 											 
 										<div>
 											<div class="row">
 											  <div class="col-md-12">
-													<h2 align="center" class="h3">Adding a Buzzer/OLED display </h2>
+													<h2 align="center" class="h3">Adding a OLED display </h2>
     </div>
 											  
 												<div class="col-md-12">
-													<p align="center">......</p>
+													<p align="center">Now that I have the <span class="style38"> marble counter working i thougth that i want o show the results on a display<br>
+													instead of on the computer. </span></p>
 													
 	</div>											
 	                                            <div align="left">
-	                                              <p align="center"><FONT SIZE=1><BR>
-	                                                </FONT><img src="images/work4.jpg" width="470" height="330"></p>
-	                                             
+	                                              <p align="center"><span class="style1">To do that i started by follow this tutorial: <a href="https://www.arduino.cc/en/Tutorial/HelloWorld">https://www.arduino.cc/en/Tutorial/HelloWorld</a></span><FONT SIZE=1><BR>
+                                                  </FONT><img src="images/week11/20170504_104028.jpg" width="700" height="420"></p>
+	                                              <p align="center">And them i tried do add what I learned in my original code:</p>
+	                                              <h5 align="center" class="row">The Code :</h5>
+	                                              <p align="center">#include &lt;LiquidCrystal.h&gt;</p>
+	                                              <p align="center">LiquidCrystal lcd(12, 11, 5, 4, 3, 2);<br>
+	                                                int LDR_START = A4;<br>
+	                                                int LED_START = 6;<br>
+	                                                int LDR_FINISH = A3;<br>
+	                                                int LED_FINISH = 7;</p>
+	                                              <p align="center">int READING_LDR_START = 0;<br>
+	                                                int READING_LDR_FINISH = 0;<br>
+	                                                int THRESHOLD = 400;<br>
+	                                                int TRIGGERED = 0;<br>
+	                                                float START = 0;<br>
+	                                                float FINISH = 0;<br>
+	                                                float DURATION = 0;</p>
+	                                              <p align="center">void setup() {<br>
+	                                                lcd.begin(16, 2);<br>
+	                                                pinMode(LDR_START, INPUT);<br>
+	                                                pinMode(LED_START, OUTPUT);<br>
+	                                                pinMode(LDR_FINISH, INPUT);<br>
+	                                                pinMode(LED_FINISH, OUTPUT);<br>
+	                                                digitalWrite(LED_START, HIGH);<br>
+	                                                digitalWrite(LED_FINISH, HIGH);<br>
+	                                                }</p>
+	                                              <p align="center">void loop() {<br>
+	                                                READING_LDR_START = analogRead(LDR_START);<br>
+	                                                if (READING_LDR_START &lt; THRESHOLD) {<br>
+	                                                START = millis();<br>
+	                                                TRIGGERED = 1;<br>
+	                                                lcd.setCursor(0, 0);<br>
+	                                                lcd.print(&quot;  * STARTED *  &quot;);<br>
+	                                                lcd.setCursor(0, 1);<br>
+	                                                lcd.print(&quot;                &quot;);<br>
+	                                                delay(500);<br>
+	                                                }<br>
+  <br>
+	                                                READING_LDR_FINISH = analogRead(LDR_FINISH);<br>
+	                                                if ((READING_LDR_FINISH &lt; THRESHOLD) &amp;&amp; (TRIGGERED == 1)) {<br>
+	                                                FINISH = millis();<br>
+	                                                DURATION = FINISH - START;<br>
+	                                                lcd.setCursor(0, 0);<br>
+	                                                lcd.print(&quot;                &quot;);<br>
+	                                                lcd.setCursor(0, 1);<br>
+	                                                lcd.print(&quot;FINISHED:&quot;);<br>
+	                                                lcd.setCursor(9, 1);<br>
+	                                                lcd.print(DURATION/1000);<br>
+	                                                lcd.setCursor(15, 1);<br>
+	                                                lcd.print(&quot;s&quot;);<br>
+	                                                TRIGGERED = 0;<br>
+	                                                delay(500);<br>
+	                                                }<br>
+	                                                }</p>
+	                                              <div align="center"></div>
+	                                              <p align="center">You can see the marble counter working on the video below:</p>
+	                                              <p align="center"><p align="center"><video width="719" controls="controls">
+    <source src="images/week11/week11.mp4" type="video/mp4" />
+    Your browser does not support the video tag. </video>;</p>
+	
+	                                              <p align="center">Our team page for the Machinebuilding is <a href="machinebuilding.html">here</a>. </p>
     </div>
 												 
 	</BODY>
