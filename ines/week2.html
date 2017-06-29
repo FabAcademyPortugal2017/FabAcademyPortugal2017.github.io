@@ -113,17 +113,32 @@
 												    that i will use in the brake to try to understand how can i fit them together. </p>
 													<p align="center">To design the conponents i used simple comands, as an example, to do the 18650 Battery i draw the batery
 												    profile and did a <strong>revolve</strong>. <br>
-												    For the other components (arduino mini, MP1405 battery charger, NeoPixel LED Stick and accelerometer) i just draw the shape of each one<br> 
-												    did an <strong>extrude curve</strong>, for the holes in the boards i draw the circles, <br>
-extruded them and did a <strong>bollean difference</strong> to take them of.<br>
-													I did each component in a different layer and with a different color to identify them more easily. </p>
+												    The <strong>revolve command</strong> creates a surface by <strong>revolving</strong> a profile curve that defines the surface shape   around an axis.<br>
+												    You can do this command in 4 steps: <br>
+												    1. select curves;<br>
+												    2. pick the start of the revolve axis;<br>
+												    3. pick   the end of the revolve axis.<br>
+												    4. specify   options.</p>
+													<p align="center"><img src="images/week2/revolve1.PNG" width="204" height="206"><img src="images/week2/revolve2.PNG" width="206" height="203"><br>
+													  For the other components (arduino mini, MP1405 battery charger, NeoPixel LED Stick and accelerometer) i just draw the shape of each one<br>
+													  did an <strong>extrude curve</strong>, for the holes in the boards i draw the circles, <br>
+													  extruded them and did a <strong>bollean difference</strong> to take them of.<br>
+													  I did each component in a different layer and with a different color to identify them more easily. </p>
+													<p align="center">The <strong>extruve curve command</strong> creates a surface by tracing the path of a curve in a straight line. <br>
+												    You can do this command in 2 steps: <br>
+												    1.select a curve; <br>
+												    2.specify a distance:</p>
+													<p align="center"><img src="images/week2/extrude.PNG" width="210" height="206"><img src="images/week2/extrude1.PNG" width="207" height="203"><img src="images/week2/extrude2.PNG" width="206" height="207"></p>
+													<p>The <strong>BooleanDifference command</strong> trims the shared areas of selected polysurfaces or surfaces with another set <br>
+												    of polysurfaces   or surfaces. You can do this command in 2 steps: <br>
+												    1.select surfaces or polysurfaces to subtract from, and   press Enter; <br>
+												    2.select surfaces or polysurfaces to subtract from, and   press Enter:</p>
+													<p><img src="images/week2/bollean1.PNG" width="207" height="206"><img src="images/week2/bollean2.PNG" width="205" height="205"><img src="images/week2/bollean3.PNG" width="204" height="204"></p>
 													<p align="center">Then i put the bloks in order and design a possible box for the components, trying find the right shape and size.</p>
 			    </div>	
 	  		  </div>
 													  <p><img src="images/week2/week21.png" alt="first drawing" longdesc="images/week2_1.png"> <img src="images/week2/week22.png" width="600" height="411"></p>
 													  
-													  <p><span class="col-md-12">If you want to see my original files click <a href="Files/brake light components - week2.3dm">here</a>. </span></p>
-						
 													  <div class="col-md-6"></div>
     </div>
 	</div>
@@ -141,10 +156,24 @@ extruded them and did a <strong>bollean difference</strong> to take them of.<br>
 													  ●	Set up the environment and ground plane<br>
 													  ●	Render<br>
 													  At the start i just appliend some basic materials. With the  materials we can specify the color, finish, <br>
-													  transparency, texture, and bump for use by the renderer. <br>
-												    Then i applied decals, the decal allow you to applied an image  to the surface of an object with <br>
-												    a given projection. You can learn more about this command here: <a href="https://docs.mcneel.com/rhino/5/help/en-us/properties/decal.htm">https://docs.mcneel.com/rhino/5/help/en-us/properties/decal.htm</a><br>
-													And did some tests with lights and envinonments. </p>
+												    transparency, texture, and bump for use by the renderer.<br>
+												    All materials have basic settings. The default material is white and matte,   with no reflectivity or transparency.</p>
+													<p align="center">To change the<strong> color</strong> you need to click   the color swatch to select a color from the Select Color dialog box.<img src="images/week2/color.PNG" width="97" height="30"><br>
+													The <strong>gloss finish</strong> adjusts the highlight from matte to glossy. To change the glossiness we need to move the slider to the right <br>
+												    to increase the   glossiness.<br>
+													<img src="images/week2/gloss.PNG" width="207" height="206"><br>
+													The <strong>reflectivity</strong> sets the material's reflectivity, to change it you need to<br>
+												    move   the slider to the right to increase the reflectivity and select   the reflective color using the color swatch.<br>
+												    The <strong>transparency</strong> adjusts the transparency of an object in the rendered image, to change it you need to move   the slider<br> 
+												    to the right to increase the transparency and select   the transparent color using the color swatch.<br>
+												    <img src="images/week2/material.PNG" width="809" height="442"><br>
+													  Then i applied decals, the decal allow you to applied an image  to the surface of an object with <br>
+												    a given projection.<br>
+												    Decals are   non-repeating textures that are applied to the surface of an object with a given projection. <br>
+												    They are an easy-to-use way of attaching single images or similar textures to <br>
+												    objects without going through the complexity of the texture mapping process.<br>
+												    You can learn more about this command here: <a href="https://docs.mcneel.com/rhino/5/help/en-us/properties/decal.htm">https://docs.mcneel.com/rhino/5/help/en-us/properties/decal.htm</a><br>
+												    And did some tests with lights and envinonments. </p>
 													<p align="center"><img src="images/week2/week23.png" alt="Render1" longdesc="images/week2_3.png">.  </p>
 	</div>
 											 
@@ -212,7 +241,8 @@ extruded them and did a <strong>bollean difference</strong> to take them of.<br>
    <p align="center"><video width="719" controls="controls">
     <source src="keyshot/untitledconverted.mp4" type="video/mp4" />
     Your browser does not support the video tag. </video>;</p>
-    <div align="center">
+   <p align="center">You can download all my files <a href="Files/week2/brakelightcomponentsweek2.3dm.zip">here</a>. </p>
+   <div align="center">
   <!DOCTYPE html>
   <html>
   <body>

@@ -115,19 +115,25 @@
     </div>
 											  
 												<div class="col-md-12">
-													<p>....</p>
+													<p>I began by looking through the ATtiny44 microcontroller´s <a href="http://www.atmel.com/images/doc8006.pdf">datasheet</a>. There I found the necessary information on the pins that I needed later on when programming. Some of the abbreviation were more easily understood than others. Some needed deciphering.</p>
 											</div>	
-							  		            <p align="center" class="style38">
-					  		                
-							  		            ...
-							  		            <p align="center" class="style38"><img src="images/work1.jpg" width="470" height="330"> 
-                                                     <h5>...</h5>
-                                                     <p align="center"><strong>...</strong></p>
-                                                     <h5>...</h5>
-                                                     <p align="center"><strong>...<br>
-                                                     </strong><br>
-                                            </p>
-                                          </div>
+							  		            <p>&nbsp;</p>
+							  		            <p><strong>A Datasheet</strong> is the biography and manual of any electronic component. They explain exactly <br>
+							  		              what a component does and how to use it. Before you start doing anything or <br>
+							  		              even designing any circuit, looking at the datasheet is crucial. <br>
+							  		              It holds important information like <strong>Power supply requirements</strong>, <strong>Pins Configurations and descriptions</strong>, <br>
+                                                  <strong>Electrical ratings</strong> and <strong>Schematic of the IC circuit.</strong>So I downloaded the <strong>ATTiny 44</strong> <a href="http://www.atmel.com/images/doc8006.pdf">datasheet</a> and started looking at it.</p>
+							  		            <p>First of all, In the begining, you can see generally the features, and from the most important features: <br>
+                                                    <strong>The memory</strong>, <strong>Number of pins</strong> and <strong>Operating voltage</strong> and others.</p>
+							  		            <p>Secondly, This is what your work most depends on: <strong>Pins Configuration</strong>.</p>
+							  		            <p><img src="images/week6/datasheet.PNG" alt="datashee1" width="582" height="275"></p>
+							  		            <p>You'll notice different labels on the pins and most of all, that they are separated into 2 categories <strong>"PA"</strong> and <strong>"PB"</strong>. <br>
+							  		              These designations are important especially if you are programming with <strong>C language</strong>, as you'll be required to define the <br>
+							  		              Ports and the data in it. And that what you'll find exactly in <strong>"Pins description"</strong> section.</p>
+							  		            <p><img src="images/week6/datasheet2.PNG" alt="datashee2" width="709" height="290"></p>
+							  		            <p><img src="images/week6/datasheet3.PNG" alt="datashee3" width="719" height="217"></p>
+							  		            <p>There is a lot to study and read about the data sheet, but I thank that would satisfy as a basic info.</p>
+					  		              </div>
 			  </div>
 											  <div class="col-md-6"></div>
     </div>
@@ -138,16 +144,45 @@
 													<h2 align="center" class="h3">Programing my board </h2>
     </div>
     <div class="col-md-12">
-		  <p align="center">....</p>
-		  
-		 
-		  
-	
-          <p align="center">
-          
-          <p align="center"><img src="images/work2.jpg" width="470" height="330">
-          
-          <p align="center">
+		  <p align="center">Now its time to use my ISP to program the Hello-Word board that I did on week 6.<br>
+	      To program the hello-world I will use  Arduino  and the FabISP that I did on week 4.</p>
+		  <p align="center">Before you start doing anything you need to:<br>
+      1. Install the arduino: <a href="https://www.arduino.cc/en/Main/Software">arduino.cc</a> <br>
+      2.Install USB drivers for FTDI: <a href="http://www.ftdichip.com/Drivers/VCP.htm">here</a> <br>
+      3.Install drivers to recognize USBtinyISP: <a href="https://learn.adafruit.com/usbtinyisp/drivers">AVR programmer and SPI interface</a> <br>
+      4.Download the Attiny libraries for board recognition on Arduino - <a href="http://highlowtech.org/?p=1695">here</a></p>
+		  <p align="center">Now we are ready to start programing!<br>
+		    First we need to conect our board and check
+		  if it's being recognized on the computer:</p>
+		  <p align="center"><img src="images/week8/usbtiny.PNG" width="798" height="586"></p>
+		  <p align="center">Next we need to  open arduino  and configure the board.</p>
+		  <ul>
+		    <li>
+		      <div align="center">Tools &gt; Board &gt; Attiny 44</div>
+		    </li>
+		    <li>
+		      <div align="center">Tools &gt; Processor &gt; Attiny 44</div>
+		    </li>
+		    <li>
+		      <div align="center">Tools &gt; Clock &gt; External 20MHz (or in case of not having an external clock, put 8MHz internal)</div>
+		    </li>
+		    <li>
+		      <div align="center">Tools &gt; Port &gt; COM9 (choose the corresponding port)</div>
+		    </li>
+		    <li>
+		      <div align="center">Tools &gt; Programmer &gt; USBtinyISP</div>
+		    </li>
+      </ul>
+		  <div align="center">
+		    <p><img src="images/week8/arduino1.png" width="499" height="603"></p>
+		    <p>To check if everything is alright we should<strong> </strong>burn the bootloader and
+		    next run the Blink example to check if everything is working.		    </p>
+		    <p>And now it's time to do the code:</p>
+		    <p><img src="images/week8/arduino2.png" width="576" height="655"> </p>
+		    <p><br>
+		    </p>
+	  </div>
+		  <p align="center">
           
           <p align="center">
     </div>
@@ -158,13 +193,19 @@
 													<h2 align="center" class="h3">Testing</h2>
     </div>
 											  
-												<div class="col-md-12">
-													<p align="center">......</p>
-													
-	</div>											
+	<div class="col-md-12">
+		<p align="center">The programming went well, and the LED is responding to the button. As we can see from the video below.</p>
+		<p align="center"><img src="images/week8/foto1.jpg" width="700" height="525"><img src="images/week8/foto2.jpg" width="700" height="525"></p>
+													<p align="center">&nbsp;</p>
+		<div align="center">
+		<video width="719" controls="controls">                                              
+      <source src="images/week8/week8.mp4" type="video/mp4" />
+    Your browser does not support the video tag. </div>
+	  </video>
+	  </div>											
 	                                            <div align="left">
 	                                              <p align="center"><FONT SIZE=1><BR>
-	                                                </FONT><img src="images/work4.jpg" width="470" height="330"></p>
+	                                                </FONT></p>
 	                                             
     </div>
 												 
