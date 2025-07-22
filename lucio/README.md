@@ -1,16 +1,7 @@
-# FabAcademy_Template
-An html/ajax template for the students of Fab Academy
+## Welcome to your new Fab Academy site
 
-## License
-MIT
-
-## Includes
-* <a href="http://getbootstrap.com/">Twitter Bootstrap</a>
-* <a href="http://jquery.com/">JQuery</a>
-* <a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>
-* <a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>
-* <a href="https://code.google.com/p/jsc3d/">JSC3D</a>
-* <a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>
-
-## Notes
-Ajax functionalities won't work locally on Chrome because of "safety settings" (but will work online).
+- This website is built automatically by gitlab every time you edit the files in the docs folder
+- It does so thanks to [Mkdocs](https://mkdocs.org) a static site generator written in Python
+- You must start customizing the file mkdocs.yml with your information
+- You can change the looks of your website using mkdocs themes, you can find in the mkdocs.yml the names of the available themes
+- If you want to start from scratch, you can delete everything in this repository and push any other static website

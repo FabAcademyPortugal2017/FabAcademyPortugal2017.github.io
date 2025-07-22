@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QEDKLDK8M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7QEDKLDK8M');
+
+    </script>
+    <!--  Finish Global site tag (gtag.js) - Google Analytics -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore computer-aided design (CAD) in Fab Academy 2020 with Lucio Pentagna. Review 2D and 3D software like Inkscape, SolidWorks, and Fusion 360. Learn about modeling techniques, design workflows, and software comparisons for digital fabrication projects."/>
+    <meta name="author" content="Lucio Pentagna">
+    <link rel="icon" href="media/favicon.ico">
+    <title>Computer-aided Design - Fab Academy 2020 - Lucio Pentagna</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>    <![endif]-->
+    <!-- Load the menu file -->
+    <script>
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+
+    </script>
+</head>
+
+<body onload="menu()">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="index.html">Lucio Pentagna</a> </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu"> </ul>
+                    </li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu"> </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Insert your content here below! -->
+        <div class="jumbotron" style="width: 100%">
+            <h3>Computer-aided Design</h3>
+            <hr>
+            <h4>Individual assignment</h4>
+            <ul>
+                <li>Model (raster, vector, 2D, 3D, render, animate, simulate, ...) a <a href="project_update.html"> possible final project</a>, and post it on your class page.</li>
+            </ul>
+            <h4>Learning outcomes:</h4>
+            <ul>
+                <li> Evaluate and select 2D and 3D software
+                </li>
+                <li>Demonstrate and describe processes used in modeling with 2D and 3D software</li>
+            </ul>
+            <h4>Have you:</h4>
+            <ul>
+                <li>Modeled experimental objects/part of a possible project in 2D and 3D software</li>
+                <li>Shown how you did it with words/images/screen-shots </li>
+                <li>Included your original design files</li>
+            </ul>
+        </div>
+        <hr>
+        <h3>Tools used</h3>
+        <ul style="list-style-type:disc">
+            <li>Caliper</li>
+            <li>Camera</li>
+        </ul>
+        <hr>
+        <h3>Software Used</h3>
+        <ul style="list-style-type:disc">
+            <li><a href="https://www.solidworks.com/">SolidWorks</a></li>
+            <li><a href="https://www.autodesk.com/products/fusion-360/free-trial">Fusion 360</a></li>
+            <li><a href="https://bcnc.org/">BCNC</a></li>
+            <li>Inkscape</li>
+        </ul>
+        <hr>
+        <h3>Design files</h3>
+        <ul style="list-style-type: disc">
+            <li>Inkscape <a href="media/computer_aided_design/inkscape/casa.zip">file</a></li>
+            <li><a href="https://gitlab.fabcloud.org/Lucio/incubator">incubator</a> SolidWorks source files on Fabacademy Gitlab</li>
+            <li>Egg <a href="media/computer_aided_design/files/eggsolidworks.zip">original file</a> and <a href="media/computer_aided_design/files/eggstl.zip">STL file</a>.</li>
+            <li>Crate <a href="https://gitlab.fabcloud.org/Lucio/incubator/-/blob/master/eggcrate.sldprt">original file</a> and <a href="media/computer_aided_design/files/eggcratestl.zip">STL file</a>.</li>
+            <li>Fusion 360 <a href="media/computer_aided_design/files/woodgrainfixv5v0.zip">file</a> of wood patch (extra credit) :-)</li>
+        </ul>
+        <hr>
+        <h3> Video render and <a href="project_update.html"> link</a> of my possible final project</h3>
+        <video width="400" controls>
+            <source src="media/computer_aided_design/wweggsincubator.mp4"> Your browser does not support HTML5 video.
+        </video>
+        <legend>Egg Incubator</legend>
+        <hr>
+        <h2>Introduction</h2>
+        <p>In this assignment, I will review three software tools: Inkscape, SolidWorks, and Fusion 360. Secondly, I will model a possible final project with SolidWorks.</p>
+        <hr>
+        <h3>Inkscape</h3>
+        <p>I have used Inkscape extensively in the past, especially with a diode laser cutter add-on, but not so much recently.</p>
+        <p>My most used feature of Inkscape was its ability to transform a raster image into a vector. Let's see how it works.</p>
+        <p>Initially, I go to File -&gt; Document properties and change the paper size. It will serve as a size reference for me as it's possible to edit outside of these boundaries. In my case, I chose A4 Landscape mode.</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape01.jpg" alt="Inkscape Document Properties"></p>
+        <p>Next, I import the file with Ctrl+I or by clicking on File -&gt; Import, then choose the file I want to import and open it.</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape01b.jpg" alt="Inkscape Import File"></p>
+        <p>Next, this dialog opens, and I click OK.</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape01c.jpg" alt="Inkscape Import Dialog"></p>
+        <p>The image is now open. One can then click on the Layers area and the plus sign to add a layer. That's useful to split the edition into different layers to organize the editing of the file. I ended up doing it later after the next steps.</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape02.jpg" alt="Inkscape Layers"></p>
+        <p>Next, I select Path -&gt; Trace Bitmap or (Shift+Alt+B).</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape03.jpg" alt="Inkscape Trace Bitmap"></p>
+        <p>This feature will trace the outlines of the raster image and convert it to a vector image. I then select Edge detection and a threshold (1), then Smooth, remove background, and Live Preview. Clicking on Live Preview gives an idea of how the settings will affect the conversion, so it can be useful. Finally, I click OK.</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape05.jpg" alt="Inkscape Edge Detection"></p>
+        <p>As I mentioned earlier, I can now create layers and name them. Next, I move the original drawing to one of the layers.</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape06.jpg" alt="Inkscape Layer Management"></p>
+        <p>Now I turn off the original raster image by clicking on the eye symbol next to the vector name. That will allow me to only see the vector. Next, I will focus on the old car.</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape07.jpg" alt="Inkscape Vector Focus"></p>
+        <p>Here we can see the Raster image on the left and the vector image on the right side.</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape08.jpg" alt="Inkscape Raster vs Vector"></p>
+        <p>I tried to select only the car and then invert the selection, but that did not work; maybe it's too big a file. So I proceeded to select the vectors and delete them. This makes the image less heavy and the computer less slow.</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape09.jpg" alt="Inkscape Vector Selection"></p>
+        <p>Here I show how I select the nodes and then delete them. In number 3, I show where I will focus next.</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape10.jpg" alt="Inkscape Node Editing"></p>
+        <p>Here I show the node editing. By moving the center of the node or the lever, I can change the shape of the image.</p>
+        <p class="pic"><img src="media/computer_aided_design/inkscape/inkscape11.jpg" alt="Inkscape Node Manipulation"></p>
+        <p>That manipulation allowed me to extract the car from the raster image. Now I can use the laser cutter or another digital manufacturing machine to follow the path of the vector, but that's for another week.</p>
+        <hr>
+        <h3>Fusion 360</h3>
+        <p>In my review of Fusion 360, I will go through the process of creating two solids. One will match the other, based on the grain contour of an oak door frame piece I need repairing.</p>
+        <ol>
+            <li>I started by taking a picture of the damage on the oak door frame I want to try fixing.</li>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/00.jpg" alt="Ruler in the photo will be used in the following steps">The ruler in the photo will be used in the following steps.</p>
+            <li>When Fusion starts, the work area opens automatically, and one can just start designing.</li>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion1.jpg" alt="Fusion 360 Work Area"></p>
+            <li>The repair I am attempting is based on the grain geometry of the oak. For that reason, I will first insert the picture previously taken into the Fusion environment. The following steps are going to create a 2D sketch environment and let one insert a picture on it for future reverse engineering:</li>
+            <ul>
+                <li>Click on Insert</li>
+                <li>then click on Attached Canvas</li>
+            </ul>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion3.jpg" alt="Fusion 360 Insert Canvas"></p>
+            <li>Now one needs to select a plane. The image or canvas, as Fusion calls it, will be inserted next on that plane.</li>
+            <ul>
+                <li>Directly click on the desired plane. In case one has previously created a solid, a face can be selected as well.</li>
+            </ul>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion4.jpg" alt="Fusion 360 Select Plane"></p>
+            <li>With the plane selected, it's time to find the image.</li>
+            <ul>
+                <li>In the opened dialog, click on Select Image.</li>
+                <li>A file explorer will be opened, allowing you to find the desired file, select it.</li>
+                <li>Press Open.</li>
+            </ul>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion5.jpg" alt="Fusion 360 Select Image"></p>
+            <li>This frame shows the image inserted on the XY plane.</li>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion6.jpg" alt="Fusion 360 Image Inserted"></p>
+            <li>Now it's time to scale the image.</li>
+            <ul>
+                <li>Click on Calibrate.</li>
+            </ul>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion7.jpg" alt="Fusion 360 Calibrate Image"></p>
+            <li>Now, using the ruler as a reference and as accurately as possible, select two points and insert the known measure.</li>
+            <ul>
+                <li>Click on the first point.</li>
+                <li>Click on the second point.</li>
+                <li>Using the ruler in the photo as a guide, type the known measurement.</li>
+            </ul>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion9.jpg" alt="Fusion 360 Calibrate Measurement"></p>
+            <li>Now, with the image aligned and scaled, it's time to sketch a 2D design.</li>
+            <ul>
+                <li>Click on Sketch.</li>
+                <li>Click on the image.</li>
+                <li>Following the image grains, draw a pattern.</li>
+            </ul>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion11.jpg" alt="Fusion 360 Sketch Pattern"></p>
+            <li>Basically, following the pattern of the grain, I draw lines to form a geometry.</li>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion1a.jpg" alt="Fusion 360 Grain Pattern"></p>
+            <li>That's the Geometry with sharp corners.</li>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion12.jpg" alt="Fusion 360 Sharp Corners"></p>
+            <li>In order to remove the sharp corners, as they won't be milled, one can use the Fillet tool.</li>
+            <ul>
+                <li>In the Sketch drop-down menu, select Fillet.</li>
+                <li>Select the corners to be filleted.</li>
+                <li>Add a dimension. In my case, I typed 1.5mm, as this is the radius of the tool I will use to mill the wood damage.</li>
+            </ul>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion2a.jpg" alt="Fusion 360 Fillet Tool"></p>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion2b.jpg" alt="Fusion 360 Fillet Application"></p>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion2c.jpg" alt="Fusion 360 Fillet Result"></p>
+            <li>The final 2D sketch is done and ready for virtual extrusion.</li>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion13.jpg" alt="Fusion 360 Final Sketch"></p>
+            <li>The process of virtual extrusion, in summary, is the same as creating a solid 3D object from a 2D sketch:</li>
+            <ul>
+                <li>Click on the Extrude icon on top of Create.</li>
+                <li>Select the 2D sketch.</li>
+                <li>Add a dimension.</li>
+            </ul>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion14a.jpg" alt="Fusion 360 Extrude Process"></p>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion14b.jpg" alt="Fusion 360 Extrude Selection"></p>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion14c.jpg" alt="Fusion 360 Extrude Dimension"></p>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion14d.jpg" alt="Fusion 360 Extrude Result"></p>
+            <li>Based on the solid (positive), one is ready to make the negative part.</li>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion15.jpg" alt="Fusion 360 Negative Part"></p>
+            <li>In my case, I wanted to have a negative and a positive of the shape so I can mill the pocket and the repair piece. So the next steps:</li>
+            <ul>
+                <li>Select the underside.</li>
+                <li>Click on Create Sketch.</li>
+            </ul>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion16.jpg" alt="Fusion 360 Create Sketch"></p>
+            <li>With the new sketch created, I drew a square around it in preparation for the next step.</li>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion17.jpg" alt="Fusion 360 Sketch Square"></p>
+            <li>Selecting the new sketch and following the same steps as when making the last solid, I could extrude the base for milling the pocket.</li>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion18.jpg" alt="Fusion 360 Extrude Base"></p>
+            <li>That's how both parts look like.</li>
+            <p class="pic"><img src="media/computer_aided_design/fusion360/fusion19.jpg" alt="Fusion 360 Final Parts"></p>
+        </ol>
+        <hr>
+        <h3>The review of Solidworks 2019 and my Final Project.</h3>
+        <p>Solidworks has been my software of choice for the last few years when it comes to mechanical design. I am very happy with it as it's powerful and allows quite complex assemblies while being intuitive enough for me to learn by using it.</p>
+        <p class="pic"><img src="media/computer_aided_design/solidworks/solid01.jpg" alt="Image of my possible final project">Image of my <a href="project_update.html">possible final project</a></p>
+        <p class="pic"><img src="media/computer_aided_design/solidworks/explodedview.jpg" alt="Exploded View of Incubator"><a href="project_update.html"> Exploded View of Incubator</a></p>
+        <ol>
+            <h4>Design files of final project proposal</h4>
+            <ul style="list-style-type: disc">
+                <li><a href="https://gitlab.fabcloud.org/Lucio/incubator">incubator</a> Solidworks source files on Fabacademy Gitlab</li>
+            </ul>
+            <h4>Designed Parts</h4>
+            <li>Egg</li>
+            <li>Case (top)</li>
+            <li>Case (bottom)</li>
+            <li>Egg Crate</li>
+            <li>Heat Element</li>
+            <li>Water</li>
+            <h4>Downloaded Parts</h4>
+            <li><a href="https://grabcad.com/library/30x30x10mm-fan-1">Fan</a> Designed by <a href="https://grabcad.com/xgentec.jason-1">Xgentec Jason</a> at Grabcad</li>
+            <li><a href="https://grabcad.com/library/sg90-servomotor-1">Servo Motor</a> Designed by <a href="https://grabcad.com/akshaya.simha-2">Akshaya Simha</a> at Grabcad</li>
+            <li><a href="https://grabcad.com/library/ball-bearing-608zz-1">Ball Bearing</a> Designed by <a href="https://grabcad.com/hendricks-1">Hendricks</a> at Grabcad</li>
+            <li><a href="https://grabcad.com/library/1-3-oled-module-1">Oled Display</a> Designed by <a href="https://grabcad.com/thmjpr">thmjpr</a> at Grabcad</li>
+            <li><a href="https://grabcad.com/library/dht22-humidity-temperature-sensor-1">Humidity Sensor</a> Designed by <a href="https://grabcad.com/nonthanut.hoku-1">Nonthanut Hoku</a> at Grabcad</li>
+        </ol>
+        <h3>1. The egg (where it all starts)</h3>
+        <ol type="I">
+            <p class="pic"><img src="media/computer_aided_design/solidworks/solid02.jpg" alt="Solidworks Egg Design"></p>
+            <li>In order to design my final project, I started with designing an egg.</li>
+            <li>I took a picture of a real egg with the caliper for reference later in Solidworks.<p class="pic"><img src="media/computer_aided_design/solidworks/egg.jpg" alt="Egg with Caliper"></p></li>
+            <li>To use the feature, start a new sketch, then in the menu go to: Tools > Sketch Tools > Sketch Picture.<p class="pic"><img src="media/computer_aided_design/solidworks/solid03.jpg" alt="Solidworks Sketch Picture"></p></li>
+            <li>After inserting the picture, scale it using the caliper reference as well as the blue ruler provided by Solidworks.<p class="pic"><img src="media/computer_aided_design/solidworks/solid04.jpg" alt="Solidworks Scale Picture"></p></li>
+            <li>With the picture calibrated to scale, it's time to sketch around. For this, I used the spline tool and closed the spline with a construction line.<p class="pic"><img src="media/computer_aided_design/solidworks/solid05.jpg" alt="Solidworks Spline Tool"></p></li>
+            <li>Leave the Sketch and Click on Revolved Boss/Base.<p class="pic"><img src="media/computer_aided_design/solidworks/solid07.jpg" alt="Solidworks Revolved Boss/Base"></p></li>
+            <li>If the axis of rotation is not selected automatically, select the line that is in the center of the future egg. Press the green check mark.<p class="pic"><img src="media/computer_aided_design/solidworks/solid08.jpg" alt="Solidworks Axis of Rotation"></p></li>
+            <li>Voila, the virtual egg is made!<p class="pic"><img src="media/computer_aided_design/solidworks/solid09.jpg" alt="Solidworks Virtual Egg"></p></li>
+        </ol>
+        <hr>
+        <h3>3. Bottom Case</h3>
+        <p>Because of the number of steps, I will only detail the most important ones, specifying the type of operation in the beginning and then some of the steps to accomplish it.</p>
+        <ol type="I">
+            <li>I started by sketching two hexagons and extruding them.</li>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/case01.jpg" alt="Solidworks Hexagon Sketch"></p>
+            <li>Converting a contour of another object in an assembly:</li>
+            <ol>
+                <li>With the fan already mated with the sides of the case, I selected the outside contour of the fan and converted it, creating a sketch.</li>
+                <li>Next, I cut the space for the fan.</li>
+            </ol>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/case02.jpg" alt="Solidworks Fan Space"></p>
+            <li>Screw wizard</li>
+            <ol>
+                <li>In the type of Hole, I selected a simple hole as I will later tap the thread.</li>
+                <li>In the standard, I selected ISO as it contains metric screws.</li>
+                <li>In the type of drill, I selected tap drill as this will give the right clearance to use a manual tap to open a thread later.</li>
+                <li>Here I selected the size of the screw M3.</li>
+                <li>Next, I clicked on position to determine where the holes will be located.</li>
+            </ol>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/case03.jpg" alt="Solidworks Screw Wizard"></p>
+            <li>Position of screw holes:</li>
+            <ol>
+                <li>The point sketch is normally selected already unless you had to create construction lines or other operations.</li>
+                <li>Next, I centered each point on the locations where the fan will receive the screws. Lastly, confirm and close the operation, and the result will be holes created in the surface previously selected.</li>
+            </ol>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/case04.jpg" alt="Solidworks Screw Holes"></p>
+            <li>Here is the result of the previous operation, the holes in place.</li>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/case05.jpg" alt="Solidworks Holes Result"></p>
+            <li>Cavity, this operation is useful as it will save time designing many features that, in this example, will be simply inherited from the selected object or body:</li>
+            <ol>
+                <li>Simply start by either searching in the search menu for "cavity" or finding it on the "insert" "features" menu. After the feature is initiated, I selected the part I wanted to inherit the features, creating a kind of negative stamp in my part.</li>
+                <li>Then simply confirm the operation.</li>
+            </ol>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/case06.jpg" alt="Solidworks Cavity Feature"></p>
+            <li>Here you see the part with the cavity already created.</li>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/case06b.jpg" alt="Solidworks Cavity Created"></p>
+            <li>Here you see the cavity.</li>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/case06c.jpg" alt="Solidworks Cavity View"></p>
+        </ol>
+        <hr>
+        <h3>4. The crate</h3>
+        <ol type="I">
+            <li>The crate was a bit complex to create.</li>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/thecrate01.jpg" alt="Solidworks Crate Design"></p>
+            <li>I started by extruding a cylinder.</li>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/thecrate02.jpg" alt="Solidworks Cylinder Extrusion"></p>
+            <li>Next, I cut it in half by sketching a half circle on one of its faces.</li>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/thecrate03.jpg" alt="Solidworks Half Circle Cut"></p>
+            <li>This time, I used the combine feature instead of cavity.</li>
+            <ol>
+                <li>The main body should be already selected by default.</li>
+                <li>Next, I selected the part I wanted to combine.</li>
+                <li>In order to create a footprint, I selected the operation subtract.</li>
+                <li>Lastly, select the confirmation check mark to finish the combine feature.</li>
+            </ol>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/thecrate04.jpg" alt="Solidworks Combine Feature"></p>
+            <li>Linear Pattern is a feature used to replicate in various directions a feature, so it saves time instead of designing the pattern feature again and again:</li>
+            <ol>
+                <li>I started by selecting the pattern.</li>
+                <li>Then I selected the distance between the patterns.</li>
+                <li>Then I specified it to replicate it three times.</li>
+                <li>Next, I confirm.</li>
+            </ol>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/thecrate05.jpg" alt="Solidworks Linear Pattern"></p>
+            <li>Here I used the shell feature as I wanted to keep the contours, but I wanted the interior to become empty. This was done simply by specifying the thickness, in my case, 3mm, and I did not have to select the body as it was already selected before initiating the feature.</li>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/thecrate06.jpg" alt="Solidworks Shell Feature"></p>
+            <li>Now, in order to expose the previous feature, I cut the lower shell by sketching around the lower shell of the body.</li>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/thecrate07.jpg" alt="Solidworks Lower Shell Cut"></p>
+            <li>This was a simple cut feature with a complex sketch. The sketch was created by offsetting inwards the outer contour, drawing lines towards the center, and lastly trimming all the lines in order to form closed perimeters that were used to cut the shape.</li>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/thecrate08.jpg" alt="Solidworks Complex Sketch"></p>
+            <li>The cut feature is trivial and was done simply by selecting the previous sketch and cutting it through all.</li>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/thecrate09.jpg" alt="Solidworks Cut Feature"></p>
+            <li>This was again a linear pattern done in the same manner as the previous one.</li>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/thecrate10.jpg" alt="Solidworks Linear Pattern Again"></p>
+            <li>I then extruded cut the rest of the wall off the once shell of the half cylinder.</li>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/thecrate11.jpg" alt="Solidworks Extrude Cut"></p>
+            <li>Lastly, I extruded cylinders in between each basket to work as a shaft.</li>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/thecrate12.jpg" alt="Solidworks Extrude Cylinders"></p>
+            <li>Fillet was used everywhere in this part. Here I exemplify the shaft being reinforced with the fillet operation.</li>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/thecrate13.jpg" alt="Solidworks Fillet Operation"></p>
+            <li>The final result of the crate.</li>
+            <p class="pic"><img src="media/computer_aided_design/solidworks/thecrate01.jpg" alt="Solidworks Final Crate"></p>
+        </ol>
+        <hr>
+        <h3>Extra Credits - Milling stuff</h3>
+        <p>Remember the Fusion360 review? Well, I decided to post photos only of the final result with the mill. I know CNC milling is not this week, but I couldn't resist. So not a proper documentation, just some hero photos of the final result.</p>
+        <ul>
+            <li>This tool-path was made with Fusion 360, and it is rendered here in the software BCNC. BCNC is a GRBL controller I use with our fablab-made CNC.<p class="pic"><img src="media/computer_aided_design/millingextra/mill01.jpg" alt="BCNC Tool-path"></p></li>
+            <li>The CNC mill's spindle here is displayed creating a pocket in the wooden door frame.<p class="pic"><img src="media/computer_aided_design/millingextra/mill02.jpg" alt="CNC Mill Spindle"></p></li>
+            <li>Both pieces here right before assembly.<p class="pic"><img src="media/computer_aided_design/millingextra/mill03.jpg" alt="CNC Mill Assembly"></p></li>
+            <li>The pieces did not fit perfectly. We had to file a little. So this shows we will need to do some calibration of the CNC mill in the following weeks. Also, I don't like that the veneer was raised from the plywood where the CNC went against the grain.<p class="pic"><img src="media/computer_aided_design/millingextra/mill04.jpg" alt="CNC Mill Veneer Issue"></p></li>
+            <li>Here the pieces are glued together but not yet stained with linseed oil.<p class="pic"><img src="media/computer_aided_design/millingextra/mill05.jpg" alt="CNC Mill Glued Pieces"></p></li>
+            <li>After and Before photo.<p class="pic"><img src="media/computer_aided_design/millingextra/millfinal.jpg" alt="CNC Mill Before and After"></p></li>
+        </ul>
+        <hr>
+        <p>Solidworks has been my choice of 3D design software for some time. I learned to use it with videos and tutorials online.</p>
+        <style type="text/css">
+            .tg {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+
+            .tg td {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                padding: 10px 5px;
+                border-style: solid;
+                border-width: 1px;
+                overflow: hidden;
+                word-break: normal;
+                border-color: black;
+            }
+
+            .tg th {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                padding: 10px 5px;
+                border-style: solid;
+                border-width: 1px;
+                overflow: hidden;
+                word-break: normal;
+                border-color: black;
+            }
+
+            .tg .tg-s268 {
+                text-align: left
+            }
+
+            .tg .tg-0lax {
+                text-align: left;
+                vertical-align: top
+            }
+
+        </style>
+        <table class="tg">
+            <tr>
+                <th class="tg-s268"></th>
+                <th class="tg-s268">Solidworks</th>
+                <th class="tg-s268">Fusion360</th>
+                <th class="tg-s268">Inkscape</th>
+            </tr>
+            <tr>
+                <td class="tg-s268">3D Design<br></td>
+                <td class="tg-s268">yes</td>
+                <td class="tg-s268">yes<br></td>
+                <td class="tg-s268">no</td>
+            </tr>
+            <tr>
+                <td class="tg-s268">2D Design</td>
+                <td class="tg-s268">yes</td>
+                <td class="tg-s268">yes</td>
+                <td class="tg-s268">yes</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">CAM</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">2D only yes with plugin</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">Parametric</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">yes</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">Run locally</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">cloud-based</td>
+                <td class="tg-0lax">yes</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">Price</td>
+                <td class="tg-0lax">$$$$</td>
+                <td class="tg-0lax">$</td>
+                <td class="tg-0lax">free</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">Windows</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">yes</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">MacOS</td>
+                <td class="tg-0lax">no</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">yes</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">Assembly-driven</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">no</td>
+                <td class="tg-0lax">no</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">Large assemblies</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">has trouble</td>
+                <td class="tg-0lax">no</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">Simulation solutions</td>
+                <td class="tg-0lax">depends on package</td>
+                <td class="tg-0lax">beginner plug-ins</td>
+                <td class="tg-0lax">no</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">Mesh modeling</td>
+                <td class="tg-0lax">not intuitive</td>
+                <td class="tg-0lax">yes</td>
+                <td class="tg-0lax">no</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">&nbsp;</td>
+                <td class="tg-0lax">&nbsp;</td>
+                <td class="tg-0lax">&nbsp;</td>
+                <td class="tg-0lax">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">&nbsp;</td>
+                <td class="tg-0lax">&nbsp;</td>
+                <td class="tg-0lax">&nbsp;</td>
+                <td class="tg-0lax">&nbsp;</td>
+            </tr>
+        </table>
+
+
+
+
+
+        <!-- End of your content -->
+    </div> <!-- /container -->
+    <!-- footer -->
+    <footer id="footer">
+        <p id="cclicense"> </p>
+        <p class="license"> Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br> Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+
+    <!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+    <!-- Syntax Highlighter -->
+    <script defer src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=desert"> </script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+
+    </script>
+    <script src="bootstrap/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>

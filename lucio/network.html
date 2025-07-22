@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QEDKLDK8M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7QEDKLDK8M');
+    </script>
+    <!-- Finish Global site tag (gtag.js) - Google Analytics -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Delve into embedded networking and communications in Fab Academy 2020 with Lucio Pentagna. Explore his project on wireless communication using ESP32, including network diagrams, PCB design files, firmware code, and insights into implementing network protocols for IoT devices."/>
+    <meta name="author" content="Lucio Pentagna">
+    <link rel="icon" href="media/favicon.ico">
+    <title>Embedded Networking and Communications - Fab Academy 2020 - Lucio Pentagna</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js" defer></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js" defer></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Load the menu file -->
+    <script>
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+    </script>
+</head>
+
+<body onload="menu()">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu"></ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu"></ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Insert your content here below! -->
+        <div class="jumbotron" style="width: 100%">
+            <h3>Embedded Networking and Communications</h3>
+            <hr>
+            <h4>Group assignment</h4>
+            <ul>
+                <li>Send a message between two projects</li>
+            </ul>
+            <h4>Individual assignment</h4>
+            <ul>
+                <li>Design, build, and connect wired or wireless node(s) with network or bus addresses</li>
+            </ul>
+            <br>
+            <h4>Learning outcomes:</h4>
+            <ul>
+                <li>Demonstrate workflows used in network design</li>
+                <li>Implement and interpret networking protocols and/or communication protocols</li>
+            </ul>
+            <br>
+            <h4>Have you:</h4>
+            <ul>
+                <li>Linked to the group assignment page</li>
+                <li>Documented your project</li>
+                <li>Documented what you have learned from implementing networking and/or communication protocols</li>
+                <li>Explained the programming process/es you used.</li>
+                <li>Outlined problems and how you fixed them</li>
+                <li>Included design files (or linked to where they are located if you are using a board you have designed and fabricated earlier) and original code.</li>
+            </ul>
+        </div>
+        <hr>
+        <h3 id="software">Software Used</h3>
+        <ul style="list-style-type:disc">
+            <li><a href="https://code.visualstudio.com/">vscode</a></li>
+            <li><a href="https://platformio.org/">Platformio</a></li>
+            <li><a href="https://www.arduino.cc/en/main/software">Arduino IDE</a></li>
+            <li><a href="https://arduinojson.org/v6/assistant/">Arduino Json Website</a></li>
+            <li><a href="https://www.autodesk.com/products/eagle/free-download">Autodesk Eagle</a></li>
+            <li><a href="https://github.com/McNugget6750/pcb-gcode">PCB-Gcode ULP for Autodesk Eagle</a></li>
+            <li><a href="http://www.autoleveller.co.uk/downloads/">Auto Leveller</a></li>
+        </ul>
+        <hr>
+        <h3 id="files">Files</h3>
+        <ol>
+            <li>Gitlab Fabcloud <a href="https://gitlab.fabcloud.org/Lucio/e-splash/">project page</a> containing the pcb, enclosure and firmware.</li>
+            <li><a href="https://gitlab.fabcloud.org/Lucio/e-splash/-/tree/V5-Development/Firmware">Firmware</a></li>
+            <li><a href="https://gitlab.fabcloud.org/Lucio/e-splash/-/tree/V5-Development/pcb/ESPlash">Board Files</a></li>
+            <li><a href="https://gitlab.fabcloud.org/Lucio/e-splash/-/tree/V5-Development/board_enclosure">Enclosure</a></li>
+        </ol>
+        <hr>
+        <h3 id="group">Group Assignment</h3>
+        <p>Go to <a href="http://fabacademy.org/2020/labs/algarve/">group assignment page</a></p>
+        <hr>
+        <h4 id="index">Index</h4>
+        <ul>
+            <li>Introduction</li>
+            <li><a href="#software">Software Used</a></li>
+            <li><a href="#files">Files</a></li>
+            <li><a href="#group">Group Assignment</a></li>
+            <li><a href="#diagram">Network Diagram</a></li>
+            <li>PCB</li>
+            <li><a href="#pcbdesign">Designing my Irrigation System Board</a></li>
+            <li><a href="#milling">Milling the PCB</a></li>
+            <li><a href="#soldering">Soldering and testing/Debugging</a></li>
+            <li><a href="#Burn">Burning the firmware</a></li>
+            <li><a href="#debugagain">Debugging Again</a></li>
+            <li>Network</li>
+            <li><a href="#networkcode">Network Coding</a></li>
+            <li><a href="#json">Connecting C++ and the HTML with Arduino Json</a></li>
+            <li><a href="#hero">Hero Shot</a></li>
+        </ul>
+        <hr>
+        <h4 id="diagram">Network Diagram</h4>
+        <p class="pic left"><img src="media/network/networkdiagram.jpg" alt="Network Diagram"></p>
+        <h4>Introduction</h4>
+        <hr>
+        <h4 id="pcbdesign">Designing my Irrigation System Board</h4>
+        <p>After tinkering with an ESP32 Development kit for a while, I had an idea of what I needed for my PCB. So let's see the list of capabilities I want for it:</p>
+        <ol>
+            <li>Control:</li>
+            <ol type="a">
+                <li>3 valve relays;</li>
+                <li>1 pump relay;</li>
+            </ol>
+            <li>Sense:</li>
+            <ol type="a">
+                <li>Temperature and humidity sensor;</li>
+                <li>Amp meter expansion header (for pump);</li>
+                <li>Battery charging/sensing;</li>
+                <li>RTC clock expansion header or solder pad;</li>
+            </ol>
+        </ol>
+        <p>With the requirements in hand, I went looking for an Eagle library for the ESP-WROOM-32 and found several:</p>
+        <ol>
+            <li><a href="https://github.com/MacroYau/MacroYau-EAGLE-Libraries">MacroYau/MacroYau-EAGLE-Libraries</a></li>
+            <li><a href="https://github.com/lpodkalicki/eagle-libraries">lpodkalicki/eagle-libraries</a></li>
+            <li><a href="https://github.com/sparkfun/ESP32_Miscellany">sparkfun/ESP32_Miscellany</a></li>
+        </ol>
+        <p>After reviewing all of them, I decided to use the one from MacroYau/MacroYau. </p>
+        <p class="pic left"><img src="media/network/pcb_design/esppcb01.jpg" alt="ESP PCB Design"></p>
+        <p>Because I want maximum compatibility with the dev kits for ESP32 I was used to, I went looking for and found an ESP32 Wroom pinout that I used to name the pins.</p>
+        <p class="pic left"><img src="media/network/pcb_design/esp32-pinout-chip-esp-wroom-32.jpg" alt="ESP32 Pinout"></p>
+        <p>Next step was to go and attach net wires to each pin. I wish I did this in the order I am presenting as it would have saved me redoing many wires I connected wrongly in the first place. The lesson is logical pin numbers and physical pin numbers are not always the same, so with that in mind, I connected them this time correctly.</p>
+        <p class="pic left"><img src="media/network/pcb_design/connectingthewiresineagle.jpg" alt="Connecting Wires in Eagle"></p>
+        <p>That's the end result:</p>
+        <p class="pic left"><img src="media/network/pcb_design/endresultesp32.jpg" alt="End Result ESP32"></p>
+        <p>The relay I found at <a href="https://www.snapeda.com/parts/SRD-05VDC-SL-C/Songle%20Relay/view-part/1029484/">snapeda</a> is not the same model as the one I have, but the footprint is.</p>
+        <p>The relay circuit I found online <a href="">here</a> at web.archive schematics below.</p>
+        <p class="pic left"><img src="media/network/pcb_design/relay_circuit_schematic_S.jpg" alt="Relay Circuit Schematic"></p>
+        <p>With the schematics in hand, I drew the following in Eagle:</p>
+        <p class="pic left"><img src="media/network/pcb_design/relayssch.jpg" alt="Relay Schematic"></p>
+        <p>For the battery circuit, I followed a circuit on the web page <a href="https://randomnerdtutorials.com/power-esp32-esp8266-solar-panels-battery-level-monitoring/">Random Nerds Tutorial</a>.</p>
+        <p class="pic left"><img src="media/network/pcb_design/esp32-solar-powered-circuit-1.jpg" alt="ESP32 Solar Powered Circuit"></p>
+        <p>Since I don't have the TP4056 module for now, my circuit will contain only the sensing part.</p>
+        <p class="pic left"><img src="media/network/pcb_design/powersense.jpg" alt="Power Sense"></p>
+        <p>The voltage divider resistor was calculated using the online calculator <a href="http://www.ohmslawcalculator.com/voltage-divider-calculator">here</a>.</p>
+        <p class="pic left"><img src="media/network/pcb_design/voltage_divider_calculator.jpg" alt="Voltage Divider Calculator"></p>
+        <p>For the future, I found the library for the TP4056 <a href="https://breadboardtronics.wordpress.com/tag/tp4056/">here</a> thanks to a tip from Luis Carvão, my remote instructor.</p>
+        <p>The humidity Sensor library can be found <a href="">here</a>. With it in hand, I simply had to net some wires to the ESP32 pin 32</p>
+        <p class="pic left"><img src="media/network/pcb_design/dhtsch.jpg" alt="DHT Schematic"></p>
+        <p>As for the current sensor, I chose to use the ACS712. The library I found on this <a href="https://github.com/triffid/ESC/tree/master/Schematic%20and%20Board">Github</a>. The finished Schematics is below:</p>
+        <p class="pic left"><img src="media/network/pcb_design/currentsensesch.jpg" alt="Current Sense Schematic"></p>
+        <p>I got the Real-time clock library as well at <a href="https://www.snapeda.com/parts/DS1302ZN/Maxim%20Integrated/view-part/?ref=search&t=DS1302Z">Snapeda</a>, but for now, I will not use it, so the full Schematics I drew is below:</p>
+        <p class="pic left"><img src="media/network/pcb_design/schematics.jpg" alt="Full Schematic"></p>
+        <p>After some time staring at the Schematics, I realized a few errors. I forgot to connect the relays LED's resistor to VCC and also forgot to include a reset and a program button necessary to put the ESP on programming mode, as well as forgot to include headers for the serial mode and for expandability, and finally, I decided to include a crystal for better timekeeping.</p>
+        <p>I then drew the Reset and Program buttons:</p>
+        <p class="pic left"><img src="media/network/pcb_design/buttons.jpg" alt="Reset and Program Buttons"></p>
+        <p>Here I corrected the relays by adding the VCC as well as added an optocoupler in between the signal and the relays to prevent any feedback from the relays.</p>
+        <p class="pic left"><img src="media/network/pcb_design/relayswithoctocoupler.jpg" alt="Relays with Optocoupler"></p>
+        <p>Here I added TX RX header, crystal for better internal RTC timekeeping, and ESP32DEVKIT compatibility headers.</p>
+        <p class="pic left"><img src="media/network/pcb_design/headersandcrystal.jpg" alt="Headers and Crystal"></p>
+        <p>So hopefully, finally my final Schematics...</p>
+        <p class="pic left"><img src="media/network/pcb_design/schematicsfinal.jpg" alt="Final Schematic"></p>
+        <p>Now I will start the routing work on the board. I have to say I am a bit anxious as I have never made such a complex PCB!</p>
+        <p>How encouraging is what I see when I move to the board mode in Eagle!!!</p>
+        <p class="pic left"><img src="media/network/pcb_design/encoraging.jpg" alt="Encouraging Board Mode"></p>
+        <p>First thing I do is to move the devkit footprint to the center along with the ESP32</p>
+        <p class="pic left"><img src="media/network/pcb_design/firstthing.jpg" alt="First Thing"></p>
+        <p>After trying for a while to connect by hand, I give a try on the autorouter. I had to stop after a few minutes, and the result is laughable. I will try again moving the ESP32 up, and if not, I will not attempt an ESP32devkit compatibility.</p>
+        <p class="pic left"><img src="media/network/pcb_design/isthisevenfabable.jpg" alt="Is This Even Fabable?"></p>
+        <p>So I gave up on the DevKit compatibility and decided to move slowly this time. I created a backup of my work that I opened in another Eagle window and deleted all the components I was not working on. The schematics and board looked like this. My idea is to copy from the backup the components back as I finish each step. So below is how step one looks.</p>
+        <p class="pic left"><img src="media/network/pcb_design/step01a.jpg" alt="Step 01a"></p>
+        <p>In the Board, you can see #1 the relay and #2 the current sensor circuit and #3 the onboard LED.</p>
+        <p class="pic left"><img src="media/network/pcb_design/step01b.jpg" alt="Step 01b"></p>
+        <p>So now I copied the first valve relay, and when I went to the board, Eagle presented me with the pasted components. I believe this way is much easier.</p>
+        <p class="pic left"><img src="media/network/pcb_design/step02b1.jpg" alt="Step 02b1"></p>
+        <p>So far, the board looks like this. I haven't routed any power wires, including GND 3.3V and 5V. I will try autoroute now to have an idea and maybe route manually. The entire routing process was best described at input devices <a href="input_devices.html">week</a>.</p>
+        <p class="pic left"><img src="media/network/pcb_design/step3b.jpg" alt="Step 3b"></p>
+        <p>After finishing the layout of the board, I decided to add the logo. Click on File, import, and Bitmap (currently, Eagle only accepts .bmp).</p>
+        <p class="pic left"><img src="media/network/pcb_design/logo01.jpg" alt="Logo 01"></p>
+        <p>Choose the color to be imported.</p>
+        <p class="pic left"><img src="media/network/pcb_design/logo02.jpg" alt="Logo 02"></p>
+        <p>Then select the unit, mm in my case, and the size and ok.</p>
+        <p class="pic left"><img src="media/network/pcb_design/logo03.jpg" alt="Logo 03"></p>
+        <p>Because I wanted to mill the logo as opposed to stamp it, I had to move it to the top layer.</p>
+        <p class="pic left"><img src="media/network/pcb_design/logo04.jpg" alt="Logo 04"></p>
+        <p>The finalized board layout with holes and milling contours as described in output devices <a href="output_devices.html">week</a>.</p>
+        <p class="pic left"><img src="media/network/pcb_design/logo05.jpg" alt="Logo 05"></p>
+        <hr>
+        <h4 id="milling">Milling</h4>
+        <p>Here I show the visualization of the gcode routes with red as the trace closest to the copper to be left.</p>
+        <p class="pic left"><img src="media/network/pcb_cam/logo06.jpg" alt="Logo 06"></p>
+        <p>As usual and again best described at <a href="input_devices.html">week</a>, here follows a glimpse of the autolevel software.</p>
+        <p class="pic left"><img src="media/network/pcb_cam/autolevel.jpg" alt="Autolevel"></p>
+        <p class="pic left"><img src="media/network/milling/03_contourn.jpg" alt="Contour"></p>
+        <hr>
+        <h4 id="soldering">Soldering and testing/Debugging</h4>
+        <p>Inspecting PCB under the light.</p>
+        <p>In order to verify if the tracks are all good, I place the light under the PCB and review everything looking for shorts or missing tracks.</p>
+        <p class="pic left"><img src="media/network/debug_pcb/04_under_the_light.jpg" alt="Under the Light"></p>
+        <p>The underside being populated.</p>
+        <p>I place the big components last so as not to make soldering the small SMD components hard.</p>
+        <p class="pic left"><img src="media/network/debug_pcb/05_underside.jpg" alt="Underside"></p>
+
+        <h4>Reading from Serial Monitor/Burning Firmware Schematics</h4>
+        <p>After soldering everything, I connect the board to my serial adapter. Below is the schematics.</p>
+        <p class="pic left"><img src="media/network/debug_pcb/burnfirmware.jpg" alt="Burn Firmware"></p>
+        <p>I pasted the first output from the ESP32 with factory firmware. It boots!</p>
+        <pre><code>
+            --- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+            --- More details at http://bit.ly/pio-monitor-filters
+            --- Miniterm on COM5  115200,8,N,1 ---
+            --- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+            ets Jun  8 2016 00:22:57
+
+            rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+            configsip: 0, SPIWP:0x00
+            clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+            mode:DIO, clock div:2
+            load:0x3fff0008,len:8
+            load:0x3fff0010,len:3480
+            load:0x40078000,len:7804
+            ho 0 tail 12 room 4
+            load:0x40080000,len:252
+            entry 0x40080034
+            ␛[0;32mI (45) boot: ESP-IDF v2.0-3-gbef9896 2nd stage bootloader␛[0m   
+            ␛[0;32mI (45) boot: compile time 05:59:45␛[0m
+            ␛[0;32mI (45) boot: Enabling RNG early entropy source...␛[0m
+            ␛[0;32mI (64) boot: SPI Speed      : 40MHz␛[0m
+            ␛[0;32mI (77) boot: SPI Mode       : DIO␛[0m
+            ␛[0;32mI (89) boot: SPI Flash Size : 4MB␛[0m
+            ␛[0;32mI (101) boot: Partition Table:␛[0m
+            ␛[0;32mI (113) boot: ## Label            Usage          Type ST Offset   Length␛[0m
+            ␛[0;32mI (136) boot:  0 phy_init         RF data          01 01 0000f000 00001000␛[0m
+            ␛[0;32mI (159) boot:  1 otadata          OTA data         01 00 00010000 00002000␛[0m
+            ␛[0;32mI (182) boot:  2 nvs              WiFi data        01 02 00012000 0000e000␛[0m
+            ␛[0;32mI (205) boot:  3 at_customize     unknown          40 00 00020000 000e0000␛[0m
+            ␛[0;32mI (228) boot:  4 ota_0            OTA app          00 10 00100000 00180000␛[0m
+            ␛[0;32mI (252) boot:  5 ota_1            OTA app          00 11 00280000 00180000␛[0m
+            ␛[0;32mI (275) boot: End of partition table␛[0m
+            ␛[0;32mI (288) boot: Disabling RNG early entropy source...␛[0m
+            ␛[0;32mI (305) boot: Loading app partition at offset 00100000␛[0m
+            ␛[0;32mI (1481) boot: segment 0: paddr=0x00100018 vaddr=0x00000000 size=0x0ffe8 ( 65512) ␛[0m
+            ␛[0;32mI (1481) boot: segment 1: paddr=0x00110008 vaddr=0x3f400010 size=0x1c5f0 (116208) map␛[0m
+            ␛[0;32mI (1498) boot: segment 2: paddr=0x0012c600 vaddr=0x3ffb0000 size=0x0215c (  8540) load␛[0m
+            ␛[0;32mI (1528) boot: segment 3: paddr=0x0012e764 vaddr=0x40080000 size=0x00400 (  1024) load␛[0m
+            ␛[0;32mI (1551) boot: segment 4: paddr=0x0012eb6c vaddr=0x40080400 size=0x1b028 (110632) load␛[0m
+            ␛[0;32mI (1630) boot: segment 5: paddr=0x00149b9c vaddr=0x400c0000 size=0x00034 (    52) load␛[0m
+            ␛[0;32mI (1631) boot: segment 6: paddr=0x00149bd8 vaddr=0x00000000 size=0x06430 ( 25648) ␛[0m
+            ␛[0;32mI (1648) boot: segment 7: paddr=0x00150010 vaddr=0x400d0018 size=0x7a56c (501100) map␛[0m
+            ␛[0;32mI (1675) heap_alloc_caps: Initializing. RAM available for dynamic allocation:␛[0m
+            ␛[0;32mI (1697) heap_alloc_caps: At 3FFBA6B8 len 00025948 (150 KiB): DRAM␛[0m
+            ␛[0;32mI (1719) heap_alloc_caps: At 3FFE8000 len 00018000 (96 KiB): D/IRAM␛[0m
+            ␛[0;32mI (1740) heap_alloc_caps: At 4009B428 len 00004BD8 (18 KiB): IRAM␛[0m
+            ␛[0;32mI (1761) cpu_start: Pro cpu up.␛[0m
+            ␛[0;32mI (1773) cpu_start: Single core mode␛[0m
+            ␛[0;32mI (1786) cpu_start: Pro cpu start user code␛[0m
+            ␛[0;32mI (1846) cpu_start: Starting scheduler on PRO CPU.␛[0m
+            ␛[0;32mI (2085) uart: queue free spaces: 10␛[0m
+            Bin version:0.10.0
+            I (2087) wifi: wifi firmware version: c604573
+            I (2087) wifi: config NVS flash: enabled
+            I (2088) wifi: config nano formating: disabled
+            I (2096) wifi: Init dynamic tx buffer num: 32
+            I (2097) wifi: wifi driver task: 3ffc4eac, prio:23, stack:3584
+            I (2102) wifi: Init static rx buffer num: 10
+            I (2106) wifi: Init dynamic rx buffer num: 0
+            I (2110) wifi: Init rx ampdu len mblock:7
+            I (2114) wifi: Init lldesc rx ampdu entry mblock:4
+            I (2118) wifi: wifi power manager task: 0x3ffca254 prio: 21 stack: 2560
+            I (2125) wifi: wifi timer task: 3ffcb2d4, prio:22, stack:3584
+            ␛[0;31mE (2130) phy_init: PHY data partition validated␛[0m
+            ␛[0;32mI (2152) phy: phy_version: 329, Feb 22 2017, 15:58:07, 0, 0␛[0m
+            I (2152) wifi: mode : softAP (3c:71:bf:10:66:e1)
+            I (2155) wifi: mode : sta (3c:71:bf:10:66:e0) + softAP (3c:71:bf:10:66:e1)
+            I (2159) wifi: mode : softAP (3c:71:bf:10:66:e1)
+        </code></pre>
+        <hr>
+        <h4 id="burn">Burning the firmware:</h4>
+        <p>In order to burn my firmware, I use Microsoft VScode with Platformio.</p>
+        <p>Before starting with the burning process, first, I had to configure the environment of Platformio. I describe this <a href="project_development.html#13/06/2020">here</a> in the project development week.</p>
+        <p>Next, I hold down the GPIO0 switch and press the reset button to enter the firmware burning mode. After that, I press on the icon to burn the firmware, and it burns. Success!</p>
+
+        <!-- Debug -->
+        <hr>
+        <p id="debugagain">Debugging the board.</p>
+        <p>I ended up removing all the components in order to review the signals directly produced by the microprocessor.</p>
+        <p class="pic">
+            <video controls>
+                <source src="media/network/debug_pcb/06.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <legend>Debugging Video</legend>
+        </p>
+        <p>The result from the debug was that I found out there was nothing wrong with the code or the microprocessor soldering or the immediate tracks.</p>
+        <p>What I found out was that I needed to have 220 ohms resistors added between the signal and Anode pin number 1 of each optocoupler. It turns out the optocoupler has an internal LED, and the voltage used to activate it needs to be limited.</p>
+        <p class="pic left"><img src="media/network/debug_pcb/calculate_resistor.jpg" alt="Resistor Calculation">
+            <legend>From electronics stack exchange <a href="https://electronics.stackexchange.com/questions/94097/calculate-resistor-value-for-optocoupler-24vdc-anode">website</a></legend>
+        </p>
+        <p class="pic left"><img src="media/network/debug_pcb/datasheet.jpg" alt="Datasheet"></p>
+        <p>Then R=(3.3v-1.2v)/20ma=105ohms or</p>
+        <p class="pic left"><img src="media/network/debug_pcb/calculate.jpg" alt="Calculate"></p>
+        <p>I then cut the tracks and soldered the 220ohms resistors because that was what I had in hand, and it worked, but the right size is 120ohms as the online resistor calculator shows.</p>
+        <p class="pic left"><img src="media/network/debug_pcb/resistor.jpg" alt="Resistor"></p>
+        <p>And this is how the schematics for the relay look like</p>
+        <p class="pic left"><img src="media/network/debug_pcb/sch.jpg" alt="Relay Schematic"></p>
+        <hr>
+        <h4 id="networkcode">Network Code in the firmware</h4>
+        <p>There are two types of communications happening in my board that I can describe.</p>
+        <ul>
+            <li>The communication between the phone and the ESP32 (TCP/IP protocol)</li>
+            <li>The communication between the C++ and the HTML <a href="https://arduinojson.org/">Arduino Json</a></li>
+        </ul>
+        <br>
+        <h4>Phone and the ESP32</h4>
+        <p>The network between the phone and the ESP32 is established thanks to a few libraries working together: </p>
+        <ol>
+            <li><a href="https://github.com/espressif/arduino-esp32/tree/master/libraries/WiFi">WiFi.h</a></li>
+            <p>It is described in its documentation:</p>
+            <p><i>"Enables network connection (local and Internet) using the ESP32 built-in WiFi. With this library, you can initiate Servers, Clients, and send/receive UDP packets through WiFi. The shield can connect either to open or encrypted networks (WEP, WPA). The IP address can be assigned statically or through a DHCP. The library can also manage DNS."</i></p>
+            <li><a href="https://github.com/me-no-dev/AsyncTCP">AsyncTCP.h</a></li>
+            <p>It is described in its documentation:</p>
+            <p><i>"This is a fully asynchronous TCP library, aimed at enabling a trouble-free, multi-connection network environment for Espressif's ESP32 MCUs. This library is the base for ESPAsyncWebServer"</i></p>
+            <li><a href="https://github.com/me-no-dev/ESPAsyncWebServer">ESPAsyncWebServer.h</a></li>
+            <p>It is described in its documentation:</p>
+            <p><i>"Async HTTP and WebSocket Server for ESP8266 Arduino"</i></p>
+            <p>So basically, in my project, these libraries are responsible for establishing a network connection to a router as well as creating an access point.</p>
+            <p>They also create a web server as well as a DHCP server, and with that, it issues an IP address in case one connects to it via the access point created with this code: </p>
+            <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c">  //Soft Wifi Access point setup
+  WiFi.softAP("softap", "password_here");
+  IPAddress IP = WiFi.softAPIP();</code></pre>
+            <p>The connection to the router is established with this code:</p>
+            <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c">  //start wifi sessions as a client.
+  //Wifi client setup
+  const char* ssid = doc["data"]["ssid"];
+  const char* password = doc["data"]["pass"];
+  ssid = "fabfarm";
+  password = "password_here";
+  WiFi.begin(ssid, password);</code></pre>
+            <p>The webserver is initiated with this code <code>AsyncWebServer server(81);</code> </p>
+        </ol>
+        <!-- -->
+        <hr>
+        <h4 id="json">Connecting C++ and the HTML with Arduino Json</h4>
+        <p>Json is the format I chose for the communication of the Web interface and the microprocessor.</p>
+        <p><a href="https://arduinojson.org/">ArduinoJson.h</a> is described in its documentation as:</p>
+        <p><i>ArduinoJson is a C++ JSON library for Arduino and IoT (Internet Of Things)</i></p>
+        <p>A great source of documentation and a great assistant to create the parsing <code>deserializeJson()</code> program and the serializing <code>serializeJson(doc, Serial)</code> program is an <a href="https://arduinojson.org/v6/assistant/">Arduino Json Website</a></p>
+        <p>In order to use the library, I had first to create a <a href="https://gitlab.fabcloud.org/Lucio/e-splash/-/blob/V5-Development/Firmware/src/fabfarm_irrigation/data/sample.json">json file</a>. This file will be used by the assistant in order to generate code for the C++.</p>
+        <p>Having created the json file by hand, it's time to create the programs in C++. The assistant will then create a C++ code to serialize as well as parse data from and to the json file that is inside the file system.</p>
+        <p class="pic left"><img src="media/network/json/json01jpg.jpg" alt="JSON Assistant"></p>
+        <p>In the dialog box on the left, I pasted the <a href="https://gitlab.fabcloud.org/Lucio/e-splash/-/blob/V5-Development/Firmware/src/fabfarm_irrigation/data/sample.json">json file</a> contents.</p>
+        <p class="pic left"><img src="media/network/json/json02.jpg" alt="JSON Assistant Code"></p>
+        <p>The website generates the codes automatically.</p>
+        <p class="pic left"><img src="media/network/json/json03.jpg" alt="Generated JSON Code"></p>
+        <p>Below I show the code generated in the assistant.</p>
+        <h4>Parsing program (Deserialize/decode)</h4>
+        <pre class="prettyprint linenums"><code class="language-c">const size_t capacity = JSON_ARRAY_SIZE(1) + JSON_ARRAY_SIZE(2) + 2*JSON_ARRAY_SIZE(3) + JSON_OBJECT_SIZE(2) + 6*JSON_OBJECT_SIZE(4) + JSON_OBJECT_SIZE(5) + 3*JSON_OBJECT_SIZE(6) + 540;
+DynamicJsonDocument doc(capacity);
+
+const char* json = "{\"data\":{\"currentTime\":\"Wednesday, June 24 2020 23:49:23\",\"temperature\":\"22.30\",\"humidity\":\"74.00\",\"override\":0,\"ssid\":\"rato\",\"pass\":\"imakestuff\"},\"relays\":[{\"name\":\"Fruit Tree\",\"pin\":25,\"isRunning\":1,\"isEnabled\":0,\"times\":[{\"startTime\":\"01:01\",\"duration\":0,\"hour\":1,\"min\":1}]},{\"name\":\"Vegie Garden\",\"pin\":26,\"isRunning\":1,\"isEnabled\":0,\"status\":1,\"times\":[{\"startTime\":\"02:02\",\"duration\":32,\"hour\":2,\"min\":2},{\"startTime\":\"02:02\",\"duration\":32,\"hour\":2,\"min\":2}]},{\"name\":\"Cypress Hill\",\"pin\":33,\"isRunning\":1,\"isEnabled\":0,\"status\":1,\"times\":[{\"startTime\":\"03:03\",\"duration\":60,\"hour\":3,\"min\":3},{\"startTime\":\"03:03\",\"duration\":60,\"hour\":3,\"min\":3},{\"startTime\":\"03:03\",\"duration\":60,\"hour\":3,\"min\":3}]}]}";
+
+deserializeJson(doc, json);
+
+JsonObject data = doc["data"];
+const char* data_currentTime = data["currentTime"]; // "Wednesday, June 24 2020 23:49:23"
+const char* data_temperature = data["temperature"]; // "22.30"
+const char* data_humidity = data["humidity"]; // "74.00"
+int data_override = data["override"]; // 0
+const char* data_ssid = data["ssid"]; // "rato"
+const char* data_pass = data["pass"]; // "imakestuff"
+
+JsonArray relays = doc["relays"];
+
+JsonObject relays_0 = relays[0];
+const char* relays_0_name = relays_0["name"]; // "Fruit Tree"
+int relays_0_pin = relays_0["pin"]; // 25
+int relays_0_isRunning = relays_0["isRunning"]; // 1
+int relays_0_isEnabled = relays_0["isEnabled"]; // 0
+
+JsonObject relays_0_times_0 = relays_0["times"][0];
+const char* relays_0_times_0_startTime = relays_0_times_0["startTime"]; // "01:01"
+int relays_0_times_0_duration = relays_0_times_0["duration"]; // 0
+int relays_0_times_0_hour = relays_0_times_0["hour"]; // 1
+int relays_0_times_0_min = relays_0_times_0["min"]; // 1
+
+JsonObject relays_1 = relays[1];
+const char* relays_1_name = relays_1["name"]; // "Vegie Garden"
+int relays_1_pin = relays_1["pin"]; // 26
+int relays_1_isRunning = relays_1["isRunning"]; // 1
+int relays_1_isEnabled = relays_1["isEnabled"]; // 0
+int relays_1_status = relays_1["status"]; // 1
+
+JsonObject relays_1_times_0 = relays_1["times"][0];
+const char* relays_1_times_0_startTime = relays_1_times_0["startTime"]; // "02:02"
+int relays_1_times_0_duration = relays_1_times_0["duration"]; // 32
+int relays_1_times_0_hour = relays_1_times_0["hour"]; // 2
+int relays_1_times_0_min = relays_1_times_0["min"]; // 2
+
+JsonObject relays_1_times_1 = relays_1["times"][1];
+const char* relays_1_times_1_startTime = relays_1_times_1["startTime"]; // "02:02"
+int relays_1_times_1_duration = relays_1_times_1["duration"]; // 32
+int relays_1_times_1_hour = relays_1_times_1["hour"]; // 2
+int relays_1_times_1_min = relays_1_times_1["min"]; // 2
+
+JsonObject relays_2 = relays[2];
+const char* relays_2_name = relays_2["name"]; // "Cypress Hill"
+int relays_2_pin = relays_2["pin"]; // 33
+int relays_2_isRunning = relays_2["isRunning"]; // 1
+int relays_2_isEnabled = relays_2["isEnabled"]; // 0
+int relays_2_status = relays_2["status"]; // 1
+
+JsonArray relays_2_times = relays_2["times"];
+
+JsonObject relays_2_times_0 = relays_2_times[0];
+const char* relays_2_times_0_startTime = relays_2_times_0["startTime"]; // "03:03"
+int relays_2_times_0_duration = relays_2_times_0["duration"]; // 60
+int relays_2_times_0_hour = relays_2_times_0["hour"]; // 3
+int relays_2_times_0_min = relays_2_times_0["min"]; // 3
+
+JsonObject relays_2_times_1 = relays_2_times[1];
+const char* relays_2_times_1_startTime = relays_2_times_1["startTime"]; // "03:03"
+int relays_2_times_1_duration = relays_2_times_1["duration"]; // 60
+int relays_2_times_1_hour = relays_2_times_1["hour"]; // 3
+int relays_2_times_1_min = relays_2_times_1["min"]; // 3
+
+JsonObject relays_2_times_2 = relays_2_times[2];
+const char* relays_2_times_2_startTime = relays_2_times_2["startTime"]; // "03:03"
+int relays_2_times_2_duration = relays_2_times_2["duration"]; // 60
+int relays_2_times_2_hour = relays_2_times_2["hour"]; // 3
+int relays_2_times_2_min = relays_2_times_2["min"]; // 3</code></pre>
+        <h4>Serializing Program (encode)</h4>
+        <pre class="prettyprint linenums"><code class="language-c">const size_t capacity = JSON_ARRAY_SIZE(1) + JSON_ARRAY_SIZE(2) + 2*JSON_ARRAY_SIZE(3) + JSON_OBJECT_SIZE(2) + 6*JSON_OBJECT_SIZE(4) + JSON_OBJECT_SIZE(5) + 3*JSON_OBJECT_SIZE(6);
+DynamicJsonDocument doc(capacity);
+
+JsonObject data = doc.createNestedObject("data");
+data["currentTime"] = "Wednesday, June 24 2020 23:49:23";
+data["temperature"] = "22.30";
+data["humidity"] = "74.00";
+data["override"] = 0;
+data["ssid"] = "rato";
+data["pass"] = "imakestuff";
+
+JsonArray relays = doc.createNestedArray("relays");
+
+JsonObject relays_0 = relays.createNestedObject();
+relays_0["name"] = "Fruit Tree";
+relays_0["pin"] = 25;
+relays_0["isRunning"] = 1;
+relays_0["isEnabled"] = 0;
+
+JsonArray relays_0_times = relays_0.createNestedArray("times");
+
+JsonObject relays_0_times_0 = relays_0_times.createNestedObject();
+relays_0_times_0["startTime"] = "01:01";
+relays_0_times_0["duration"] = 0;
+relays_0_times_0["hour"] = 1;
+relays_0_times_0["min"] = 1;
+
+JsonObject relays_1 = relays.createNestedObject();
+relays_1["name"] = "Vegie Garden";
+relays_1["pin"] = 26;
+relays_1["isRunning"] = 1;
+relays_1["isEnabled"] = 0;
+relays_1["status"] = 1;
+
+JsonArray relays_1_times = relays_1.createNestedArray("times");
+
+JsonObject relays_1_times_0 = relays_1_times.createNestedObject();
+relays_1_times_0["startTime"] = "02:02";
+relays_1_times_0["duration"] = 32;
+relays_1_times_0["hour"] = 2;
+relays_1_times_0["min"] = 2;
+
+JsonObject relays_1_times_1 = relays_1_times.createNestedObject();
+relays_1_times_1["startTime"] = "02:02";
+relays_1_times_1["duration"] = 32;
+relays_1_times_1["hour"] = 2;
+relays_1_times_1["min"] = 2;
+
+JsonObject relays_2 = relays.createNestedObject();
+relays_2["name"] = "Cypress Hill";
+relays_2["pin"] = 33;
+relays_2["isRunning"] = 1;
+relays_2["isEnabled"] = 0;
+relays_2["status"] = 1;
+
+JsonArray relays_2_times = relays_2.createNestedArray("times");
+
+JsonObject relays_2_times_0 = relays_2_times.createNestedObject();
+relays_2_times_0["startTime"] = "03:03";
+relays_2_times_0["duration"] = 60;
+relays_2_times_0["hour"] = 3;
+relays_2_times_0["min"] = 3;
+
+JsonObject relays_2_times_1 = relays_2_times.createNestedObject();
+relays_2_times_1["startTime"] = "03:03";
+relays_2_times_1["duration"] = 60;
+relays_2_times_1["hour"] = 3;
+relays_2_times_1["min"] = 3;
+
+JsonObject relays_2_times_2 = relays_2_times.createNestedObject();
+relays_2_times_2["startTime"] = "03:03";
+relays_2_times_2["duration"] = 60;
+relays_2_times_2["hour"] = 3;
+relays_2_times_2["min"] = 3;
+
+serializeJson(doc, Serial);</code></pre>
+
+        <p>With the help of my friend Jeff Knight, without whom I would not be able to do it alone, the code generated was simplified for my program. I then created a few functions, and the following picture shows the serial monitor printing the result of a deserialization of the json file read.</p>
+        <p class="pic left"><img src="media/network/json/deserialisingjson.jpg" alt="JSON Deserialization Output"></p>
+
+        <p>I made this diagram so I don't forget how it works:</p>
+        <p class="pic left"><img src="media/network/diagramesplash.jpg" alt="System Diagram"></p>
+
+        <!-- <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c"></code></pre> -->
+        <hr>
+        <h3 id="hero">Hero shot</h3>
+        <p>In the end, it works like this:</p>
+        <p class="pic">
+            <video controls title="Irrigation system demo">
+                <source src="media/network/irrigation_on_off.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <legend>Irrigation System Demo</legend>
+        </p>
+        <!-- End of your content -->
+    </div> <!-- /container -->
+    <!-- footer -->
+    <footer id="footer">
+        <p id="cclicense"></p>
+        <p class="license">Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br> Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">jQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+    <!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js" defer></script>
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js" defer></script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+    </script>
+    <script src="bootstrap/js/bootstrap.min.js" defer></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js" defer></script>
+</body>
+</html>

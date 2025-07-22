@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QEDKLDK8M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7QEDKLDK8M');
+    </script>
+    <!-- Finish Global site tag (gtag.js) - Google Analytics -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore the foundational principles and practices of Fab Academy 2020 through Lucio Pentagna's documentation. Delve into project planning, technical documentation, learning outcomes, and insights into digital fabrication education and maker culture."/>
+    <meta name="author" content="Lucio Pentagna">
+    <link rel="icon" href="media/favicon.ico">
+    <title>Principles and Practices - Fab Academy 2020 - Lucio Pentagna</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    <!-- 3D files viewer -->
+    <script defer type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+    <script defer type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script defer type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script defer type="text/javascript" src="media/jsc3d.touch.js"></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script defer src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Load the menu file -->
+    <script>
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+    </script>
+</head>
+
+<body onload="menu()">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu"></ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu"></ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Insert your content here below! -->
+        <div class="jumbotron" style="width: 100%">
+            <h3>Principles and Practices</h3>
+            <hr>
+            <h4>Individual assignment</h4>
+            <ul>
+                <li>Plan and sketch a potential final project</li>
+            </ul>
+            <h4>Learning outcomes:</h4>
+            <ul>
+                <li>Communicate an initial project proposal</li>
+            </ul>
+            <h4>Have you:</h4>
+            <ul>
+                <li>Sketched your final project idea/s</li>
+                <li>Described what it will do and who will use it</li>
+            </ul>
+        </div>
+        <h2>THIS PAGE IS OBSOLETE NEW PROJECT <a href="project_update_2.html">HERE!</a></h2>
+        <h2>Electronic Components Vending Machine:</h2>
+        <p>For my final project, I decided on developing a very necessary Fab Machine: a vending machine for electronic components. I hope this machine will relieve Fab Managers from the burden of doing inventory and selling components, as everything will happen automatically.</p>
+        <p class="pic">
+            <img src="media/principles_and_practices/electronicsvendingmachine.jpg" alt="Electronics vending machine concept">
+            <legend>Electronics vending machine</legend>
+        </p>
+        <p>Currently, electronics vending machines use the soda/snack vending machine platform. I believe that besides the high cost of such machines and their excessive footprint, they are prohibitive equipment, especially in small labs.</p>
+        <p class="pic">
+            <img src="media/principles_and_practices/pt_10262.jpg" alt="Commercial electronics vending machine">
+            <legend>Electronics vending machine</legend>
+        </p>
+        <p>The other thing that bothers me is the necessity to repackage the electronics to be sold. That in itself is a boring task that should be avoided as it creates waste from packaging material and time waste to prepare the packages.</p>
+        <p>The payment system should be one that uses virtual currency to eliminate yet another managerial task. With electronic payment, everything will be automatically accounted for without human intervention. During my stay in China, I came across the WeChat and Alipay payment systems. These systems allow you to pay for virtually everything in China.</p>
+        <p class="pic">
+            <img src="media/principles_and_practices/wechat.jpg" alt="WeChat QR code payment system">
+            <legend>WeChat payment System with QR code</legend>
+        </p>
+        <h4>Machine Description:</h4>
+        <p>The machine will use current electronic reels used for electronics packaging to be fed on pick and place machines. The DIY Pick and Place below illustrates the reel tapes system I would like to incorporate.</p>
+        <p class="pic">
+            <img src="media/principles_and_practices/diypickandplace.jpg" alt="DIY pick and place machine">
+            <legend>PIC.01: DIY pick and place</legend>
+        </p>
+        <p>Because sometimes it's not possible to stock such quantities of electronics in a Fab Lab, the machine should also be able to use already cut electronics packaging strips stored in the machine itself.</p>
+        <p>I plan to use a guide as in PIC. 02 to guide the stripes along the machine;</p>
+        <p class="pic">
+            <img src="media/principles_and_practices/reelfeeder.jpg" alt="Stripe guide for electronics vending machine">
+            <legend>PIC. 02 Stripe guide</legend>
+        </p>
+        <h4>Sketch:</h4>
+        <p class="pic">
+            <img src="media/principles_and_practices/esquema1.jpg" alt="Front view sketch of vending machine">
+            <legend>Front view</legend>
+        </p>
+        <h5>Parts:</h5>
+        <ol>
+            <li>Reel</li>
+            <li>Reel support</li>
+            <li>Gear and motors</li>
+            <li>Cutter</li>
+            <li>QR code</li>
+            <li>Dispenser</li>
+            <li>Site</li>
+            <li>Control</li>
+        </ol>
+        <p class="pic">
+            <img src="media/principles_and_practices/esquema2.jpg" alt="Side view sketch of vending machine">
+            <legend>Side view</legend>
+        </p>
+        <h4>User steps:</h4>
+        <ol>
+            <li>User scans QR code (leads to app/site)</li>
+            <li>User login</li>
+            <li>From App, user selects desired components and quantities</li>
+            <li>User confirms/pays for items</li>
+            <li>Machine supplies and cuts component tape</li>
+            <li>Component falls to collecting points</li>
+            <li>User collects component</li>
+        </ol>
+        <h4>Manager Steps:</h4>
+        <ol>
+            <li>Manager feeds machine with new components</li>
+            <li>Manager updates inventory through software, with price, quantity, and type</li>
+        </ol>
+        <hr>
+        <h3>Updates 1</h3>
+        <p>Along the course of Fabacademy, I changed my mind about the Final Project. Click <a href="project_update.html">here</a> for the updated page where you can see the Incubator.</p>
+        <p class="pic">
+            <img src="media/computer_aided_design/solidworks/explodedview.jpg" alt="Exploded view of Incubator">
+            <legend>Exploded view of Incubator</legend>
+        </p>
+        <hr>
+        <h3>Updates 2</h3>
+        <p>I know it's getting old. Check new update <a href="project_update_2.html">here</a>. It's going to be an Irrigation Controller.</p>
+        <!-- End of your content -->
+    </div> <!-- /container -->
+    <!-- footer -->
+    <footer id="footer">
+        <p id="cclicense"></p>
+        <p class="license">Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br> Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">jQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+
+    <!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script defer src="media/jquery-1.9.1.min.js"></script>
+    <!-- Syntax Highlighter -->
+    <script defer src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+    </script>
+    <script defer src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script defer src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>

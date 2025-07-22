@@ -1,0 +1,29 @@
+#BIMP 2.3
+#MANIPULATION SET DEFINITION
+
+[RESIZE]
+new_w_pc=100
+new_h_pc=100
+new_w_px=1080
+new_h_px=100
+resize_mode_width=1
+resize_mode_height=2
+stretch_mode=1
+padding_color=#000000000000
+padding_color_alpha=65535
+interpolation=2
+change_res=true
+new_res_x=72
+new_res_y=72
+
+[CHANGEFORMAT]
+format=3
+quality=80
+smoothing=0
+entropy=true
+progressive=true
+comment=
+subsampling=2
+baseline=true
+markers=0
+dct=1

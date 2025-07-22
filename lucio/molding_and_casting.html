@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QEDKLDK8M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7QEDKLDK8M');
+
+    </script>
+    <!--  Finish Global site tag (gtag.js) - Google Analytics -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover molding and casting techniques in Fab Academy 2020 with Lucio Pentagna. Explore mold design in SolidWorks, CNC machining of machinable wax, silicone mold creation, and casting processes using Smooth-On materials. Review safety procedures and workflow for creating custom parts."/>
+    <meta name="author" content="Lucio Pentagna">
+    <link rel="icon" href="media/favicon.ico">
+    <title>Molding and Casting - Fab Academy 2020 - Lucio Pentagna</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js" defer></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js" defer></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>    <![endif]-->
+    <!-- Load the menu file -->
+    <script>
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+
+    </script>
+</head>
+
+<body onload="menu()">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="index.html">Lucio Pentagna</a> </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu"> </ul>
+                    </li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu"> </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Insert your content here below! -->
+        <div class="jumbotron" style="width: 100%">
+            <h3>Molding and Casting</h3>
+            <hr>
+            <h4>Group assignment</h4>
+            <ul>
+                <li>Review the safety data sheets for each of your molding and casting materials, then make and compare test casts with each of them</li>
+            </ul>
+            <h4>Individual assignment</h4>
+            <ul>
+                <li>Design a 3D mold around the stock and tooling that you'll be using, machine it, and use it to cast parts.</li>
+            </ul>
+            <br>
+            <h4>Learning outcomes:</h4>
+            <ul>
+                <li>Design appropriate objects within the limitations of 3 axis machining.</li>
+                <li>Demonstrate workflow used in mold design, construction and casting.</li>
+            </ul><br>
+            <h4>Have you:</h4>
+            <ul>
+                <li>Explained how you designed your 3D mold and created your rough and finish toolpaths for machining.</li>
+                <li>Shown how you made your mold and cast the parts.</li>
+                <li>Described problems and how you fixed them.</li>
+                <li>Included your design files and 'hero shot' photos of the mold and the final object.</li>
+            </ul>
+        </div>
+        <hr>
+        <h3>Tools used</h3>
+
+        <ul style="list-style-type:disc">
+            <li>cnc</li>
+        </ul>
+        <hr>
+        <h3>Software Used</h3>
+        <ul style="list-style-type:disc">
+            <li>Solidworks</li>
+            <LI>Mach3</LI>
+        </ul>
+        <hr>
+        <h3>Files</h3>
+        <ol>
+            <li>Solidworks <a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/labs/algarve/students/lucio/-/tree/master/media/molding_and_casting/solidworks">files</a></li>
+            <li>G-code <a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/labs/algarve/students/lucio/-/blob/master/media/molding_and_casting/cam/Positive.tap">files</a></li>
+        </ol>
+        <hr>
+
+        <h3> Group Assignment
+        </h3>
+        <p>Go to <a href="http://fabacademy.org/2020/labs/algarve/">group assignment page</a></p>
+        <hr>
+        <p class="pic left"><img src="media/wildcard_week/smurfblock.jpg" alt="Machinable wax made in the Wildcard Week">
+            <legend>Machinable wax made in the <a href="wildcard_week.html">Wildcard Week</a></legend>
+        </p>
+        <hr>
+        <h4>Designing</h4>
+        <p>I will be describing the workflow necessary to create a positive in wax, a negative mold in Silicone and finally the casting process of the final positive, for that reason we start creating an assembly with the model already done using a simple revolve feature.</p>
+        <ol>
+            <li>With a new assembly opened click in Insert components;</li>
+            <li>Again :-) Click on the second insert components;</li>
+        </ol>
+        <p class="pic left"><img src="media/molding_and_casting/design/assembly01.jpg" alt="Solidworks assembly step 1"></p>
+        <p>Confirm the insertion clicking on the green checkmark.</p>
+        <p class="pic left"><img src="media/molding_and_casting/design/assembly02.jpg" alt="Solidworks assembly step 2"></p>
+        <p>Now we need to create the negative mold!</p>
+        <ol>
+            <li>Click on the front plane, making sure that this plane is in the exact middle of the part.</li>
+            <li>Click on New part.</li>
+        </ol>
+        <p class="pic left"><img src="media/molding_and_casting/design/assembly03.jpg" alt="Solidworks assembly step 3"></p>
+        <p>With the new part opened click on the front plane again and the on sketch.</p>
+        <p class="pic left"><img src="media/molding_and_casting/design/assembly04.jpg" alt="Solidworks assembly step 4"></p>
+        <p>I then created a square around the part making sure to leave 10mm around the part so there is silicone structuring the mold.</p>
+        <p class="pic left"><img src="media/molding_and_casting/design/assembly05.jpg" alt="Solidworks assembly step 5"></p>
+        <p>Now the magic! Imagine if we had to create all those negative features. No way Jose! We are going to create a negative with the cavity feature.</p>
+        <ol>
+            <li>Click insert;</li>
+            <li>Click then features in the opened menu;</li>
+            <li>Find Cavity and Click on it.</li>
+        </ol>
+        <p class="pic left"><img src="media/molding_and_casting/design/assembly06.jpg" alt="Solidworks assembly step 6"></p>
+        <p>Now simply select the model and confirm.</p>
+        <p class="pic left"><img src="media/molding_and_casting/design/assembly07.jpg" alt="Solidworks assembly step 7"></p>
+        <p>Thats it! The first part is done! Lets call it mold A, shall we?</p>
+        <p>I exploded the parts for your entertainment, how nice of me! :-)</p>
+        <p class="pic left"><img src="media/molding_and_casting/design/assembly08.jpg" alt="Solidworks assembly exploded view"></p>
+        <p>Now because I am very lazy I will make a copy of the mold A in other to create Mold B</p>
+        <ol>
+            <li>Click in Save as copy and open, the reason we chose this option is that the first one will really just rename the part, but we actually want to have a opened copy;</li>
+            <li>Name the part, in my case Mold_b</li>
+            <li>And save.</li>
+        </ol>
+        <p class="pic left"><img src="media/molding_and_casting/design/assembly09.jpg" alt="Solidworks assembly step 9"></p>
+        <p>Now we are going to insert the copied part, like before click in insert part again and again... and confirm.</p>
+        <p class="pic left"><img src="media/molding_and_casting/design/assembly10.jpg" alt="Solidworks assembly step 10"></p>
+        <p>Now we need to mate the parts., Oh I forgot to mention that after copying the part if so desired you should create some features in order to keep the mold from moving and minimize the parting line.</p>
+        <ol>
+            <li>Do that by clicking on the face</li>
+            <li>and the clicking on the second face of mold A so later they will mate there.</li>
+            <li>Now click on coincident and confirm.</li>
+        </ol>
+        <p class="pic left"><img src="media/molding_and_casting/design/assembly11.jpg" alt="Solidworks assembly step 11"></p>
+        <p>The part is not yet completely mated but its getting there.</p>
+        <p>Repeat this in the opposite corner and we are done mating.</p>
+        <p class="pic left"><img src="media/molding_and_casting/design/assembly12.jpg" alt="Solidworks assembly step 12"></p>
+        <p>Now with the same procedure as before, click on the corner of the part.</p>
+        <p class="pic left"><img src="media/molding_and_casting/design/assembly13.jpg" alt="Solidworks assembly step 13"></p>
+        <p>Again exploded for you! In case you are wondering how I got the features negative in the mold b , just review the first cavity, its done the same way.</p>
+        <p class="pic left"><img src="media/molding_and_casting/design/assembly14.jpg" alt="Solidworks assembly step 14"></p>
+        <p>Finally I calculate the volume of the part. This will be useful when casting so so I waste the minimum amount of silicone when casting the part. About 5ml of silicone I guess. But I will actually prepare twice that as I have some plans for the leftover. Ah in case you noticed the Positive part is different than the one I used initially its because I decided to reduce its size as it was too big for the machinable wax I created in the <a href="wildcard_week.html">wildcard week</a>.</p>
+        <p class="pic left"><img src="media/molding_and_casting/design/design20.jpg" alt="Solidworks design final step"></p>
+        <hr>
+        <!-- <h4>Tool path / G-code</h4>
+        <p>The CNC speaks, or at least understands, one language <a href="https://en.wikipedia.org/wiki/G-code">G-code</a> </p>
+        <p>In order to create the G-code toolpath </p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath01.jpg"></p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath02.jpg"></p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath03.jpg"></p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath03a.jpg"></p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath03b.jpg"></p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath03c.jpg"></p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath04.jpg"></p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath05.jpg"></p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath06.jpg"></p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath07.jpg"></p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath08.jpg"></p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath09.jpg"></p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath010.jpg"></p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath011.jpg"></p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath012.jpg"></p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath013.jpg"></p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath014.jpg"></p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath015.jpg"></p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath016.jpg"></p>
+        <p class="pic left"><img src="media/molding_and_casting/toolpath/toolpath017.jpg"></p>
+        <hr>-->
+        <h4>Milling</h4>
+        <p>I started Milling by fitting the stock over a cardboard box so I would waste as little wax as possible. Recycle is in my mind! I drilled clearance holes and attached everything in the sacrificial bed of my large CNC.</p>
+        <p class="pic left"><img src="media/molding_and_casting/milling.jpg" alt="Milling process"></p>
+        <p>The process to start the CNC is the same presented in the <a href="output_devices.html#mach3">input devices week</a>, except there is no auto calibration or finding the 0 automatically, so in case you forgot: Start Mach3 using the arrows move the cnc to the desired location you want the origin to be, than clicking on each axis ) X, Y and Z.</p>
+        <p> The video Shows the CNC doing its initial moves clearing the first steps with a 1/4" mill bit.</p>
+        <p class="pic"><video controls>
+                <source src="media/molding_and_casting/smurfjuice02.mp4" type="video/mp4">Your browser does not support HTML5 video.
+            </video></p>
+        <p>Here we can see more the process with the smaller 1.5mm mill bit which was the last bit I used.</p>
+        <p class="pic"><video controls>
+                <source src="media/molding_and_casting/smurfjuice03.mp4" type="video/mp4">Your browser does not support HTML5 video.
+            </video></p>
+        <p>The final result of the positive mold is really nice, its smooth and the details are satisfying.</p>
+        <p class="pic left"><img src="media/molding_and_casting/milling05result.jpg" alt="Milling result"></p>
+        <hr>
+        <h4>Casting the Negative Mold</h4>
+        <p>We started by reading the datasheet aloud! My dear colleague and daughter Bianca did the honors. :-)</p>
+        <p class="pic"><video controls>
+                <source src="media/molding_and_casting/castingthemold/datasheetreading.mp4" type="video/mp4">Your browser does not support HTML5 video.
+            </video></p>
+        <p>Here you can see the <a href="http://fab.academany.org/2018/labs/farmlabalgarve/group/moldandcast.html">3030 Slide</a> I used initially.</p>
+        <p>We marked each bamboo stick with a different color tape, with glasses on and gloves we started the process.</p>
+        <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding02.jpg" alt="Casting process step 1"></p>
+        <p>A lot of stirring is necessary but this product has a long shelf life, 45 minutes before start curing so no hurry here. Its important to mix well each component and then the mix.</p>
+        <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding03.jpg" alt="Casting process step 2"></p>
+        <p>With a one to one ratio we had 43 grams of silicone to make our negative mold.</p>
+        <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding05.jpg" alt="Casting process step 3"></p>
+        <p>Here you can see the pouring, how satisfying!</p>
+        <p class="pic"><video controls>
+                <source src="media/molding_and_casting/castingthemold/molding05.mp4" type="video/mp4">Your browser does not support HTML5 video.
+            </video>
+            <legend>Oops I forgot the gloves, but I swear no spill and it was a clean pour.</legend>
+        </p>
+        <p>The results were not good! After waiting more than 48 hours the mold was still sticky. I believe there is something wrong with my silicone, its been 2 years since I bought it, so that might be it.</p>
+        <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding06.jpg" alt="Casting process result"></p>
+        <p>The second problem was the features I created to prevent the mold from moving they would not fit well against each other so I decided to fill it up with regular paraffin and smooth it with a blade, the results were decent.</p>
+        <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding07.jpg" alt="Casting process adjustment"></p>
+        <p>Here is the positive mold with the features manually filled with paraffin, ready for casting again.</p>
+        <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding07b.jpg" alt="Positive mold ready for casting"></p>
+        <p>Here you can see the new cast with this Silicone I had in the lab. It is from a Chinese company called OTT the model # of the silicone is OTT-1817, I couldn't find its datasheet as I believe its a product no longer been made. Tried even emailing the company but no return from them.</p>
+        <p>The process was the same, from ratio to stirring the difference is that this product cures in 30-40 minutes so one needs to be fast. :-)</p>
+        <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding08.jpg" alt="New casting process"></p>
+        <p>The results were really satisfying!</p>
+        <p class="pic left"><img src="media/molding_and_casting/castingthemold/molding09.jpg" alt="New casting result"></p>
+        <hr>
+        <h4>Casting the Part</h4>
+        <p>As I am doing Silicone on Silicone casting, I need to prepare a release agent.</p>
+        <p>On the Smoth-On <a href="https://www.smooth-on.com/support/faq/94/#:~:text=A%20mixture%20of%202%20parts,with%20minimal%20visible%20brush%20strokes.">website</a> There are 3 possibilities presented. One is proprietary, the other are easy to DIY.</p>
+        <p class="pic left"><img src="media/molding_and_casting/casting/finalcasting01.jpg" alt="Casting part preparation"></p>
+        <p>As always I will go DIY and make a a mixture of 2 parts isopropyl alcohol and 1 part dish soap, I have no idea it will work or it will ruin the mold.</p>
+        <p>Because there are no instructions on the DIY solution I assume they are the same as in the <a href="https://www.smooth-on.com/products/ease-release-200/">proprietary</a> option.</p>
+        <p class="pic left"><img src="media/molding_and_casting/casting/finalcasting02.jpg" alt="DIY release agent"></p>
+        <p>So with the solution in hand I apply to the mold and let it dry in the sun.</p>
+        <p class="pic left"><img src="media/molding_and_casting/casting/finalcasting03.jpg" alt="Mold drying"></p>
+        <p class="pic left"><img src="media/molding_and_casting/casting/finalcasting05.jpg" alt="Mold drying in the sun" style="width: 50%;">
+            <legend>Mold drying in the sun on top of a wood postcard sent by my friends from my lab in Shanghai, I miss you guys!</legend>
+        </p>
+        <p>With the mold ready I cut 2 pieces of thin plywood. This will help structure the mold to have an even pressure and prevent that the mold licks.</p>
+        <p>I then clamp it down hole up</p>
+        <p class="pic left"><img src="media/molding_and_casting/casting/finalcasting06.jpg" alt="Mold clamped"></p>
+        <p>I will need a hole to let the air out as the silicone enters, as I haven't thought of that in the design phase I cut a bit of the silicone to enlarge hole.</p>
+        <p class="pic left"><img src="media/molding_and_casting/casting/finalcasting04.jpg" alt="Enlarging air hole"></p>
+        <p>Having already prepared the silicone like before I use the syringe to introduce the silicone into the mold.</p>
+        <p class="pic left"><img src="media/molding_and_casting/casting/finalcasting07.jpg" alt="Injecting silicone"></p>
+        <p>Now I wait for the silicone to cure just like before, and then go to inspect the part.</p>
+        <p>Voila, its done</p>
+        <p class="pic left"><img src="media/molding_and_casting/casting/finalcasting11.jpg" alt="Final cast part" style="width: 50%;">
+            <legend>Hero Shoot</legend>
+        </p>
+        <p>Its so Flexible!</p>
+        <p class="pic left"><img src="media/molding_and_casting/casting/finalcasting09.jpg" alt="Flexible cast part" style="width: 50%;"></p>
+        <p>And so strong!</p>
+        <p class="pic left"><img src="media/molding_and_casting/casting/finalcasting10.jpg" alt="Strong cast part" style="width: 50%;"></p>
+        <p>I cant forget to mention that the leftover of the silicone was not wasted. I made a simple cast with the measuring cup and my attiny44 board from <a href="input_devices.html#mach3">Input Devices</a>.</p>
+        <p class="pic left"><img src="media/molding_and_casting/casting/finalcasting08.jpg" alt="Leftover silicone cast" style="width: 50%;"></p>
+        <p class="pic left"><img src="media/molding_and_casting/casting/finalcasting12.jpg" alt="Final leftover cast" style="width: 50%;"></p>
+        <!-- End of your content -->
+    </div> <!-- /container -->
+    <!-- footer -->
+    <footer id="footer">
+        <p id="cclicense"> </p>
+        <p class="license"> Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br> Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">jQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+
+    <!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js" defer></script>
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js" defer></script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+
+    </script>
+    <script src="bootstrap/js/bootstrap.min.js" defer></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js" defer></script>
+</body>
+
+</html>

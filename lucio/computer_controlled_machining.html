@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QEDKLDK8M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7QEDKLDK8M');
+    </script>
+    <!-- Finish Global site tag (gtag.js) - Google Analytics -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dive into computer-controlled machining in Fab Academy 2020 with Lucio Pentagna. Learn CNC techniques, from designing a treehouse table to using ShopBot, ArtCAM, and Fusion 360. Explore workflows, toolpaths, and problem-solving in large format CNC machining projects."/>
+    <meta name="author" content="Lucio Pentagna">
+    <link rel="icon" href="media/favicon.ico">
+    <title>Computer-Controlled Machining - Fab Academy 2020 - Lucio Pentagna</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    <!-- 3D files viewer -->
+    <script defer src="media/jsc3d_ie.min.js"></script>
+    <script defer src="media/jsc3d.min.js"></script>
+    <script defer src="media/jsc3d.webgl.js"></script>
+    <script defer src="media/jsc3d.touch.js"></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Load the menu file -->
+    <script>
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+    </script>
+</head>
+
+<body onload="menu()">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu"></ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu"></ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Insert your content here below! -->
+        <div class="jumbotron" style="width: 100%">
+            <h3>Computer-Controlled Machining</h3>
+            <hr>
+            <h4>Group Assignment</h4>
+            <ul>
+                <li>Test run-out alignment, speeds, feeds, and tool-paths for your machine</li>
+            </ul>
+            <h4>Individual Assignment</h4>
+            <ul>
+                <li>Make something big (on a CNC machine).</li>
+            </ul>
+            <h4>Learning Outcomes:</h4>
+            <ul>
+                <li>Demonstrate 2D design development for CNC production</li>
+                <li>Describe workflows for CNC production</li>
+            </ul>
+            <h4>Have You:</h4>
+            <ul>
+                <li>Explained how you made your files for machining (2D or 3D)</li>
+                <li>Shown how you made something BIG (setting up the machine, using fixings, testing joints, adjusting feeds and speeds, depth of cut, etc.)</li>
+                <li>Described problems and how you fixed them</li>
+                <li>Included your design files and 'hero shot' photos of the final object</li>
+            </ul>
+        </div>
+        <h3>Tools Used</h3>
+        <ul style="list-style-type:disc">
+            <li>Large (2x3 meters) self-made CNC</li>
+        </ul>
+        <hr>
+        <h3>Software Used</h3>
+        <ul style="list-style-type:disc">
+            <li>SolidWorks</li>
+            <li>ArtCAM</li>
+            <li>Mach3</li>
+            <li>Fusion 360</li>
+            <li><a href="http://tapnair.github.io/Dogbone/">Dog-bone Plug-in for Fusion</a></li>
+        </ul>
+        <hr>
+        <ol type="1">
+            <li><a href="http://fabacademy.org/2020/labs/algarve/">Group Assignment</a>:
+                <br> Test run-out alignment, speeds, feeds, and tool-paths for your machine. Go to <a href="http://fabacademy.org/2020/labs/algarve/">group assignment page</a>
+            </li><br>
+            <li>Introduction:
+                <br><br> I will be designing and cutting a table for the tree-house.
+                I based my work on a sketch of a table done by Anaig, a volunteer in the FabFarm.
+            </li>
+            <p class="pic"><img src="media/computer_controlled_machining/tablerender.jpg" alt="Rendered table">
+                <legend>Rendered table.</legend>
+            </p>
+            <p class="pic"><img src="media/computer_controlled_machining/final_result.jpg" alt="Finished table">
+                <legend>Table finished.</legend>
+            </p>
+            <li>Specifications
+                <ul style="list-style-type:disc">
+                    <li>Material: Birch plywood</li>
+                    <li>Mill bit used: 3.175 diamond shape</li>
+                </ul>
+            </li><br>
+            <li>In order to manufacture the table, I will first be using multiple CAD and CAM software. I will start designing with SolidWorks, then move to Fusion 360 to create the dog-bones, then with the exported .dxf file, I will move to ArtCAM and create the CAM files. Let's see all these steps below:
+                <br><br>
+                <ol type="I">
+                    <li>I started by scanning Anaig's sketches.</li>
+                    <p class="pic"><img src="media/computer_controlled_machining/sketch1.jpg"></p>
+                    <legend>Anaig's sketch</legend>
+                    <p class="pic"><img src="media/computer_controlled_machining/sketch2.jpg"></p>
+                    <legend>Anaig's sketch</legend>
+                    <li>In SolidWorks, I started a sketch and then went to Tools >> Sketch Tools >> Sketch Picture.
+                        <p class="pic"><img src="media/computer_controlled_machining/step1.jpg"></p>
+                    </li>
+                    <li>Next, I scaled the picture by:
+                        <ol>
+                            <li>Clicking on the ruler and dragging it to a known dimension</li>
+                            <li>Dragging the tip of the ruler to the limit of the known dimension on the picture</li>
+                            <li>Inserting the dimension of the known dimension of the picture</li>
+                            <li>Confirming the input.</li>
+                        </ol>
+                        <p class="pic"><img src="media/computer_controlled_machining/step2.jpg"></p>
+                        <p>This procedure ensures the picture is with the correct scale and alignment.</p>
+                        <p class="pic"><img src="media/computer_controlled_machining/sketch_from_drawing.jpg"></p>
+                    </li>
+                    <li>From there, I extruded and repeated the steps above for each part, then I created an assembly of the table.
+                        <p class="pic"><img src="media/computer_controlled_machining/tableassembly.jpg"></p>
+                    </li>
+                    <li>After being satisfied with the design, I proceeded to create dog-bones in Fusion 360. That is done using a plugin called, well, guess what? Dog-bone!
+                        <p class="pic"><img src="media/computer_controlled_machining/dogboneaddin.jpg"></p>
+                        <p>The Add-in <a href="http://github.com/caseycrogers/Dogbone">Dog-bone</a> can be simply placed on Windows in the folder "~/AppData/Roaming/Autodesk/Autodesk Fusion 360/API/AddIns/" under its own directory, and it will be started at every startup of Fusion.</p>
+                    </li>
+                    <li>To apply the dog-bone in a design made in SolidWorks, I first imported the design to Fusion 360, then copied the solid with Ctrl+C.
+                        <p class="pic"><img src="media/computer_controlled_machining/adddogbonestep3.jpg"></p>
+                    </li>
+                    <li>Next, I created a new design:
+                        <ol>
+                            <li>By clicking on the plus sign</li>
+                            <li>Right-clicking the workspace</li>
+                            <li>Clicking "Paste New"</li>
+                        </ol>
+                        <p class="pic"><img src="media/computer_controlled_machining/adddogbonestep4.jpg"></p>
+                    </li>
+                    <li>That automatically opens a dialog box that I just clicked OK on.
+                        <p class="pic"><img src="media/computer_controlled_machining/adddogbonestep5.jpg"></p>
+                    </li>
+                    <li>Last is to use the Dog-bone add-in itself.
+                        <ol>
+                            <li>Click the home icon</li>
+                            <li>Choose the view</li>
+                            <li>Click on the Dog-bone add-in icon</li>
+                            <li>Click on the face selector</li>
+                            <li>Click on the face you want to add dog-bones to</li>
+                            <li>Fill in the dimension of the dog-bone; in my case, 3.175 mm or 0.125 inches, which is the size of the mill bit I am going to use</li>
+                            <li>Choose the style of the dog-bone</li>
+                            <li>Press OK.</li>
+                        </ol>
+                        <p class="pic"><img src="media/computer_controlled_machining/adddogbonestep6.jpg"></p>
+                    </li>
+                    <li>The result is several dog-bones created at once. Very practical.
+                        <p class="pic"><img src="media/computer_controlled_machining/detail_of_dogbone.jpg"></p>
+                        <p class="pic"><img src="media/computer_controlled_machining/detail_of_dogbonecut.jpg"></p>
+                    </li>
+                    <li>I need to export a .dxf in Fusion 360 in order to create a CAM file in ArtCAM.
+                        <ol>
+                            <li>Click on the surface</li>
+                            <li>Click on "Create Sketch"</li>
+                        </ol>
+                        <p class="pic"><img src="media/computer_controlled_machining/dxfexportstep1.jpg"></p>
+                    </li>
+                    <li>Click "Finish Sketch."
+                        <p class="pic"><img src="media/computer_controlled_machining/dxfexportstep2.jpg"></p>
+                    </li>
+                    <li>
+                        <ol>
+                            <li>Right-click on the sketch</li>
+                            <li>Click on "Save as DXF"</li>
+                        </ol>
+                        <p class="pic"><img src="media/computer_controlled_machining/dxfexportstep3.jpg"></p>
+                    </li>
+                    <li>Finally, choose a name and save, and I am ready to move to ArtCAM.
+                        <p class="pic"><img src="media/computer_controlled_machining/dxfexportstep4.jpg"></p>
+                    </li>
+                    <li>Open Autodesk ArtCAM and then:
+                        <ol>
+                            <li>Click "New Model"</li>
+                            <li>Choose the size of the stock</li>
+                            <li>Choose the unit</li>
+                            <li>Click OK</li>
+                        </ol>
+                        <p class="pic"><img src="media/computer_controlled_machining/artcamstep1.jpg"></p>
+                    </li>
+                    <li>Next, it's importing the previously created vector:
+                        <ol>
+                            <li>Click "Vector"</li>
+                            <li>Click "Import"</li>
+                            <li>Choose the file</li>
+                            <li>Press "Open"</li>
+                        </ol>
+                        <p class="pic"><img src="media/computer_controlled_machining/artcamstep2b.jpg"></p>
+                    </li>
+                    <li>The previous steps will show a preview of the import; then do:
+                        <ol>
+                            <li>Confirm unit</li>
+                            <li>Choose "Automatically rejoin vectors"</li>
+                            <li>Press OK</li>
+                        </ol>
+                        <p class="pic"><img src="media/computer_controlled_machining/artcamstep3.jpg"></p>
+                    </li>
+                    <li>Do the steps above as many times as needed so you import all the vectors you want to create the CAM for.
+                        <p class="pic"><img src="media/computer_controlled_machining/artcamstep4.jpg"></p>
+                    </li>
+                    <li>I offset all vectors by 0.1 mm to compensate for the imperfections of my CNC. That allows for higher tolerance.
+                        <p class="pic"><img src="media/computer_controlled_machining/artcamoffset01.jpg"></p>
+                    </li>
+                    <li>Next, I sometimes like to organize the vector, wasting as little stock as possible. That can be automatically done with the nesting tool:
+                        <ol>
+                            <li>On the vector menu, click "Nest"; this will open a dialog</li>
+                            <li>You can inform here the milling tool to be used; in my case, 3.175</li>
+                            <li>Also, inform the angle increments in which you will allow the software to rotate the parts; in my case, I chose 45 degrees.</li>
+                        </ol>
+                        <p class="pic"><img src="media/computer_controlled_machining/artcamstep5.jpg"></p>
+                    </li>
+                    <li>I like to organize the vectors into layers; in this case, I will create an outside layer and an inside layer so when creating the tool-path, this will be easier.
+                        <ol>
+                            <li>With the vectors ungrouped, select the vector you want first; in my case, I selected the vector to be cut outside</li>
+                            <li>Click "Move Vectors To"</li>
+                            <li>New layer or to a layer previously created.</li>
+                        </ol>
+                        <p class="pic"><img src="media/computer_controlled_machining/artcamstep6.jpg"></p>
+                    </li>
+                    <li>Here, I rename the layers to "Outside" and "Inside."
+                        <p class="pic"><img src="media/computer_controlled_machining/artcamstep7.jpg"></p>
+                    </li>
+                    <li>In the following steps, we are creating the tool-path:
+                        <ol>
+                            <li>Click on the "Tool-path" in the menu</li>
+                            <li>Click "New 2D Tool-path"</li>
+                            <li>Click "Profile"</li>
+                        </ol>
+                        <p class="pic"><img src="media/computer_controlled_machining/artcamtoolpath1.jpg"></p>
+                    </li>
+                    <li>Since we already have separated the vector into different layers, now this will come in handy.
+                        <ol>
+                            <li>Select "Inside Operation"</li>
+                            <li>Select the inside layer</li>
+                            <li>Select the depth; in my case, the stock is 19 mm</li>
+                            <li>Under "Profiling Tool," click on "Click to Select"; this will open a dialog where you can choose the milling bit to be used.</li>
+                            <li>Choose the tool; in my case, I chose a 3.176 diamond mill bit</li>
+                            <li>Click "Select"</li>
+                            <li>You can then add the type of ramp to be used; I want to try the smooth one.</li>
+                        </ol>
+                        <p class="pic"><img src="media/computer_controlled_machining/artcamtoolpath2.jpg"></p>
+                    </li>
+                    <li>Next step is to finalize the tool-path; scroll down to show more options and:
+                        <ol>
+                            <li>Choose material thickness; in my case, 19 mm</li>
+                            <li>Define the Material Z Zero; I like to define it on the top of the stock</li>
+                            <li>Confirm the bottom offset, which should be 19 mm</li>
+                            <li>Click OK</li>
+                            <li>Do the same procedure over and over for each tool-path</li>
+                        </ol>
+                        <p class="pic"><img src="media/computer_controlled_machining/artcamtoolpath3.jpg"></p>
+                    </li>
+                    <li>Now we are saving the tool-path; start by clicking on the blue floppy-disk icon; this will open a dialog.
+                        <ol>
+                            <li>You can then view the tool-paths you created earlier:</li>
+                            <li>Move the tool-paths to the window on the right to include them in one file</li>
+                            <li>Here you can confirm all files on the right side</li>
+                            <li>Choose the folder location</li>
+                            <li>Choose here the post-processor to be used; in my case, I choose the Mach3 post-processor.</li>
+                            <li>Click on "Save."</li>
+                        </ol>
+                        <p class="pic"><img src="media/computer_controlled_machining/artcamtoolpath4.jpg"></p>
+                    </li>
+                    <li>One thing I almost forgot is to create holes in the G-code. I do that by placing these circles around where the tool-path is in various parts of the job in order to later screw and fix the stock on the bed. The advantage is I am sure the tool-path is not going to collide with the fixtures of the stock, in this case, the screws.
+                        <p class="pic"><img src="media/computer_controlled_machining/artcamholes.jpg"></p>
+                    </li>
+                </ol>
+            </li>
+            <li>Now let's manufacture it with Mach3 on Windows XP :-) with the CNC I built while in the Fab Academy.
+                Although it's operational, I decided not to document it as a final project, but that's another story.
+                <br><br>
+                <ol type="I">
+                    <li>With Mach3 opened:
+                        <ol>
+                            <li>Click on "File"</li>
+                            <li>Then click "Load G-code"</li>
+                        </ol>
+                        <p class="pic"><img src="media/computer_controlled_machining/mach3step1.jpg"></p>
+                    </li>
+                    <li>Choose your G-code file and open it.
+                        <p class="pic"><img src="media/computer_controlled_machining/mach3step2.jpg"></p>
+                    </li>
+                    <li>The previous step will load the G-code.
+                        <ol>
+                            <li>G-code will be shown on the left window</li>
+                            <li>Next, I like to click on "Jog Follow"; this will allow you to visualize where your tool is in relation to the G-code. This way, you can safely check and simulate the paths before actually running the code. Use arrows to move within the X and Y axes and PgUp and PgDn to move the Z axis.</li>
+                            <li>By clicking on "Zero X, Y, and Z" when you are over the place in the stock you want to be 0,0,0, it will set the soft zero to where the tool has been moved.</li>
+                        </ol>
+                        <p class="pic"><img src="media/computer_controlled_machining/mach3step3.jpg"></p>
+                    </li>
+                    <li>I started the job by first securing the stock. For that, I have the CNC make holes around the design with the G-code "holes.tap" contained in this <a href="media/computer_controlled_machining/tableprojectfiles.zip">zip file</a>.
+                        <p class="pic"><video controls>
+                                <source src="media/computer_controlled_machining/holescut.mp4"> Your browser does not support HTML5 video.
+                            </video>
+                            <legend>Holes being made for the stock to be screwed down into the sacrificial bed.</legend>
+                        </p>
+                    </li>
+                    <li>Here, you can see the screwing of the stock. I like to use a Torx screw; they can be reused several times and are always reliable. Thanks to Jarek from <a href="https://www.facebook.com/fablabnomads/">FabLab Nomads</a> for the tip.
+                        <p class="pic"><img src="media/computer_controlled_machining/fixingstocktosacrificialtable.jpg"></p>
+                    </li>
+                    <li>After the holes are made and the stock is secure, the internal holes are cut.
+                        <p class="pic"><video controls>
+                                <source src="media/computer_controlled_machining/internalok.mp4"> Your browser does not support HTML5 video.
+                            </video>
+                            <legend></legend>
+                        </p>
+                    </li>
+                    <li>After internal cuts are done, then the external cuts are done. The step-down is 4 mm on all cuts.
+                        <p class="pic"><video controls>
+                                <source src="media/computer_controlled_machining/outsideok.mp4"> Your browser does not support HTML5 video.
+                            </video>
+                            <legend></legend>
+                        </p>
+                    </li>
+                    <li>I believe the quality of the cuts is quite good for this birch plywood. The dog-bones are visible, and with little finishing, the parts are going to be ready for assembly.
+                        <p class="pic"><img src="media/computer_controlled_machining/detail_cut.jpg"></p>
+                    </li>
+                    <li>Here, you can see the quality control; a team of four, including me, is filing the finger joints so they smoothly attach to one another.
+                        <p class="pic"><img src="media/computer_controlled_machining/kidshelp.jpg"></p>
+                    </li>
+                    <li>I use here an orbital sander. I started with sandpaper 100 grit and moved to 220 and then 500. After that, I sprayed some water to lift the fibers and sanded again before applying beeswax mixed with isopropyl alcohol.
+                        <p class="pic"><img src="media/computer_controlled_machining/sanding.jpg"></p>
+                    </li>
+                    <li>Here, I test the assembly; everything fits. I fit and then remove the pieces by hammering with a white rubber mallet.
+                        <p class="pic"><img src="media/computer_controlled_machining/pre_assembly.jpg"></p>
+                    </li>
+                    <li>Now, with all pieces sanded and waxed, I fit one to another.
+                        <p class="pic"><video controls>
+                                <source src="media/computer_controlled_machining/assemblyok.mp4"> Your browser does not support HTML5 video.
+                            </video>
+                            <legend></legend>
+                        </p>
+                    </li>
+                    <li>Here, you can see the tight tolerances of this finger joint. To reduce the gaps even more, I used a mixture of glue and sawdust I generated while sanding the surfaces.
+                        <p class="pic"><img src="media/computer_controlled_machining/detail1.jpg"></p>
+                    </li>
+                    <li>Detail of the curves.
+                        <p class="pic"><img src="media/computer_controlled_machining/detail2.jpg"></p>
+                    </li>
+                    <li>Another detail of the filleted sides. The fillet was done manually with a router tool.
+                        <p class="pic"><img src="media/computer_controlled_machining/detail3.jpg"></p>
+                    </li>
+                    <li>And voilà, the final result!
+                        <p class="pic"><img src="media/computer_controlled_machining/final_result.jpg"></p>
+                    </li>
+                </ol>
+            </li>
+        </ol> <!-- End of your content -->
+    </div> <!-- /container -->
+    <!-- footer -->
+    <footer id="footer">
+        <p id="cclicense"></p>
+        <p class="license"> Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br> Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">jQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+
+    <!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script defer src="media/jquery-1.9.1.min.js"></script>
+    <!-- Syntax Highlighter -->
+    <script defer src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+    </script>
+    <script defer src="bootstrap/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script defer src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>

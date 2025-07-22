@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QEDKLDK8M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7QEDKLDK8M');
+    </script>
+    <!-- Finish Global site tag (gtag.js) - Google Analytics -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Delve into electronics design with Lucio Pentagna's Fab Academy 2020 journey. Learn PCB design using Eagle CAD, KiCad, and Fab Modules. Explore schematics, board layout, milling, soldering, and testing of microcontroller circuit boards. Discover workflows and insights into electronics production."/>
+    <meta name="author" content="Lucio Pentagna">
+    <link rel="icon" href="media/favicon.ico">
+    <title>Electronics Design - Fab Academy 2020 - Lucio Pentagna</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    <!-- 3D files viewer -->
+    <script defer src="media/jsc3d_ie.min.js"></script>
+    <script defer src="media/jsc3d.min.js"></script>
+    <script defer src="media/jsc3d.webgl.js"></script>
+    <script defer src="media/jsc3d.touch.js"></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script defer src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Load the menu file -->
+    <script>
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+    </script>
+</head>
+
+<body onload="menu()">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu"></ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu"></ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Insert your content here below! -->
+        <div class="jumbotron" style="width: 100%">
+            <h3>Electronics Design</h3>
+            <hr>
+            <h4>Group assignment</h4>
+            <ul>
+                <li>Use the test equipment in your lab to observe the operation of a microcontroller circuit board</li>
+            </ul>
+            <h4>Individual assignment</h4>
+            <ul>
+                <li>Redraw the echo hello-world board, add (at least) a button and LED (with current-limiting resistor), check the design rules, make it, test it.</li>
+            </ul>
+            <h4>Learning outcomes:</h4>
+            <ul>
+                <li>Select and use software for circuit board design</li>
+                <li>Demonstrate workflows used in circuit board design</li>
+            </ul>
+            <h4>Have you:</h4>
+            <ul>
+                <li>Shown your process using words/images/screenshots</li>
+                <li>Explained problems and how you fixed them, including how you worked with design rules for milling (DRC in EagleCad and KiCad)</li>
+                <li>Included original design files (Eagle, KiCad, Inkscape, .cad - whatever)</li>
+            </ul>
+        </div>
+        <h3>Week workflow</h3>
+        <p>Weekly assignment → introduction to Eagle → Edit Schematic/Board → Mill the board → solder components → debug → edit and publish website</p>
+        <hr>
+        <h3>Group Assignment</h3>
+        <p>Go to <a href="http://fabacademy.org/2020/labs/algarve/electronic_production.html">the group assignment page</a></p>
+        <h3>Tools used</h3>
+        <ul style="list-style-type:disc">
+            <li>Solder Station</li>
+            <li>TaoBao CNC</li>
+            <li>Test equipment: digital voltmeter, oscilloscope, regulated power supply</li>
+        </ul>
+        <hr>
+        <h3>Software Used</h3>
+        <ul style="list-style-type:disc">
+            <li>Eagle</li>
+            <li>Fab Modules</li>
+            <li>Gimp</li>
+        </ul>
+        <hr>
+        <h3>Design files of hello board</h3>
+        <ul style="list-style-type: disc">
+            <li><a href="media/boards/helloboard.zip">zip</a> of Eagle source files</li>
+            <li><a href="media/electronics_design/neilhelloboard.jpg">internal jpeg</a> to CNC</li>
+            <li><a href="media/electronics_design/neilhelloboardoutline.jpg">external jpeg</a> to CNC</li>
+        </ul>
+        <hr>
+        <ol type="1">
+            <li>Using the test equipment in our lab</li>
+            <br>
+            <li>I started by watching a SparkFun's <a href="https://www.youtube.com/watch?time_continue=279&v=u4zyptPLlJI">YouTube video</a> on an oscilloscope
+                <br><br>
+                I learned:
+            </li>
+            <ul style="list-style-type:disc">
+                <li>That an oscilloscope measures voltage over time: getting amplitude, frequency, transient signals</li>
+                <li>The important buttons...
+                    <p class="pic"><img src="media/electronics_design/ociloscope.jpg" alt="Our Lab oscilloscope">
+                        <legend>Our Lab oscilloscope</legend>
+                    </p>
+                </li>
+                <li>Calibrating the probe/Adjusting compensation capacitor</li>
+                <p class="pic"><img src="media/electronics_design/probe.jpg" alt="Oscilloscope's probe">
+                    <legend>Oscilloscope's probe</legend>
+                </p>
+                <ol type="a">
+                    <li>On the probe select to X10</li>
+                    <li>Connect the probe to channel one plug</li>
+                    <li>Connect the probe to the 1kHz 5V square wave generator</li>
+                    <li>Turn on oscilloscope</li>
+                    <li>Make sure only channel one is on, click on CH2 button until it's off and the other way around on CH1 button</li>
+                    <li>Select DC coupling with the F1 key</li>
+                    <li>Press button F4 to select 10X on probe mode</li>
+                    <li>Press trig/menu button and select type as "edge" and source CH1</li>
+                    <li>Select slope as "Rise"</li>
+                    <li>Adjust the vertical and horizontal knobs until you see the wave</li>
+                    <li>If wave is moving adjust trig knob until it stops</li>
+                    <li>To calibrate the probe adjust the screw on the base of the probe until the wave is square</li>
+                    <p class="pic"><img src="media/electronics_design/beforeafter.jpg" alt="Picture of the wave before and after adjustment">
+                        <legend>Picture of the wave before and after adjustment</legend>
+                    </p>
+                </ol>
+            </ul>
+            <br>
+            <li>Eagle introduction:</li>
+            <ol type="i">
+                <li>I started by watching the video tutorials below I had a look through the
+                    <a href="http://archive.fabacademy.org/archives/2017/doc/electronics_design_eagle.html">Eagle tutorial</a> for the week 6. Following it I downloaded and installed the <a href="https://gitlab.cba.mit.edu/pub/libraries">Fab library for Eagle</a>.
+                </li>
+            </ol>
+            <p class="pic"><iframe src="https://www.youtube.com/embed/1AXwjZoyNno" frameborder="0" allowfullscreen=""></iframe></p>
+            <p class="pic"><iframe src="https://www.youtube.com/embed/CCTs0mNXY24" frameborder="0" allowfullscreen=""></iframe>
+                <legend>Printed Circuit Board Layout</legend>
+            </p>
+            <li>Reverse engineering Neil's Board
+                <p class="pic">
+                    <img src="media/electronics_design/hello.ftdi.44.jpg" alt="Neil's Hello Board">
+                    <legend>Neil's Hello Board</legend>
+                </p>
+            </li>
+            <ol type="i">
+                <li>I started by having a look at the
+                    <a href="http://archive.fabacademy.org/archives/2017/doc/electronics_design_eagle.html#step5">Electronics Design - Eagle tutorial</a>
+                    With the above schematics in hand I started redrawing it in Eagle
+                </li>
+                <br>
+            </ol>
+            <li>Schematics Step by Step:</li>
+            <ol type="a">
+                <li>Under projects → right-click on Eagle → click on new project → name project</li>
+                <p class="pic"><img src="media/electronics_design/image02.jpg" alt="Creating a new project in Eagle"></p>
+                <li>Right-click on project name → new → Schematic</li>
+                <p class="pic"><img src="media/electronics_design/image06.jpg" alt="Creating a new schematic in Eagle"></p>
+                <li>Type "add" → search for each part</li>
+                <p class="pic"><img src="media/electronics_design/image07.jpg" alt="Adding parts in Eagle"></p>
+                <li>Place part with left click → repeat procedure until all the same part is added → press ESC to add next part → search for next part or press ESC to go back to schematics</li>
+                <p class="pic"><img src="media/electronics_design/image04.jpg" alt="Placing parts in Eagle"></p>
+                <li>Type "rotate" and left click on part origin to turn part around to desired position</li>
+                <li>Type "net" to connect part to each other</li>
+                <li>Type "name" and left click on top of part to name part</li>
+                <li>Type "label" and left click on wire to connect one to the other without having to net</li>
+                <li>Type "value" and left click on part origin to designate part "value"</li>
+                <li>Type "move" to position the part as needed</li>
+                <li>Save the file</li>
+            </ol>
+            <p class="pic"><img src="media/embedded_programming/schematics.jpg" alt="Eagle schematics"></p>
+            <p>On the above schematics it is possible to see that most components are not connected with a line, "net" command, except for the crystal (XTAL1). The rest of the components are connected virtually with the command "label" as explained in the letter "h" above.</p>
+            <hr>
+            <li>Drawing the Board</li>
+            <br>
+            <h5>To position the components on the PCB use commands as done on the schematics:</h5>
+            <ol type="a">
+                <li>Left click on file → type "board" → accept warning and left click yes to create start designing the PCB from previously created schematics</li>
+                <p class="pic"><img src="media/electronics_design/image01.jpg" alt="Creating a board in Eagle"></p>
+                <li>All components will be displayed to the left of the board → Drag them one by one with command "move" + left click drag to position inside the board</li>
+                <li>Type "rotate" to turn the components the same way as in the schematics</li>
+                <li>After all is positioned → resize board size dragging the sides of the original board with the command "move"</li>
+                <li>Type "polygon" and select top layer and draw a square around the board limits in order to create the top layer of the PCB</li>
+                <li>Type "ratsnest" → start autorouter type "auto". This command is very convenient as it gives initial idea on how you can route the board, but it doesn't replace manual routing</li>
+                <p class="pic"><img src="media/electronics_design/image13.jpg" alt="Using autorouter in Eagle"></p>
+                <li>Select start</li>
+                <p class="pic"><img src="media/electronics_design/image11.jpg" alt="Starting autorouter in Eagle"></p>
+                <li>Adjust traces if needed with command "ripup" to remove positioned paths</li>
+                <li>Place new paths with command "route" and "move" to better position</li>
+                <li>Type command "info" + left click in order to fine tune position of paths as well as thickness</li>
+            </ol>
+            <br>
+            <p>You can watch how I did it here, pump up the volume for some Cash!</p>
+            <p class="pic"><video controls>
+                    <source src="media/electronics_design/hello.mp4">Your browser does not support HTML5 video.
+                </video></p>
+            <p>In case it doesn't play, watch it on <a href="https://www.youtube.com/embed/7-cdfKUBsu8">YouTube!</a></p>
+            <hr>
+            <li>Adding the LED and Button</li>
+            <ol type="a">
+                <li>In order to add the LED and the Button I went back to the Schematics</li>
+                <li>In the schematics type "add" to add two resistors, one LED and the button</li>
+                <li>The first resistor works to limit the current that goes to the LED. It should be placed in the positive side of it. In order to dimension the LED I checked first the LED data sheet. There I looked for DC forward current, in this case 30, and forward voltage, in this case 2.1</li>
+                <li>With those two values plus my input voltage "5" in hand I input the values to the website <a href="http://led.linear1.org/1led.wiz">LED center</a> in order to calculate the correct resistor, in this case 100Ohms</li>
+                <p class="pic"><img src="media/electronics_design/image14.jpg" alt="LED resistor calculation"></p>
+                <li>As for the switch I used a 10K resistor as a pull-up resistor</li>
+                <li>Like before I used the commands move, rotate, label, name, copy to position all components in their place</li>
+            </ol>
+            <hr>
+            <li>Make BOM (Bill of Materials)</li>
+            <ol type="a">
+                <li>Left click on design link → left click on Schematic</li>
+                <p class="pic"><img src="media/electronics_design/image08.jpg" alt="Creating BOM in Eagle"></p>
+                <li>Wait for program to display part → type new search string in case desired part does not appear → left click manual search → choose desired part → left click select</li>
+                <p class="pic"><img src="media/electronics_design/image09.jpg" alt="Selecting parts for BOM in Eagle"></p>
+                <li>Repeat previous process until all parts are found</li>
+                <li>Left click export and save BOM File</li>
+                <p class="pic"><img src="media/electronics_design/image10.jpg" alt="Exporting BOM in Eagle"></p>
+            </ol>
+            <p>After some editing here it is:</p>
+            <div class="tg-wrap">
+                <table class="table" border>
+                    <tr>
+                        <th>Qty</th>
+                        <th>Location</th>
+                        <th>Digikey or Mouser Part number</th>
+                        <th>Manufacture Part #</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>U1</td>
+                        <td>ATTINY44</td>
+                        <td>ATTINY44</td>
+                        <td>IC 4KB FLASH</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>R1</td>
+                        <td>311-10.0KFRCT-ND</td>
+                        <td>RC1206FR-0710KL</td>
+                        <td>RES SMD 10K OHM 1% 1/4W 1206</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>R2</td>
+                        <td>311-100FRCT-ND</td>
+                        <td>RC1206FR-07100RL</td>
+                        <td>RES SMD 100 OHM 1% 1/4W 1206</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>D3</td>
+                        <td>160-1169-1-ND</td>
+                        <td>LTST-C150GKT</td>
+                        <td>LED GREEN CLEAR 1206 SMD</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>C1</td>
+                        <td>445-1423-1-ND</td>
+                        <td>C3216X7R1H105K160AB</td>
+                        <td>CAP CER 1UF 50V X7R 1206</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>FTDI</td>
+                        <td></td>
+                        <td></td>
+                        <td>6 pin header</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>RESONATOR</td>
+                        <td>XC1109CT-ND</td>
+                        <td>ECS-CR2-20.00-B-TR</td>
+                        <td>CER RES 20.0000MHZ 15PF SMD</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td></td>
+                        <td>450-2058-1-ND</td>
+                        <td>FSM6JSMATR</td>
+                        <td>SWITCH TACTILE SPST-NO 0.05A 24V</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>ISP</td>
+                        <td>649-95278-101A06LF</td>
+                        <td>71600-006LF</td>
+                        <td>Headers &amp; Wire Housings 2X3P UNSHRD HDR 30 micro inch gold</td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <li>Exporting the image for fabmodules</li>
+            <ol type="i">
+                <li>Go to Options, Set, Misc and deselect Display Pad names, signal and via lengths. This will prevent undesired text from appearing on the exported image</li>
+                <li>On layers toolbar select only the top layer</li>
+                <p class="pic"><img src="media/electronics_design/image05.jpg" alt="Selecting top layer in Eagle"></p>
+                <li>Next type "export" → select image and monochromatic → and in resolution type 500</li>
+                <li>Save to desired location</li>
+                <p class="pic"><img src="media/electronics_design/image00.jpg" alt="Exporting image in Eagle"></p>
+                <li>The result is a black and white image</li>
+            </ol>
+            <br>
+            <li>Edit in Gimp</li>
+            <ol type="i">
+                <li>With the exported Eagle file in hand open in Gimp</li>
+                <li>In Gimp I decided to add some wording. This was easy by selecting the text tool, then font size and rotating the wording to an ideal location</li>
+                <li>I also removed unnecessary black areas with the bucket tool</li>
+                <li>To create the outline I selected the area I wanted to keep and covered it with the bucket tool</li>
+                <li>In the end you should have two images, one for the PCB and one for the outline</li>
+            </ol>
+            <p class="pic"><img src="media/electronics_design/neilhelloboard.jpg" alt="PCB image ready for fabmodules">
+                <legend>PCB image ready for fabmodules</legend>
+            </p>
+            <p class="pic"><img src="media/electronics_design/neilhelloboardoutline.jpg" alt="PCB outline ready for fabmodules">
+                <legend>PCB outline ready for fabmodules</legend>
+            </p>
+            <hr>
+            <li>Fab modules and Milling</li>
+            <p>The process in Fab modules and Milling is already outlined by the <a href="electronics_production.html">week 4</a> assignment so I will only keep here an image of the result</p>
+            <p class="pic"><img src="media/electronics_design/image15.jpg" alt="Milled PCB">
+                <legend>Milled PCB, polished with toothpaste for best appearance</legend>
+            </p>
+            <hr>
+            <li>Soldering/Populating the PCB and Debugging</li>
+            <h4>The result</h4>
+            <p>As before the populating and debugging is already outlined by the <a href="3d_scanning_and_printing.html">week 5</a> assignment so I will only keep here an image of the result</p>
+            <p class="pic"><img src="media/electronics_design/image16.jpg" alt="Populated PCB">
+                <legend>Populated PCB ready for burning firmware</legend>
+            </p>
+            <li>Burn firmware</li>
+            <br>
+            <p>Disclaimer</p>
+            <p>I actually did this activity in the embedded programming week. I only place it here to fulfill the Fab Academy requirements.</p>
+            <p>With that here follows the test of my board.</p>
+            <ol type="i">
+                <li>Identify example code:</li>
+                <p>- There is this <a href="http://academy.cba.mit.edu/classes/embedded_programming/hello.ftdi.44.echo.c">code</a> from Prof. Neil</p>
+                <li>Identify commands to compile and burn firmware</li>
+                <p>- With all files prior downloaded on one directory, in Linux I rename the file to makefile and run the script to create the firmware (this step I will repeat every time I want to modify the code):</p>
+                <pre class="prettyprint linenums">mv hello.ftdi.44.echo.c.make makefile
+make</pre>
+                <p class="pic"><img src="media/embedded_programming/lsmake.jpg" alt="Renaming to makefile and compiling">
+                    <legend>Renaming to makefile and compiling</legend>
+                </p>
+                <li>Compile source code</li>
+                <p>- Done in previous step</p>
+                <li>Adapting makefile to work with my programmer</li>
+                <p class="pic"><img src="media/embedded_programming/makefile.jpg" alt="Editing makefile">
+                    <legend>I had to edit the makefile file to work with my programmer. That was done by replacing the entry usbtiny with USBasp 2 times, one when burning the firmware the other when burning the fuses</legend>
+                </p>
+                <li>Burn firmware</li>
+                <p>Run:</p>
+                <pre class="prettyprint linenums">make program-usbtiny</pre>
+                <p class="pic"><img src="media/embedded_programming/burn.jpg" alt="Burning firmware">
+                    <legend>Renaming to makefile and compiling</legend>
+                </p>
+                <li>Identify what fuses to burn</li>
+                <p>- That was done already in the makefile</p>
+                <li>Burn fuses</li>
+                <p>Run:</p>
+                <pre class="prettyprint linenums">make program-usbasp-fuses</pre>
+                <p class="pic"><img src="media/embedded_programming/fuses.jpg" alt="Burning fuses">
+                    <legend>Burning fuses</legend>
+                </p>
+            </ol>
+        </ol>
+        <a id="programmer">Programmer FabISP and USBisp</a>
+        <p>Here I show how I used the programmers on Output devices. For another method without the Arduino IDE check <a href="embedded_programming.html">Embedded Programming</a></p>
+        <p class="pic"><img src="media/output_devices/programmerusbasp.jpg" alt="USBasp">USBasp</p>
+        <p>Programming an ATtiny44 board with Arduino using a FabTinyISP or USBtinyISP that I made.</p>
+        <p class="pic"><img src="media/output_devices/programmerfabisp.jpg" alt="FabISP">FabISP</p>
+        <p>Programming an ATtiny44 board with Arduino using a FabTinyISP or USBtinyISP that I made was fine. There is only the inconvenience of having to power the target board.</p>
+        <p>Start by opening the Arduino IDE, then in tools choose the board, in my case ATtiny24/44/84. Next in processor I chose ATtiny44.</p>
+        <p class="pic"><img src="media/output_devices/programingATtiny44_with_arduino.jpg" alt="Programming ATtiny44 with Arduino"></p>
+        <p>Next chose the clock, as I'm not using an external crystal I chose "Internal 8MHz".</p>
+        <p class="pic"><img src="media/output_devices/programingATtiny44_with_arduino01.jpg" alt="Choosing clock in Arduino"></p>
+        <p>Next go to Programmer: "USBasp" or "USBtiny" for the FabISP.</p>
+        <p class="pic"><img src="media/output_devices/programingATtiny44_with_arduino02.jpg" alt="Choosing programmer in Arduino"></p>
+        <p>In the video below I show the process of programming with the FabISP.</p>
+        <p class="pic"><video controls>
+                <source src="media/output_devices/programming_usbtiny.mp4">Your browser does not support HTML5 video.
+            </video>For a full resolution video check <a href="https://youtu.be/CKtFtvp55ME">YouTube</a></p>
+        <p>In this video I show the process of programming with the USBasp.</p>
+        <p class="pic"><video controls>
+                <source src="media/output_devices/programming_usbasp.mp4">Your browser does not support HTML5 video.
+            </video>For a full resolution video check <a href="https://youtu.be/ZyDkVr3AqaQ">YouTube</a></p>
+        <hr>
+        <h4>First test</h4>
+        <h4>Burning Neil's code "hello.ftdi.44.echo.c"</h4>
+        <p>Here instead of using terminal and avrdude, I used the Arduino IDE as it has a built-in serial monitor.</p>
+        <p>The results are as follows in the video</p>
+        <p class="pic"><video controls>
+                <source src="media/embedded_programming/helloworldserialcomunicationtest.mp4">Your browser does not support HTML5 video.
+            </video></p>
+        <hr>
+        <li>Conclusion</li>
+        <p>I really enjoyed learning this new tool. I have used Eagle before to view PCBs but never actually designed one. I feel it opens my mind to a lot of new things to come!</p>
+        <p>To see how I program this board check <a href="embedded_programming.html">Embedded Programming week.</a></p>
+        <!-- End of your content -->
+    </div> <!-- /container -->
+    <!-- footer -->
+    <footer id="footer">
+        <p id="cclicense"></p>
+        <p class="license">Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a><br>Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">jQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+    <!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js" defer></script>
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js" defer></script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+    </script>
+    <script src="bootstrap/js/bootstrap.min.js" defer></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js" defer></script>
+</body>
+
+</html>

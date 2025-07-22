@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QEDKLDK8M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7QEDKLDK8M');
+
+    </script>
+    <!--  Finish Global site tag (gtag.js) - Google Analytics -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore 3D scanning and printing techniques in Fab Academy 2020. Learn about printer testing, designing printable objects, and 3D scanning processes. Discover insights and outcomes from Lucio Pentagna's Fab Academy journey."/>
+    <meta name="author" content="Lucio Pentagna">
+    <link rel="icon" href="media/favicon.ico">
+    <title>3D Scanning and Printing - Fab Academy 2020 - Lucio Pentagna</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.min.js"></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js"></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js"></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>    <![endif]-->
+    <!-- Load the menu file -->
+    <script>
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+
+    </script>
+</head>
+
+<body onload="menu()">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="index.html">Lucio Pentagna</a> </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu"> </ul>
+                    </li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu"> </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Insert your content here below! -->
+        <div class="jumbotron" style="width: 100%">
+            <h3>3D Scanning and Printing</h3>
+            <h3> Group Assignment
+            </h3>
+            <p>Go to the <a href="http://fabacademy.org/2020/labs/algarve/3d_scanning_and_printing.html">group assignment page</a></p>
+            <hr>
+            <h4>Individual assignment</h4>
+            <ul>
+                <li>Test the design rules for your printer(s) (group project)</li>
+                <li>Design and 3D print an object (small, few cm) that could not be made subtractively</li>
+                <li>3D scan an object (and optionally print it)</li>
+            </ul>
+            <h4>Learning outcomes:</h4>
+            <ul>
+                <li>Identify the advantages and limitations of 3D printing and scanning technology</li>
+                <li>Apply design methods and production processes to show your understanding.</li>
+            </ul>
+            <h4>Have you:</h4>
+            <ul>
+                <li>Described what you learned by testing the 3D printers</li>
+                <li>Shown how you designed and made your object and explained why it could not be made subtractively</li>
+                <li>Scanned an object</li>
+                <li>Outlined problems and how you fixed them</li>
+                <li>Included your design files and ‘hero shot’ photos of the scan and the final object</li>
+            </ul>
+        </div>
+        <h3> Week workflow
+        </h3>
+        <p> Weekly assignment: Test Printer → Design an object → Print object → Scan object → Print scanned object (optional)
+        </p>
+        <hr>
+        <h3> Tools used
+        </h3>
+        <ul style="list-style-type:disc">
+            <li> Delta 3D Printer
+
+            </li>
+            <li> Mini 3D Printer
+            </li>
+            <li> Caliper
+            </li>
+            <li> 0.4 mm needle
+            </li>
+            <li> Uhu glue
+            </li>
+        </ul>
+        <hr>
+        <h3> Software Used
+        </h3>
+        <ul style="list-style-type:disc">
+            <li> <a href="https://www.repetier.com/download-now/">Repetier Host</a>
+            </li>
+            <li><a href="https://slic3r.org/download/">Slic3r</a></li>
+            <li><a href="https://solidworks.com">Solidworks</a>
+            </li>
+            <li> <a href="https://www.autodesk.com/products/recap/overview">Autodesk Recap</a>
+            </li>
+        </ul>
+        <hr>
+        <h3> Files Generated/used
+        </h3>
+        <ul style="list-style-type:disc">
+            <li> Test's stl file:
+                <a href="media/3d_scanning_and_printing/3d_test.stl"> 3D Printer test model
+                </a>from <a href="https://www.thingiverse.com/thing:1363023">thingiverse</a>
+            </li>
+            <li> G-code file:
+                <a href="media/3d_scanning_and_printing/g_code/generatedgcode.zip"> all week's generated G-code from STL files
+                </a> and scanned <a href="media/3d_scanning_and_printing/g_code/stonemodel.zip">stone model</a>
+            </li>
+            <li> Solid Works file:
+                <a href="https://gitlab.fabcloud.org/Lucio/wire_organiser"> Project page of the 3D model for a wire organizer used on a CNC I built
+                </a>
+            </li>
+            <li> Chain's stl file:
+                <a href="media/3d_scanning_and_printing/wire_organiser_chain.stl"> Generated stl file from the Solidworks archive
+                </a>
+            </li>
+        </ul>
+        <hr>
+        <ol type="1">
+            <li> Printers preparation
+            </li>
+            <p class="pic"> <img src="media/3d_scanning_and_printing/IMG_2836.JPG">
+                <legend> Printer I design and built a few years back.
+                </legend>
+            </p> <br>
+            <ol type="i">
+                <li> To start the test, I prepared the printers by cleaning the nozzles and spreading new glue onto the platforms.
+                </li>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/image5.jpg">
+                    <legend> Glue used on the platform
+                    </legend> <img src="media/3d_scanning_and_printing/image6.jpg">
+                    <legend> 0.4 mm needle used to clean nozzle
+                    </legend>
+                </p>
+                <li> I tested the extrusion on both printers, and it looked good.
+                </li>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/image7.jpg">
+                    <legend> PLA being extruded
+                    </legend> <img src="media/3d_scanning_and_printing/image8.jpg">
+                    <legend> PLA being extruded
+                    </legend>
+                </p>
+            </ol>
+            <br>
+            <li> The limits of our printers
+            </li>
+            <br>
+            <ol type="i">
+                <li> I started this week's assignment by looking for a test pattern on the website
+                    <a href="https://www.thingiverse.com"> Thingiverse
+                    </a>. Simply by using its search engine with the keywords,
+
+                    <a href="https://www.thingiverse.com/search?q=test+3d+printer&sa="> test 3d print
+                    </a> it showed various results with the purpose of testing the printers.
+                    <p class="pic"> <img src="media/3d_scanning_and_printing/image1.jpg">
+                        <legend> Print from the search at
+                            <a href="https://www.thingiverse.com/search?q=test+3d+printer&sa="> Thingiverse
+                            </a>
+                        </legend>
+                    </p>
+                </li>
+                <li> I selected one of the designs, which tests different capabilities of the printers.
+                </li>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/image2.jpg">
+                    <legend> Print from the test pattern page at
+                        <a href="https://www.thingiverse.com/thing:1363023"> Thingiverse
+                        </a>
+                    </legend>
+                </p>
+                <p> On the 3D printer test model's page, I downloaded the design and noted the parameters it tests, such as:
+                </p>
+                <ul style="list-style-type:disc">
+                    <li> Nut, Size M4 Nut should fit perfectly
+                    </li>
+                    <li> Wave, rounded print
+                    </li>
+                    <li> Star, Sharp Edges
+                    </li>
+                    <li> Name, Complex Shapes
+                    </li>
+                    <li> Holes, Size 3, 4, 5 mm
+                    </li>
+                    <li> minimal Distance: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 mm
+                    </li>
+                    <li> Z height: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1 mm
+                    </li>
+                    <li> Wall Thickness: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 mm
+                    </li>
+                    <li> Bridge Print: 2, 4, 8, 16 mm
+                    </li>
+                    <li> Sphere, Rounded Print 4.8mm height
+                    </li>
+                    <li> Sphere Mix, 7 mm height
+                    </li>
+                    <li> Pyramid 7 mm height
+                    </li>
+                    <li> Overhang: 25, 30, 35, 40, 45, 50, 55, 60, 65, 70°
+                    </li>
+                    <li> Warp, does it bend?
+                    </li>
+                    <li> 3D Print Font, optimized for 3D printing
+                    </li>
+                    <li> Surface, Flatness
+                    </li>
+                    <li> Size, 100 x 100mm x 23.83 (10mm width)
+                    </li>
+                    <li> Spike, minimum Layer Time, 21 mm height from Bottom (include Baseplate)
+                    </li>
+                    <li> Hole in Wall, 4 mm diameter, check for proper print
+                    </li>
+                    <li> Raft Test, raft should be just under the model
+                    </li>
+                    <li> Retract Travel, check retract settings for longer travel
+                    </li>
+                </ul> <br>
+                <p> Bellow is the 3D print test model:
+                </p>
+                <p> <canvas id="testmodel1" width=640 height=480>
+                        It seems you are using an outdated browser that does not support canvas :-(
+
+                    </canvas>
+                    <script type="text/javascript">
+                        var canvas = document.getElementById('testmodel1');
+                        var viewer = new JSC3D.Viewer(canvas);
+                        viewer.setParameter('SceneUrl', 'media/3d_scanning_and_printing/3d_test.stl');
+                        viewer.setParameter('ModelColor', '#1826ca');
+                        viewer.setParameter('BackgroundColor1', '#E5D7BA');
+                        viewer.setParameter('BackgroundColor2', '#383840');
+                        viewer.setParameter('RenderMode', 'flat');
+                        viewer.setParameter('MipMapping', 'on');
+                        viewer.setParameter('Definition', 'high');
+                        viewer.setParameter('Renderer', 'webgl');
+                        viewer.init();
+                        viewer.update();
+
+                    </script>
+                    <legend> rendered 3D model of the STL file
+                    </legend>
+                </p>
+                <p> The author also provides an image for reference when checking the print.
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/testIII.jpg">
+                    <legend> Infographic from the
+                        <a href="http://www.whoote.com/viewtopic.php?f=13&t=13"> phpBB forum
+                        </a>
+                    </legend>
+                </p>
+                <br>
+                <li> In Repetier Host, I loaded the STL file and sliced it for each printer, naming the G-code with the printer designation in front.
+                </li>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/image3.jpg">
+                    <legend> Generating G-code on<b>Repetier</b> Host for the Mini
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/image4.jpg">
+                    <legend> Generating G-code on<b>Repetier</b> Host for the Delta
+                    </legend>
+                </p>
+                <a id="settings">Slic3r Settings</a>
+                <li>3D printers are far from being plug-and-play devices. There is a lot of adjusting, and some of it seems like magic. I will highlight the most important points to consider in the settings of the Slic3r software, which works in conjunction with Repetier.</li>
+                <ol>
+                    <li>Still on <b>Repetier</b> in the "Slicer" tab the software presents us with several options of preset configuration. The first is the slicer software itself. On the drop-down menu, it is possible to choose from Slic3r, Cura, or older software that nobody uses...</li>
+                    <li>In Print settings, we have characteristics of the particular model to print. My current choice is "coarsewithsupport"; later, I will discuss how I chose the settings that make up the presets presented.</li>
+                    <li>Then we have "Printer Settings". Normally, settings related to a specific printer (machine) go here. In my presets, I have the different printers of the lab: one is a Cartesian printer, "Mini_2.5_retraction", and another (not shown) is a delta printer.</li>
+                    <li>Here, in "Filament Settings", are the many filaments one can have, each with different settings like color, temperature, or thickness.</li>
+                    <li>In this item, we will dive deeper into the settings and set up the presets displayed before.</li>
+                </ol>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/slic3r01.jpg">
+                </p>
+                <ol>This <b>Slic3r</b> is the slicer software itself that is buried deep in the <b>Repetier</b>. Its realms are not for the faint of heart, where wrong moves here, or should I say settings, might render catastrophic results in your prints.
+                    <li>As Slic3r presents in the first column, we have the classes: Print settings, Filament, and Printer.</li>
+                    <li>Then, in the second column, we have drop-down menus to choose each preset that the user wishes to customize.</li>
+                    <li>In the third column, we see a gear-shaped icon, a typical icon for configuration. Let's click on it to open each class and see its inner workings.</li>
+                </ol>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/slic3r02.jpg">
+                </p>
+                <ol>Now we are in the Print Settings tab.
+                    <li>Let's examine it sub-class by sub-class, starting with Layers and Perimeters.</li>
+                    <li>In this area, we can see Layer height. This is an important setting that should not go beyond the nozzle diameter size. If you are in a hurry and don't care about the appearance, go high. I have chosen 0.3 mm for a rough feeling. The layers will be noticeable, and slopes will look like stairs. If you need a detailed result, go low. The limits of how low this can go are near infinite, but because time is limited, I suggest not going lower than 0.1 mm. A lower number means more layers, and it will be smooth as peach skin. </li>
+                    <li>After each tweak, click on this strange blue square shape that reminds me of past times before all this excess of information and the echo chambers, before this true limitless universe of terabytes around us. It's called a floppy disk. If you don't click, believe me, you will regret it as nothing will be saved, but fear not, Slic3r won't let you do that without a warning.</li>
+                </ol>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/slic3r03.jpg">
+                </p>
+                <p>Now, this sub-class of the Print settings is infill. One can save a lot of time and money here. Someone once said they are both the same; frankly, I'd rather own the first than the second. The infill I have is 20%. I am not a cheapskate; I believe 20% is enough. After all, the ephemeral pieces this printer expels are rarely worth using all this corn. Ah, did I mention I am using PLA, a derivative of corn? Of course not; that's later in filaments... So, for now, believe me, 20% is enough for almost all prints. If you need to tow a truck, go crazy, use 100%. If, on the other hand, you want to make a delicate vase, 0% will leave you a hollow print.
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/slic3r04.jpg">
+                </p>
+                <p>In this subsection of Print settings, the famous Skirt and Brim, the savvy fabber can use Brim instead of the ridiculous and wasteful rafts done by those who won't take the time to level and calibrate their printers. By using a wide brim, you make sure your print won't detach from the bed. Brim basically consists of lines next to each other and attached to the print; it's great for a spiky model's base, or just corners that want to take off from the print bed, causing "warping". The skirt is used to kind of clean one's noose—I mean nozzle, yes, the printer nozzle, the part that the filament comes out of. This setting will extrude a line around the model to be printed, especially useful when filament promiscuity is the case, so when changing colors or filament types, be sure to either extrude in the air or add some skirt before your print.</p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/slic3r05.jpg">
+                </p>
+                <p>The subclass of Support material I leave for the people who won't challenge their machines for the ones who don't care to calibrate and level.</p>
+                <p>With Support material, you use this for overhangs. Support builds under your model in places where the negative slope is too steep, in order to prevent a real bird's nest by free-forming under your nose—I mean nozzle.</p>
+                <p>Raft... how I hate rafts! I don't even want to talk about rafts. I wonder how much popcorn has been erased from the universe by the usage of rafts! Well, like the name implies, no one wants to be on, or use, a raft. It's for emergencies and should be kept only for that. It creates a waste of material that will poorly compensate for the lack of leveling; it's for the lazy, but in the end, promotes more work, as the underside of the print will never be as smooth as the part printed directly on glass. Support also does that. Try printing with support and then spend the next hours post-processing your prints—super fun stuff.</p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/slic3r06.jpg">
+                </p>
+                <p>The class of filament settings deserves not much time as they are straightforward. If your filament supplier cares about you, they will give you the temperature at which to print on a label on the sides of the box or spool. The diameter is, and has always been with me, 1.75mm. The thinner diameter is easier to push than 3mm, the other standard in filament thickness. After all, we are pushing filament through a nozzle with a 0.4 mm diameter; that's thin, so choosing a printer that takes a thin filament is better!</p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/slic3r07.jpg">
+                </p>
+                <p>Here in printer settings, we find nozzle size. I use 0.4 mm. Next, my preferred setting in these tests—well, practically the only one I messed with—is "retraction".</p>
+                <p>As the designer, engineer, and technician of my printers, there's little that I haven't tried before.</p>
+                <p>The retraction, yes, the retraction, will depend on many factors. Too much retraction, and the filament can get stuck in the nozzle, guaranteeing one a lot of fun fixing/disassembling a nozzle where the filament froze in higher levels. It's always fun for geeks like me to fix that, NOT! Too little retraction, and you will have spider webs all around your towers. So, this is a setting that needs to be tested and tested, until, like many other settings, you do trial and error until mastered to what resembles perfection, if that even exists in FDM, of course.</p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/slic3r08.jpg">
+                </p>
+                <li> Next, I took the G-code I had saved on the SD card, placed it in the 3D printers, and started the print.
+                </li>
+                <p>Click <a id="slice_print" href="3d_scanning_and_printing.html#slice_print">here</a> for the process of slicing and creating the file with the g-code to print.</p>
+                <p class="pic">
+                    <video controls>
+                        <source src="media/3d_scanning_and_printing/video1.mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                    <legend>
+                        Video of mini starting the test print
+                    </legend>
+                </p>
+                <li> The prints were not bad, but there was a lot of oozing (spider webs). So, I increased the retraction by .5 mm and then by 1 mm; the improvements were very noticeable in both printers.
+                    <p class="pic"> <img src="media/3d_scanning_and_printing/minibeforeaftercollage2.jpg">
+                        <legend>photo of prints with 1.5(left) and 2.5mm(right) retraction settings</legend>
+                    </p>
+                </li>
+                <li> The results
+                </li> <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <table class="tableizer-table">
+                    <thead>
+                        <tr class="tableizer-firstrow">
+                            <th></th>
+                            <th>Parameter</th>
+                            <th>Results</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>Mini</td>
+                            <td>Delta</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Nut, Size M4 Nut should fit perfectly</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Wave, rounded print</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Star, Sharp Edges</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Name, Complex Shapes</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Holes, Size 3, 4, 5 mm</td>
+                            <td>2.9, 3.9, 4.9</td>
+                            <td>3, 4, 5 mm oval</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>minimal Distance: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 mm</td>
+                            <td> 0.1mm not good</td>
+                            <td>0.1, 0.2, 0.3 not good scale wrong 6.5mm instead of 7mm</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Z height: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1 mm</td>
+                            <td>0.1mm printed with 0.2 and 1.1 with 1</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Wall Thickness: 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 mm</td>
+                            <td>didn't print 0.1, 0.2 next walls printed as 0.5 until last as 1mm</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Bridge Print: 2, 4, 8, 16 mm</td>
+                            <td>Printed as 2.85, 3.9, 7.9, 15.8</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Sphere, Rounded Print 4.8mm height</td>
+                            <td>5.1</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Sphere Mix, 7 mm height</td>
+                            <td>7.15</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>pyramid, 7 mm height</td>
+                            <td>6.95</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Overhang: 25, 30, 35, 40, 45, 50, 55, 60, 65, 70°</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Warp, does it bend?</td>
+                            <td>no</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>3D Print Font, optimized for 3D printing</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>Surface, Flatness</td>
+                            <td>a bit rough </td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>Size, 100 x 100mm x 23.83 (10mm width)</td>
+                            <td>99.45 x 99.8 x 23.2 (10.2 with)</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>Spike, minimum Layer Time, 21 mm height from Bottom (include Baseplate)</td>
+                            <td>15mm</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>Hole in Wall, 4 mm diameter, check for proper print</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>Raft Test, raft should be just under the model</td>
+                            <td>didn't test</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>Retract Travel, check retract settings for longer travel</td>
+                            <td>almost no oozing</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>Conclusion</td>
+                            <td>For an FDM printer, I believe the result is very good. The size differences are probably due to PLA shrinkage.</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </ol> <br>
+            <li> Designing and printing an object
+            </li>
+            <br>
+            <ol type="i">
+                <li> I decided to create a necessary part for my final project: a wire organizer that, when connected together, works as a chain.
+                </li>
+                <p>This design is either too hard or even impossible to do with subtractive techniques due to its shape and details, which are inaccessible to a 2-axis CNC or even a 3-axis one.</p>
+                <li> The design is parametric, so I can easily change the size as needed.
+                </li>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/designingcollage.jpg">
+                    <legend> parametric design on Solid Works from beginning to G-code generation
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/image11.jpg">
+                    <legend> model finished
+                    </legend>
+                </p>
+                <li>The steps to design
+                </li>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step00.jpg">
+                    <legend> Here, I selected a plane, then created a square and added parameters so I can easily change it in the future.
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step00_plane_chose_sketch.jpg">
+                    <legend> Here, I already exited the sketch and selected the type of feature, in this case, extrusion. Next, I chose the dimension of the extrusion.
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step01_extrude.jpg">
+                    <legend> the extruded piece!
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step03.jpg">
+                    <legend> next I chose the face that will have the feature and started sketching directly on its plane.
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step04_sketchcut.jpg">
+                    <legend> After the last extrusion, I sketched what would be cut.
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step05_cut.jpg">
+                    <legend> And finished with the feature, choosing to cut all.
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step06.jpg">
+                    <legend> I created a few planes for the next operations.
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step07.jpg">
+                    <legend> planes being created
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step08.jpg">
+                    <legend> With the planes created, I could mirror the feature.
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step09.jpg">
+                    <legend> the mirror operation
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step10.jpg">
+                    <legend> Fillets for better finishing and also a smooth 3D printing. This feature would be very hard to do on a CNC.
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step11_filet.jpg">
+                    <legend> The fillets finished.
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step12_equation.jpg">
+                    <legend> Example of the parameters.
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step13.jpg">
+                    <legend> finished part ready for the STL creation
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step15_chose_stl_name.jpg">
+                    <legend> ...to create the STL, click on archive, save as...
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step16_chosing_format.jpg">
+                    <legend> Choose the format type as STL.
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step17_chosing_location_saving.jpg">
+                    <legend> Save on the desired location.
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/step18_you_get_statistics.jpg">
+                    <legend> Confirm and see the statistics.
+                    </legend>
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/solidworks_modeling/equationcharts.jpg">
+                    <legend> This is the table of parameters for this part.
+                    </legend>
+                </p>
+                <li> As I finished the SolidWorks model, I then exported the file as STL.
+                </li> <br>
+                <p> <canvas id="wireorganiser" width=640 height=480> It seems you are using an outdated browser that does not support canvas :-(
+                    </canvas>
+                    <legend> Render of my 3D model of the wire organizer.
+                    </legend>
+                    <script type="text/javascript">
+                        var canvas = document.getElementById('wireorganiser');
+                        var viewer = new JSC3D.Viewer(canvas);
+                        viewer.setParameter('SceneUrl', 'media/3d_scanning_and_printing/wire_organiser_chain.stl');
+                        viewer.setParameter('ModelColor', '#1826ca');
+                        viewer.setParameter('BackgroundColor1', '#E5D7BA');
+                        viewer.setParameter('BackgroundColor2', '#383840');
+                        viewer.setParameter('RenderMode', 'flat');
+                        viewer.setParameter('MipMapping', 'on');
+                        viewer.setParameter('Definition', 'high');
+                        viewer.setParameter('Renderer', 'webgl');
+                        viewer.init();
+                        viewer.update();
+
+                    </script>
+
+                </p>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/repetier01.jpg"> </p>
+                <a id="slice_print">Slice and Print</a>
+                <ol>
+                    <li>Add the STL file.</li>
+                    <li>scale if needed</li>
+                    <li>rotate if needed</li>
+                    <li>click on slicer to get to settings and start slicing</li>
+                </ol>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/repetier02.jpg"> </p>
+                <ol>
+                    <li>In Configuration, you can set particular characteristics of the slicing operation. Attached is the <a href="media/3d_scanning_and_printing/Slic3r_config_bundle.ini">config bundle</a> for our printers.</li>
+                    <li>With the preset loaded, here you choose print settings.</li>
+                    <li>Here, you can select the machine model.</li>
+                    <li>Here are the filament settings.</li>
+                    <li>Finally, click on "Slice with Slic3r".</li>
+                </ol>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/repetier03.jpg"> </p>
+                <ol>
+                    <li>Click on save to SD card to have your G-code saved to the media you will insert into a 3D printer.</li>
+                    <li>In visualization, you can see layer by layer and understand how your settings will affect the print before actually printing.</li>
+                </ol>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/repetier04.jpg"> </p>
+                <ol>
+                    <li>The settings in the slicer show that the infill was rectilinear and at 20%, and the layer height was 0.2mm.</li>
+                    <li>Again, clicking show layer height and sliding the last layer will show the layers step by step.</li>
+                </ol>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/printer01.jpg"> </p>
+                <ol>
+                    <li>With the SD card inside, check the LCD, which will show the nozzle temperature, top left.</li>
+                    <li>Then, press the rotary encoder to show the menu options.</li>
+                </ol>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/printer02.jpg"> </p>
+                <ol>
+                    <li>Scroll to "Print from media" and press the encoder knob.</li>
+                </ol>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/printer03.jpg"> </p>
+                <ol>
+                    <li>Scroll to the desired file, press the knob, and the print will start.</li>
+                </ol>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/image13.jpg">
+                    <legend> Printer almost finished printing chain organizer.
+                    </legend>
+                </p>
+                <p class="pic">
+                    <video controls>
+                        <source src="media/3d_scanning_and_printing/video2.mp4">
+                        Your browser does not support HTML5 video.
+
+                    </video>
+                    <legend>
+                        Video of printers printing the organizer and the organizer assembled in a chain.
+
+                    </legend>
+                </p>
+            </ol>
+            <li> 3D Scanning
+            </li> <br>
+            <ol type="i">
+                <li> For that part of the assignment, I used Autodesk ReMake. It relies on <a href="https://www.engineering.com/DesignSoftware/DesignSoftwareArticles/ArticleID/13313/Photogrammetry-Explained-The-State-of-Reality-Capture.aspx">photogrammetry</a>.
+                </li>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/remake.jpg">
+                    <legend>
+                    </legend>
+                </p>
+                <li> Luckily, I was at the beach, and I saw a model that would be interesting: someone had balanced a large rock.
+                </li>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/rock.jpg">
+                    <legend> Balanced rock at "Figueira beach" near Lagos, Portugal.
+                    </legend>
+                </p>
+                <li> The next step was to take around 40 photos from all angles, preferably without a moving background like people or clouds.
+                </li>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/rockcollage.jpg">
+                    <legend> Sample of the 90+ images taken to make the model.
+                    </legend>
+                </p>
+                <li> Next, I uploaded the files to ReMake. It's important to select only good images and restrict background moving objects. After the upload is done, press create model. It can take a while during your model generation.
+                </li>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/image14.jpg">
+                    <legend> print from remake uploading images
+                    </legend>
+                </p>
+                <li> After upload, choose an option in the generation process. I chose standard as it's free.
+                </li>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/image14b.jpg">
+                    <legend> print from options on remake
+                    </legend>
+                </p>
+                <li> On the lower part of the screen, ReMake shows models being generated and in queue. The top part shows models already done.
+                </li>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/image16.jpg">
+                    <legend> print from Autodesk ReMake
+                    </legend>
+                </p>
+                <li> With the model ready, you can click on it and enter the edit mode of ReMake.
+                </li>
+                <p class="pic">
+                    <video controls>
+                        <source src="media/3d_scanning_and_printing/rotatestonemodel.mp4">
+                        Your browser does not support HTML5 video.
+
+                    </video>
+                    <legend> Model generated, showing problems with opened faces. Not ready for printing.
+                    </legend>
+                </p>
+                <li> I compiled the editing sequence in the following mosaic, in synthesis. I selected the undesired parts, deleted them, and filled the holes left. Finally, I generated an STL file that should be ready to print.
+                </li>
+                <p class="pic"> <img src="media/3d_scanning_and_printing/editthescan.jpg">
+                    <legend> collage from screen prints editing sequence of Autodesk ReMake
+                    </legend>
+                </p> <br>
+                <p>The result:</p>
+                <p> <canvas id="stone" width=640 height=480> It seems you are using an outdated browser that does not support canvas :-(
+                    </canvas>
+                    <legend> Render of my 3D model from photogrammetry scanning on ReMake
+                    </legend>
+                    <script type="text/javascript">
+                        var canvas = document.getElementById('stone');
+                        var viewer = new JSC3D.Viewer(canvas);
+                        viewer.setParameter('SceneUrl', 'media/3d_scanning_and_printing/stonemodel.stl');
+                        viewer.setParameter('ModelColor', '#1826ca');
+                        viewer.setParameter('BackgroundColor1', '#E5D7BA');
+                        viewer.setParameter('BackgroundColor2', '#383840');
+                        viewer.setParameter('RenderMode', 'flat');
+                        viewer.setParameter('MipMapping', 'on');
+                        viewer.setParameter('Definition', 'high');
+                        viewer.setParameter('Renderer', 'webgl');
+                        viewer.init();
+                        viewer.update();
+
+                    </script>
+                </p>
+                <li>Preparation of the Stone Model
+                    <ol>
+                        <li>I clicked on load in order to load the STL file into Repetier. STL file <a href="media/3d_scanning_and_printing/3d_test.stl">here</a>.</li>
+                        <li>Next find the file in its directory and click ok</li>
+                        <li>If needed, it's possible to rotate, scale, etc. the model until it fits in the printer area. In my case, this was not necessary as the model fit.</li>
+                    </ol>
+                    <p class="pic"> <img src="media/3d_scanning_and_printing/preparestone01.jpg">
+                        <legend>
+                        </legend>
+                    </p>
+                </li>
+                <li>On the tab "Slicer"
+                    <ol type="1">
+                        <li>I started by selecting the slicer software. I chose "Slic3r" (with a 3 instead of the letter "E"—yes, this is a confusing name).</li>
+                        <li>Next, I selected the pre-configured setting "coarse with support".</li>
+                        <li>Then, the best option according to the previous tests: Mini 2.5 retraction.</li>
+                        <li>On Extruder, there is only one pre-configured in this printer, so no choices are available.</li>
+                        <li>Advanced configurations are available in the "configuration" option, but in my case, it was not needed as the already tested pre-configuration should work fine.</li>
+                        <li>Finally, click on "Slice with Slic3r" to start the slicing process.</li>
+                    </ol>
+                    <p class="pic"> <img src="media/3d_scanning_and_printing/preparestone02.jpg">
+                        <legend>
+                        </legend>
+                    </p>
+                </li>
+                <li>Now the model is ready to be printed. This can be done by clicking on the button "Print". The top arrow points to the statistics of the print; it would take 1:41 minutes to print the scanned model, which I chose not to do. In the lower arrow, it's possible to see the support material that was prepared for the print.
+                    <p class="pic"> <img src="media/3d_scanning_and_printing/preparestone03.jpg">
+                        <legend>
+                        </legend>
+                    </p>
+                </li>
+                <li><a href="media/3d_scanning_and_printing/g_code/stonemodel.zip">G-code generated:</a>
+                    <p>The G-code generated can be downloaded with the link above, but I extracted the beginning of it here in order to show a few of its statistics:</p>
+                    <pre><code class="text">; generated by <b>Slic3r</b> 1.3.1-dev on 2020-05-31 at 20:04:21
+; external perimeters extrusion width = 0.44mm (3.38mm^3/s)
+; perimeters extrusion width = 0.48mm (7.54mm^3/s)
+; infill extrusion width = 0.48mm (10.05mm^3/s)
+; solid infill extrusion width = 0.48mm (2.51mm^3/s)
+; top infill extrusion width = 0.48mm (1.88mm^3/s)
+; support material extrusion width = 0.44mm (6.76mm^3/s)
+</code></pre>
+                </li>
+            </ol>
+        </ol>
+
+        <!-- End of your content -->
+    </div> <!-- /container -->
+    <!-- footer -->
+    <footer id="footer">
+        <p id="cclicense"> </p>
+        <p class="license"> Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br> Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+
+    <!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js"></script>
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"> </script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+
+    </script>
+    <script src="bootstrap/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>

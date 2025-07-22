@@ -1,0 +1,14 @@
+#BIMP 1.18
+#MANIPULATION SET DEFINITION
+
+[CHANGEFORMAT]
+format=4
+interlace=false
+compression=9
+savebgc=true
+savegamma=false
+saveoff=false
+savephys=true
+savetime=true
+savecomm=true
+savetrans=true

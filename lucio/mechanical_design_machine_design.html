@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QEDKLDK8M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7QEDKLDK8M');
+
+    </script>
+    <!--  Finish Global site tag (gtag.js) - Google Analytics -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Delve into mechanical and machine design in Fab Academy 2020 with Lucio Pentagna's DIY laser cutter project. Explore the design and build process, group assignments, learning outcomes, and future improvements for this digital fabrication machine."/>
+    <meta name="author" content="Lucio Pentagna">
+    <link rel="icon" href="media/favicon.ico">
+    <title>Mechanical Design, Machine Design - Fab Academy 2020 - Lucio Pentagna</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js" defer></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js" defer></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Load the menu file -->
+    <script>
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+
+    </script>
+</head>
+
+<body onload="menu()">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="index.html">Lucio Pentagna</a> </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu"> </ul>
+                    </li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu"> </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Insert your content here below! -->
+        <div class="jumbotron" style="width: 100%">
+            <h2>Mechanical Design, Machine Design</h2>
+            <hr>
+            <h3>Mechanical Design (part 1 of 2)</h3>
+            <hr>
+            <h4>Group assignment</h4>
+            <hr>
+            <ul>
+                <li>Design a machine that includes mechanism + actuation + automation
+                </li>
+                <li>Build the mechanical parts and operate it manually.
+                </li>
+                <li>Document the group project
+                </li>
+            </ul>
+            <hr>
+            <h4>Individual Project</h4>
+            <hr>
+            <ul>
+                <li>Document your individual contribution.
+                </li>
+            </ul> <br>
+            <h3>Machine Design (part 2 of 2)
+            </h3>
+            <hr>
+            <h4>Group assignment</h4>
+            <hr>
+            <ul>
+                <li>Actuate and automate your machine.
+                </li>
+                <li>Document the group project
+                </li>
+            </ul>
+            <hr>
+            <h4>Individual Project</h4>
+            <hr>
+            <ul>
+                <li>Document your individual contribution.
+                </li>
+            </ul>
+            <hr>
+            <h4>Learning outcomes:</h4>
+            <ul>
+                <li>Work and communicate effectively in a team and independently</li>
+                <li>Design, plan and build a system</li>
+                <li>Analyze and solve technical problems
+                </li>
+                <li>Recognize opportunities for improvements in the design
+                </li>
+            </ul>
+            <hr>
+            <h4>Have you?</h4>
+            <ul>
+                <li>Documented the machine building process to the group page
+                </li>
+                <li>Documented your individual contribution to this project on your own website
+                </li>
+                <li>Linked to the group page from your individual page as well as from group page to your individual pages</li>
+            </ul>
+        </div>
+        <hr>
+        <h3> Group Assignment
+        </h3>
+        <p>For other group assignments go to <a href="http://fabacademy.org/2020/labs/algarve/">group assignment page</a></p>
+        <p>This assignment was completely done by me as I am the only student at the Algarve FabFarm this year.</p>
+        <hr>
+        <h3>Frankenlaser cutter</h3>
+        <p>Design Files and Gcode files @ <a href="https://gitlab.fabcloud.org/Lucio/frankenlaser">Gitlab Fabcloud project repo</a></p> <br>
+        <p class="pic"><img src="media/machine/laser/01_frankenlaser.jpg" alt="Frankenlaser cutter"></p>
+        <p>I gave it the name Frankenlaser because many of its parts come from retired machines I once design and fabricated. Its a machine again just like my CNC made with parts I had laying around as well as commercial parts.</p>
+        <p>I designed the machine with solidworks and used the CNC in the bottom of this page that I also designed to cut the carbon fiber and the OSB parts.</p>
+        <h3>Mechanical Design (part 1 of 2)</h3>
+        <p class="pic"><img src="media/machine/laser/02_laser_so_far.jpg" alt="Laser design progress"></p>
+        <p>With the mechanical design ready I started preparing the bits and pieces.</p>
+        <p class="pic"><img src="media/machine/laser/03_bits_and_pieces.jpg" alt="Bits and pieces for assembly"></p>
+        <p>I am using 30x30 aluminum profiles, they came in 3 meters bars and needed to be cut to size.</p>
+        <p class="pic"><img src="media/machine/laser/04_profiles1.jpg" alt="Aluminum profiles"></p>
+        <p>the most precise way I could cut the profiles was with a wood saw. I know that it is made for wood, but also know that I could cut aluminum as long as I use it slowly. I then leveled the saw blade to 90 degrees in reference to the table saw.</p>
+        <p class="pic"><img src="media/machine/laser/05_profiles2.jpg" alt="Cut aluminum profiles"></p>
+        <p>The cut was perfect.</p>
+        <p class="pic"><img src="media/machine/laser/07_profile3.jpg" alt="Perfectly cut profiles"></p>
+        <p>Next I began with the tracks, they were very dirty. So I started with the cleaning.</p>
+        <p class="pic"><img src="media/machine/laser/08a_tracks.jpg" alt="Dirty tracks"></p>
+        <p>And like magic they are clean; first I removed the tracks from the sliders and left them aside. I used WD40, a scotch brite sponge for the rust and acetone to remove oil and dust. I oiled it finally with machine oil.</p>
+        <p class="pic"><img src="media/machine/laser/08b_tracks2.jpg" alt="Clean tracks"></p>
+        <p>Now the sliders... equally dirt I disassembled the plastic covers and dropped the little bearing balls into a recipient.</p>
+        <p class="pic"><img src="media/machine/laser/08d_sliders01.jpg" alt="Disassembled sliders"></p>
+        <p>With the sliders disassembled I used the same cleaning steps with the same products as before.</p>
+        <p class="pic"><img src="media/machine/laser/09_sliders02.jpg" alt="Cleaned sliders"></p>
+        <p>With a paper towel I dried it all</p>
+        <p class="pic"><img src="media/machine/laser/09a_sliders03.jpg" alt="Dried sliders"></p>
+        <p>And again like magic they are like new.</p>
+        <p class="pic"><img src="media/machine/laser/10_cleantracks.jpg" alt="Reassembled clean tracks"></p>
+        <p>To have an idea of the final product I placed the parts resting on top of each other. Nice!</p>
+        <p class="pic"><img src="media/machine/laser/11_assembly.jpg" alt="Parts assembly"></p>
+        <p>A different perspective.</p>
+        <p class="pic"><img src="media/machine/laser/12_assembly.jpg" alt="Assembly from another angle"></p>
+        <p>The view from ArtCam.</p>
+        <p class="pic"><img src="media/machine/laser/12aa_milling.jpg" alt="ArtCam view"></p>
+        <p>I then started cutting the carbon fiber. It cuts easily on my CNC but I was in a hurry so I did not want to clean double face tape and have to clean its glue latter. This decision will have consequences, watch the next videos for it.</p>
+        <p class="pic"><img src="media/machine/laser/12a_milling.jpg" alt="Cutting carbon fiber"></p>
+        <p>Here I drill the holes.</p>
+        <video width="300" controls>
+            <source src="media/machine/laser/12b_milling.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+        </video>
+        <p>In this video I cut many of the contours because I did not use double face tape or tabs the parts jumped from the stock in a way they could meet demise if touched by the blade. So I removed the pieces as the machine spit it out.</p>
+        <video width="300" controls>
+            <source src="media/machine/laser/12c_milling.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+        </video>
+        <p>All the parts cut and ready for assembly.</p>
+        <video width="300" controls>
+            <source src="media/machine/laser/12c_milled.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+        </video>
+        <p>With a digital angle finder I made sure the parts were squared.</p>
+        <p class="pic"><img src="media/machine/laser/13_assembly.jpg" alt="Squared parts"></p>
+        <p>Here the support of the other side.</p>
+        <p class="pic"><img src="media/machine/laser/14_assembly.jpg" alt="Support assembly"></p>
+        <p>Here the laser head support assembled.</p>
+        <p class="pic"><img src="media/machine/laser/14a_assembly.jpg" alt="Laser head support"></p>
+        <p>And now it is assembled.</p>
+        <p class="pic"><img src="media/machine/laser/15_assembly.jpg" alt="Fully assembled machine"></p>
+        <p>And the laser head attached. The laser head will hold the focus lens when the laser is ready.</p>
+        <p class="pic"><img src="media/machine/laser/16_assembly.jpg" alt="Laser head attached"></p>
+        <p>Moving the X axis.</p>
+        <video width="300" controls>
+            <source src="media/machine/laser/18_manuallymovingit.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+        </video>
+        <p>Moving it again.</p>
+        <video width="300" controls>
+            <source src="media/machine/laser/19_movingmanually.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+        </video>
+        <p>Here the hole assembly is ready.</p>
+        <p class="pic"><img src="media/machine/laser/20_assembled.jpg" alt="Whole assembly ready"></p>
+        <p>Now I test all axis by hand and this part one is done.</p>
+        <video width="300" controls>
+            <source src="media/machine/laser/21_movingallaxis.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+        </video>
+        <!--        laser 2nd part-->
+        <h3>Machine Design (part 2 of 2)</h3>
+        <h4>Index</h4>
+        <ol>
+            <li> <a href="#external_frame">Milling and Assembly External Frame</a></li>
+            <li> <a href="#frame_assembly_to_axis">Frame Assembly to Axis</a></li>
+            <li> <a href="#wiring">Wiring</a></li>
+            <li> <a href="#burning_the_firmware">Burning the firmware</a></li>
+            <li> <a href="#testing">First Test</a></li>
+            <li> <a href="#setup_grbl">Setting up GRBL</a></li>
+            <li> <a href="#second_test">Second Test</a></li>
+        </ol>
+        <h4>It moves!</h4>
+        <p>The machine is speaking and with its immature voice it spoke "Hello World"</p>
+        <video width="300" controls>
+            <source src="media/machine/laser_2nd_part/07_test_again/test.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+        </video>
+        <p>How did I get there? Lets see the steps:</p>
+        <hr>
+        <ol>
+            <li id="external_frame">Milling and Assembly External Frame</li>
+            <p>I design the frame with Solidworks. The techniques already explained in the week of <a href="computer_aided_design.html">Computer aided design</a> and <a href="computer_controlled_machining.html">Computer controlled machining</a>.</p>
+            <p>The design files are <a href="https://github.com/lpgn/frankenlaser">here</a>.</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/01_milling_external_frame/01_simulation.jpg" alt="Frame design simulation"></p>
+            <p>Next using the software mach3 I started the job. The material used was 19mm OSB. The milling bit was a 3.175mm and when I chose the tool I offset it by -0.1mm to compensate for imperfections and allow an easier fit, just like explained in the group assignment <a href="http://fabacademy.org/2020/labs/algarve/computer_controled_machining.html">Computer controlled Machining</a>.</p>
+            <p>I split the milling in two jobs holes job and contour job. The feed rate was max 2500 mm/Minutes. Gcode<a href="https://github.com/lpgn/frankenlaser/blob/master/to%20cnc/gcode/frame.tap"> here</a> and <a href="https://github.com/lpgn/frankenlaser/blob/master/to%20cnc/gcode/frame2.tap">here</a>.</p>
+            <video width="300" controls>
+                <source src="media/machine/laser_2nd_part/01_milling_external_frame/02.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+            </video>
+            <p>All the fightings had correspondent holes that where also used as clamps. This way I was sure that there would be no collisions. As I only fitted them after the holes job, and before the contour job.</p>
+            <video width="300" controls>
+                <source src="media/machine/laser_2nd_part/01_milling_external_frame/03.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+            </video>
+            <p>After the milling job me and my son started sanding the sides and the surface for a better fit and finish.</p>
+            <video width="300" controls>
+                <source src="media/machine/laser_2nd_part/01_milling_external_frame/05.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+            </video>
+            <p>All sanded here.</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/01_milling_external_frame/06.jpg" alt="Sanded frame"></p>
+            <p>The assembly went smoothly and we the only tools used were a rubber mallet and a screwdriver.</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/01_milling_external_frame/07.jpeg" alt="Frame assembly"></p>
+            <p>The frame is super sturdy! We were really happy with the result.</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/01_milling_external_frame/08.jpeg" alt="Sturdy frame"></p>
+            <hr>
+            <li id="frame_assembly_to_axis">Frame Assembly to Axis</li>
+            <p>The axes were secured with "t" slot nuts; I'm not sure if this is the correct name.</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/02_frame_assembly_to_axis/01.jpg" alt="T slot nuts"></p>
+            <p>Big mess now as I was using many more tools like a caliper, a digital level and square, so I would have a squared machine.</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/02_frame_assembly_to_axis/02.jpg" alt="Tools for assembly"></p>
+            <p>The laser tube was temporarily fit here just to see if things fit well.</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/02_frame_assembly_to_axis/03.jpg" alt="Laser tube fitting"></p>
+            <p>Here is an overlook of the machine almost finished.</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/02_frame_assembly_to_axis/04.jpg" alt="Machine overview"></p>
+            <hr>
+            <li id="wiring">Wiring</li>
+            <p>The board I m using for this assignment is an Arduino Uno. Bellow the diagramof the UNO GRBL wiring.</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/03_wiring/01.webp" alt="UNO GRBL wiring diagram"></p>
+            <hr>
+            <li id="burning_the_firmware">Burning the Firmware</li>
+            <p>I tested 3 methods to burn the <a href="https://github.com/gnea/grbl">grbl firmware</a>. The first method I used the incredibly practical software <a href="https://github.com/zkemble/AVRDUDESS">Avrdudess</a>its a gui version of AVRDUDE.</p>
+            <p>The usage was quite simple. Plug the programmer or the usb directly to the Arduino. Next Sect the Programmer, in my case usbasp, or Arduino for USB. Next select the hex file, downloaded from <a href="https://github.com/gnea/grbl">grbl repo</a>, press the button to the right in other to detect the MCU, then press Go to start the firmware burn. </p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/04_burning_firmware/01_burning_grbl.jpg" alt="Burning GRBL firmware"></p>
+            <p>The next method I tried was using the software <a href="https://lasergrbl.com/download/">LaserGRBL</a>. Clicking on Tools, Flash GRBL Firmware, then...</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/04_burning_firmware/02.jpg" alt="LaserGRBL tool"></p>
+            <p>A dialog will show that allows the selection of the target board, in my case Arduino Uno, the firmware version, the port and bound rate. Next...</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/04_burning_firmware/03.jpg" alt="LaserGRBL dialog"></p>
+            <p>The screen will show the successful completion.</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/04_burning_firmware/04.jpg" alt="Firmware burn success"></p>
+            <p>The next method I tried was compiling and burning the firmware using the Arduino IDE. For this method I followed the method described at the Gnea/GRBL <a href="https://github.com/gnea/grbl/wiki/Compiling-Grbl"> wiki</a>. First I modified the two lines bellow in other to enable dual motor for the y axis. I did were not successful so far and because of lack of time I ended up not using it, anyway I documented the method here for in the future I will try it again with more time.</p>
+            <p>Another referece for Getting dual axis self square gantry working is found at the <a href="https://forum.protoneer.co.nz/viewtopic.php?t=7588">Protoneer Product Forum</a>, but again in the future I will look into that.</p>
+            <p>Start by downloading the grbl firmware then add it as a library to the arduino.</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/04_burning_firmware/06.jpg" alt="Adding GRBL library"></p>
+            <p>Open the GrblUpload Arduino file example and compile the upload just like described in <a href="embedded_programming.html">Embedded Programming week</a> changing the MCU for Arduino UNO board.</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/04_burning_firmware/05.jpg" alt="Compiling GRBL firmware"></p>
+            <hr>
+            <li id="testing">First Test</li>
+            <p>Here I test the motor and its strength and temperature (by touch and thermometer). I do that in other to properly set the DIP switches.</p>
+            <video width="300" controls>
+                <source src="media/machine/laser_2nd_part/05_testing/04.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+            </video>
+            <p>After the tests I decide to use a 2 amps, the motor is rated for 1.5 amps but during all the tests the motor would never pass more than 1 amp and the temperature remained under 45 degrees.</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/05_testing/3a.jpg" alt="Motor testing"></p>
+            <p>The setting is done by selecting the dip switches. 4 - ON (down), 5 - OFF (UP), 6 - OFF (UP)</p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/05_testing/3b.jpg" alt="DIP switch settings"></p>
+            <p>Here I try moving the motors for the first time using the computer. The X axis moved well but the Y axis no. I believe this was due to wiring so I reviewed it all over again. I ended up disabling the double motor on the Y axis (sparsely documented) and wired the two motors in the Y axis in parallel.</p>
+            <video width="300" controls>
+                <source src="media/machine/laser_2nd_part/05_testing/01.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+            </video>
+            <hr>
+            <li id="setup_grbl">Setting up GRBL</li>
+            <p>Here I measured the effective movement against the movement commanded. I take a note and then using the <a href="https://en.wikipedia.org/wiki/Cross-multiplication#Rule_of_Three"> Rule of three</a>, basically a/b=c/d</p>
+            <p>Where in my test a=118.8 (real movement), b=25(desired movement), c=250 (current steps per mm) and d=X.</p>
+            <p>After doing the math I get rhe result 52.609 that I replace in the GRBL setting $100 and $101. </p>
+            <p class="pic"><img src="media/machine/laser_2nd_part/06_setup_calibration_grbl/01.jpg" alt="GRBL setup"></p>
+            <p>Bellow is the print of the settings I used for the the machine so far. This <a href="https://github.com/gnea/grbl/wiki/Grbl-v1.1-Configuration">wiki</a> shows all the configurations of Gnea/GRBL.</p>
+            <ol>
+                <li>$3 = (10) this inverts the Y axis</li>
+                <li>$100 = (52.609) </li>
+                <li>$101 = (52.609) </li>
+                <li>$110 = (15000) </li>
+                <li>$111 = (7000) </li>
+                <li>$120 = (300) </li>
+                <li>$121 = (300) </li>
+            </ol>
+            <p class="pic"><img src="media/machine/laser_2nd_part/06_setup_calibration_grbl/02.jpg" alt="GRBL configuration"></p>
+            <hr>
+            <li id="second_test">Second and Final Test for this assignment.</li>
+            <p>Because this assignment requires that I show the control over the machine I made. I present here a "Hello World". I am running out of time, I would love to come back to this documentation later and finish the laser cutter but now I need to focus on the other assignments. So for now its a Sharpie attached with tape.</p>
+            <video width="300" controls>
+                <source src="media/machine/laser_2nd_part/07_test_again/test.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+            </video>
+            <hr>
+        </ol>
+        <!--Hooking the laser 3rd part-->
+        <h2>For the Future...</h2>
+        <h3>Recognize opportunities for improvements in the design!</h3>
+        <p>The Machine is not finished yet. It will become a laser cutter by the end of the cycle. I will update here its updates. So far I have the following issues to solve:
+            <br><br>
+            <il>
+                <li>Make my own board</li>
+                <li>Hook the laser power to the controller board</li>
+                <li>Make sure the Arduino doesn't start the beam accidentally
+                <li>Design and build a z axis controlled manually or from the grbl in other to focus the machine on different thickness of materials.</li>
+                <li>Include safety glass with hinges + switch to prevent operation with door open</li>
+                <li>Install cooling system + switch to prevent dry operation</li>
+            </il>
+        </p>
+        <hr>
+        <h2>Dangerous Zone ahead.</h2>
+        <h3>Warning</h3>
+        <p>Wear Safety glasses, make sure you know where and how to operate the fire extinguisher, never leave laser unattended!</p>
+        <hr>
+        <h4>Risk of Fire</h4>
+        <p>The laser cutter its a machine that wants to catch on fire, if every thing is working it won't, but if there is a failure and the laser stays in the same place or if the air assist stops working there is a hight risk of fire, for this reason never leave the laser untended.</p>
+        <p class="pic"> <img src="media/machine/fire.jpg" alt="Fire risk warning"></p>
+        <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/firestinguisher.jpg" alt="Fire extinguisher"></p>
+        <hr>
+        <h4>Laser Radiation</h4>
+        <p>The laser beam can blind you or burn your skin in nano seconds for this reason never operate it with the lid open, aways wear the safety glasses for the type of laser you are using.</p>
+        <p class="pic"> <img src="media/machine/laser.jpg" alt="Laser radiation warning"></p>
+        <p>CO2 laser cutters are typically 10600nm wavelength, in our lab this is the correct glasses.</p>
+        <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/co2glasses.jpg" alt="CO2 laser safety glasses"></p>
+        <p>Diode laser cutters are typically in the range of 200-550nm wavelength, in our lab this is the correct glasses.</p>
+        <p class="pic"> <img src="media/computer_controlled_cutting/lasercutting/group/diodelaser.jpg" alt="Diode laser safety glasses"></p>
+        <hr>
+        <hr>
+        <h2>Extra Credit hum?!</h2>
+        <h3> The Future is now!
+        </h3>
+        <p>The machine week was completed with actuation and automation of my machine as far as the requirements in the <a href="https://fabacademy.org/2020/docs/fabacademy-assessment/mechanical_design,_machine_design.html">assessments page</a> for this week, but that is not stooping me from making my machine become a laser cutter! I only can't do it and at the same time finish the other assignments that I have due.</p>
+        <p>Well that is not stooping me from improving the machine in any free time that I will have.</p>
+        <h3>Lets hook the laser</h3>
+        <p class="pic"><img src="media/machine/laser_3rd_part/01_laser_wiring/01_laser_myjg100w_wire_diagram.jpg" alt="Laser wiring diagram"></p>
+        <p>I found this info at <a href="https://github.com/grbl/grbl/issues/1263">this grbl issue page</a></p>
+        <il>
+            <li>H--Should be connected to pin 13 (spindle direction) it activates the laser when hight</li>
+            <li>L--Should be connected to ground it activate the laser when LOW</li>
+            <li>P--connect to water protection switch</li>
+            <li>G--Connect to Arduino Ground</li>
+            <li>IN--Connect to Arduino PWM, pin 11, (10Kohms resistor to GND prevent start up hot) or middle leg of potentiometer</li>
+            <li>5V-- To be used in with potentiometer</li>
+        </il>
+        <br>
+        <p>As for the laser tube itself I found a beautiful diagram <a href="https://australia.desertcart.com/products/2295378-ten-high-ac-110-v-glass-laser-tube-40-w-co-2-700-mm-length-50-mm-dia-for-laser-engraving-and-cutting-machine">here</a> that I copied below.</p>
+        <p class="pic"><img src="media/machine/laser_3rd_part/01_laser_wiring/02_diagram.jpg" alt="Laser tube diagram"></p>
+        <p>Made my own diagram as well</p>
+        <p class="pic"><img src="media/machine/laser_3rd_part/01_laser_wiring/03_my_diagram.jpg" alt="Custom laser wiring diagram"></p>
+        <p>Here I show the solder I did from the Anode wire to a crocodile connector. The terminals from the laser cutter should not be soldered as the heat differences could crack the co2 laser tube.</p>
+        <p class="pic"><img src="media/machine/laser_3rd_part/01_laser_wiring/04_soldering.jpg" alt="Soldering anode wire"></p>
+        <P>This photo shows the Anode wire connected to its terminal as well as the water tube at the exit point of the coolant.</P>
+        <p class="pic"><img src="media/machine/laser_3rd_part/01_laser_wiring/05_hoked.jpg" alt="Anode wire and water tube"></p>
+        <p> Here I fit the water protection sensor switch to the laser power. This will prevent the laser from shooting without coolant.</p>
+        <p class="pic"><img src="media/machine/laser_3rd_part/01_laser_wiring/06_water_protection.jpg" alt="Water protection sensor"></p>
+        <h4>Laser Coolant</h4>
+        <p>To keep the laser tube cool, I fitted a small water fountain to a plastic container filled with automotive antifreeze. I used plane water in the past but bacterial growth always bugged me. In the future I hope to make this a closed system with a automotive radiator.</p>
+        <video width="300" controls>
+            <source src="media/machine/laser_3rd_part/02_laser_coolant/01.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+        </video>
+        <p>In this video you can see the laser tube being filled with antifreeze, sorry it gets upside down... At least you can see the coolant flowing</p>
+        <video width="300" controls>
+            <source src="media/machine/laser_3rd_part/02_laser_coolant/02.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+        </video>
+        <p>Here I test the water protection. As I remove the water pump power plug the LED turns off at the laser power source.</p>
+        <video width="300" controls>
+            <source src="media/machine/laser_3rd_part/02_laser_coolant/03_testing_water_protection.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+        </video>
+        <h4>Lets test it.</h4>
+        <p>In this test I show the laser beam without the mirrors aiming it at a wood piece. It works, quite a display of power!</p>
+        <video width="300" controls>
+            <source src="media/machine/laser_3rd_part/03_test/test_it.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+        </video>
+        <h4>Mirror Alignment</h4>
+        <p>The mirror alignment is the trickiest part.</p>
+        <p>I already had experience with laser alignment before but here follows some good tutorials on how to do it:</p>
+        <il>
+            <li>From Instructables <a href="https://www.instructables.com/Aligning-Laser-Cutter-Mirrors/">Aligning Laser Cutter Mirrors
+                    By Sythe101</a></li>
+            <li>From smoke and mirrors <a href="http://makestuffnow.com/laser-cutter-alignment"> website</a></li>
+            <li>From Make stuff now <a href="https://smokeandmirrors.store/pages/laser-beam-alignment-guide"> website</a></li>
+        </il>
+        <p>The way I have done is documented bellow.</p>
+        <ol>
+            <li>I took strips of painters tape and covered the hole in the first mirror support. Do not do this with a mirror in place as the tape glue and material when burned will stick to the mirrors ruining it!</li>
+            <li>Hit the pulse button, or in my case shorted the L terminal to ground inn the power source of the laser for a millisecond. </li>
+            <li>Then I check where the laser head hit the tape. The goal is to hit the center of the mirror support's hole using the tape as reference.</li>
+            <video width="300" controls>
+                <source src="media/machine/laser_3rd_part/04_alignment/01_first_mirror.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+            </video>
+            <li>When needed adjust the laser tube. In my case the dot was a bit to to the upper left side of the hole. So I adjusted the laser tube a bit. and got a better result next try. Next you should not move the laser tube anymore. </li><br>
+            <video width="300" controls>
+                <source src="media/machine/laser_3rd_part/04_alignment/02_shoting_again.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+            </video>
+            <li>Fit the first mirror being careful not to touch it with bare hands. I used a washer to turn and close the mirror backing nut.</li>
+            <video width="300" controls>
+                <source src="media/machine/laser_3rd_part/04_alignment/03_fitting_the_first_mirror.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+            </video>
+            <li>The first and second and third mirrors one after the other are then adjusted using the same procedure with the top and left knobs looking from behind the mirror support. The objective now is not to shoot at the middle of the second mirror but to shoot 2 times in the same spot, the first with the y gantry (first mirror) near and the second time with the gantry further like I show in the video. repeat this process for each mirror until you get to the lens.</li>
+            <video width="300" controls>
+                <source src="media/machine/laser_3rd_part/04_alignment/05_second_mirror_done.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+            </video>
+
+            <li>The lens should be fit with the concave side up. Shot again and make sure the beam is in the center and is a round burn as opposed to a half moon that would mean the beam is hitting the walls of the tube after the third mirror.</li>
+            <video width="300" controls>
+                <source src="media/machine/laser_3rd_part/04_alignment/06_fiting_the_lens.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+            </video>
+        </ol>
+        <h4>Problem and Solution</h4>
+        <p>The first issue was the y axis stopped moving for a reason I still don't get it. I tested a different stepper controller and also rewire every thing so I could debug it. </p>
+        <video width="300" controls>
+            <source src="media/machine/laser_3rd_part/05_problem_solution/y_axis_problem.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+        </video>
+        <p>In the end I decided it was not the wiring so I recompile GRBL like I explained earlier, switching the Y direction bit (pin) 6 for 7 in the file <a href="media/machine/laser_3rd_part/05_problem_solution/grbl.zip">cpu_map.h</a> and it worked. Not sure what really caused it.</p>
+        <p class="pic"><img src="media/machine/laser_3rd_part/05_problem_solution/grbl.jpg" alt="GRBL recompilation"></p>
+        <p>Next issue was the scale of the X axis was completely off. I had created a simple 10 mm square and had it cut but instead it created a long rectangle.</p>
+        <video width="300" controls title="Laser cutter test">
+            <source src="media/machine/laser_3rd_part/05_problem_solution/it_works_but_not_well.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <p>I solved the issue simply reapplying the steps per mm again to GRBL controller Eprom. and it started working as I can show in these pics.</p>
+        <p>The inside measurement of the square is 10.2mm</p>
+        <p class="pic"><img src="media/machine/laser_3rd_part/05_problem_solution/inside.jpg" alt="Inside measurement of test square"></p>
+        <p>The outside measurement of the square is 9.9mm</p>
+        <p class="pic"><img src="media/machine/laser_3rd_part/05_problem_solution/outside.jpg" alt="Outside measurement of test square"></p>
+        <p>Calculating the inside and outside measurements would give a kerf size of 0.15mm, not too bad for first tests but can be improved with better focus. But I will leave that for <a href="computer_controlled_cutting.html">Computer controlled cutting week</a>.</p>
+        <h4>Final Test</h4>
+        <video width="300" controls>
+            <source src="media/machine/laser_3rd_part/06_final_test/VID_20201019_183645.mp4" type="video/mp4"> Your browser does not support HTML5 video.
+        </video>
+        <!--another machine-->
+        <!--        
+        <h3>Solidworks designing</h3> <video width="300" controls>
+            <source src="media/machine/solidworksvideo.mp4"> Your browser does not support HTML5 video.
+        </video>
+        <h3>Machining parts in coloured MDF</h3>
+        <p class="pic"><img src="media/machine/mmexport1483928552449.jpg"></p>
+        <legend>machined parts</legend>
+        <p class="pic"><img src="media/machine/mmexport1483928595725.jpg"></p>
+        <legend>cutting the tabs from the machined parts</legend>
+        <p class="pic"><img src="media/machine/mmexport1483928590218.jpg"></p>
+        <legend>machined parts</legend>
+        <h3>Fixing the parts</h3>
+        <p>Here I create a template in order to correct holes made in the wrong place</p>
+        <video width="300" controls>
+            <source src="media/machine/preparing_template.mp4"> Your browser does not support HTML5 video.
+        </video>
+        <p class="pic"><img src="media/machine/IMG_20170412_181343_BURST2.jpg"></p>
+        <legend>Y Axis support</legend>
+        <br>
+        <p class="pic"><img src="media/machine/IMG-20170418-WA0009.jpg"></p>
+        <legend>motor for Y Axis</legend>
+        <p class="pic"><img src="media/machine/IMG-20170418-WA0011.jpg"></p>
+        <legend>motor for Y Axis</legend>
+        <p class="pic"><img src="media/machine/IMG-20170418-WA0009.jpg"></p>
+        <legend>motor for Y Axis</legend>
+
+        <video width="400" controls>
+            <source src="media/machine/yaxistest.mp4"> Your browser does not support HTML5 video.
+        </video>
+-->
+        <!-- End of your content -->
+    </div> <!-- /container -->
+    <!-- footer -->
+    <footer id="footer">
+        <p id="cclicense"> </p>
+        <p class="license"> Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br> Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">jQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+    <!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+ ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js" defer></script>
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js" defer></script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+
+    </script>
+    <script src="bootstrap/js/bootstrap.min.js" defer></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js" defer></script>
+</body>
+
+</html>

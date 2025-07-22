@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QEDKLDK8M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7QEDKLDK8M');
+
+    </script>
+    <!--  Finish Global site tag (gtag.js) - Google Analytics -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore project management techniques and tools used in the Fab Academy 2020 by Lucio Pentagna. Learn about website development, version control, and more.">
+    <meta name="author" content="Lucio Pentagna">
+    <link rel="icon" href="media/favicon.ico">
+    <title>Project Management - Fab Academy 2020 - Lucio Pentagna</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js" defer></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js" defer></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <!-- Load the menu file -->
+    <script>
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+    </script>
+</head>
+
+<body onload="menu()">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu"></ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu"></ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Insert your content here below! -->
+        <div class="jumbotron" style="width: 100%">
+            <h3>Project Management</h3>
+            <hr>
+            <h4>Individual assignment</h4>
+            <ul>
+                <li>Build a personal site describing you and your final project.</li>
+                <li>Upload it to the class archive. Work through a git tutorial.</li>
+            </ul>
+            <h4>Learning outcomes:</h4>
+            <ul>
+                <li>Explore and use website development tools</li>
+                <li>Identify and utilize version control protocol</li>
+            </ul>
+            <h4>Have you:</h4>
+            <ul>
+                <li>made a website and described how you did it</li>
+                <li>introduced yourself</li>
+                <li>documented steps for uploading files to archive</li>
+                <li>pushed to the class archive</li>
+            </ul>
+        </div>
+        <h3>Software Used</h3>
+        <ul style="list-style-type:disc">
+            <li>git</li>
+            <li>ncdu</li>
+            <li>gimp</li>
+            <li>bimp</li>
+            <li>cmd</li>
+            <li>brackets</li>
+            <li>sublime_text3</li>
+            <li>ffmpeg</li>
+        </ul>
+        <hr>
+        <h3>Student agreement</h3>
+        <p>Download it <a href="doc_students.md">here</a>.</p>
+        <h3>Useful Links</h3>
+        <ul>
+            <li><a href="http://fab.academany.org/2020/">Fab Academy Archive</a></li>
+            <li><a href="http://fabacademy.org/2020/docs/fabacademy-assessment/">Fab Academy Assignments and Assessment</a></li>
+            <li><a href="https://gitlab.fabcloud.org/academany/fabacademy/2020/labs">Gitlab 2020</a></li>
+            <li><a href="http://academy.cba.mit.edu/classes/">Neil's Classes Archive</a></li>
+            <li><a href="http://fabmodules.org/">Fab Modules</a></li>
+            <li><a href="http://mods.cba.mit.edu/">Mods</a></li>
+            <li><a href="http://nueval.fabacademy.org">Student Dashboard</a></li>
+            <li><a href="http://fab.academany.org/2020/labs/algarve/students/lucio">My Personal Website</a></li>
+        </ul>
+        <hr>
+        <h3>Making a Website</h3>
+        <h4>Useful reminders</h4>
+        <p>I keep forgetting basic stuff on HTML editing so in order to make my life easier I will start by enumerating useful codes and location of stuff like my template page:</p>
+        <p>HTML uses tags for each entry like a paragraph or a button so I enumerate the tags I will use the most while editing my pages:</p>
+        <p>ps: one should open the tag with <code>&lt;some tag inside here&gt;</code> and not forget to close the tag with <code>&lt;/same tag inside here&gt;</code></p>
+        <ul>
+            <li>The <code>&lt;p&gt;</code> element is used to create a paragraph</li>
+            <li>The <code>&lt;button&gt;</code> element is used to create a button like this <button>click me</button></li>
+            <li><a href="/exercisetemplatenew.html">this</a> is my exercise template page</li>
+            <li>The code <code>&lt;a href="replace with the address"&gt; replace with content&lt;/a&gt;</code> like that creates a link like <a href="">this</a> that directs to another page.</li>
+            <li>The code <code>&lt;p class="pic"&gt;&lt;img src="path/path/image.jpg" alt="Description of image"&gt;&lt;/p&gt;</code> adds an image to the page like the ones below</li>
+            <li>Using this code <code>&lt;pre class="prettyprint linenums"&gt;stuff inside here&lt;/pre&gt;</code> adds a terminal appearance like this:
+                <pre class="prettyprint linenums">stuff inside here</pre>
+            </li>
+            <li>To generate tables use the <a href="http://www.tablesgenerator.com/html_tables">HTML Table Generator</a>
+                <p class="pic"><img src="media/project_management/tablegen.jpg" alt="HTML Table Generator"></p>
+            </li>
+        </ul>
+        <h4>Research</h4>
+        <p>To get an idea of what my site would look like I went to the <a href="http://archive.fabacademy.org/archives/2016/master/students.html">2016 Fab Academy Student Archives</a> in order to have a look at what others have done and used the random student button.</p>
+        <p class="pic"><img src="media/project_management/randomstudent.jpg" alt="Random Student"></p>
+        <p>After reviewing a few pages I found <a href="http://archive.fabacademy.org/archives/2016/fablabkyushu/students/120/index.html">Yuji OKI's page</a> which led me to the <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org/">Massimo Menichinelli</a></p>
+        <p class="pic"><img src="media/project_management/yuji.jpg" alt="Yuji OKI's page">
+            <legend>Yuji OKI's page</legend>
+        </p>
+        <p class="pic"><img src="media/project_management/fabtemplate.jpg" alt="Fab Academy Template by Massimo Menichinelli">
+            <legend>Fab Academy Template by Massimo Menichinelli</legend>
+        </p>
+        <h4>Using Massimo's template</h4>
+        <p>On GitHub, I cloned the repository for Massimo's <a href="https://github.com/openp2pdesign/FabAcademy_Template">template</a> page to my hard drive. Then copied its contents to a directory with my name.</p>
+        <h4>Editing</h4>
+        <p>The code editors I chose to use are <a href="https://www.sublimetext.com/3">Sublime_text3</a> and <a href="http://brackets.io/">Brackets</a>.</p>
+        <h5>About Sublime_text3:</h5>
+        <p>Sublime is great for coding, diffing, and merging two codes. I especially like to use the plugin "Sublimerge3", It lets me compare 2 files and then merge portions of the code.</p>
+        <h5>About Brackets:</h5>
+        <p>Most of the time that's where I code HTML. The great feature Brackets have is to update in real-time what you code into the browser page. This way every single modification can be viewed without the need to refresh.</p>
+        <p>To install it on a macOS I simply run the following terminal commands:</p>
+        <pre class="prettyprint linenums">$ brew install --cask sublime-text</pre>
+        <pre class="prettyprint linenums">$ brew install --cask brackets</pre>
+        <p class="pic"><img src="media/project_management/brackets.jpg" alt="Brackets Snapshot">
+            <legend>Brackets Snapshot</legend>
+        </p>
+        <h4>Customization of the template's CSS</h4>
+        <p>CSS lets you style your HTML. This can be done in 3 ways: Inline, Internally, and externally.</p>
+        <p>As the current template uses an external method, and it's a huge time saver, that's how I went with. In some places of my website, for lack of better understanding of how CSS works I might have used inline styling.</p>
+        <p>The external style files are <a href="bootstrap/css/bootstrap.css">bootstrap.css</a> and <a href="media/fabacademy.css">fabacademy.css</a>. These files are referenced in the &lt;head&gt; section at the beginning of each HTML file.</p>
+        <p>So far I changed only a few settings in order to achieve the current settings and they are in the fabacademy.css file:</p>
+        <ul>
+            <li>The image container max-width from 920px to a variable 95%;</li>
+            <li>The legend margin was increased from 2px to 10px</li>
+        </ul>
+        <p>In the bootstrap.css I also did some changes as exemplified below:</p>
+        <ul>
+            <li>The background was changed to black by adding the code <code>background-color: #ffffff;</code> in the html bracket</li>
+            <li>The text was justified, the font color and style was modified in the body bracket section with the code: <br> <code> text-align: justify;<br> font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;<br> color: green;
+                </code></li>
+            <li>Also modified the vertical alignment of images in the img bracket with the code: <br><code> vertical-align: center;</code> </li>
+        </ul>
+        <p>As I had near 0 knowledge of HTML editing or CSS and to better understand HTML Prior to the above modifications I watched <a href="https://www.youtube.com/watch?v=PeWIU7UQ_rc">Massimo's lecture on HTML and CSS</a></p>
+        <p class="pic"><img src="media/project_management/maxlecturehtml.jpg" alt="Massimo's lecture on HTML and CSS"></p>
+        <p>Also used HTML references at <a href="http://www.w3schools.com/tags/default.asp">w3schools.com</a></p>
+        <p class="pic"><img src="media/project_management/w3chools.jpg" alt="W3Schools"></p>
+        <h4>Website Folder Structure</h4>
+        <p>Currently, the folder structure is quite simple and will need some cleanup.</p>
+        <h5>Folder Structure:</h5>
+        <ul>
+            <li>All HTML files are in the root <code>/</code> folder.</li>
+            <p>The exercises or weeks are within HTML files named after the number of the week they correspond with the EX: week01.html, week01b.html. Because I am having to adapt this website to the current 2018 Fab Academy requirements I decided in order to differentiate the files adding a year number in front of the name of the file: Ex. 2018week01.html</p>
+            <li>An exercise template file is located here <a href="exercisetemplate.html">"exercisetemplate.html"</a></li>
+            <li>All multimedia files or codes are in the folder <code>/media</code></li>
+            <p>This includes files like: STL, PNG, JPG, MP4, ZIP, etc...</p>
+            <li>All the CSS files are in the <code>/bootstrap</code> folder</li>
+        </ul>
+        <p class="pic"><img src="media/project_management/img8.jpg" alt="Current folder structure">current folder structure</p>
+        <h4>Installing ncdu and using it in order to check for big files</h4>
+        <p>In order to save space on the server as well as have a faster loading website we need to constantly make sure we don't miss big uncompressed image and video files</p>
+        <ol>
+            <li>On a Linux terminal type:</li>
+            <pre class="prettyprint linenums">sudo apt install ncdu</pre>
+            <p class="pic"><img src="media/project_management/installing_ncdu.jpg" alt="Installing ncdu"></p>
+            <li>Start ncdu on a Linux terminal by typing:</li>
+            <pre class="prettyprint linenums">ncdu</pre>
+            <p>ncdu will open and with the up and down arrows and enter key you will be able to navigate your directories.</p>
+            <p class="pic"><img src="media/project_management/navigating_with_ncdu.jpg" alt="Navigating with ncdu"></p>
+            <p>ncdu will classify the biggest files first and show the more hash tag characters "#" for the biggest folders or files.</p>
+            <p class="pic"><img src="media/project_management/finding_the_bigest_file_with_ncdu.jpg" alt="Finding the biggest file with ncdu"></p>
+            <p>In this case, the biggest file is a video file for my final project sketch</p>
+        </ol>
+        <h4>Compressing the biggest files</h4>
+        <p>For the video file we will use ffmpeg</p>
+        <ol>
+            <li>Start by installing ffmpeg on a Linux terminal:</li>
+            <pre class="prettyprint linenums">sudo apt install ffmpeg</pre>
+            <li>Next run ffmpeg on the big video file as per my example:</li>
+            <pre class="prettyprint linenums">ffmpeg -i input_video -vcodec libx264 -b:v 1000k -vf scale=-2:720 -an output_video.mp4</pre>
+        </ol>
+        <p>The code above should give you a 720p video without audio for more examples check <a href="http://academy.cba.mit.edu/classes/computer_design/video.html">Neil's ffmpeg cheatsheet</a></p>
+        <h4>For the images you can use a software called Gimp and a plugin called bimp.</h4>
+        <ol>
+            <p>I use a package managing software called Chocolatey in order to install some Windows software.</p>
+            <p>It works similarly to apt but for Windows.</p>
+            <li>On a Windows administrative shell run:</li>
+            <pre class="prettyprint linenums">choco install gimp</pre>
+            <li>Then download bimp from its <a href="https://alessandrofrancesconi.it/projects/bimp/">website</a> and then install it so you can run it under gimp.</li>
+            <li>After installation is finished run gimp and select the batch image Manipulation plugin</li>
+            <p class="pic"><img src="media/project_management/bimp_01_start.jpg" alt="BIMP Start"></p>
+            <li>In order to load a previous set or to save a new one you have to press the Add button then select the desired operation</li>
+            <p class="pic"><img src="media/project_management/bimp_02_adding.jpg" alt="BIMP Adding"></p>
+            <li>In my case since I had the set saved already I selected "load set"</li>
+            <p class="pic"><img src="media/project_management/bimp_03_load_set.jpg" alt="BIMP Load Set"></p>
+            <li>Then select the set, in my case "readyforweb.bimp"</li>
+            <p class="pic"><img src="media/project_management/bimp_04_selecting_set_made_prior.jpg" alt="BIMP Selecting Set"></p>
+            <li>In order to create or modify the behavior of the plugin click on the add to add a process or click on one of the ones you have saved prior</li>
+            <p class="pic"><img src="media/project_management/bimp_05_edditing_properity.jpg" alt="BIMP Editing Property"></p>
+            <li>Inside the resize set I selected the options I wanted specifically the width to 800px</li>
+            <p class="pic"><img src="media/project_management/bimp_06_edditing_file_size_properity.jpg" alt="BIMP Editing File Size"></p>
+            <li>Then I went to the other process and opted for 75 compression ratio as well as convert the format to jpeg</li>
+            <p class="pic"><img src="media/project_management/bimp_07_edditing_compression_and_file_type%20properity.jpg" alt="BIMP Editing Compression"></p>
+            <li>Then I selected all images I needed to convert at once and applied the changes</li>
+            <p class="pic"><img src="media/project_management/bimp_08_selecting_image_files_for_convertion.jpg" alt="BIMP Selecting Images"></p>
+            <li>Next copy converted images to your folder if you did not specify it before.</li>
+        </ol>
+        <h4>Installing and using git</h4>
+        <p>First I am using macOS. With that in mind and with many possible terminal applications to be installed it's useful to have
+            <a href="http://brew.sh/">Brew</a> it helps with all installations one needs to do on Terminal and desktop.
+        </p>
+        <p>To install open terminal and run:</p>
+        <pre class="prettyprint linenums">$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</pre>
+        <p>Next install Cask it helps installing desktop app</p>
+        <pre class="prettyprint linenums">$ brew tap caskroom/cask</pre>
+        <p>Next install Github desktop that will include Git as well</p>
+        <pre class="prettyprint linenums">$ brew install --cask github</pre>
+        <p class="pic"><img src="media/project_management/github.jpg" alt="Github Snapshot">
+            <legend>Github Snapshot</legend>
+        </p>
+        <h4>Working with your Repository</h4>
+        <p>Now that I have the website set locally it's time to upload it to the Fab Academy repository.</p>
+        <p>To do that I will have to save my public ssh key into the Fab Academy's gitlab website it will let me access it using git without the need to type my password every time. After that, it's necessary to clone your repo to the local drive to start working on it.</p>
+        <p>A source of info on how to do it is at the ssh help at <a href="https://gitlab.fabcloud.org/help/ssh/README">gitlab</a>, following is how I did it.</p>
+        <h5>Step-by-step instructions:</h5>
+        <ol>
+            <li>Since I previously had installed git I go ahead to the directory I want to work and create an ssh key with:</li>
+            <pre class="prettyprint linenums">ssh-keygen -t rsa -b 4096 -C "your_email@domain.com"</pre>
+            <p>This will generate the SSH key and the label of the key will be whatever you include inside the quotes</p>
+            <pre class="prettyprint linenums">Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/someone/.ssh/id_rsa):
+</pre>
+            <li>After a while, a message will ask to either leave the location and name of the new SSH key as default or make a new one. I chose a new typing a location and a new file name.</li>
+            <pre class="prettyprint linenums">Enter file in which to save the key (/Users/someone/.ssh/id_rsa): /Users/someone/.ssh/id_rsafab
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /Users/someone/.ssh/id_rsafab.
+Your public key has been saved in /Users/someone/.ssh/id_rsafab.pub.
+The key fingerprint is:
+SHA256:IheXdVbB4DChb7Lyo5nJPHhNyExDKAFw5kADUTMR7MU your_email@domain.com
+The key's randomart image is:
++---[RSA 4096]----+
+|XBX= .    =.++o. |
+| =+oE .  + *  .  |
+| ..o .. +   .    |
+|  .   oo .       |
+|    .+ooS o      |
+|     o+..+       |
+|     ..o.        |
+|    .oo*o        |
+|     .Bo..       |
++----[SHA256]-----+
+
+</pre>
+            <li>Show your ssh key running </li>
+            <pre class="prettyprint linenums">$ cat ~/.ssh/id_rsafab.pub</pre>
+            <li>Next you can select the text on the screen that will look like this </li>
+            <pre class="prettyprint linenums">ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDRdz+KsRwD2jgojGESZzVQNtFT0uWLGZAieKRNMy4ytav//ABgEB5eAWFTU/YfjQn2apnt+YgXC7aWfjk8Ta5/AQblQ2r/randomfakekeyrandomfakekeyrandomfakekeyrandomfakekeyrandomfakekeyrandomfakekeyrandomfakekeyrandomfakekeyrandomfakekey+rEk6OvIq5F46sKZclXdCLFbj4b9CP5wlFVWm/vq/tgeEbc701587xVCSq/7Ssqv5GNbipbq8eGElKiM4J7h1xlEJmSb06uuqk7PswQjDhV2RFHTl6sNM45qJw30y9O3WkfddFmW5nQ8roP880ef0rvvWK51nvUpmm37rIrHa+rdFpPc9U0bRZ5BhYpp/wMnVHLmZB8W/9Wf2TN0TD/H1AWjvQ1O2EJxKn7GStVGUzopCcIwt+jEjcMZRC/pRZnvEjH30FAFv5F+kYQwmsKcNuZz+qLWF8D5sjVySHSdERLJ3Y7h4ObCJt0ll5+NJ7syf1S7gCotvT910Evorq1f2jb4l6Lt1gJz7uXA03va0HhaBGTKTB0mF7NRJusotyhGWncXgNTkZOkfFQ5Ps1xAcLRmB0uMt0/3MnS7ONu/TfJVuSqYqUuuUtz9hqbke4I4JsD+X7e1a4gAvsFK/nv6Usf0m8aQ== your_email@domain.com</pre>
+            <li>Because my key is not default I need to let the SSH agent know where it is typing:</li>
+            <pre class="prettyprint linenums">$ eval $(ssh-agent -s)
+Agent pid 9284
+
+$ ssh-add ~/.ssh/id_rsafab
+Identity added: /Users/someone/.ssh/id_rsafab (/Users/someone/.ssh/id_rsafab)
+
+</pre>
+            <li>Next is to load the public key to gitlab and copy your repo ssh key address, in case you do not know it. Go to <a href="https://gitlab.fabcloud.org/academany/fabacademy/2018/labs">gitlab.fabcloud.org</a></li>
+            <li>Login with the <a href="fablabs.io">fablabs.io</a></li>
+            <li>Locate your lab and then your student name;</li>
+            <li>There you can copy your repo ssh address by switching html to ssh.</li>
+            <p class="pic"><img src="media/project_management/img3.jpg" alt="GitLab SSH Address"></p>
+            <li>Next add your key to your user profile</li>
+            <p class="pic"><img src="media/project_management/img4.jpg" alt="GitLab User Profile"></p>
+            <li>Now it's time to clone your repo and start with the "mantra"... so with your prior copied ssh address type the following</li>
+            <pre class="prettyprint linenums">git clone git@gitlab.fabcloud.org:academany/fabacademy/2018/labs/yourlab/students/yourname.git</pre>
+            <li>Now that your repo is cloned locally you can either start editing your HTML right there or paste your already edited website or template in the directory created.</li>
+            <li>Now the "MANTRA"</li>
+            <pre class="prettyprint linenums">git pull
+git add --all
+git commit -m yourmessagehere
+git push</pre>
+            <p>This series of commands will make sure:</p>
+            <ol>
+                <li>First (git pull) you are updated with your origin</li>
+                <li>Second you add all new alterations to your local branch (git add --all)</li>
+                <li>Third you committed all changes (git commit -m yourmessagehere)</li>
+                <li>And last you sent the commits to your origin (git push)</li>
+            </ol>
+        </ol>
+        <hr>
+        <h4>Git and Bash Notes:</h4>
+        <p>(Notes here are to be added along the course as a cheat list of git commands)</p>
+        <ul>
+            <li>When I want to know info about the origin of a repo</li>
+            <pre class="prettyprint linenums">git remote show origin</pre>
+            <li>Copy an ssh key to a server</li>
+            <pre class="prettyprint linenums">ssh-copy-id -i ~/.ssh/mykey.pub user@host</pre>
+            <li>When I want to push an existing repo commit by commit to a new address</li>
+            <pre class="prettyprint linenums">git remote add gitlab git@gitlab.fabcloud.org:Lucio/frankenlaser.git
+git rev-list --reverse master | ruby -ne 'i ||= 0; i += 1; puts $_ if i % 1 == 0' | xargs -I{} git push gitlab +{}:refs/heads/master</pre>
+        </ul>
+        <h4>Creating a new Repo</h4>
+        <p>I wanted to include instructions on how to create a new repo and upload it to GitHub for future reference even it was not how I did</p>
+        <ol>
+            <li>First it's necessary to be on the working directory and then make it a git directory with:</li>
+            <pre class="prettyprint linenums">git init</pre>
+            <li>Next add all files to the local repo and stages them for commit</li>
+            <pre class="prettyprint linenums">git add .</pre>
+            <li>Next needs to be committed with:</li>
+            <pre class="prettyprint linenums">git commit -m "First commit"</pre>
+            <li>Now create a new repository on GitHub</li>
+            <p class="pic"><img src="media/project_management/img5.jpg" alt="GitHub New Repository"></p>
+            <p class="pic"><img src="media/project_management/img6.jpg" alt="GitHub New Repository"></p>
+            <li>Then copy the remote repository address</li>
+            <p class="pic"><img src="media/project_management/img7.jpg" alt="GitHub Remote Address"></p>
+            <li>Now add a remote with the copied address</li>
+            <pre class="prettyprint linenums">git remote add origin copied_address_here</pre>
+            <li>Finally push everything with:</li>
+            <pre class="prettyprint linenums">git push -u origin master</pre>
+            <p>And it's done</p>
+            <li>Notes on git:</li>
+            <li>Notes on ffmpeg:</li>
+            <ul>
+                <li>Cut from ??:??:?? time to ??:??:??
+                    <pre class="prettyprint linenums">ffmpeg -i videoinput.mp4 -ss 00:00:11 -t 00:00:22 -async 1 videooutput.mp4</pre>
+                </li>
+                <li>Same result to cut can be obtained with similar code
+                    <pre class="prettyprint linenums">ffmpeg -ss 00:00:00 -to 00:00:37 -i videoinput.mp4 -c copy videooutput.mp4</pre>
+                </li>
+                <li>Create a gif and cut video
+                    <pre class="prettyprint linenums">ffmpeg -i input.mp4 -ss 00:00:00.000 -pix_fmt rgb24 -r 10 -s 320x240 -t 00:00:10.000 output.gif</pre>
+                </li>
+                <li>Compress audio and video
+                    <pre class="prettyprint linenums">ffmpeg -i input.mp4  -vcodec libx264 -crf 25 -preset medium -vf scale=-2:360 -acodec libmp3lame -q:a 4 -ar 48000 -ac 2 output.mp4</pre>
+                </li>
+                <li>Compress audio and video of all files in a certain Directory and write compressed files to another dir.
+                    <pre class="prettyprint linenums">for i in *.mp4; do ffmpeg -i "$i"  -vcodec libx264 -crf 25 -preset medium -vf scale=-2:360 -acodec libmp3lame -q:a 4 -ar 48000 -ac 2 "./1/${i%.*}.mp4"; done</pre>
+                </li>
+                <li>Compress video and remove audio with -an
+                    <pre class="prettyprint linenums">ffmpeg -i input.mp4  -vcodec libx264 -crf 25 -preset medium -vf scale=-2:360 -an -q:a 4 -ar 48000 -ac 2 output.mp4</pre>
+                </li>
+                <li>Rotate Videos 90 degrees clockwise
+                    <pre class="prettyprint linenums">ffmpeg -i input.mp4 -vf "transpose=1" output.mp4</pre>
+                </li>
+            </ul>
+        </ol>
+        <!-- End of your content -->
+    </div> <!-- /container -->
+    <!-- footer -->
+    <footer id="footer">
+        <p id="cclicense"></p>
+        <p class="license">Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br> Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer> <!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js" defer></script>
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js" defer></script>
+    <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+    </script>
+    <script src="bootstrap/js/bootstrap.min.js" defer></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js" defer></script>
+</body>
+
+</html>

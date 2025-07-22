@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QEDKLDK8M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7QEDKLDK8M');
+    </script>
+    <!-- Finish Global site tag (gtag.js) - Google Analytics -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore Lucio Pentagna's final project for Fab Academy 2020, featuring an innovative irrigation system controller with detailed documentation and multimedia presentations.">
+    <meta name="author" content="Lucio Pentagna">
+    <link rel="icon" href="media/favicon.ico">
+    <title>Final Project - Fab Academy 2020 - Lucio Pentagna</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- 3D files viewer -->
+    <script  src="media/jsc3d_ie.min.js"></script>
+    <script  src="media/jsc3d.min.js"></script>
+    <script  src="media/jsc3d.webgl.js"></script>
+    <script  src="media/jsc3d.touch.js"></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Load the menu file -->
+    <script>
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+    </script>
+</head>
+
+<body onload="menu()">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu"></ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu"></ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Insert your content here below! -->
+        <div class="jumbotron" style="width: 100%">
+            <h3>Final Project</h3>
+            <hr>
+            <h4>Individual Project</h4>
+            <hr>
+            <ul>
+                <li>Document a final project masterpiece that integrates the range of units covered, answering: What does it do? Who's done what beforehand? What did you design? What materials and components were used? Where did they come from? How much did they cost? What parts and systems were made? What processes were used? What questions were answered? What worked? What didn't? How was it evaluated? What are the implications?</li>
+                <li>Prepare a summary slide and a one-minute video showing its conception, construction, and operation. Your project should incorporate 2D and 3D design, additive and subtractive fabrication processes, electronics design and production, embedded microcontroller interfacing and programming, system integration and packaging.</li>
+                <li>Where possible, you should make rather than buy the parts of your project. Projects can be separate or joint, but need to show individual mastery of the skills and be independently operable. Present your final project, weekly and group assignments, and documentation.</li>
+            </ul> <br>
+            <h4>Learning outcomes:</h4>
+            <ul>
+                <li>Create your own integrated design</li>
+                <li>Demonstrate 2D & 3D modeling capabilities applied to your own designs</li>
+                <li>Select and apply appropriate additive and subtractive techniques</li>
+                <li>Demonstrate competence in design, fabrication, and programming of your own fabbed microcontroller PCB, including an input & output device</li>
+            </ul><br>
+            <h4>Have you?</h4>
+            <ul>
+                <li>Made your slide: 1920 x 1080 pixels with your name, project name, Fab Lab name, a photo/render/sketch of your project, a brief description of what your project is/does</li>
+                <li>Made a ~1 minute (10MB/1080p) video of you explaining your project</li>
+                <li>Made a separate Final Project page that briefly summarizes your project</li>
+                <li>Included the BOM (Bill of Materials) for your project</li>
+                <li>Linked from this page to any weeks that you worked on your final project</li>
+                <li>Linked to your presentation.png and presentation.mp4</li>
+                <li>Included all of your original design files in the archive (2D & 3D, board files & code). No external hosting of final project files - discuss file sizes with your instructor</li>
+                <li>Included the license you chose</li>
+                <li>Acknowledged work done by others</li>
+            </ul>
+        </div>
+        <hr>
+        <!--  content here  -->
+        <h4>Presentation Slide</h4>
+        <hr>
+        <p class="pic"><img src="slide.png" alt="Presentation slide"></p>
+        <hr>
+
+        <h4>Presentation Video</h4>
+        <hr>
+
+        <p class="pic"><video controls title="Project presentation video">
+                <source src="video.mp4" type="video/mp4">Your browser does not support HTML5 video.
+            </video></p>
+        <hr>
+        <h4 id="diagram">Connection Diagram</h4>
+        <p>Here is the General Diagram of the whole system.</p>
+        <p class="pic left"><img src="media/final_project/diagram.jpg" alt="Connection diagram"></p>
+        <hr>
+        <h4>Links</h4>
+        <p>Final Project summary <a href="finalresult.html">page</a></p>
+        <hr>
+        <h4>All the files</h4>
+        <hr>
+        <p>What did you design?</p>
+        <ol>
+            <li>GitLab Fabcloud <a href="https://gitlab.fabcloud.org/Lucio/e-splash/">project page</a> containing the PCB, enclosure, and firmware.</li>
+            <li><a href="https://gitlab.fabcloud.org/Lucio/e-splash/-/tree/V5-Development/Firmware">Firmware</a></li>
+            <li><a href="https://gitlab.fabcloud.org/Lucio/e-splash/-/tree/V5-Development/pcb/ESPlash">Board Files</a></li>
+            <li><a href="https://gitlab.fabcloud.org/Lucio/e-splash/-/tree/V5-Development/board_enclosure">Enclosure</a></li>
+        </ol>
+        <hr>
+        <h4>What does it do?</h4>
+        <hr>
+        <p>My final project is an irrigation system controller. It allows me to schedule irrigation events by zone and time, and it also presents humidity and temperature. The PCB has extra pins for expansion.</p>
+        <hr>
+        <h4>Who's done what beforehand?</h4>
+        <hr>
+        <p>There are a number of companies that sell irrigation controller systems.</p>
+        <p>On the <a href="https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText=irrigation+timer+phone&isPremium=y&secondFlag=true">Alibaba</a> website, we can see many options with an almost infinite price range, as well as capabilities.</p>
+        <p class="pic"><img src="media/applicationsimplications/alibaba.jpg" width="400" alt="Alibaba irrigation systems"></p>
+        <p><a href="http://archive.fabacademy.org/2018/labs/fablabkochi/students/jogin-francis/project.html">JOGIN FRANCIS</a> made a really nice automatic valve for irrigation automation that could definitely add to my project, but for now, I will focus more on the interface and controller and use commercial valves.</p>
+        <p class="pic"><img src="http://archive.fabacademy.org/2018/labs/fablabkochi/students/jogin-francis/presentation.png" width="400" alt="Jogin Francis irrigation project"></p>
+        <p><a href="http://archive.fabacademy.org/archives/2017/fablabaldeias/students/375/">João Milheiro</a> also made an irrigation system. He is using it to control the environment of a mushroom growing kit.</p>
+        <p class="pic"><img src="http://archive.fabacademy.org/archives/2017/fablabaldeias/students/375/presentation.png" width="400" alt="João Milheiro irrigation project"></p>
+        <hr>
+        <h4>What did you design?</h4>
+        <hr>
+        <p>I designed the PCB that has on its center an ESP32 and relays for the activation of various equipment like solenoid valves, a pump, and a sensor.</p>
+        <p>I also designed the waterproof enclosure as well as a gasket.</p>
+        <p>Finally, I designed the web interface to allow connectivity and operation of the system.</p>
+        <p>I did not design valves, sensors, actuators, or power supplies. These were commercially available items that were integrated into my final project.</p>
+        <hr>
+        <h4>What materials and components were used?</h4>
+        <h4>Where did they come from?</h4>
+        <h4>How much did they cost?</h4>
+        <hr>
+
+        <p>To answer the questions above, I made a spreadsheet.</p>
+        <style type="text/css">
+            table.tableizer-table {
+                font-size: 12px;
+                border: 1px solid #CCC;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .tableizer-table td {
+                padding: 4px;
+                margin: 3px;
+                border: 1px solid #CCC;
+            }
+
+            .tableizer-table th {
+                background-color: #104E8B;
+                color: #FFF;
+                font-weight: bold;
+            }
+        </style>
+        <table class="tableizer-table">
+            <thead>
+                <tr class="tableizer-firstrow">
+                    <th scope="col">Materials and components</th>
+                    <th scope="col">Purpose</th>
+                    <th scope="col">Source</th>
+                    <th scope="col">Links</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Unit Price</th>
+                    <th scope="col">Total Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>MDF Forescolor</td>
+                    <td>for the enclosure</td>
+                    <td>Fablab Stock</td>
+                    <td>http://www.forescolor.com/product/</td>
+                    <td>900mm2</td>
+                    <td> $0.000027/mm2</td>
+                    <td> $0.02</td>
+                </tr>
+                <tr>
+                    <td>Silicone</td>
+                    <td>for the gasket</td>
+                    <td>Fablab stock</td>
+                    <td>https://www.amazon.es/LETS-RESIN-silicona-relaci%C3%B3n-manualmente/dp/B07V5FFPWC/ref=sr_1_109?dchild=1&keywords=silicone+molde&qid=1601471159&sr=8-109</td>
+                    <td>50g</td>
+                    <td> $0.05/gram</td>
+                    <td> $2.39</td>
+                </tr>
+                <tr>
+                    <td>Epoxy resin</td>
+                    <td>to further waterproof the interior of the enclosure and help with the light refraction of the LEDs</td>
+                    <td>Fablab stock</td>
+                    <td>https://www.amazon.es/gp/product/B07KQ6Q5CB/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1</td>
+                    <td>50ml</td>
+                    <td> $0.01/ml</td>
+                    <td> $0.60</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>Total</td>
+                    <td> $3.01</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <p>Electronics Board</p>
+        <style type="text/css">
+            table.tableizer-table {
+                font-size: 12px;
+                border: 1px solid #CCC;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .tableizer-table td {
+                padding: 4px;
+                margin: 3px;
+                border: 1px solid #CCC;
+            }
+
+            .tableizer-table th {
+                background-color: #104E8B;
+                color: #FFF;
+                font-weight: bold;
+            }
+        </style>
+        <table class="tableizer-table">
+            <thead>
+                <tr class="tableizer-firstrow">
+                    <th scope="col">Value</th>
+                    <th scope="col">Package</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Source Links</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Unit Price</th>
+                    <th scope="col">Total Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PCB blank</td>
+                    <td>&nbsp;</td>
+                    <td>Proto Board Copper Clad FR1, Single Sided, 1 oz. 5.00" x 4.00" (127.0mm x 101.6mm)</td>
+                    <td>https://www.digikey.com/product-detail/en/bantam-tools/MT1004/1932-1038-ND/8567212</td>
+                    <td>1</td>
+                    <td> $2.44</td>
+                    <td> $2.44</td>
+                </tr>
+                <tr>
+                    <td>FTDI-SMD-HEADER</td>
+                    <td>1X06SMD</td>
+                    <td>CONN HEADER R/A 6POS 2.54MM</td>
+                    <td>https://www.digikey.com/product-detail/en/adam-tech/PH1RB-06-UA/2057-PH1RB-06-UA-ND/9830592</td>
+                    <td>1</td>
+                    <td> $0.18</td>
+                    <td> $0.18</td>
+                </tr>
+                <tr>
+                    <td>22-23-2021</td>
+                    <td>22-23-2021</td>
+                    <td>CONN HEADER VERT 2POS 2.54MM</td>
+                    <td>https://www.digikey.com/products/en?keywords=22-23-2021</td>
+                    <td>1</td>
+                    <td> $0.17</td>
+                    <td> $0.17</td>
+                </tr>
+                <tr>
+                    <td>header2x6</td>
+                    <td>2X03</td>
+                    <td>CONN HEADER VERT 6POS 2.54MM</td>
+                    <td>https://www.digikey.com/product-detail/en/samtec-inc/TSW-103-07-F-D/SAM10846-ND/2685876</td>
+                    <td>2</td>
+                    <td> $0.48</td>
+                    <td> $0.96</td>
+                </tr>
+                <tr>
+                    <td>SWITCH</td>
+                    <td>SWITCH TACTILE SPST-NO 50MA 12V</td>
+                    <td>SWITCH TACTILE SPST-NO 50MA 12V</td>
+                    <td>https://www.digikey.com/product-detail/en/e-switch/TL3305BF260QG/EG5354CT-ND/5816199</td>
+                    <td>2</td>
+                    <td> $0.20</td>
+                    <td> $0.40</td>
+                </tr>
+                <tr>
+                    <td>0.1uF</td>
+                    <td>C1206FAB</td>
+                    <td>CAP CER 0.1UF 50V X7R 1206</td>
+                    <td>https://www.digikey.com/product-detail/en/kemet/C1206C104K5RAC7800/399-C1206C104K5RAC7800CT-ND/411524</td>
+                    <td>2</td>
+                    <td> $0.11</td>
+                    <td> $0.22</td>
+                </tr>
+                <tr>
+                    <td>100uF</td>
+                    <td>C1206FAB</td>
+                    <td>CAP CER 100UF 10V X5R 1206</td>
+                    <td>https://www.digikey.com/product-detail/en/tdk-corporation/C3216X5R1A107M160AC/445-6007-1-ND/2444048</td>
+                    <td>1</td>
+                    <td> $1.49</td>
+                    <td> $1.49</td>
+                </tr>
+                <tr>
+                    <td>15pf</td>
+                    <td>C1206FAB</td>
+                    <td>CAP CER 15PF 50V 1206</td>
+                    <td>https://www.digikey.com/product-detail/en/kemet/C1206C150K5GACTU/399-9314-1-ND/3522832</td>
+                    <td>2</td>
+                    <td> $0.19</td>
+                    <td> $0.38</td>
+                </tr>
+                <tr>
+                    <td>1nF</td>
+                    <td>C1206FAB</td>
+                    <td>CAP CER 1206 1NF 250V X7R 10%</td>
+                    <td>https://www.digikey.com/product-detail/en/kemet/C1206C102KARECAUTO/399-17173-1-ND/8563714</td>
+                    <td>1</td>
+                    <td> $0.27</td>
+                    <td> $0.27</td>
+                </tr>
+                <tr>
+                    <td>ESP32-WROOM-32 (16MB)</td>
+                    <td>ESP-WROOM-32</td>
+                    <td>WIFI MODULE 128MBITS SPI FLASH</td>
+                    <td>https://www.digikey.com/product-detail/en/espressif-systems/ESP32-WROOM-32-16MB/1904-1020-2-ND/9381713</td>
+                    <td>1</td>
+                    <td> $4.50</td>
+                    <td> $4.50</td>
+                </tr>
+                <tr>
+                    <td>LED</td>
+                    <td>LED1206</td>
+                    <td>Standard LEDs - SMD 1206 Blue</td>
+                    <td>https://eu.mouser.com/productdetail/lumex/sml-lx1206usbc-tr?qs=UWUCXFQQ%252bdkNnUihARaICw==</td>
+                    <td>7</td>
+                    <td> $1.45</td>
+                    <td> $10.15</td>
+                </tr>
+                <tr>
+                    <td>100ohm</td>
+                    <td>R1206</td>
+                    <td>RES SMD 100 OHM 1% 1/4W 1206</td>
+                    <td>https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-8AEB101V/P100BCCT-ND/3069515</td>
+                    <td>5</td>
+                    <td> $0.57</td>
+                    <td> $2.85</td>
+                </tr>
+                <tr>
+                    <td>10k</td>
+                    <td>R1206</td>
+                    <td>RES SMD 10K OHM 1% 1/4W 1206</td>
+                    <td>https://www.digikey.com/product-detail/en/bourns-inc/CRT1206-BY-1002ELF/CRT1206-BY-1002ELFCT-ND/1775051</td>
+                    <td>3</td>
+                    <td> $0.57</td>
+                    <td> $1.71</td>
+                </tr>
+                <tr>
+                    <td>1.2Mohm</td>
+                    <td>R1206</td>
+                    <td>RES SMD 1.2M OHM 1% 1/4W 1206</td>
+                    <td>https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-8GEYJ125V/P1-2MECT-ND/203263</td>
+                    <td>1</td>
+                    <td> $0.10</td>
+                    <td> $0.10</td>
+                </tr>
+                <tr>
+                    <td>1.5Mohm</td>
+                    <td>R1206</td>
+                    <td>RES SMD 1.5M OHM 1% 1/4W 1206</td>
+                    <td>https://www.digikey.com/product-detail/en/rohm-semiconductor/KTR18EZPF1504/RHM1-5MAICT-ND/4071441</td>
+                    <td>1</td>
+                    <td> $0.18</td>
+                    <td> $0.18</td>
+                </tr>
+                <tr>
+                    <td>150ohm</td>
+                    <td>R1206</td>
+                    <td>RES SMD 15 OHM 1% 1/4W 1206</td>
+                    <td>https://www.digikey.com/product-detail/en/yageo/RC1206JR-07150RL/311-150ERCT-ND/732170</td>
+                    <td>2</td>
+                    <td> $0.10</td>
+                    <td> $0.20</td>
+                </tr>
+                <tr>
+                    <td>1K</td>
+                    <td>R1206</td>
+                    <td>RES SMD 1K OHM 1% 1/4W 1206</td>
+                    <td>https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-8AEB102V/P1-0KBCCT-ND/3069520</td>
+                    <td>4</td>
+                    <td> $0.57</td>
+                    <td> $2.28</td>
+                </tr>
+                <tr>
+                    <td>220ohm</td>
+                    <td>R1206</td>
+                    <td>RES SMD 220 OHM 1% 1/4W 1206</td>
+                    <td>https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF1206FT220R/RMCF1206FT220RCT-ND/2418647</td>
+                    <td>4</td>
+                    <td> $0.10</td>
+                    <td> $0.40</td>
+                </tr>
+                <tr>
+                    <td>SRD-05VDC-SL-C</td>
+                    <td>RELAY_SRD-05VDC-SL-C</td>
+                    <td>SRD-5VDC-SL-C 5 Pin PCB Type</td>
+                    <td>https://www.banggood.com/Mini-5V-DC-Power-Relay-SRD-5VDC-SL-C-5-Pin-PCB-Type-p-930170.html?rmmds=buy&cur_warehouse=CN</td>
+                    <td>4</td>
+                    <td> $1.99</td>
+                    <td> $7.96</td>
+                </tr>
+                <tr>
+                    <td>ACS712</td>
+                    <td>SO08</td>
+                    <td>SENSOR CURRENT HALL 20A AC/DC</td>
+                    <td>https://www.digikey.com/product-detail/en/allegro-microsystems/ACS712ELCTR-20A-T/620-1190-2-ND/1284594</td>
+                    <td>1</td>
+                    <td> $2.32</td>
+                    <td> $2.32</td>
+                </tr>
+                <tr>
+                    <td>Diode</td>
+                    <td>SOD123</td>
+                    <td>DIODE GEN PURP 100V 200MA SOD123</td>
+                    <td>https://www.digikey.com/product-detail/en/on-semiconductor/MMSD4148T1G/MMSD4148T1GOSCT-ND/1121611</td>
+                    <td>4</td>
+                    <td> $0.13</td>
+                    <td> $0.52</td>
+                </tr>
+                <tr>
+                    <td>EL817(S)(D)(TU)-V</td>
+                    <td>SOIC254P1030X460-4N</td>
+                    <td>OPTOISOLTR 5KV TRANSISTOR 4-DIP</td>
+                    <td>https://www.digikey.com/product-detail/en/everlight-electronics-co-ltd/EL817/EL817-ND/2693260</td>
+                    <td>4</td>
+                    <td> $0.18</td>
+                    <td> $0.72</td>
+                </tr>
+                <tr>
+                    <td>BCX70SMD</td>
+                    <td>SOT23</td>
+                    <td>TRANS NPN 45V 0.1A SOT23</td>
+                    <td>https://www.digikey.com/product-detail/en/nexperia-usa-inc/BCX70K-215/1727-4918-1-ND/2531422</td>
+                    <td>4</td>
+                    <td> $0.19</td>
+                    <td> $0.76</td>
+                </tr>
+                <tr>
+                    <td>MCP1700T-3302E/TT</td>
+                    <td>SOT95P237X112-3N</td>
+                    <td>IC REG LINEAR 3.3V 250MA SOT23-3</td>
+                    <td>https://www.digikey.com/product-detail/en/microchip-technology/MCP1700T-3302E-TT/MCP1700T3302ETTCT-ND/652677</td>
+                    <td>1</td>
+                    <td> $0.37</td>
+                    <td> $0.37</td>
+                </tr>
+                <tr>
+                    <td>TEMP-HUM-SENSOR-DHT11</td>
+                    <td>TEMP-HUM-SENSOR-DHT11</td>
+                    <td>SENSOR HUMID/TEMP 5V DTL 5% MOD</td>
+                    <td>https://www.digikey.com/products/en/sensors-transducers/humidity-moisture-sensors/529?k=DHT11</td>
+                    <td>1</td>
+                    <td> $5.00</td>
+                    <td> $5.00</td>
+                </tr>
+                <tr>
+                    <td>Screw Clamp</td>
+                    <td>W237-102</td>
+                    <td>WAGO SCREW CLAMP</td>
+                    <td>https://www.aliexpress.com/item/33038876365.html?spm=a2g0o.productlist.0.0.668a28acJbQtwH&algo_pvid=1f4a38ed-b66c-47e9-9e25-39714f26a649&algo_expid=1f4a38ed-b66c-47e9-9e25-39714f26a649-5&btsid=0bb0623f16014685639395395e16d4&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_</td>
+                    <td>4</td>
+                    <td> $0.10</td>
+                    <td> $0.40</td>
+                </tr>
+                <tr>
+                    <td>ECS-.327-12.5-13X</td>
+                    <td>XTAL_ECS-.327-12.5-13X</td>
+                    <td>CRYSTAL 32.7680KHZ 12.5PF TH</td>
+                    <td>https://www.digikey.com/products/en?keywords=ECS-.327-12.5-13X</td>
+                    <td>1</td>
+                    <td> $0.24</td>
+                    <td> $0.24</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>Total</td>
+                    <td> $44.73</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <h4>What parts and systems were made?</h4>
+        <hr>
+
+        <ul>
+            <li>The enclosure</li>
+            <li>The PCB</li>
+            <li>The gasket</li>
+        </ul>
+        <hr>
+        <h4 id="alltheprocess">What processes were used?</h4>
+        <hr>
+
+        <ul>
+            <li>Electronics</li>
+            <ul>
+                <li>Electronics design, <a href="project_development.html#PCB design">Designing the PCB</a> in Eagle.</li>
+                <li>Electronics Production, <a href="project_development.html#PCB milling">Milling the PCB</a>.</li>
+                <li><a href="project_development.html#PCB debugging">Debugging the PCB</a><br></li>
+                <li><a href="interface_and_application_programing.html">Web interface</a>, communication with C++ with Json, and the embedded program itself on C++</li>
+                <li><a href="project_development.html#burningthefirmware">Burning The Firmware</a><br></li>
+                <li><a href="project_development.html#code">Network Code</a><br></li>
+            </ul>
+        </ul>
+
+        <ul>
+            <li>Enclosure</li>
+            <ul>
+                <li>3D design, Designing the PCB enclosure itself and <a href="project_development.html#casemilling">Milling</a> the enclosure using the CNC.</li>
+                <!--                <li>Design and cast a gasket using wax for the mold and silicone for the gasket</li>-->
+            </ul>
+            <li>Finalizing</li>
+            <ul>
+                <li><a href="project_development.html#wiring">Wiring</a></li>
+                <li><a href="project_development.html#diagram">General Diagram of the whole system</a></li>
+                <li><a href="project_development.html#greenhouse">Setting up the test environment (greenhouse)</a></li>
+                <li><a href="project_development.html#hero">Hero Shot</a></li>
+            </ul>
+        </ul>
+        <hr>
+        <h4>What questions were answered?</h4>
+        <hr>
+
+        <p>How to make a web interface that communicates smoothly with C++? I used an ArduinoJson library that serialized and deserialized the communication between the HTML, JavaScript, and C++.</p>
+        <p>How to set time and keep it from losing it with a power loss? That's still a challenge to be tackled as I am not completely happy with how the system keeps time. Right now, it relies heavily on the battery in case of power failure.</p>
+        <hr>
+        <h4>What worked? and What didn't?</h4>
+        <hr>
+
+        <p>The firmware worked for 3 months so far, irrigating my plants. What I am not very happy with is that if the battery finishes because it is in a remote location, we need to bring a hotspot so it connects to the internet automatically to get the internet time.</p>
+        <p>I did not have time to to create a safety routine to check the pump amperage. The board has the components, but the software is not developed yet.</p>
+        <hr>
+        <h4>How was it evaluated?</h4>
+        <hr>
+
+        <p>My objectives with my final project were to have an irrigation controller on my fabfarm and at the same time learn code and electronics.</p>
+        <p>Let's see my evaluation questions.</p>
+        <ul>
+            <li>Can I connect using my phone to the web interface of the irrigation controller?</li>
+            <p>Yes</p>
+            <li>Can I view the scheduled times and irrigation zones from the web interface?</li>
+            <p>Yes</p>
+            <li>Can I change time and duration from the web interface?</li>
+            <p>Yes</p>
+            <li>Does it displays humidity and temperature?</li>
+            <p>Yes</p>
+            <li>Does it irrigate the plants according to the schedule?</li>
+            <p>Yes</p>
+            <li>Can farmer install/operate the system without a lot of technical knowledge?</li>
+            <p>Yes and no, I don't believe a non technical person can install it but anyone can operate it.</p>
+            <li>Will it improve the life of a small farmer/plant enthusiast reducing, with a relative low cost, the time it needs to spend watering plants?</li>
+            <p>Yes! It improved mine! We don't need to go water the plants like before having to open and close valves about 8 times a day.</p>
+            <li>Did I improve c++ skill while making this project?</li>
+            <p>Yes, I am much more confident programming in C++ now.</p>
+            <li>Did I improve electronics design skills while making this project?</li>
+            <p>Yes, I feel like I can move on to many more projects in electronics.</p>
+        </ul>
+        <hr>
+        <!--
+        <h4>What are the implications?</h4>
+        <p></p>
+        <hr>
+-->
+
+        <h4>Weeks that I worked on my final project</h4>
+        <hr>
+
+        <p><a href="network.html">Network</a></p>
+        <p><a href="interface_and_aplication_programing.html">Interface and Aplication Programing</a></p>
+        <hr>
+        <h4>License</h4>
+        <hr>
+
+        <p>Attribution-NonCommercial-ShareAlike.</p>
+        <a href="license.html">license file</a>
+        <hr>
+        <h4>Acknowledgments</h4>
+        <hr>
+
+        <p>I would like to thank my local instructor Luis Carvão for all the tips and time dedicated to help me finish this project and the Fabacademy course</p>
+        <p>I also would like to thanks Jeff Knight my friend for the instructions on C++ during one day and a late night he spent helping me implementing the the arduinojson library into my project.</p>
+        <p>Jeff contributed also in the following commits in the firmware <a href="https://gitlab.fabcloud.org/Lucio/e-splash/-/commits/V5-Development">here</a>: </p>
+        <ul>
+            <li>67b8986dc461a48e3b30200d0f11b5dd3fbc80ac</li>
+            <li>f25d13f2b7815fac7dd77ed1649d91ac00ccd9ad</li>
+            <li>f378d6e14cc321061a00d9e26984945cc89e626b</li>
+            <li>05524b31d637ed6b8a400be250609f2009b70d75</li>
+            <li>4cb1541005bedf5d1ca8ad8460527e4cacdccd9d</li>
+            <li>8e0d0cbede70c0df11671a82f1443deaa3d6c9eb</li>
+            <li>71567dc3612ff74e320ba6bf4a23b33b1df091f7</li>
+            <li>38dba68509052fc6db306f06a1fa82c1e9add3c9</li>
+            <li>4ceaffcf42d84c8ee0c79b63d927556a43889af6</li>
+            <li>2650a62e9afadb377c6fde4ae305d7321ce3a398</li>
+            <li>3aefa9dde126dfbc0b7b46d73bde86464cb3d91c</li>
+            <li>34486528453d6e11dd8a4cefc3b47929642c58b8</li>
+            <li>0ef9ce70e71ce3fa1ea8c4f2e82f5ba4ffe742cd</li>
+            <li>4a4b18f125d0b8d175301a3b7c5c0e4a61e3627d</li>
+            <li>39a5eae10aaf87dca6e1f879e6e0390f5c1f7761</li>
+        </ul>
+        <hr> <!-- End of your content -->
+    </div> <!-- /container -->
+    <!-- footer -->
+    <footer id="footer">
+        <p id="cclicense"> </p>
+        <p class="license"> Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br> Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+
+    <!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js" defer></script>
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js" defer></script>
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+
+    </script>
+    <script src="bootstrap/js/bootstrap.min.js" defer></script>
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js" defer></script>
+</body>
+
+</html>

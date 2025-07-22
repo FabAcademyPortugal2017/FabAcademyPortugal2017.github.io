@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QEDKLDK8M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7QEDKLDK8M');
+    </script>
+    <!-- Finish Global site tag (gtag.js) - Google Analytics -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover computer-controlled cutting techniques in Fab Academy 2020: laser cutting with a DIY laser cutter and vinyl cutting with Silhouette Cameo 3. Explore group assignments, parametric design of press-fit kits, kerf testing, and vinyl cutting projects by Lucio Pentagna."/>
+    <meta name="author" content="Lucio Pentagna">
+    <link rel="icon" href="media/favicon.ico">
+    <title>Computer-Controlled Cutting - Fab Academy 2020 - Lucio Pentagna</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js" defer></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js" defer></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Load the menu file -->
+    <script>
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+    </script>
+</head>
+
+<body onload="menu()">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu"></ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu"></ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Insert your content here below! -->
+        <div class="jumbotron" style="width: 100%">
+            <h3>Computer-Controlled Cutting</h3>
+            <hr>
+            <h4>Group Assignment</h4>
+            <ul>
+                <li>Characterize your laser cutter's focus, power, speed, rate, kerf, and joint clearance</li>
+                <li>Document your work (individually or in group)</li>
+            </ul>
+            <h4>Individual Assignment</h4>
+            <ul>
+                <li>Design, laser cut, and document a parametric press-fit construction kit, which can be assembled in multiple ways. Account for the laser cutter kerf.</li>
+            </ul>
+            <h4>Learning Outcomes:</h4>
+            <ul>
+                <li>Demonstrate and describe parametric 2D modeling processes</li>
+                <li>Identify and explain processes involved in using the laser cutter</li>
+                <li>Develop, evaluate, and construct the parametric construction kit</li>
+            </ul>
+            <h4>Have You:</h4>
+            <ul>
+                <li>Linked to the group assignment page</li>
+                <li>Explained how you parametrically designed your files</li>
+                <li>Documented how you made your press-fit kit</li>
+                <li>Included your hero shots</li>
+            </ul>
+            <h3>Vinyl Cutting</h3>
+            <h4>Individual Assignment</h4>
+            <ul>
+                <li>Cut something on the vinyl cutter</li>
+            </ul>
+            <h4>Learning Outcomes:</h4>
+            <ul>
+                <li>Identify and explain processes involved in using the vinyl cutter</li>
+            </ul>
+            <h4>Have You:</h4>
+            <ul>
+                <li>Documented how you made your vinyl cutting</li>
+                <li>Included your original design files</li>
+                <li>Included your hero shots</li>
+            </ul>
+        </div>
+        <!-- Start of page -->
+        <h3>Index</h3>
+        <ul>
+            <li><a href="#toolsused">Tools Used</a></li>
+            <li><a href="#softwareused">Software Used</a></li>
+            <li><a href="#files">Files</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#group_assignment">Group Assignment</a></li>
+            <li><a href="#test">Characterization of My Laser Cutter</a></li>
+            <li><a href="#design">Press-Fit Construction Kit</a></li>
+            <li><a href="#vinyl">Vinyl Cutter</a></li>
+        </ul>
+        <hr>
+        <h3 id="toolsused">Tools Used</h3>
+        <ul style="list-style-type:disc">
+            <li><a href="mechanical_design_machine_design.html">Laser cutter</a> made during machine design week</li>
+            <li><a href="https://wiki.imal.org/resource/silhouette-cameo-3">Silhouette Cameo</a></li>
+        </ul>
+        <hr>
+        <h3 id="softwareused">Software Used</h3>
+        <ul style="list-style-type:disc">
+            <li><a href="https://www.solidworks.com/">SolidWorks</a></li>
+            <li><a href="https://laserweb.yurl.ch/">LaserWeb</a></li>
+            <li><a href="https://inkscape.org/">Inkscape</a></li>
+            <li><a href="https://www.silhouetteamerica.com/software">Silhouette Studio</a></li>
+        </ul>
+        <hr>
+        <h3 id="files">Files</h3>
+        <ul style="list-style-type:disc">
+            <li>Press-fit construction kit: <a href="media/computer_controlled_cutting/lasercutting/construction_kit/triangles.zip">Zip file</a> with the SolidWorks file, DXF file, and laser cutter G-code</li>
+            <li><a href="media/computer_controlled_cutting/lasercutting/group/speed_power_test.zip">Test Files</a></li>
+        </ul>
+        <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/construction_kit/heroshot.jpg" alt="Hero Shot"></p>
+        <legend>Hero Shot</legend>
+        <hr>
+        <h3>Warning</h3>
+        <p>Wear safety glasses, make sure you know where and how to operate the fire extinguisher, and never leave the laser unattended!</p>
+        <hr>
+        <h4>Risk of Fire</h4>
+        <p>The laser cutter is a machine that can catch fire if not properly monitored. If everything is working correctly, it won't, but if there is a failure and the laser stays in the same place or if the air assist stops working, there is a high risk of fire. For this reason, never leave the laser unattended.</p>
+        <p class="pic"><img src="media/machine/fire.jpg" alt="Fire Safety"></p>
+        <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/group/firestinguisher.jpg" alt="Fire Extinguisher"></p>
+        <hr>
+        <h4>Laser Radiation</h4>
+        <p>The laser beam can blind you or burn your skin in nanoseconds. For this reason, never operate it with the lid open, and always wear the safety glasses for the type of laser you are using.</p>
+        <p class="pic"><img src="media/machine/laser.jpg" alt="Laser Safety"></p>
+        <p>CO2 laser cutters are typically 10,600 nm wavelength. In our lab, these are the correct glasses.</p>
+        <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/group/co2glasses.jpg" alt="CO2 Laser Glasses"></p>
+        <p>Diode laser cutters are typically in the range of 200-550 nm wavelength. In our lab, these are the correct glasses.</p>
+        <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/group/diodelaser.jpg" alt="Diode Laser Glasses"></p>
+        <hr>
+        <h3 id="introduction">Introduction</h3>
+        <p>In this assignment, I was going to use a 3D printer I designed and made, which I then upgraded with a 2-watt diode laser. However, I ended up designing and making a CO2 <a href="mechanical_design_machine_design.html">laser cutter</a> as I did not want to finish this course without such a machine in my lab. I am really happy with my machine. It is showing amazing results even as a DIY machine.</p>
+        <p>I will be testing its capabilities and pushing it to its limits to better understand its capabilities and limitations.</p>
+        <p>On the vinyl side of the assignment, I will be using a <a href="https://wiki.imal.org/resource/silhouette-cameo-3">Silhouette Cameo</a> and documenting its results.</p>
+        <p class="pic"><img src="media/computer_controlled_cutting/3dprinter.jpg" alt="3D Printer with Carbon Fiber Body">
+            <legend>3D printer I designed and made with a carbon fiber milled body</legend>
+        </p>
+        <p class="pic"><img src="media/computer_controlled_cutting/laserdetail.jpg" alt="3D Printer with Laser Head">
+            <legend>The printer now with a 2-watt diode laser head attached to it</legend>
+        </p>
+        <p class="pic"><img src="media/machine/laser_2nd_part/02_frame_assembly_to_axis/04.jpg" alt="DIY Laser Cutter">
+            <legend>Laser cutter I designed and made in <a href="computer_controlled_cutting.html">Computer Controlled Cutting</a></legend>
+        </p>
+        <hr>
+        <h3 id="group_assignment">Group Assignment</h3>
+        <p>Visit the group assignment <a href="http://fabacademy.org/2020/labs/algarve/index.html">page</a> for other assignments. This week's group assignment I am doing by myself as I am alone in the lab.</p>
+        <h4 id="test">Characterization of My Laser Cutter</h4>
+        <ul>
+            <li>Work area: 400 x 290 mm</li>
+            <li>Height: 150 mm</li>
+            <li>Laser power: 50 W</li>
+        </ul>
+        <hr>
+        <ul>
+            <li>Focus and Kerf</li>
+            <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/group/01.jpg" alt="Laser Cutter Focus">
+                <legend>Image extracted from Laser Cutter Focus <a href="https://www.youtube.com/watch?v=Eg6THrEdleo">video</a> from makestuffnow!</legend>
+            </p>
+            <p>The lens I use in my laser is a 20 mm diameter lens with a 50.8 mm focal length. This means I should keep the height from the lens around that measurement.</p>
+            <p>It would be a challenge to measure the focal distance every time. For this reason, I designed the ramp below. This will allow the laser to trace a line from the highest point of the ramp (0 mm from the tip of the laser) to the lowest point of the ramp.</p>
+            <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/group/02.jpg" alt="Focus Ramp Design">
+                <legend>Design files for focus ramp <a href="https://gitlab.fabcloud.org/Lucio/frankenlaser/-/blob/master/tools/focus%20ramp.zip">here</a></legend>
+            </p>
+            <p>The result from the test is that I should use the distance of 5 to 7 mm from the material top to the tip of the laser head.</p>
+            <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/group/03.jpg" alt="Focus Test Result">
+                <legend>Laser cut result from focus test</legend>
+            </p>
+            <video width="300" controls>
+                <source src="media/computer_controlled_cutting/lasercutting/group/03_a.mp4"> Your browser does not support HTML5 video.
+            </video>
+            <p>With the trace done, I started measuring with a caliper and a square the most focused area of the trace.</p>
+            <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/group/04.jpg" alt="Measuring Focus"></p>
+            <p>The result is a range from 5 to 7 mm.</p>
+            <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/group/05.jpg" alt="Focus Measurement"></p>
+            <p>To easily measure the encountered optimal distance, I designed small steps of 1 mm starting from 3 mm ending on 8 mm.</p>
+            <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/group/06_a.jpg" alt="Focus Measurement Steps"></p>
+            <p>I then laser cut it.</p>
+            <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/group/06_b.jpg" alt="Laser Cut Steps"></p>
+            <p>Placing the nozzle on top of the desired height gives a consistent measurement across the surface of the material.</p>
+            <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/group/08.jpg" alt="Nozzle Placement"></p>
+            <!-- Kerf -->
+            <p>Measuring the kerf was simple. I used the previous template and the hole left by the cut. The difference is the kerf or the thickness of the removed material by the laser beam.</p>
+            <p>The inside measurement was 8.1 mm</p>
+            <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/group/07.jpg" alt="Kerf Measurement"></p>
+            <p>The outside measurement was 7.9 mm, which means the kerf is 0.2 mm / 2 = 0.1 mm.</p>
+            <p>I really like the fact that it fits perfectly!</p>
+            <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/group/scale1.jpg" alt="Perfect Fit"></p>
+            <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/group/scale2.jpg" alt="Scale Fit"></p>
+            <hr>
+            <!-- Power and Speed -->
+            <li>Power and Speed</li>
+            <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/group/09.jpg" alt="Power and Speed Test">
+                <legend>Original SVG used <a href="media/computer_controlled_cutting/lasercutting/group/speed_power_test.zip">here</a></legend>
+            </p>
+            <p>The power test above was done with a speed of 5000 mm/min on a 2.7 mm plywood. The power I chose as most suitable for this speed is 50%.</p>
+            <p>The speed test above was done on a 2.7 mm plywood, with power set at 60%. Even with the low power, the laser was able to cut on almost all speeds tested. To be on the safe side, I would choose to cut at 5000 mm/min with the power at 60% for this thickness of plywood.</p>
+        </ul>
+        <hr>
+        <h3 id="design">Press-Fit Construction Kit</h3>
+        <p>For this assignment, I will use 2D design from SolidWorks. This is done within the sketches. SolidWorks is a parametric design tool able to dynamically change its features with a change of a variable.</p>
+        <p>I started by creating a sketch. I then drew a triangle.</p>
+        <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/construction_kit/01.jpg" alt="Triangle Sketch"></p>
+        <p>Next, I started creating global variables. While adding dimensions, I simply typed "equal" and then named the variables. Next, I confirmed the creation of the global variable.</p>
+        <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/construction_kit/03.jpg" alt="Global Variables"></p>
+        <p>I kept drawing more features to the sketch, adding parameters to each measurement.</p>
+        <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/construction_kit/05.jpg" alt="Sketch Features"></p>
+        <p>Next, I created a pattern with the desired feature that will be the connection of the piece.</p>
+        <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/construction_kit/07.jpg" alt="Pattern Creation"></p>
+        <p>In this panel, I am able to edit each variable, changing it and dynamically changing the model.</p>
+        <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/construction_kit/09.jpg" alt="Variable Editing"></p>
+        <p>I added a little fillet here to allow a smooth coupling of the parts.</p>
+        <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/construction_kit/10.jpg" alt="Fillet Addition"></p>
+        <p>I proceeded to create formulas. This will allow me to change the opening by changing one variable, and it will take into account the kerf size.</p>
+        <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/construction_kit/11.jpg" alt="Formula Creation"></p>
+        <p>Next, I prepared the kit for exporting as a DXF file.</p>
+        <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/construction_kit/12.jpg" alt="DXF Export Preparation"></p>
+        <p>In SolidWorks, in order to export a sketch, keep it open, then click on save as and do not rebuild, then choose the format, in my case, DXF, and finish the export process.</p>
+        <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/construction_kit/13.jpg" alt="DXF Export"></p>
+        <p>In LaserWeb, add the document. Next, drag the added document to the gray area below.</p>
+        <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/construction_kit/laserweb/01b.jpg" alt="LaserWeb Document Addition"></p>
+        <p>After dragging the file, a dialog with configurations will open. The software sometimes won't prevent you from creating invalid G-code. This means if some parameters are filled up, it will not warn about them.</p>
+        <p>For this job, since it's a cut, I used one of my presets with the speed 4000 mm/min, power 80%, and segment 0.1.</p>
+        <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/construction_kit/laserweb/01c.jpg" alt="LaserWeb Configuration"></p>
+        <p>Next, I positioned the object using either the arrows or the coordinates.</p>
+        <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/construction_kit/laserweb/02.jpg" alt="Object Positioning"></p>
+        <p>Here I show that I ended up multiplying the triangles in SolidWorks and then reopened the file.</p>
+        <p>In this picture, it is also possible to see the middle top of the web camera that is positioned on top of the laser so I don't need to keep my eyes on it. Even though I wear protective glasses, I still prefer not to look at the laser while it is still without a cover.</p>
+        <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/construction_kit/laserweb/06.jpg" alt="Web Camera Setup"></p>
+        <video width="300" controls>
+            <p>The laser cuts it very well.</p>
+            <source src="media/computer_controlled_cutting/lasercutting/construction_kit/the_kit/03.mp4"> Your browser does not support HTML5 video.
+        </video>
+        <p>I then removed it from the machine and piled it to start inspecting and assembly.</p>
+        <video width="300" controls>
+            <source src="media/computer_controlled_cutting/lasercutting/construction_kit/the_kit/05.mp4"> Your browser does not support HTML5 video.
+        </video>
+        <p>Just a pile.</p>
+        <p class="pic"><img src="media/computer_controlled_cutting/lasercutting/construction_kit/the_kit/04.jpg" alt="Kit Pile"></p>
+        <p>I then started assembly, and it fits perfectly.</p>
+        <video width="300" controls>
+            <source src="media/computer_controlled_cutting/lasercutting/construction_kit/the_kit/06.mp4"> Your browser does not support HTML5 video.
+        </video>
+        <video width="300" controls>
+            <source src="media/computer_controlled_cutting/lasercutting/construction_kit/the_kit/07.mp4"> Your browser does not support HTML5 video.
+        </video>
+        <hr>
+        <!-- Vinyl Cutter -->
+        <h3 id="vinyl">Vinyl Cutting</h3>
+        <p>The vinyl cutter we have in the lab is the Silhouette Cameo 3. It's a nice, affordable, easy-to-use vinyl cutter.</p>
+        <p class="pic"><img src="media/computer_controlled_cutting/cameo3.jpg" alt="Silhouette Cameo 3">
+            <legend>Lab's Silhouette Cameo 3</legend>
+        </p>
+        <p>It comes with the software Silhouette Studio.</p>
+        <p class="pic"><img src="media/computer_controlled_cutting/silhouettestudio.jpg" alt="Silhouette Studio">
+            <legend>Print from the first screen when you open Silhouette Studio</legend>
+        </p>
+        <h4>Learning Outcomes:</h4>
+        <ul>
+            <li>Identify and explain processes involved in using this machine.</li>
+        </ul>
+        <ol type="1">
+            <li>Creating the File</li>
+            <ol type="i">
+                <li>Selecting a File from Library</li>
+                <p>As a warm-up and because we are near Halloween, I decided to cut something my kids could use.</p>
+                <p class="pic"><img src="media/computer_controlled_cutting/library.jpg" alt="Studio Library">
+                    <legend>Image of Studio Library</legend>
+                </p>
+                <p>I chose the bat from the library.</p>
+                <p><img src="media/computer_controlled_cutting/bat.jpg" alt="Bat Outline">
+                    <legend>Outline of the bat chosen from the Studio's library</legend>
+                </p>
+                <p></p>
+                <p><img src="media/computer_controlled_cutting/batresize.jpg" alt="Bat Resizing">
+                    <legend>Once clicking twice, the bat gets inserted in the middle of the work area.</legend>
+                </p>
+                <p>Then using Ctrl+C and Ctrl+V, I copied and pasted the bat several times.</p>
+                <p><img src="media/computer_controlled_cutting/batcopypaste.jpg" alt="Bat Copy Paste"></p>
+                <p>I then selected all the pasted bats.</p>
+                <p><img src="media/computer_controlled_cutting/batselection.jpg" alt="Bat Selection"></p>
+                <p>With the selected drawings, it is possible to align the drawings uniformly.</p>
+                <p><img src="media/computer_controlled_cutting/batalign.jpg" alt="Vinyl Cutter Alignment"></p>
+                <p>I then selected the vinyl size.</p>
+                <p><img src="media/computer_controlled_cutting/mediasize.jpg" alt="Vinyl Size Selection"></p>
+                <p>I then pasted again some more bats and started setting up the job. This machine is capable of automatically setting the thickness of the material, but the option autoblade must be selected.</p>
+                <p><img src="media/computer_controlled_cutting/batchecksetingsandsendagain.jpg" alt="Vinyl Cutter Settings"></p>
+                <p>I then aligned the vinyl and lifted the roll that drags the material.</p>
+                <p><img src="media/computer_controlled_cutting/02.jpg" alt="Vinyl Alignment"></p>
+                <p>Using the screen, I fed the material a little bit.</p>
+                <p><img src="media/computer_controlled_cutting/03.jpg" alt="Material Feeding"></p>
+                <p>At this point, I could either connect a USB directly to the machine or use the USB.</p>
+                <p><img src="media/computer_controlled_cutting/04.jpg" alt="USB Connection"></p>
+                <p>I pressed start, and in minutes the bats are cut.</p>
+                <p><img src="media/computer_controlled_cutting/07.jpg" alt="Bats Cut"></p>
+                <p>For a project as simple as that, it is sufficient to just peel the adhesive out of the protective paper and stick it everywhere!</p>
+                <p><img src="media/computer_controlled_cutting/08.jpg" alt="Adhesive Peeling"></p>
+            </ol>
+        </ol>
+        <p class="pic"><video controls title="Vinyl cutting process">
+            <source src="media/computer_controlled_cutting/cutting_process.mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <!-- End of your content -->
+    </div> <!-- /container -->
+    <!-- footer -->
+    <footer id="footer">
+        <p id="cclicense"></p>
+        <p class="license"> Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br> Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">jQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+
+    <!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js" defer></script>
+    <!-- Syntax Highlighter -->
+    <script defer src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=desert"> </script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+    </script>
+    <script src="bootstrap/js/bootstrap.min.js" defer></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js" defer></script>
+</body>
+
+</html>

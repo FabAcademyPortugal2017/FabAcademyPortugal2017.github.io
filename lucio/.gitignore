@@ -1,0 +1,24 @@
+.env
+_site
+.DS_Store
+/small_Mold_b^negative_mold.SLDPRT
+/small_Mold_b^negative_mold.SLDPRT
+*.b#1
+*.s#1
+*.brd
+*.sch
+*.gcode
+*.pro
+*.txt
+*.epf
+*.brd
+*.b##
+exercise16 - Copy.html
+media/computer_aided_design/files/eggcratesolidworks.zip
+media/molding_and_casting/solidworks/Plucker/Plucker_small_positive.SLDPRT
+media/molding_and_casting/solidworks/Plucker/Positive.SLDPRT
+media/molding_and_casting/solidworks/Plucker/small_mold_a.SLDPRT
+media/molding_and_casting/solidworks/Plucker/small_Mold_b^negative_mold.SLDPRT
+media/molding_and_casting/solidworks/Plucker/small_negative_mold.SLDASM
+media/molding_and_casting/solidworks/Plucker/smalltocnc.SLDASM
+media/final_project/code/esp32irrigation/.vscode/settings.json

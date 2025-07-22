@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QEDKLDK8M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7QEDKLDK8M');
+
+    </script>
+    <!--  Finish Global site tag (gtag.js) - Google Analytics -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover interface and application programming in Fab Academy 2020 with Lucio Pentagna. Explore web interface development for ESP32, app creation with MIT App Inventor, and integration of user interfaces with input/output devices. Learn GUI design and programming protocols."/>
+    <meta name="author" content="Lucio Pentagna">
+    <link rel="icon" href="media/favicon.ico">
+    <title>Interface and Application Programming - Fab Academy 2020 - Lucio Pentagna</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js" defer></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js" defer></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Load the menu file -->
+    <script>
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+
+    </script>
+</head>
+
+<body onload="menu()">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="index.html">Lucio Pentagna</a> </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu"> </ul>
+                    </li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu"> </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Insert your content here below! -->
+        <div class="jumbotron" style="width: 100%">
+            <h3>Interface and Application Programming</h3>
+            <hr>
+            <h4>Group assignment</h4>
+            <ul>
+                <li>Compare as many tool options as possible.</li>
+            </ul>
+            <h4>Individual assignment</h4>
+            <ul>
+                <li>Write an application that interfaces a user with an input and/or output device that you made</li>
+            </ul>
+            <br>
+            <h4>Learning outcomes:</h4>
+            <ul>
+                <li>Interpret and implement design and programming protocols to create a Graphic User Interface (GUI).</li>
+            </ul><br>
+            <h4>Have you:</h4>
+            <ul>
+                <li>Linked to the group assignment page</li>
+                <li>Documented your process</li>
+                <li>Outlined problems and how you fixed them</li>
+                <li>Included original code (or a screenshot of the app code if that's not possible)</li>
+                <li>Included a 'hero shot/video' of your application running with your board</li>
+            </ul>
+        </div>
+        <hr>
+        <h3>Software Used</h3>
+        <ul style="list-style-type:disc">
+            <li>for <a href="https://code.visualstudio.com/">VScode</a> follow this <a href="http://fabacademy.org/2020/labs/algarve/students/lucio/interface_and_aplication_programing.html#13/06/2020">link</a> and see how I setup a basic project.</li>
+            <li><a href="https://platformio.org/">Platformio</a> </li>
+            <li><a href="http://brackets.io/">Brackets</a></li>
+            <li><a href="https://www.arduino.cc/en/software/">Arduino IDE</a></li>
+            <li><a href="http://ai2.appinventor.mit.edu/">MIT app inventor 2</a></li>
+        </ul>
+        <hr>
+        <h3> Group Assignment
+        </h3>
+        <p>For other group assignments go to <a href="http://fabacademy.org/2020/labs/algarve/">group assignment page</a></p>
+        <p>This assignment was completely done by me as I am the only student at the Algarve FabFarm this year.</p>
+        <h3>The app</h3>
+        <h4>MIT App Inventor</h4>
+        <p>The MIT app inventor is a great simple free tool that lets you design phone apps. There are two flavors, one with an installation and the most recent one that is totally online.</p>
+        <h4>Files</h4>
+        <p><a href="media/interface/groupassignment/appinventor/app/Groupproject.aia">Source Code</a></p>
+        <p><a href="media/interface/groupassignment/appinventor/app/Groupproject.zip">APK</a></p>
+        <h4>Steps:</h4>
+        <ol>
+            <li>To access the online version go to this <a href="http://ai2.appinventor.mit.edu/">link</a>.</li>
+            <li>Next login with your google account</li>
+            <li>Click start a new project.</li>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/01.jpg" alt="MIT App Inventor start new project">
+            </p>
+            <li>Name the project Mine is "groupproject"</li>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/02.jpg" alt="Naming the project">
+            </p>
+            <li>#1 in the center is the area reserved for the design of the app, #2 this section is used in case you want to have more than one screen, #3 to the left the palette contains all the objects like buttons or a video player used in the app visual construction, #4 each object can have its properities edited in this area to the right, #5 will switch to the blocks area where the logics of the app are created.</li>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/03.jpg" alt="App design interface">
+            </p>
+            <li>In this quick example I drag a button from the left side to the screen.</li>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/04.jpg" alt="Dragging a button">
+            </p>
+            <li>Here I also show how to add a text in the same fashion as the button but I won't be using the text in my app.</li>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/05.jpg" alt="Adding text">
+            </p>
+            <li>Using the application Paint3D from Windows 10 I quickly drew a big red button.</li>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/06.jpg" alt="Drawing a red button">
+            </p>
+            <li>Next I upload the red button to the MIT app Inventor. This procedure will be used every time there is a media element used.</li>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/07.jpg" alt="Uploading the red button">
+            </p>
+            <li>Then I edidt its properties like hight, with and text. On #3 I define the image that will serve as the button, in my case the big red button.</li>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/08.jpg" alt="Editing button properties">
+            </p>
+            <li>Then I drag a sound object to the screen area. The process to link this object to its media is the same done before. I will repeat that also for a video.</li>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/08b.jpg" alt="Adding a sound object">
+            </p>
+            <li>Next I move to the block editor area to the upper right corner. Clicking on button open the possible blocks I can add to the app logic. I then add a button click block.</li>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/09.jpg" alt="Adding a button click block">
+            </p>
+            <li>Clicking on the sound block and selecting from the options "call sound1.play" allows me to add a command to the button to be executed when its clicked. </li>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/10.jpg" alt="Adding sound play command">
+            </p>
+            <li>I do the same as before to add a video and then to open it full screen.</li>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/14.jpg" alt="Adding a video">
+            </p>
+            <li>After the app is done I then generate an apk and saved it to my phone file system in order to install the program.</li>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/15.jpg" alt="Generating APK">
+            </p>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/16.jpg" alt="Saving APK">
+            </p>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/17.jpg" alt="Installing APK">
+            </p>
+            <li>On the phone I went to the location I saved the apk and installed it. Play protect will try blocking the app but that can be ignored.</li>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/18.jpg" alt="Installing on phone">
+            </p>
+            <p class="pic"> <img src="media/interface/groupassignment/appinventor/19.jpg" alt="Play Protect warning">
+            </p>
+            <li>This is the resulting app made in the group assignment.</li>
+            <p class="pic"> <video controls>
+                    <source src="media/interface/groupassignment/appinventor/output.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </p>
+        </ol>
+        <hr>
+        <h3>Files</h3>
+        <ol>
+            <li><a href="media/interface/code/irrigationsystem.zip">Code</a></li>
+        </ol>
+        <hr>
+        <h4>Introduction</h4>
+        <p>This Assignment is part of my final project development</p>
+        <p>As my final project has been changed to a Irrigation system I started developing its Web Interface.</p>
+        <p>Its really complicated to separate the competences and keep here only the part of my project that has to do with Interface, so in some points I will have subjects that are related with other weeks.</p>
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial11.jpg" alt="Hero-Shot">
+            <legend>Hero-Shot</legend>
+        </p>
+        <p>The design so far is the one above. I still need to modify it for the final project as I do not want it merelly activating deactivating the pumps, but I also what in Scheduling of zones among other features.</p>
+        <p>I will compile bellow the steps it took me to arrive to this point which overlaps in part to my <a href="project_update_2.html">Project Update 2</a></p>
+        <p>As I am writing this there are no current design files, there is a sketch of a code and there is a prototype on a breadboard!</p>
+        <p>There are in the other hand requirements for the hardware and for the software:</p>
+        <h4>Software Requirements and stage</h4>
+        <ol>
+            <li>Simplify the code creating more functions;</li>
+            <li>try to separate the HTML part for a cleaner code;</li>
+            <li>Improve the appearance/Interface of the code;</li>
+            <li>Add readings to HTML;</li>
+            <li>Add a log of occurrences like over current;</li>
+            <li>Add more safety for the equipment;</li>
+            <li>Add a phone interface (APP);</li>
+            <li>Add function to set current time;</li>
+            <li>Add renaming function to each relay so one can relate the relay to the area of interest or at least rename relays to actual areas of the farm.</li>
+        </ol>
+        <h4>Development</h4>
+        <h4><a id="07/06/2020">7th of June, 2020</a></h4>
+        <p>As of today 07th of June 2020 the development is like this.</p>
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial01.jpg" alt="Initial setup">
+            <legend>What I start with is a system that works on a Uno and is a torture on a ESP8266 besides is a shock hazard and because of water damage I need to replace some relays.</legend>
+        </p>
+        <p>The code running on this setup can be found on the Fabfarm Github <a href="https://github.com/fabfarm/autovalve/tree/master/Uno/Irrigation/original/irrigation_system_arduino_code">Autovalve</a></p>
+        <p>Shakeel one of our volunteers managed to create a version that runs on a ESP8266 that can be found in the same repo <a href="https://github.com/fabfarm/autovalve/tree/master/ESP8266_NodeMCU/Irrigation_System_NodeMCU_RTC_ACS712v2">here</a>. Due to the Pandemic situation he left us in a hurry and did not have time to test his code so it worked but not stable due to the fact that he heroically attempted to share the analog pin with the wifi, leading to drops in the wifi that rendered using the system almost impossible. This is the code that I started with.</p>
+        <hr>
+        <h4><a id="08/06/2020">8th of June, 2020</a></h4>
+        <p>After many hours trying to understand the code I managed to port Shakeel's code to a ESP32 and also split the file with each function on a separate file. </p>
+        <p>In this video I show the progress I did so far in the merging the codes and having it work in the ESP32</p>
+        <p class="pic"> <video controls>
+                <source src="media/final_project/images/initial_stage/initial03_codediff.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <legend>Check high resolution version on <a href="https://youtu.be/oxlblIs7CC0">Youtube</a></legend>
+        </p>
+        <p>To port the code to ESP32 might be simple for a programmer but it took many hours for me.</p>
+        <p>Steps:</p>
+        <ol>
+            <li>separated everything that was a function already to its own file to make it more readable;</li>
+            <li>Opened then another session of the Arduino IDE and started copying every part of the code line by line to the new session, in this session I renamed the main file to "esp32irrigation"</li>
+            <li>remapped the pins to ESP32 pins</li>
+            <li>run beautify on the HTML on Brackets</li>
+            <li>organized the code so pins are on top</li>
+            <li>created variables for the RTC pins</li>
+            <li>Commented parts of the code that print error to the serial monitor</li>
+        </ol>
+        <p>The code is too big for displaying on the HTML so I will leave a link for the state of the code as this early morning: <a href="https://github.com/fabfarm/autovalve/tree/master/ESP32/esp32irrigation_historical_no_change">code here</a>.</p>
+        <p>Here in this video you can see the testing setup of the current irrigation system of the farm</p>
+        <p class="pic"> <video controls>
+                <source src="media/final_project/images/initial_stage/initial02_showthesetup.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <legend>Check high resolution version on <a href="https://youtu.be/ytQwHZToBWM">Youtube</a></legend>
+        </p>
+        <hr>
+        <h4><a id="09/06/2020">9th of June, 2020</a></h4>
+        <p>Today after testing the relays I realized that some relays work some not. After testing on the lab power supply directly with 5volts applied to the signal pin I believe that this is due to low voltage being supplied by the esp32 or the signal voltage.</p>
+        <p>I watched then the Great Scott's video on Youtube about <a href="https://www.youtube.com/watch?v=2BdevOmN-Zk">relays and optocouplers</a>.</p>
+        <p>I will make sure the relays have at least a 5 volts power supply. Wich are their required voltage acording to the <a href="media/final_project/datasheet/SRD-12VDC-xx-x_ETC.pdf">datasheet</a>. The signal should be fine at 3.3. Will be tested in situ.</p>
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial04.jpg" alt="Relay setup">
+            <legend></legend>
+        </p>
+        <p>The other point is the current reading that is completely wrong. In other to have the irrigation system working I will have to run it without current sensing until debugged.</p>
+        <hr>
+        <h4><a id="10/06/2020">10th of June, 2020</a></h4>
+        <p>After the tests, the conclusion to the voltage problem is that the esp32 should not supply power to the relay, that should be supplied from an external power source, set at 5volts. The signal can come from the esp32 unchanged but the esp 32 should share the same ground.</p>
+        <p>more changes in the code:</p>
+        <ol>
+            <li>increased the interval the time is displayed from 3000 to 5000 ms (5s) in the variable <code>RTCtimeInterval</code></li>
+            <li>increased the interval the setup is displayed from 10000 to 30000 ms (30s) in the variable <code>configTimeInterval</code> </li>
+            <li>Set recognizable names to the relay's html interface</li>
+            <li>Cleaned up a bit more on the serial monitor by removing seconds from the setting display</li>
+        </ol>
+        <p>I will place the setup back to work today in the morning and set times for each irrigation and field test the esp32 irrigation module.</p>
+        <p>Strangely the external RTC clock is not keeping accurate time. I will look into utilizing internal clock with external battery in case of power failure.</p>
+        <p>According to <a href="https://github.com/espressif/arduino-esp32/issues/3641">this closed issue discussion at the esp repo at Github</a> and this <a href="https://www.esp32.com/viewtopic.php?t=3715#p17038">esp accuracy topic</a> the internal clock will delay "Internal RTC clock frequency error is about 5%", this can be solved with a external crystal of 32.768KHz crystal assembled according to the schematics below:</p>
+        <p>Another solution would be to have the esp always connected to the Internet and grabbing the time from the Internet updates to compensate for inaccuracy.</p>
+        <p class="pic"> <img src="media/final_project/images/initial_stage/73125119-71fc6c80-3f60-11ea-879e-9a5b5f027982.jpg" alt="RTC clock schematic">
+        </p>
+        <p>After wakeup update</p>
+        <p>Today I went into installing the temporary testing setup. I troubleshoot a few problems.</p>
+        <ol>
+            <li>Setup was not working when disconnected from computer: -solution power wiring was not correct, ended up connecting 2 USB cables one for the ESP32 and another for the relays, they both share the same ground, also I might have solved the RTC clock problem as well with the same approach.</li>
+        </ol>
+        <p>This is how the prototype looks now:</p>
+        <p class="pic"><img src="media/final_project/images/initial_stage/initial05.jpg" alt="Prototype setup">
+            <legend>Still need to wire the pump and the solenoid valves.</legend>
+        </p>
+        <p class="pic"><img src="media/final_project/images/initial_stage/initial06.jpg" alt="I hope the wasps don't mind the invasion">
+            <legend>I hope the wasps don't mind the invasion</legend>
+        </p>
+        <p class="pic"><img src="media/final_project/images/initial_stage/initial07.jpg" alt="Wiring the system">
+            <legend>Wiring the system</legend>
+        </p>
+        <p class="pic"> <video controls>
+                <source src="media/final_project/images/initial_stage/initial08360.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <legend>testing...testing...</legend>
+        </p>
+        <p>After the tests I went back to the code for more customization.</p>
+        <p>I first watched a series of <a href="">videos on Youtube</a> about functions really create and then started creating even more functions.</p>
+        <p>Basically I went into looking how to reduce code repetitions and how to send a value to a function</p>
+        <p>From the code available I created this function:</p>
+        <pre><code>void turnOffRelay(int valveHere){
+  // wait then turn valve relay OFF
+  Serial.print("Waiting ");
+  Serial.print(waitTimeValveOff / 1000);
+  Serial.println("s before deactivating Valve Relay 3.");
+  delay(waitTimeValveOff);
+  digitalWrite(valveHere, LOW);
+  valveHere = 0;
+  Serial.print("*** Valve Relay ");
+  Serial.print(valveHere);
+  Serial.println("3 turned OFF ***");
+}</code></pre>
+        <p>Every time I want to call this function I use
+        </p>
+        <pre><code>      {
+        int valveHere = valveRelay3;
+        turnOffRelay (valveHere);
+      }</code></pre>
+        <p>The reason I use the <code>{}</code> is because I had to declare the local variable <code>valveHere</code> this way I could replace only that piece of code each time I called the function.</p>
+        <p>Technically calling that function would be just having this code here <code>turnOffRelay (valveHere);</code> but that would not work alone as I am always replacing the valve relay pin with <code>int valveHere = valveRelay3;</code></p>
+        <p>I still haven't tested the behaviour but at least it compiles :-)</p>
+        <hr>
+        <h4><a id="09/06/2020">9th of June, 2020</a></h4>
+        <p> I burned it on the ESP32 and the behavior is unexpected. The function keeps printing again and again I believe I need to send back the state of one variable and I did not do that. I will try using the code <code>return variable;</code> to do it and then test but before I will watch again the functions video to better understand it.</p>
+        <hr>
+        <h4><a id="13/06/2020">13th of June, 2020</a></h4>
+        <p>Argh... OK Long time no updates, well the last code uploaded works and I have some functions but not happy yet as Its working on Arduino but not Platformio. What I learned so far is that Arduino IDE does a lot "under the hood" and with platformio you need to setup it in more detail.</p>
+        <p>Read the following</p>
+        <ul>
+            <li><a href="https://community.platformio.org/t/i-cannot-figure-out-how-to-upload-a-spiffs-image/6172/5">Platformio community thread</a></li>
+            <li><a href="https://docs.platformio.org/en/latest/projectconf/section_platformio.html#projectconf-pio-data-dir">Platformio docs</a></li>
+        </ul>
+        <p>I ended up being able to write a file to the spiffs using platformio. I already were able to do it with arduino but without really understanding how now maybe I think I got it so to do that I had to setup the file platformio.ini and the tree directory following a set of steps so lets see:</p>
+        <ol>
+            <li>I created a new project file in the "projects" tab area in platformio</li>
+            <li>Then I created a data folder in the same level as the src folder. Another option is to include in the platformio.ini file a different path for the data file.</li>
+            <li>Then with the board connected I run <code>pio run -t uploadfs</code></li>
+            <li>Had to remove time library from platformio as it was conflicting with ESPAsyncWebServer and <a href="https://community.platformio.org/t/errors-after-updating-espasyncwebserver/476">here</a> is where I fund the relevant information.</li>
+        </ol>
+        <p>It worked.</p>
+        <p>With that I started understanding how I did not know what I was doing. The code I started with had the html included in the Arduino Sketch. That bothered me. Now with this new understanding I can have it apart from the sketch file.</p>
+        <p> Then I found this tutorial: <a href="https://randomnerdtutorials.com/esp32-web-server-spiffs-spi-flash-file-system/">ESP32 Web Server using SPIFFS</a></p>
+        <p>And <a href="https://randomnerdtutorials.com/install-esp32-filesystem-uploader-arduino-ide/">this</a> in case I want to use Arduino IDE plug in for the upload process.</p>
+        <p>I really wish I understood it better before! So many days I spent on it!</p>
+        <h4>The C++ code till now.</h4>
+        <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c">
+            /****************************************************************************
+            *                                  Aknowledments                           * 
+            *                                  by LucioPGN                             * 
+            ****************************************************************************/
+           /*  Up to this date: 07th of June 2020 I don't consider myself a programer 
+            *  so I need to stand on top of giants sholders for my programing projects:
+            *  A Portion of this code was based on Rui Santos Code;
+            *  A Portion of this code was based on losely based Shakeels code for ESP8266;
+            *  A Portion of this code was based on several websites I lost track of....!
+            *  My contributions: 
+            *     -So far I made it work on platformio :), that took me quite a lot of time
+            *     -That means:
+            *        +created a new project;
+            *        +created a folder named data under the main folder (fabfarm_irrigation)
+            *        +linked the platformio.ini to the folder of the project + the data folder
+            *        +linked the needed libraries to their github repo in the platformio.ini
+            *        +found a conflict with time library and ESPAsyncWebserverLibrary can be solved by renaming time library or by removing it
+            *        +Made it work with a separate HTML file under the data folder using SPIFFS
+            *        +I can load the data to Spiffs inside platformio
+            *  Things I still want to program for my final project:
+            *    -so far I ported Shakeels code into ESP32;
+            *    -simplify the code creating functions rather than repeating the code;
+            *    -try to separate the HTML part for a cleaner code (this applies to maybe mix up the other previous code to this);
+            *    -Improve the appearance/Interface of the code
+            *    -Add readings to HTML
+            *    -Add a log of occurrences like over current
+            *    -Add more safety for the equipment
+            *    -Add a phone interface (APP)
+            *    -Add function to set current time
+            *    -Add renaming function to each relay so one can relate the relay to the area of interest or at least rename relays to actual areas of the farm.
+            * 
+            ****************************************************************************/
+            
+           
+           //Required Libraries
+           #include "WiFi.h"
+           #include "ESPAsyncWebServer.h"
+           #include "SPIFFS.h"
+           #include &#60AsyncTCP.h&#62
+           
+           // Network Credentials
+           const char* ssid = "rato";
+           const char* password = "imakestuff";
+           
+           //Start the Async Web Server listening on port 80
+           AsyncWebServer server(80);
+           
+           // Set to true to define Relay as Normally Open (NO)
+           #define RELAY_NO false
+           
+           // Set number of relays, will be used in the array
+           #define NUM_RELAYS  4
+           
+           // Assign each GPIO to a relay
+           int relayGPIOs[NUM_RELAYS] = {26, 25, 33, 32};
+           
+           //
+           const char* PARAM_INPUT_1 = "relay";  
+           const char* PARAM_INPUT_2 = "state";
+           
+           // Replaces placeholder with button section in your web page
+           String processor(const String& var){
+             //Serial.println(var);
+             if(var == "BUTTONPLACEHOLDER"){
+               String buttons ="";
+               for(int i=1; i&#60=NUM_RELAYS; i++){
+                 String relayStateValue = relayState(i);
+                 //Here parts of the HTML will be parsed to index.html like Relay # followed by its value in variable for the GPIO numbers
+                 buttons+= "&#60h4&#62;Turn on water on " + String(i) + "&#60/h4&#62&#60h4&#62Valve (relay) #" + String(i) + " - GPIO " + relayGPIOs[i-1] + "&#60/h4&#62&#60label class=\"switch\"&#62&#60input type=\"checkbox\" onchange=\"toggleCheckbox(this)\" id=\"" + String(i) + "\" "+ relayStateValue +"&#62&#60span class=\"slider\"&#62&#60/span&#62&#60/label&#62";
+               }
+               return buttons;
+             }
+             return String();
+           }
+           
+           String relayState(int valveRelayNum){
+             if(RELAY_NO){
+               if(digitalRead(relayGPIOs[valveRelayNum-1])){
+                 return "";
+               }
+               else {
+                 return "checked";
+               }
+             }
+             else {
+               if(digitalRead(relayGPIOs[valveRelayNum-1])){
+                 return "checked";
+               }
+               else {
+                 return "";
+               }
+             }
+             return "";
+           }
+           
+           void setup(){
+             // Serial port for debugging purposes
+             Serial.begin(9600);
+             // Initialize SPIFFS
+             if(!SPIFFS.begin(true)){
+               Serial.println("An Error has occurred while mounting SPIFFS");
+               return;
+             }
+             // Set all relays to off when the program starts - if set to Normally Open (NO), the relay is off when you set the relay to HIGH
+             for(int i=1; i&#60=NUM_RELAYS; i++){
+               pinMode(relayGPIOs[i-1], OUTPUT);
+               if(RELAY_NO){
+                 digitalWrite(relayGPIOs[i-1], HIGH);
+               }
+               else{
+                 digitalWrite(relayGPIOs[i-1], LOW);
+               }
+             }
+             
+             // Connect the ESP to the Wi-Fi using the credentials entered before
+             WiFi.begin(ssid, password);
+             while (WiFi.status() != WL_CONNECTED) {
+               delay(1000);
+               Serial.println("Connecting to WiFi..");
+             }
+           
+             // Print ESP32 Local IP Address
+             Serial.println(WiFi.localIP());
+           
+           /*
+           *Now we are going to configure the route where server will be listening for incoming HTTP requests 
+           and a function that will be executed when a request is received on that route.
+           We specify this by calling the "on" method on the server object. With server.on(){}; 
+           As first input, this method receives a string with the path where it will be listening. 
+           We are going to set it to listen for requests on the "/" route. This could be anything. 
+           It is basically what you write after the ip adress when in the browser or an APP.
+           This website has a great explanation of the ESP32 Arduino: Asynchronous HTTP web server
+           https://techtutorialsx.com/2017/12/01/esp32-arduino-asynchronous-http-webserver/
+           So... 
+           - First parameter here is: "/" thats the root directory.
+           - Second parameter is HTTP_GET thats an enum of type WebRequestMethod a method defined in the library here --&#62 https://github.com/me-no-dev/ESPAsyncWebServer/blob/63b5303880023f17e1bca517ac593d8a33955e94/src/ESPAsyncWebServer.h
+           - Third parameter is a the function AsyncWebServerRequest
+           So there is this c++ lambda function used here. My litle understanding is that they are locally declared unamed function this means they dont have a name and are declared locally :-)
+            I don't grasp the concept fully haha.
+            the syntax is [captures](params){body} where in here [] is empity
+           */
+           
+             // Route for root / web page
+             server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
+               request-&#62send(SPIFFS, "/index.html", String(), false, processor);
+             });
+           
+            // Send a GET request to &#60ESP_IP&#62/update?relay=&#60inputMessage&#62&state=&#60inputMessage2&#62
+             server.on("/update", HTTP_GET, [] (AsyncWebServerRequest *request) {
+               String inputMessage;
+               String inputParam;
+               String inputMessage2;
+               String inputParam2;
+               // GET input1 value on &#60ESP_IP&#62/update?relay=&#60inputMessage&#62
+               if (request-&#62hasParam(PARAM_INPUT_1) & request-&#62hasParam(PARAM_INPUT_2)) {
+                 inputMessage = request-&#62getParam(PARAM_INPUT_1)-&#62value();
+                 inputParam = PARAM_INPUT_1;
+                 inputMessage2 = request-&#62getParam(PARAM_INPUT_2)-&#62value();
+                 inputParam2 = PARAM_INPUT_2;
+                 if(RELAY_NO){
+                   Serial.print("NO ");
+                   digitalWrite(relayGPIOs[inputMessage.toInt()-1], !inputMessage2.toInt());
+                 }
+                 else{
+                   Serial.print("NC ");
+                   digitalWrite(relayGPIOs[inputMessage.toInt()-1], inputMessage2.toInt());
+                 }
+               }
+               else {
+                 inputMessage = "No message sent";
+                 inputParam = "none";
+               }
+               Serial.println(inputMessage + inputMessage2);
+           
+               //This is the last part of the lambda function. 
+               //This method receives as first input the HTTP response code, which will be 200 in our case.  This is the HTTP response code for "OK".
+               request->send_P(200, "text/plain", "OK");
+             });
+           
+             // Start server here
+             server.begin();
+           }
+           
+           void loop(){
+           
+           }
+        </code></pre>
+        <p style="text-align:center"><a href="https://adress_here">View raw code</a></p>
+        <h4>The HTML code till now.</h4>
+        <pre style="max-height: 40em; margin-bottom: 20px;"><code class="language-c">
+&#60!DOCTYPE HTML&#62&#60html&#62
+&#60head&#62
+  &#60meta name="viewport" content="width=device-width, initial-scale=1"&#62
+  &#60style&#62
+    html {font-family: Arial; display: inline-block; text-align: center;}
+    h2 {font-size: 3.0rem;}
+    p {font-size: 3.0rem;}
+    body {max-width: 600px; margin:0px auto; padding-bottom: 25px;}
+    .switch {position: relative; display: inline-block; width: 120px; height: 68px} 
+    .switch input {display: none}
+    .slider {position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; border-radius: 34px}
+    .slider:before {position: absolute; content: ""; height: 52px; width: 52px; left: 8px; bottom: 8px; background-color: #fff; -webkit-transition: .4s; transition: .4s; border-radius: 68px}
+    input:checked+.slider {background-color: #2196F3}
+    input:checked+.slider:before {-webkit-transform: translateX(52px); -ms-transform: translateX(52px); transform: translateX(52px)}
+  &#60/style&#62
+&#60/head&#62
+&#60body&#62
+  &#60h2&#62Fab Farm Irrigation System&#60/h2&#62
+  %BUTTONPLACEHOLDER%
+&#60script&#62function toggleCheckbox(element) {
+  var xhr = new XMLHttpRequest();
+  if(element.checked){ xhr.open("GET", "/update?relay="+element.id+"&state=1", true); }
+  else { xhr.open("GET", "/update?relay="+element.id+"&state=0", true); }
+  xhr.send();
+}&#60/script&#62
+&#60/body&#62
+&#60/html&#62
+                </code></pre>
+        <legend>
+            <p>The html file needs to be placed under a folder named "data" or another address if specified on platformio.ini.</p>
+        </legend>
+        <p style="text-align:center"><a href="https://adress_here">View raw code</a></p>
+        <p>It currently looks like this:</p>
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial08.jpg" alt="Current interface">
+            <legend></legend>
+        </p>
+        <p>The appearance and code right now are pretty much similar to that in the <a href="https://randomnerdtutorials.com/esp32-esp8266-relay-web-server/">Random Nerd tutorial Website for Relays controlled with ESP32</a>.</p>
+        <p>The main difference from the original code is that it runs on Platformio for VScode and also it uses a separate folder structure for the html file that is written in the SPIFFS of the ESP.</p>
+        <hr>
+        <h4><a id="14/06/2020">14th of June, 2020</a></h4>
+        <p>After all this personal breakthrough I decided I need to start the code from scratch and use only the general Algorithm of the current irrigation system installed in the farm. The reason is that the code is too messy and repetitive, the approaches found in the last the sources of yesterday made me realize its faster to add the features on the last code one by one than to recode everything from the code currently running on the farm.</p>
+        <p>I will today attempt to add updated information like temperature and humidity information. I am basing again on the works by Rui Santos <a href="https://randomnerdtutorials.com/esp32-dht11-dht22-temperature-humidity-web-server-arduino-ide/">on this page about a weather station.</a> With this approach I believe I will be able to also include time of the day using a RTC clock.</p>
+        <p>The schematics for connecting the DHT22 are from his Website:</p>
+        <p class="pic"> <img src="media/final_project/images/initial_stage/ESP32-DHT-wiring_bb.jpg" alt="DHT22 wiring">
+            <legend></legend>
+        </p>
+        <p>It uses a 4.7k Ohm Resistor as a pull-up. </p>
+        <p>After some work this is how the page looks: </p>
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial09.jpg" alt="Updated interface">
+            <legend></legend>
+        </p>
+        <p>The reason the temperature now is negative I believe is because the temperature and humidity sensor is either faulty or my wirings are a bit loose, I believe once I mill my own board and solder everything instead of plugging on a breadboard this will be more reliable, anyway I am getting the values and being able to show them on the web interface. </p>
+        <p>On Serial monitor I am currently being able to display the Internet time as well as the Network information now I need to find out a way to get the time value and display in the web interface. Currently I am sending through code the word TESTE and that is being displayed instead of the time.</p>
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial10.jpg" alt="Serial monitor output">
+            <legend></legend>
+        </p>
+        <hr>
+        <h4><a id="15/06/2020">15th of June, 2020</a></h4>
+        <p>Today I will focus on getting the time displayed in the web interface and perhaps create a function to turn on the relay on specific set time.</p>
+        <p>8:44 Update:</p>
+        <p>- After the whole day trying I were able to display the machine time and the irrigation system (ESP32) time.</p>
+        <p>Now the interface looks like this:</p>
+        <p class="pic"> <img src="media/final_project/images/initial_stage/initial11.jpg" alt="Interface with time">
+            <legend></legend>
+        </p>
+        <p>When I grow up I want to be a programmer :-) and not spend an entire day on something someone puts together in a few lines!</p>
+        <p>My struggles were stopped by a saint with <a href="https://arduino.stackexchange.com/a/52677">this answer</a> on stack overflow.</p>
+        <p>Here follows the original function posted there:</p>
+        <pre><code>
+void printLocalTime()
+{
+  time_t rawtime;
+  struct tm timeinfo;
+  if(!getLocalTime(&timeinfo))
+  {
+    Serial.println("Failed to obtain time");
+   return;
+  }
+  char timeStringBuff[50]; //50 chars should be enough
+  strftime(timeStringBuff, sizeof(timeStringBuff), "%A, %B %d %Y %H:%M:%S", &timeinfo);
+  //print like "const char*"
+  Serial.println(timeStringBuff);
+
+  //Optional: Construct String object 
+  String asString(timeStringBuff);
+}
+</code></pre>
+        <p> With minor modifications by changing it from a void function into a String function and adding a return that I named "timeAsAString":</p>
+        <pre><code>
+//this function was found here https://arduino.stackexchange.com/questions/52676/how-do-you-convert-a-formatted-print-statement-into-a-string-variable
+//I did a minor change so instead of a void function it now returns a string to be used to show time in the webinterface
+String printFarmTime()
+{
+  time_t rawtime;
+  struct tm timeinfo;
+  getLocalTime(&timeinfo);
+  char timeStringBuff[50]; //50 chars should be enough
+  strftime(timeStringBuff, sizeof(timeStringBuff), "%A, %B %d %Y %H:%M:%S", &timeinfo);
+  //print like "const char*"
+  Serial.println(timeStringBuff);
+
+  //Construct to create the String object
+  String timeAsAString(timeStringBuff);
+  return timeAsAString;
+}
+</code></pre>
+        <p>So with that out of the way I will try to create the functions to turn on and off the relays according to the time scheduled. Let's see if I can finish it by today...</p>
+        <hr>
+        <h4>Conclusion</h4>
+        <p>As for this assignment I am happy with the point I am now but I will develop further the web interface for the final project, you can pick up from where this assignment stops and continue on <a id="16/06/2020">16th of June, 2020 in the Project development page</a>.</p>
+        <p>After a meeting with a friend of mine Jeff Knight who is a professional programmer he helped me draft a sketch of a plan for where I want to take my final project and where we are its below and is part of the README.md of the <a href="https://github.com/fabfarm/ESPlash">Github page I created for the software I am writing for my final project.</a></p>
+        <p>In the video Below I show the functionality</p>
+        <p class="pic"> <video controls>
+                <source src="media/interface/irrigationsytem.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <legend>Check high resolution version on <a href="https://www.youtube.com/watch?v=kPZFBc8P_nI">Youtube</a></legend>
+        </p>
+        <div id="readme">
+            <h4>Plan Sketch</h4>
+            <p>HTML &lt;--&gt; JavaScript &lt;--&gt; C++</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th><strong>Web Interface</strong></th>
+                        <th><strong>Microprocessor</strong> (ESP32)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Set per zone:</td>
+                        <td>Receives:</td>
+                    </tr>
+                    <tr>
+                        <td>[ ] start times</td>
+                        <td>[ ] start times</td>
+                    </tr>
+                    <tr>
+                        <td>[ ] duration of cycle, max 1 hour</td>
+                        <td>[ ] Duration or cycle</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>[ ] Override button</td>
+                    </tr>
+                    <tr>
+                        <td>Displays</td>
+                        <td>[ ] Stores info above at SPIFFS (csv ? )</td>
+                    </tr>
+                    <tr>
+                        <td>[x] time of day</td>
+                        <td>logic test:</td>
+                    </tr>
+                    <tr>
+                        <td>[x] Humidity</td>
+                        <td>keep checking: ({</td>
+                    </tr>
+                    <tr>
+                        <td>[x] Temperature</td>
+                        <td>- am I ('zone x') in an On window ('time + duration') ?</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Yes: 'be sure' I'm on</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>No: be sure I'm off</td>
+                    </tr>
+                    <tr>
+                        <td>[ ] current zone programs stored</td>
+                        <td>-wait for override button and break cycle if received</td>
+                    </tr>
+                    <tr>
+                        <td>[ ] override button</td>
+                        <td>wait for override button and turn on/off anytime</td>
+                    </tr>
+                    <tr>
+                        <td>[ ] current zone state (ON/OFF)</td>
+                        <td>Updates/sends current situation:</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>[x]Time of day;</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>[x]State of zone (ON/OFF)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>[x]sensor information (humidity/temperature)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>microprocessor</p>
+            <ul>
+                <li>Runs: webserver</li>
+                <li>/index.html: displays index</li>
+                <li>/temp.htmml: placeholder</li>
+                <li>/farmtimenow: returns time</li>
+                <li>/slider:</li>
+                <li>/temperature: returns temp</li>
+                <li>/humidity: returns humidity</li>
+                <li>/update: <strong>sets</strong> values</li>
+            </ul>
+
+            <p>On Startup:</p>
+            <ul>
+                <li>we read from csv file</li>
+                <li>keep info in memory to check against in loop (is this the window?)</li>
+                <li>we also have to tell the html what settings it should PRE SET</li>
+            </ul>
+
+            <p>Problem:</p>
+            <ul>
+                <li>If the microcontroller loses power, we can lose state. We therefore need a way to persist settings to disk</li>
+                <li>What do we need to save?
+                    <ul>
+                        <li>N zones and for each zone:
+                            <ul>
+                                <li>Name</li>
+                                <li>start time (timestamp)</li>
+                                <li>duration of cycle</li>
+                                <li>current state (one off) &lt;-- this can be calculated - if we're between start &amp; stop then should be on !</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p>csv file:
+                zone1, 20200101 00:00:00.0000, 1234, 1, 12
+                zone2, 20200101 00:00:00.0000, 1234, 1, 16
+                zone3, 20200101 00:00:00.0000, 1234, 1, 18</p>
+            <p>When do I touch this?</p>
+            <ul>
+                <li>On change (new info)</li>
+                <li>On reboot</li>
+                <li>That's it</li>
+                <li>Otherwise, it's in memory and you already know (!)</li>
+            </ul>
+            <p>read the csv file. for each row: split on ',' into array ....</p>
+            <p>We need to save state:</p>
+            <ul>
+                <li>csv or sqlite</li>
+            </ul>
+        </div>
+        <p>This was a first plan for the final project Web Interface and by the time you are reading this its already more developed.</p>
+        <!-- End of your content -->
+    </div> <!-- /container -->
+    <!-- footer -->
+    <footer id="footer">
+        <p id="cclicense"> </p>
+        <p class="license"> Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br> Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">JQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+
+    <!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js" defer></script>
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js" defer></script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+
+    </script>
+    <script src="bootstrap/js/bootstrap.min.js" defer></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js" defer></script>
+</body>
+
+</html>

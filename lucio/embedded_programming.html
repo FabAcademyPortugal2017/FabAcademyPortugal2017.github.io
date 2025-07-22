@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QEDKLDK8M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7QEDKLDK8M');
+    </script>
+    <!-- Finish Global site tag (gtag.js) - Google Analytics -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn embedded programming in Fab Academy 2020 with Lucio Pentagna. Dive into microcontroller datasheets, programming ATtiny44 boards using Arduino IDE and AVRDUDE, and explore different programming workflows. Discover insights into firmware burning, debugging, and C code implementation."/>
+    <meta name="author" content="Lucio Pentagna">
+    <link rel="icon" href="media/favicon.ico">
+    <title>Embedded Programming - Fab Academy 2020 - Lucio Pentagna</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    <!-- 3D files viewer -->
+    <script defer src="media/jsc3d_ie.min.js"></script>
+    <script defer src="media/jsc3d.min.js"></script>
+    <script defer src="media/jsc3d.webgl.js"></script>
+    <script defer src="media/jsc3d.touch.js"></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script defer src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Load the menu file -->
+    <script>
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+    </script>
+</head>
+
+<body onload="menu()">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Lucio Pentagna</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu"></ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu"></ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Insert your content here below! -->
+        <div class="jumbotron" style="width: 100%">
+            <h3>Embedded Programming</h3>
+            <hr>
+            <h4>Group assignment</h4>
+            <ul>
+                <li>Compare the performance and development workflows for other architectures.</li>
+            </ul>
+            <h4>Individual assignment</h4>
+            <ul>
+                <li>Read a microcontroller data sheet. Program your board to do something, with as many different programming languages and programming environments as possible.</li>
+            </ul>
+            <h4>Learning outcomes:</h4>
+            <ul>
+                <li>Identify relevant information in a microcontroller data sheet.</li>
+                <li>Implement programming protocols.</li>
+            </ul>
+            <h4>Have you:</h4>
+            <ul>
+                <li>Documented what you learned from reading a microcontroller datasheet.</li>
+                <li>What questions do you have? What would you like to learn more about?</li>
+                <li>Programmed your board</li>
+                <li>Described the programming process/es you used</li>
+                <li>Included your code</li>
+            </ul>
+        </div>
+        <h3>Week workflow</h3>
+        <p class="pic"><img src="media/embedded_programming/week8diagram.jpg" alt="Week 8 workflow diagram"></p>
+        <hr>
+        <h3>Tools used</h3>
+
+        <ul style="list-style-type:disc">
+            <li>Soldering station</li>
+            <li>USBtiny ISP</li>
+        </ul>
+        <hr>
+
+        <h3>Software Used</h3>
+        <ul style="list-style-type:disc">
+            <li>AVRdude</li>
+            <li>Arduino IDE</li>
+        </ul>
+        <hr>
+        <h3>Group Assignment</h3>
+        <p>Go to <a href="http://fabacademy.org/2020/labs/algarve/electronic_production.html">the group assignment page</a></p>
+        <h2>Introduction</h2>
+        <h2>Read the Datasheet</h2>
+        <h4>A few thoughts about it:</h4>
+        <ul>
+            <li>Are you joking? 200 plus pages of very technical stuff!</li>
+            <li>Slept on the first pages</li>
+            <li>Is there a movie version?</li>
+        </ul>
+        <p>One a more serious note, I really think this assignment is one of the hardest. I'm stuck because of this datasheet.</p>
+
+        <p>Will jump to programming and use it to consult only. While I do, I will detach important sections below:</p>
+        <p class="pic"> <img src="media/embedded_programming/01.jpg" alt="ATTINY44A pin configurations">
+            <legend>ATTINY44A pin configurations
+            </legend>
+        </p>
+        <hr>
+        <h2>Programming</h2>
+        <p>Because I was a bit confused on how to do it, I decided to list all steps in detail and have some sort of template for my next projects. With what is applicable, I fill the gaps after each step and do while documenting it, and that is what follows below:</p>
+        <ol type="1">
+            <li>Burn bootloader
+            </li> <br>
+            <ol type="i">
+                <li>Identify programmer
+                </li>
+                <p>-
+                    <a href="http://www.nongnu.org/avrdude/">avrdude
+                    </a> or
+                    <a href="http://www.atmel.com/Microsite/atmel-studio/default.aspx">Atmel Studio 7
+                    </a> (windows only)
+                </p>
+                <li>Identify bootloader and makefile
+                </li>
+                <p>- for that I start by pointing out I want to program a
+                    <a href="http://www.atmel.com/Images/8183S.pdf">ATTINY44A
+                    </a>
+                </p>
+                <p>- Download
+                    <a href="http://academy.cba.mit.edu/classes/embedded_programming/hello.ftdi.44.echo.c.make">makefile
+                    </a>
+                </p>
+                <p>- Bootloader is not going to be used here since there is no USB
+                </p>
+                <li>Download bootloader
+                </li>
+                <p>- not applicable
+                </p>
+                <li>Identify commands to burn bootloader
+                </li>
+                <p>- nope
+                </p>
+                <li>Burn bootloader
+                </li>
+                <p>- nope
+                </p>
+            </ol>
+            <br>
+            <li>Burn firmware
+            </li>
+            <br>
+            <ol type="i">
+                <li>Identify example code:</li>
+                <p>- There is this <a href="http://academy.cba.mit.edu/classes/embedded_programming/hello.ftdi.44.echo.c">code</a> from Prof. Neil</p>
+                <li>Identify commands to compile and burn firmware</li>
+                <p>- with all files prior downloaded on one directory, in Linux I rename the file to makefile and run the script to create the firmware (this step I will repeat every time I want to modify the code:</p>
+                <pre class="prettyprint linenums">mv hello.ftdi.44.echo.c.make makefile
+make</pre>
+                <p class="pic"><img src="media/embedded_programming/lsmake.jpg" alt="Renaming to makefile and compiling">
+                    <legend>Renaming to makefile and compiling</legend>
+                </p>
+                <li>Compile source code</li>
+                <p>- done in previous step</p>
+                <li>Adapting makefile to work with my programmer</li>
+                <p class="pic"><img src="media/embedded_programming/makefile.jpg" alt="Editing makefile to work with programmer">
+                    <legend>I had to edit the makefile file to work with my programmer. That was done by replacing the entry usbtiny with USBasp 2 times, one when burning the firmware the other when burning the fuses</legend>
+                </p>
+                <li>Burn firmware</li>
+                <p>Run:</p>
+                <pre class="prettyprint linenums">make program-usbtiny</pre>
+                <p class="pic"><img src="media/embedded_programming/burn.jpg" alt="Burning firmware">
+                    <legend>Renaming to makefile and compiling</legend>
+                </p>
+                <li>Identify what fuses to burn</li>
+                <p>- that was done already in the makefile</p>
+                <li>Burn fuses</li>
+                <p>Run:</p>
+                <pre class="prettyprint linenums">make program-usbasp-fuses</pre>
+                <p class="pic"><img src="media/embedded_programming/fuses.jpg" alt="Burning fuses">
+                    <legend>Burning fuses</legend>
+                </p>
+            </ol>
+        </ol>
+        <hr>
+        <h2>Programming with Arduino IDE</h2>
+        <p>I decided to try Arduino IDE as well to program my board.</p>
+        <p>In order to do it there are a few steps that should work regardless of the OS</p>
+        <ol>
+            <li>Add additional board to the boards manager:</li>
+            <p>Paste the following into (Preferences)-(Additional Boards Manager URLs:)</p>
+            <pre class="prettyprint linenums">https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json</pre>
+            <p class="pic"><img src="media/embedded_programming/step1.jpg" alt="Adding board to Arduino IDE"></p>
+            <li>Chose your new added board, in my case ATtiny44</li>
+            <p class="pic"><img src="media/embedded_programming/step2.jpg" alt="Choosing ATtiny44 board"></p>
+            <li>Chose your processor, same as before</li>
+            <p class="pic"><img src="media/embedded_programming/step3.jpg" alt="Choosing processor"></p>
+            <li>Select clock, because I am using an external 20Mhz oscillator, I chose "External 20 MHZ"</li>
+            <p class="pic"><img src="media/embedded_programming/step4.jpg" alt="Selecting clock"></p>
+            <li>Because I want to do some serial monitoring on this board I chose the best match for my FTDI which is "/dev/cu.usbserial-A7032T9C"</li>
+            <p class="pic"><img src="media/embedded_programming/step5.jpg" alt="Selecting serial port"></p>
+            <li>The last step before compiling and burning was to select the programmer, in my case "USBasp"</li>
+            <p class="pic"><img src="media/embedded_programming/step6.jpg" alt="Selecting programmer"></p>
+        </ol>
+        <hr>
+        <h2>First test</h2>
+        <h3>Burning Neil's code "hello.ftdi.44.echo.c"</h3>
+        <p>Here instead of using terminal and avrdude, I used the Arduino IDE as it has a built-in serial monitor.</p>
+        <p>The results are as follows in the video</p>
+        <p class="pic"><video controls>
+                <source src="media/embedded_programming/helloworldserialcomunicationtest.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video></p>
+        <hr>
+        <h2>Program something else</h2>
+        <p>Now I will try to program it to blink as I press the button.</p>
+        <ol>
+            <li>Determine the pin where the switch is connected</li>
+            <p class="pic"><img src="media/embedded_programming/schematics.jpg" alt="PCB schematics"></p>
+            <p>After looking into the PCB schematics I determined the button is connected to pin 10</p>
+            <li>Determine the pin where the LED is connected</li>
+            <p>After looking into the PCB schematics I determined the LED is connected to pin 6</p>
+            <li>Code</li>
+            <p>In human language I want something like this:</p>
+            <ol type="i">
+                <li>Wait for button</li>
+                <li>If button pressed blink LED 3 times</li>
+                <li>If not go back to beginning</li>
+            </ol>
+        </ol>
+        <p>The problem is I never really coded from scratch, only changed code, so that will be a challenge...</p>
+        <hr>
+        <h3>1st iteration</h3>
+        <h4>How did I do it</h4>
+        <p>I tried first to customize the <a href="media/code/embedded_programming/blink/blink.ino">Blink code</a> from Arduino IDE with my pin numbers. That did not work</p>
+        <p>Code without comments below:</p>
+        <pre class="prettyprint linenums">void setup() {
+
+  pinMode(LED_BUILTIN, OUTPUT);
+  
+}
+
+void loop() {
+
+  digitalWrite(LED_BUILTIN, HIGH);   
+  delay(1000);                       
+  digitalWrite(LED_BUILTIN, LOW);    
+  delay(1000); 
+  
+}
+
+</pre>
+
+        <p>The reason the first code did not work is because I was using a code built in for the Arduino platform but building my own board. Arduino boards usually have a built-in LED connected to pin 13, not my board! The constant for the Arduino platform to deal with the built-in LED is:</p>
+        <pre class="prettyprint linenums">LED_BUILTIN </pre>
+        <p>In the first code I tried to use that constant and failed. In the second code I found empirically by setting a number instead of the constant would make the
+            LED on.</p>
+        <p>The right code for the ATtiny44 would need to have the pin declared in the beginning with the following code:</p>
+        <pre class="prettyprint linenums">const int ledPin =  07;</pre>
+        <p>I realized that after trial and error. Now I understand that the pin number on the data sheet does not correspond to the Arduino pin number that is not the same as in the Arduino platform constant. Of course, after all, this is a customized board, but that's the price you pay for being a noob!</p>
+        <p>So after empirically finding the right pin number I programmed the board and got it to blink!</p>
+        <p>Here is the customized <a href="media/code/embedded_programming/blinkcustomised/blinkcustomised.ino">code</a> without comments:</p>
+        <pre class="prettyprint linenums">const int ledPin =  07;
+
+void setup()    {
+
+  pinMode(ledPin, OUTPUT);
+  
+}
+
+void loop()     {
+
+  digitalWrite(ledPin, HIGH);
+  delay(1000);
+  digitalWrite(ledPin, LOW);
+  delay(1000);
+
+}
+        </pre>
+        <p>No more empirically finding pins. Here is the ATtiny44 Arduino pinout diagram</p>
+        <p class="pic"> <img src="media/embedded_programming/pinsetup.jpeg" alt="ATtiny44 Arduino pinout diagram"></p>
+        <p>In order to have the button recognized by the board I needed to initialize it too with the following code in the beginning of the sketch:</p>
+        <pre class="prettyprint linenums">const int buttonPin = "the pin number here"</pre>
+        <p>Next I had to set the state of the pin with the following code:</p>
+        <pre class="prettyprint linenums">int buttonState = 0; </pre>
+        <p>The <code><0></code> in the above code could also be defined as <code><LOW></code> another constant in Arduino programming. <a href="https://www.arduino.cc/reference/en/language/variables/constants/constants/">Arduino website</a> on constants.</p>
+        <p>After searching for ATtiny44 Arduino pin. With the right pin number in hand I replaced the pins in the code and it worked! Here is the <a href="media/code/embedded_programming/buttonblink/buttonblink.ino">code.</a></p>
+        <pre class="prettyprint linenums">const int buttonPin = 3;
+const int ledPin =  7;
+
+int buttonState = 0; 
+
+void setup() {
+
+  pinMode(ledPin, OUTPUT);
+
+  pinMode(buttonPin, INPUT);
+}
+
+void loop() {
+
+  buttonState = digitalRead(buttonPin);
+
+  if (buttonState, LOW) {
+
+  digitalWrite(ledPin, HIGH);
+  } else {
+
+    digitalWrite(ledPin, LOW);
+  }
+}
+    </pre>
+        <a id="Schema">Schema</a>
+        <p>Because I lost this board many years ago I can only show how to connect the programmer on a similar board. Just like I did in <a href="electronics_design.html#programmer">Electronic Design week.</a></p>
+        <a id="programmer">Programmer FabISP and USBisp</a>
+        <p>Here I show how I used the programmers on Output devices, for Another method without the Arduino IDE check <a href="embedded_programming.html">Embedded Programming</a></p>
+        <p class="pic"><img src="media/output_devices/programmerusbasp.jpg" alt="USBasp programmer">USBasp</p>
+        <p>Programming an ATtiny44 board with Arduino using a FabTinyISP or USBtinyISP that I made.</p>
+        <p class="pic"><img src="media/output_devices/programmerfabisp.jpg" alt="FabISP programmer">FabISP</p>
+
+        <p class="pic"><video controls>
+                <source src="media/embedded_programming/hello1.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video></p>
+        <p>In order to change the behavior of the button I simply replaced the constant <code><HIGH></code> for the constant <code><LOW></code> here:</p>
+        <pre class="prettyprint linenums">if (buttonState == LOW) {</pre>
+        <p>This way the logic of the code is inverted meaning that when the button is depressed the LED is off.</p>
+        <p>Now I inverted when the LED turns on and off. Here is the <a href="media/code/embedded_programming/buttonblink2/buttonblink2.ino">code without comments:</a></p>
+
+        <pre class="prettyprint linenums">const int buttonPin = 3;
+const int ledPin =  7;
+
+int buttonState = 0;
+
+void setup() {
+
+  pinMode(ledPin, OUTPUT);
+
+  pinMode(buttonPin, INPUT);
+}
+
+void loop() {
+
+  buttonState = digitalRead(buttonPin);
+
+  if (buttonState == LOW) {
+
+    digitalWrite(ledPin, HIGH);   
+  }else {
+
+    digitalWrite(ledPin, LOW);
+    }
+    }
+</pre>
+        <p>Let's see some proof...</p>
+        <p class="pic"><video controls>
+                <source src="media/embedded_programming/hello2.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video></p>
+        <hr>
+        <h4 id="3times">Blink 3 times</h4>
+        <p>With a simple addition to the code I changed the behaviour so it blinks 3 times.</p>
+        <p class="pic"><img src="media/code/embedded_programming/buttonblink3times/code.jpg" alt="Code for blinking 3 times">Download the <a href="media/code/embedded_programming/buttonblink3times/buttonblink3times.ino">code</a></p>
+        <hr>
+        <h2>Hacking the board</h2>
+        <p>I was a bit annoyed my board would not advise me when powered so I decide to solder a red LED and a 22 Ohms resistor and a resistor so if I got the connections wrong I would know and switch it.</p>
+        <p>That's the before and after</p>
+        <p class="pic"><img src="media/embedded_programming/pcb01.jpg" alt="PCB before modification">
+            <legend>Before</legend>
+        </p>
+        <p class="pic"><img src="media/embedded_programming/pcb02.jpg" alt="PCB after modification">
+            <legend>After</legend>
+        </p>
+        <p class="pic"><img src="media/embedded_programming/pcb03.jpg" alt="PCB after modification">
+            <legend>After</legend>
+        </p>
+        <!-- End of your content -->
+    </div> <!-- /container -->
+    <!-- footer -->
+    <footer id="footer">
+        <p id="cclicense"></p>
+        <p class="license">Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a><br>Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">jQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+
+    <!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js" defer></script>
+    <!-- Syntax Highlighter -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js" defer></script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+    </script>
+    <script src="bootstrap/js/bootstrap.min.js" defer></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QEDKLDK8M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7QEDKLDK8M');
+
+    </script>
+    <!--  Finish Global site tag (gtag.js) - Google Analytics -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore the Wildcard Week project by Lucio Pentagna, featuring digital fabrication processes, safety tips, and a step-by-step guide to creating machinable wax.">
+    <meta name="author" content="Lucio Pentagna">
+    <link rel="icon" href="media/favicon.ico">
+    <title>Wildcard Week - Fab Academy 2020 - Lucio Pentagna</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="media/fabacademy.css" rel="stylesheet">
+    <!-- 3D files viewer -->
+    <script type="text/javascript" src="media/jsc3d_ie.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.min.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.webgl.js" defer></script>
+    <script type="text/javascript" src="media/jsc3d.touch.js" defer></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js" defer></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Load the menu file -->
+    <script>
+        function menu() {
+            $('#exercises').load("exercises-menu.html");
+            $('#project').load("project-menu.html");
+            $('#cclicense').load("license.html");
+        }
+
+    </script>
+</head>
+
+<body onload="menu()">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="index.html">Lucio Pentagna</a> </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Exercises <span class="caret"></span></a>
+                        <ul id="exercises" class="dropdown-menu" role="menu"> </ul>
+                    </li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+                        <ul id="project" class="dropdown-menu" role="menu"> </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Insert your content here below! -->
+        <div class="jumbotron" style="width: 100%">
+            <h3>Wildcard Week</h3>
+            <hr>
+            <h4>Individual assignment</h4>
+            <ul>
+                <li>Design and produce something with a digital fabrication process (incorporating computer-aided design and manufacturing) not covered in another assignment, documenting the requirements that your assignment meets, and including everything necessary to reproduce it. Possibilities include but are not limited to wildcard week examples.</li>
+            </ul>
+            <h4>Learning outcomes:</h4>
+            <ul>
+                <li>Demonstrate workflows used in the chosen process</li>
+                <li>Select and apply suitable materials and processes to do your assignment.</li>
+            </ul>
+            <h4>Have you:</h4>
+            <ul>
+                <li>Documented how you made your creation</li>
+                <li>Described problems and how you fixed them</li>
+                <li>Included your design files and 'hero shot' of the result</li>
+            </ul>
+        </div>
+        <hr>
+        <h3>Tools used</h3>
+        <ul style="list-style-type:disc">
+            <li>Old Electric fryer</li>
+            <li>Wire cutter</li>
+        </ul>
+        <hr>
+        <h3>Software Used</h3>
+        <ul style="list-style-type:disc">
+            <li>Arduino IDE</li>
+            <li></li>
+        </ul>
+        <hr>
+        <h4>Introduction</h4>
+        <p> On Molding and casting week I had a problem. I needed machinable wax quickly. I had not ordered it ahead and and judging by other consumables delivery time I would not receive in time at a reasonable cost.</p>
+        <p>So my decision was easy, on this week's assignment, I will be making a machine that helps me make my own machinable wax.</p>
+        <p class="pic left"><img src="media/wildcard_week/scared_smiley_surprised-512.jpg" width="10%" alt="Surprised smiley face"></p>
+        <p>So yes I will be using the knowledge aquired in the previous weeks and even some of the hardware to achieve a digitally manufactured machinable wax.</p>
+        <hr>
+        <h3>Safety first</h3>
+        <p>Read this first!! Extracted from <a href="http://shamrockaffiliations.ws/Paraffin_Wax_Flash_Points.php#.Xs-_czpKjOg">Shamrock Candles website</a> and lightly modified.</p>
+        <p>Can paraffin wax catch fire? Yes, highly-flammable paraffin wax generally ignites at the following temperatures, depending upon its melting point, and the hardeners you mix into it:</p>
+        <ol>
+            <li>Paraffin wax without additives: 199°C (390.2°F).
+            </li>
+            <li>Paraffin wax with additives: 249°C (480.2°F).</li>
+        </ol>
+        <p class="pic left"><img src="media/wildcard_week/fire-safety-icon-0.jpg" alt="Fire safety icon"></p>
+        <p>Because of additives used in the process we are doing, the mix will exceed 100 degrees, using a double-boiler, which prevents wax from exceeding the temperature of boiling water, becomes impossible.</p>
+        <p>So in my project I don't want to use open flame (gas stove, etc...). The flammability of paraffin causes a problem, when melting wax directly on the stove. Watch for signs of overheating: candle wax turns brown, smells bitter, smokes and sizzles, some time before it approaches the point of auto ignition.</p>
+        <h4>How to Put out a Paraffin Wax Fire</h4>
+        <p>So, if parafin (or candle wax) combusts, how do you extinguish the fire? Do not pour water over burning wax. This impulsive action might be the first thing one thinks of, but this simply accelerates the fire, and causes an explosion. Instead, switch your electricity mains off. Stick a lid onto the pot with the flaming wax. This smothers the flames, and causes the fire to die down naturally.</p>
+        <hr>
+        <h4>The process of building the machine and making the Machinable Wax:</h4>
+        <h4>1-What I learned from input devices</h4>
+        <p>On <a href="input_devices.html">Input Devices</a> I made a thermometer so I wanted to use it to take the temperature reading and order to activate deactivate the heater resistance and obtain controlled temperature</p>
+        <p class="pic left"><img src="media/wildcard_week/tiny45withsensor.jpg" alt="Tiny45 with sensor"></p>
+        <h4>2- The code used</h4>
+        <p>The <a href="https://github.com/zaggo/ReflowController">code</a> I used is for a reflow soldering oven and it required minimum changes to perform the test.</p>
+        <p>The problem was the size it was too big and in other to use it on the attiny44 it loses software serial so I had to use an Arduino instead. Luckily <a href="https://github.com/zaggo">Zaggo</a> the author had a debug mode and all went flawlessly.</p>
+        <p>I could then use his debug mode to view the changes in temperature.</p>
+        <p>The project of the <a href="http://pleasantsoftware.com/developer/3d/reflow/">reflow oven</a> can be found on github.</p>
+        <h4>3- The build process</h4>
+        <p>You will be amazed what you can find in the trash.</p>
+        <p>Of course my dumpster diving impulses are much contained now on times of a pandemic but hopefully one day I will be able to go back to one of my preferred activities.</p>
+        <p>So some time ago I found this fryer</p>
+        <p>The brand is UFESA and I couldn't find much information outline except some 2nd hand websites from south Asia</p>
+        <p>In malasya it sells used for around <a href="https://my.carousell.com/p/deep-fryer-ufesa-84127728/">20 Euros</a> :)</p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice01.jpg" alt="Old electric fryer"></p>
+        <p>Tuning it upside down I opened the first cover, there athe mains cable could be reattached as the original was cut.</p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice02.jpg" alt="Inside the fryer"></p>
+        <p>The second cover revealed much more interesting stuff, lets see:</p>
+        <ol>
+            <li>a lever that is connected to some type of current adjusting mechanism I couldn't identify.</li>
+            <li>a temperature fuse</li>
+            <li>the resistance</li>
+            <li>a light bulb</li>
+        </ol>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice02b.jpg" alt="Fryer components"></p>
+        <p>I believe in the future I could have a servo atached to the lever or another way to adjust the max current.</p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice02c.jpg" alt="Fryer lever"></p>
+        <p>The temperature fuse is rated at 228 degrees ading another level of safety to the project. Nice!</p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice02d.jpg" alt="Temperature fuse"></p>
+        <p>I couldn't find its datasheet but its part# is DNKD226P</p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice02e.jpg" alt="Temperature fuse part number"></p>
+        <p>The Heater resistance reads 30 amps so it was working as it matches its label (1600w 220V~)</p>
+        <p>I calculated it with the following <a href="https://www.homebrewtalk.com.br/threads/resist%C3%AAncias-el%C3%A9tricas-quase-tudo-que-voc%C3%AA-quer-saber.403630/">formula</a>:</p>
+        <pre><code>R = Resistance (Ohms)
+V = Tension (Volts)
+I = Current (amps)
+P = Power (watts)
+
+I = P / V
+I = 1600 / 220
+I =~ 7.27 Amps (Thats the current drawn at 220 Volts)
+
+R = V / I
+R = 220 / 7.27
+R = ~30.26 Ohms
+</code></pre>
+        <p>This result matches the reading of the ammeter almost perfectly.</p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice05.jpg" alt="Wax making setup"></p>
+        <p>So with the previous information checked I could continue with the project without the fear of doing it for nothing if the resistance was broken. After all I found it in the trash.</p>
+        <p>Next I attached a thermistor with processor thermal paste and kapton tape.</p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice04.jpg" alt="Thermistor attachment"></p>
+        <p>The thermistor 100k was then soldered to my thermistor board replacing the smd thermistor I had done in <a href="input_devices.html">Input devices</a>.</p>
+        <p>In the below photo you can see:</p>
+        <ol>
+            <li>Mains plug;</li>
+            <li><a href="input_devices.html">Thermistor board</a>;</li>
+            <li>Amp meter for future additional safety with current reading;</li>
+            <li>Relay</li>
+            <li>Arduino Uno</li>
+        </ol>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice05.jpg" alt="Setup components"></p>
+        <hr>
+        <h4>3- Making the wax</h4>
+        <p>As a reference I read the following pages on how to make machinable wax</p>
+        <ol>
+            <li><a href="https://www.instructables.com/id/Machinable-Wax/">Instructables</a></li>
+            <li><a href="https://hackaday.com/2016/06/11/new-cnc-machine-diy-machinable-wax/">Hackaday</a></li>
+            <li>And this <a href="https://www.youtube.com/watch?v=e1tU4tLypBU">video</a></li>
+        </ol>
+        <p>I liked the first page the most, they use a electric fryer and that makes all the difference in safety.</p>
+        <h5>Ingredients:</h5>
+        <ol type="a">
+            <li>Paraffin Wax 80%</li>
+            <li>Plastic Shopping Bags (HDPE or LDPE, Recycle symbol #4) 20%</li>
+        </ol>
+        <p>I tried using HDPE first, it did not work well, it requires highter temperature and I ended up having to remove it as it would not melt so in my experience I advise using plastic bags (LDPE) symbol #4</p>
+        <p class="pic left"><img src="media/wildcard_week/Plastics-Image1.jpg" alt="Plastic types"></p>
+        <p>Here you can see me placing entire bags, no need to cut them.</p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice06.jpg" alt="Placing plastic bags"></p>
+        <p>There is a lot of stiring needed, do it until you can't notice the solid plastic.</p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice07.jpg" alt="Stirring the mix"></p>
+        <p>When you have an homogeneous mix add the coloring, not required. I used kids crayons.</p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice08.jpg" alt="Adding coloring"></p>
+        <p>It's nice to see the crayons getting mixed; watch until the end for the effect.</p>
+        <p class="pic"><video controls title="Wax mixing process">
+                <source src="media/molding_and_casting/smurfjuice.mp4">
+                Your browser does not support HTML5 video.
+            </video></p>
+        <p>Pour the mix thruu a strainer, use a better one than mine.</p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice10.jpg" alt="Pouring the mix"></p>
+        <p>Then last pour it into a mold. I unnecessarily placed this paper as I was afraid it sticking to the mold, it won;t stick to glass.</p>
+        <p class="pic left"><img src="media/wildcard_week/smurfjuice11.jpg" alt="Pouring into mold"></p>
+        <p>Sucess, Ready for machining! See results on <a href="molding_and_casting.html">molding and casting week</a></p>
+        <p class="pic left"><img src="media/wildcard_week/smurfblock.jpg" alt="Finished wax block"></p>
+        <!-- End of your content -->
+    </div> <!-- /container -->
+    <!-- footer -->
+    <footer id="footer">
+        <p id="cclicense"> </p>
+        <p class="license"> Theme: <a href="https://github.com/openp2pdesign/FabAcademy_Template">Fab Academy Template</a> by <a href="http://openp2pdesign.org">Massimo Menichinelli</a> <br> Based on <a href="http://getbootstrap.com/">Twitter Bootstrap</a>+<a href="http://jquery.com/">jQuery</a>+<a href="https://code.google.com/p/google-code-prettify/">google-code-prettify</a>+<a href="http://jmblog.github.io/color-themes-for-google-code-prettify/github/">GitHub theme for google-code-prettify</a>+<a href="https://code.google.com/p/jsc3d/">JSC3D</a>+<a href="https://github.com/thegrubbsian/jquery.ganttView">jquery.ganttView</a>.
+        </p>
+    </footer>
+
+    <!-- Do not touch this! -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="media/jquery-1.9.1.min.js" defer></script>
+    <!-- Syntax Highlighter -->
+    <script defer src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=desert"> </script> <!-- From https://github.com/jmblog/color-themes-for-google-code-prettify -->
+    <link href="media/github.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        ! function($) {
+            $(function() {
+                window.prettyPrint && prettyPrint()
+            })
+        }(window.jQuery)
+
+    </script>
+    <script src="bootstrap/js/bootstrap.min.js" defer></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/js/ie10-viewport-bug-workaround.js" defer></script>
+</body>
+
+</html>
